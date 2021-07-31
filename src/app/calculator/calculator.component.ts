@@ -119,7 +119,7 @@ export class CalculatorComponent implements OnInit {
   private calcTeamTarget(attackers: Array<Tile>, defenders: Array<Tile>) {
     const events: Array<string> = [];
     attackers.reduce((alreadyInTarget, attcker) => {
-      if (!attcker) {
+      if (!validTileId(attcker)) {
         return alreadyInTarget;
       }
       let potentialTargets: Array<Tile> = [];
