@@ -1,0 +1,12 @@
+.square {
+  height: 45px;
+  width: 45px;
+  border: 1px solid white;
+  display: grid;
+  place-items: center center;
+  cursor: pointer;
+}
+
+.square.disabled {
+  cursor: default;
+}

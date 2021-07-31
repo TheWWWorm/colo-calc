@@ -1,0 +1,14 @@
+.field {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: calc(45px * 14 + 29px);
+  min-width: calc(45px * 14 + 29px);
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid white;
+}
+
+.field > * {
+  //flex: 1 0 calc(25% - 40px);
+  flex-direction: column;
+}

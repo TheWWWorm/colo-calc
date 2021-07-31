@@ -1,0 +1,22 @@
+<div class="calculator">
+  <div>
+    <h2>Colosseum calculator</h2>
+    <a href="https://discord.gg/ghFPrvAnXt" target="_blank">Any ideas? Feedback? Join our discord!</a>
+    <app-field
+      [matrix]="matrix"
+    ></app-field>
+  </div>
+  <div>
+    <h3>Order of attacks:</h3>
+    <div class="attackOrder">
+      <ol>
+        <li *ngFor="let event of events">{{ event }}</li>
+      </ol>
+    </div>
+  </div>
+  <div class="unitSettings">
+    <h3>Ai types</h3>
+    <app-ai-toggle *ngFor="let tile of goodParty.tiles" [tile]="tile"></app-ai-toggle>
+    <app-ai-toggle *ngFor="let tile of evilParty.tiles" [tile]="tile"></app-ai-toggle>
+  </div>
+</div>

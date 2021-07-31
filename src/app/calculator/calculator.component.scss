@@ -1,0 +1,25 @@
+.calculator {
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.attackOrder {
+  width: 300px;
+}
+
+.unitSettings {
+  margin-top: 10px;
+  > * {
+    display: block;
+  }
+}
+
+a {
+  color: #ce93d8;
+}
+
+h3 {
+  padding-top: 10px;
+}

@@ -1,0 +1,66 @@
+.container {
+  font-size: calc(100px);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+}
+
+.name {
+  font-size: 14px;
+}
+
+.toggle {
+  position: relative;
+  width: 1em;
+  height: 0.1em;
+  border-radius: 0.5em;
+  border: 0.015em solid #9f9f9f;
+  background: lightgrey;
+  margin: 0.26em 0.15em;
+  cursor: pointer;
+  filter: drop-shadow(0.015em 0.015em 0.01em rgba(0, 0, 0, 0.3))
+}
+
+.toggle-btn::after {
+  position: absolute;
+  top: -0.14rem;
+  left: 0;
+  width: 50%;
+  font-size: 0.35em;
+  text-align: center;
+  transition: all 500ms cubic-bezier(0.34, 0.78, 0.55, 1.4);
+}
+
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.toggle-checkbox:checked + .toggle-btn::after {
+  left: 50%;
+}
+
+/* Sword/Bow Toggle */
+
+.sword-bow .toggle-btn::after {
+  content: '🗡️';
+}
+
+.sword-bow .toggle-checkbox:checked + .toggle-btn::after {
+  content: '🏹';
+}
+
+.disabled .toggle-checkbox:checked + .toggle-btn::after {
+  left: 25%;
+}
+
+.disabled .sword-bow .toggle-btn::after {
+  content: '❓';
+}
+
+.disabled .sword-bow .toggle-checkbox:checked + .toggle-btn::after {
+  content: '❓';
+}
