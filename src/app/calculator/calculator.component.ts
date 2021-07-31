@@ -43,7 +43,7 @@ export class CalculatorComponent implements OnInit {
         value: aiType + party.prefix + String(unusedIndex + 1),
         aiType,
       }
-      console.log(updatedTile);
+
       party.tiles[unusedIndex] = updatedTile;
       this.matrix[updatedTile.id] = updatedTile;
     }
@@ -90,11 +90,11 @@ export class CalculatorComponent implements OnInit {
   }
 
   private returnPositionInLine(id: number): number {
-    return id % LINE_LENGTH + 1;
+    return (id % LINE_LENGTH) + 1;
   }
 
   private returnPositionInColumn(id: number): number {
-    return Math.floor((id + 1) / LINE_LENGTH);
+    return Math.floor((id) / LINE_LENGTH) + 1;
   }
 
   private returnParty(id: number): Party {
