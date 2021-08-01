@@ -24,10 +24,11 @@ export class LineService {
 
   public createLine(id_from: string, id_to: string, color: TargetColour) {
     const id = `line_container_${id_from}_${id_to}`;
-    const subId = `line_${id_from}_${id_to}`;
+    const pahtSubId = `line_${id_from}_${id_to}`;
+    const arrowSubId = `arrow_line_${id_from}_${id_to}`;
     this.lines.push(id);
     //SVG that will not appear until points towards the element that we want is given
-    const create_svg = `<span id="${id}" style="position: absolute; pointer-events: none; top: 0; left: 0;"> <svg width="1000" height="1000" >    <defs>    <marker id="arrow" markerWidth="13" markerHeight="13" refx="2" refy="6" orient="auto">        <path d="M2,1 L2,10 L10,6 L2,2" style="fill:${color};" />      </marker>    </defs>    <path id="${subId}" d="" style="stroke:${color}; stroke-width: 1.75px; fill: none; marker-end: url(#arrow);"/>  </svg> </span>`;
+    const create_svg = `<span id="${id}" style="position: absolute; pointer-events: none; top: 0; left: 0;"> <svg width="1000" height="1000" >    <defs>    <marker id="${arrowSubId}" markerWidth="13" markerHeight="13" refx="2" refy="6" orient="auto">        <path d="M2,1 L2,10 L10,6 L2,2" style="fill:${color};" />      </marker>    </defs>    <path id="${pahtSubId}" d="" style="stroke:${color}; stroke-width: 1.75px; fill: none; marker-end: url(#${arrowSubId});"/>  </svg> </span>`;
 
     const parsed = parseHTML(create_svg);
     document.querySelector("#" + id_from).before(parsed);
@@ -55,7 +56,7 @@ export class LineService {
     );
     //Input into SVG
     console.log(test1_loc, test2_loc, coords);
-    document.getElementById(subId).setAttribute('d', coords);
+    document.getElementById(pahtSubId).setAttribute('d', coords);
   }
 
 
