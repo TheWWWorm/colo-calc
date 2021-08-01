@@ -2,6 +2,11 @@
   <div>
     <h2>Colosseum calculator</h2>
     <a href="https://discord.gg/ghFPrvAnXt" target="_blank">Any ideas? Feedback? Join our discord!</a>
+    <span class="actions">
+      <a>Show ally lines</a><input type="checkbox" [(ngModel)]="showAllyLinesChecked" (change)="calculateEvents()">
+      <a>Show enemy lines</a><input type="checkbox" [(ngModel)]="showEnemyLinesChecked" (change)="calculateEvents()">
+      <a (click)="reset()">Reset table</a>
+    </span>
     <app-field
       [matrix]="matrix"
     ></app-field>

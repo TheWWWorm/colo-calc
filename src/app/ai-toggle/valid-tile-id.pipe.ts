@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Tile } from 'src/app/calculator/calculator.types';
-import { validTileId } from '../fn/helpers';
+import { validTileId } from '../../fn/helpers';
 
 @Pipe({
   name: 'validTileId'

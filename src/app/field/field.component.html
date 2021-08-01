@@ -1,6 +1,7 @@
 <div class="field">
   <app-tile
     *ngFor="let tile of matrix"
+    id="{{'tile' + tile.id}}"
     [tile]="tile">
   </app-tile>
 </div>

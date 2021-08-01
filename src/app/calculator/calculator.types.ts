@@ -6,6 +6,11 @@ export enum AiType {
   Ranged = '🏹',
 }
 
+export enum TargetColour {
+  Ally = '#f3ff81b3',
+  Enemy = '#ff1818ba'
+}
+
 export const defaultAiType = AiType.Melee;
 
 export interface Tile {
@@ -15,6 +20,8 @@ export interface Tile {
   aiType?: AiType;
   onClick?: (tile: Tile) => void;
   onAiChange?: (tile: Tile) => void;
+  targets?: Tile;
+  lineColour?: TargetColour;
 }
 
 export interface Party {

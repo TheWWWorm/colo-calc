@@ -18,6 +18,19 @@
 
 a {
   color: #ce93d8;
+  padding-right: 5px;
+  padding-left: 10px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  top: 2px;
+}
+
+.actions {
+  float: right;
 }
 
 h3 {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { createParty, validTileId } from 'src/fn/helpers';
-import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, AiType, defaultAiType } from './calculator.types';
+import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, AiType, defaultAiType, TargetColour } from './calculator.types';
 
 @Component({
   selector: 'app-calculator',
@@ -9,9 +9,12 @@ import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, AiTyp
 })
 export class CalculatorComponent implements OnInit {
 
+  public showAllyLinesChecked = true;
+  public showEnemyLinesChecked = true;
+
   public aiTypes = Object.values(AiType);
-  public goodParty: Party = createParty('Good', 'A');
-  public evilParty: Party = createParty('Evil', 'E');
+  public goodParty: Party;
+  public evilParty: Party;
   
   public events: Array<string> = [];
 
@@ -31,7 +34,8 @@ export class CalculatorComponent implements OnInit {
       const updatedTile: Tile = {
         ...tile,
         value: '',
-        aiType: defaultAiType
+        aiType: defaultAiType,
+        targets: null
       }
       this.matrix[tile.id] = updatedTile;
     } else if (party.size < 4) {
@@ -63,30 +67,42 @@ export class CalculatorComponent implements OnInit {
     this.calculateEvents();
   }
 
-  public matrix: Array<Tile> = Array.from(new Array(LINE_LENGTH * LINE_HEIGHT), (_, i): Tile => {
-    const posInLine = this.returnPositionInLine(i);
-    const baseTile: Tile = {
-      value: '',
-      onClick: this.onTileClick,
-      onAiChange: this.onAiChange,
-      aiType: defaultAiType,
-      id: i
-    }
-    if (posInLine < 5) {
+  public generateMatrix = (): Array<Tile> => {
+    return Array.from(new Array(LINE_LENGTH * LINE_HEIGHT), (_, i): Tile => {
+      const posInLine = this.returnPositionInLine(i);
+      const baseTile: Tile = {
+        value: '',
+        onClick: this.onTileClick,
+        onAiChange: this.onAiChange,
+        aiType: defaultAiType,
+        id: i
+      }
+      if (posInLine < 5) {
+        return baseTile;
+      } else if (posInLine > 4 && posInLine < 11) {
+        return {
+          ...baseTile,
+          disabled: true,
+          value: 'x'
+        };
+      }
       return baseTile;
-    } else if (posInLine > 4 && posInLine < 11) {
-      return {
-        ...baseTile,
-        disabled: true,
-        value: 'x'
-      };
-    }
-    return baseTile;
-  });
+    });
+  }
+
+  public matrix: Array<Tile>;
 
   constructor() { }
 
   ngOnInit() {
+    console.log('init')
+    this.reset();
+  }
+
+  public reset() {
+    this.matrix = this.generateMatrix();
+    this.goodParty = createParty('Good', 'A');
+    this.evilParty = createParty('Evil', 'E');
   }
 
   private returnPositionInLine(id: number): number {
@@ -116,9 +132,11 @@ export class CalculatorComponent implements OnInit {
     return c;
   }
 
-  private calcTeamTarget(attackers: Array<Tile>, defenders: Array<Tile>) {
+  private calcTeamTarget(attackers: Array<Tile>, defenders: Array<Tile>, lineColour: TargetColour) {
     const events: Array<string> = [];
     attackers.reduce((alreadyInTarget, attcker) => {
+      attcker.targets = null;
+      attcker.lineColour = null;
       if (!validTileId(attcker)) {
         return alreadyInTarget;
       }
@@ -152,6 +170,13 @@ export class CalculatorComponent implements OnInit {
         return distanceArr;
       }, [] as Array<TileDistance>).sort((a, b) => a.distance - b.distance)[0];
 
+      if (
+        (lineColour === TargetColour.Ally && this.showAllyLinesChecked) ||
+        (lineColour === TargetColour.Enemy && this.showEnemyLinesChecked)
+      ) {
+        attcker.targets = target.tile;
+        attcker.lineColour = lineColour;
+      }
       events.push(`${attcker.value} targets ${target.tile.value} with a distance of ${target.distance.toFixed(2)}`);
       alreadyInTarget.push(target.tile);
 
@@ -160,12 +185,13 @@ export class CalculatorComponent implements OnInit {
     return events;
   }
 
-  private calculateEvents() {
+  public calculateEvents() {
     const newEvents = [
-      ...this.calcTeamTarget(this.goodParty.tiles, this.evilParty.tiles),
-      ...this.calcTeamTarget(this.evilParty.tiles, this.goodParty.tiles)
+      ...this.calcTeamTarget(this.goodParty.tiles, this.evilParty.tiles, TargetColour.Ally),
+      ...this.calcTeamTarget(this.evilParty.tiles, this.goodParty.tiles, TargetColour.Enemy)
     ];
     this.events = newEvents;
+    this.matrix = [...this.matrix];
   }
 
 }
