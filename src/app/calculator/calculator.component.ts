@@ -142,8 +142,14 @@ export class CalculatorComponent implements OnInit {
       }
       let potentialTargets: Array<Tile> = [];
 
+      // Melee targets closest, untargeted
       if (attcker.aiType === AiType.Melee) {
         potentialTargets = defenders.filter((m) => !alreadyInTarget.includes(m) && validTileId(m));
+        // If all targets are taken occupied, just take closest one
+        if (!potentialTargets.length) {
+          potentialTargets = defenders.filter(validTileId);
+        }
+      // Ranged targets closest target
       } else if (attcker.aiType === AiType.Ranged) {
         potentialTargets = defenders.filter(validTileId);
       }
