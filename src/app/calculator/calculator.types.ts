@@ -11,7 +11,7 @@ export enum TargetColour {
   Enemy = '#ff1818ba'
 }
 
-export const defaultAiType = AiType.Melee;
+export const defaultAiType = AiType.Ranged;
 
 export interface Tile {
   id: number;
