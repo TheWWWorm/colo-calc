@@ -12,6 +12,7 @@
 .unitSettings {
   margin-top: 10px;
   > * {
+    padding-bottom: 10px;
     display: block;
   }
 }
@@ -35,4 +36,22 @@ input[type="checkbox"] {
 
 h3 {
   padding-top: 10px;
+}
+
+.user-hint {
+  max-width: 200px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: right;
+  padding: 0 10px 10px 10px;
+}
+
+.footer > .help-me-link {
+  padding-right: 30px;
 }

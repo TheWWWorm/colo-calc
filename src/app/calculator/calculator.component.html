@@ -21,6 +21,7 @@
   </div>
   <div class="unitSettings">
     <h3>Parties</h3>
+    <div class="user-hint">Click on the tiles to add/move heroes. Click on the party list to change them!</div>
     <app-party
       [party]="goodParty"
       title="Your team"
@@ -29,9 +30,7 @@
       [party]="evilParty"
       title="Enemy team"
     ></app-party>
-    <!-- TODO: show the paties, like the are shown in the game. Give option to change the hero, also make a note that order matters -->
     <!-- Also move clear button next to the party, instead of clearing the whole thing -->
-    <!-- <app-ai-toggle *ngFor="let tile of goodParty.tiles" [tile]="tile"></app-ai-toggle>
-    <app-ai-toggle *ngFor="let tile of evilParty.tiles" [tile]="tile"></app-ai-toggle> -->
   </div>
+  <div class="footer"><a class="help-me-link" href="https://ko-fi.com/wwworm" target="_blank">Consider supporting me!</a></div>
 </div>

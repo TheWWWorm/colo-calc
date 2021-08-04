@@ -51,6 +51,13 @@ export class LineService {
     }
     console.log(test1_loc, test2_loc)
     console.log(from, to)
+    if (from.x < to.x) {
+      to.x = to.x - test2_loc.width;
+      from.x = from.x + test1_loc.width / 2;
+    } else if (to.x < from.x) {
+      to.x = to.x + test2_loc.width;
+      from.x = from.x - test1_loc.width /2;
+    }
     const coords = (
       'M' + from.x
       + ',' + from.y + 
