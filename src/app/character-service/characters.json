@@ -114,13 +114,13 @@
 	},
 	{
 		"name": "Eugene",
-		"aiType": "Melee",
+		"aiType": "Ranged",
 		"class": "Warrior",
 		"imgName": "Eugene.png"
 	},
 	{
 		"name": "Eva",
-		"aiType": "Ranged",
+		"aiType": "Melee",
 		"class": "Ranged",
     "isRare": true,
 		"imgName": "Eva.png"
@@ -212,7 +212,7 @@
 	},
 	{
 		"name": "Lapice",
-		"aiType": "Melee",
+		"aiType": "Ranged",
 		"class": "Warrior",
 		"imgName": "Lapice.png"
 	},
@@ -250,7 +250,7 @@
 	},
 	{
 		"name": "Lynn",
-		"aiType": "Melee",
+		"aiType": "Ranged",
 		"class": "Warrior",
 		"imgName": "Lynn.png"
 	},
@@ -269,7 +269,7 @@
 	},
 	{
 		"name": "Marvin",
-		"aiType": "Melee",
+		"aiType": "Ranged",
 		"class": "Warrior",
     "isRare": true,
 		"imgName": "Marvin.png"
@@ -354,7 +354,7 @@
 	},
 	{
 		"name": "Rie",
-		"aiType": "Ranged",
+		"aiType": "Melee",
 		"class": "Ranged",
     "isRare": true,
 		"imgName": "Rie.png"
