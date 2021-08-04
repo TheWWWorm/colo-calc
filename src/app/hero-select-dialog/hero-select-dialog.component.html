@@ -1,0 +1,21 @@
+<div class="container">
+  <h3>Select your hero</h3>
+  <div class="actions">
+    <mat-form-field>
+      <mat-label>Filter</mat-label>
+      <input
+        #heroFilter
+        matInput
+        [formControl]="filterField"
+      >
+    </mat-form-field>
+    <span>Only unique heroes</span><input type="checkbox" [(ngModel)]="onlyUniques" (change)="toggleRares()">
+  </div>
+  <div *ngIf="displayCharacters && displayCharacters.length" class="hero-list">
+    <img *ngFor="let character of displayCharacters" [src]="character.imgName" [src]="character.imgName" [alt]="character.name" (click)="heroSelected(character)" [title]="character.name">
+  </div>
+  <div *ngIf="!displayCharacters || !displayCharacters.length">
+    <h3>No character was found!</h3>
+  </div>
+  <span class="enter-hint">You can also press enter to select first hero in the list</span>
+</div>

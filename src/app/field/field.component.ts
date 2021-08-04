@@ -1,4 +1,4 @@
-import { AfterViewChecked, AfterViewInit, Component, Input, OnChanges, OnInit } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component, Input, NgZone, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Tile } from '../calculator/calculator.types';
 import { LineService } from '../line/line.service';
 
@@ -7,21 +7,22 @@ import { LineService } from '../line/line.service';
   templateUrl: './field.component.html',
   styleUrls: ['./field.component.scss']
 })
-export class FieldComponent implements OnInit, AfterViewChecked {
+export class FieldComponent implements OnInit, OnChanges {
   @Input() public matrix: Array<Tile> = [];
 
-  constructor(private lineService: LineService) { }
+  constructor(
+    private lineService: LineService
+  ) { }
 
   ngOnInit() {
   }
 
-  public ngAfterViewChecked() {
-    //console.log('ngAfterViewChecked');
+  public ngOnChanges(changes: SimpleChanges): void {
     this.lineService.clearLines();
+    console.log('here');
     this.matrix.forEach((tile) => {
       if (tile.targets) {
         // console.log(tile);
-        // console.log('tile', tile.id, 'targets', tile.targets.id);
         this.lineService.createLine(
           'tile' + tile.id,
           'tile' + tile.targets.id,
@@ -30,5 +31,4 @@ export class FieldComponent implements OnInit, AfterViewChecked {
       }
     });
   }
-
 }

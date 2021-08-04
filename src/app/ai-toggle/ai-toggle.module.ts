@@ -2,15 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AiToggleComponent } from './ai-toggle.component';
 import { FormsModule } from '@angular/forms';
-import { ValidTileIdPipe } from './valid-tile-id.pipe';
+import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
+    PipesModule
   ],
-  declarations: [AiToggleComponent, ValidTileIdPipe],
-  exports: [AiToggleComponent, ValidTileIdPipe],
+  declarations: [AiToggleComponent],
+  exports: [AiToggleComponent],
   providers: []
 })
 export class AiToggleModule { }

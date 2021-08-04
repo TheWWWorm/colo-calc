@@ -20,8 +20,18 @@
     </div>
   </div>
   <div class="unitSettings">
-    <h3>Ai types</h3>
-    <app-ai-toggle *ngFor="let tile of goodParty.tiles" [tile]="tile"></app-ai-toggle>
-    <app-ai-toggle *ngFor="let tile of evilParty.tiles" [tile]="tile"></app-ai-toggle>
+    <h3>Parties</h3>
+    <app-party
+      [party]="goodParty"
+      title="Your team"
+    ></app-party>
+    <app-party
+      [party]="evilParty"
+      title="Enemy team"
+    ></app-party>
+    <!-- TODO: show the paties, like the are shown in the game. Give option to change the hero, also make a note that order matters -->
+    <!-- Also move clear button next to the party, instead of clearing the whole thing -->
+    <!-- <app-ai-toggle *ngFor="let tile of goodParty.tiles" [tile]="tile"></app-ai-toggle>
+    <app-ai-toggle *ngFor="let tile of evilParty.tiles" [tile]="tile"></app-ai-toggle> -->
   </div>
 </div>

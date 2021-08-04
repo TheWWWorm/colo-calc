@@ -1,0 +1,22 @@
+.hero-list {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center; 
+}
+
+.hero-list > * {
+  display: grid;
+  place-items: center center;
+  flex-direction: column;
+  height: 50px;
+  width: 50px;
+  border: 1px solid white;
+} 
+
+.hero-list img {
+  flex-direction: column;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  border: 1px solid white;
+}

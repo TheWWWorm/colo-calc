@@ -1,0 +1,44 @@
+.container {
+  text-align: center;
+}
+
+.hero-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.enter-hint {
+  text-align: right;
+  font-size: 11px;
+}
+
+.hero-list > img {
+  flex-direction: column;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+img:before {
+  content: ' ';
+  display: block;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  background-image: url(/assets/CharacterPortraits/Boy.png);
+}
+
+span {
+  color: #ce93d8;
+}
+
+.actions {
+  text-align: left;
+  margin-top: -20px;
+  margin-bottom: 15px;
+}
+
+.actions > * {
+  margin-right: 10px;
+}

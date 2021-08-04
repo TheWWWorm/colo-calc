@@ -10,3 +10,17 @@
 .square.disabled {
   cursor: default;
 }
+
+img {
+  height: inherit;
+  width: inherit;
+}
+
+img:before {
+  content: ' ';
+  display: block;
+  background-size: contain;
+  height: inherit;
+  width: inherit;
+  background-image: url(/assets/CharacterPortraits/Boy.png);
+}

@@ -1,5 +1,5 @@
 <div class="container" [ngClass]="{disabled: !(tile | validTileId) }">
-  <span class="name">{{ tile?.value }}</span>
+  <span class="name">{{ tile?.character?.name }}</span>
   <label class="toggle sword-bow">
     <input type="checkbox" class="toggle-checkbox" [(ngModel)]="isChecked" (change)="onUpdateToggle(isChecked?'🏹':'🗡️')" [disabled]="!(tile | validTileId) ">
     <div class="toggle-btn"></div>

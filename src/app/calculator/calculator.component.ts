@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { createParty, validTileId } from 'src/fn/helpers';
-import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, AiType, defaultAiType, TargetColour } from './calculator.types';
+import { CharacterService } from '../character-service/character-service.service';
+import { HeroSelectDialogComponent } from '../hero-select-dialog/hero-select-dialog.component';
+import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, TargetColour, AiType, CharacterClass, Character } from './calculator.types';
 
 @Component({
   selector: 'app-calculator',
@@ -11,60 +16,72 @@ export class CalculatorComponent implements OnInit {
 
   public showAllyLinesChecked = true;
   public showEnemyLinesChecked = true;
-
-  public aiTypes = Object.values(AiType);
+  
+  // @TODO: local storage the "good" party
   public goodParty: Party;
   public evilParty: Party;
+  // @TODO: good/evil summon party, like noxias pet
   
   public events: Array<string> = [];
 
   // Handle when user clicks on the tile - set/unset value, recalc stuff
   public onTileClick = (tile: Tile) => {
     const party = this.returnParty(tile.id);
-    console.log(party);
+
     const tileIndexInParty = party.tiles.findIndex((member) => member?.id === tile.id);
 
     if (~tileIndexInParty) {
       party.tiles[tileIndexInParty] = {
         id: null,
-        value: '❓' + party.prefix + (tileIndexInParty + 1),
-        aiType: party.tiles[tileIndexInParty].aiType
+        value: null,
+        character: tile.character,
+        positionInParty: tileIndexInParty
       };
       party.size = party.size - 1;
       const updatedTile: Tile = {
         ...tile,
-        value: '',
-        aiType: defaultAiType,
-        targets: null
+        targets: null,
+        character: null,
+        positionInParty: null,
       }
       this.matrix[tile.id] = updatedTile;
+      this.calculateEvents();
     } else if (party.size < 4) {
-      party.size = party.size + 1;
       const unusedIndex = party.tiles.findIndex((member) => !validTileId(member));
-      const aiType = party.tiles[unusedIndex].aiType || defaultAiType;
-      const updatedTile: Tile = {
-        ...tile,
-        value: aiType + party.prefix + String(unusedIndex + 1),
-        aiType,
-      }
+      const selectedCharacter = party.tiles[unusedIndex].character;
 
-      party.tiles[unusedIndex] = updatedTile;
-      this.matrix[updatedTile.id] = updatedTile;
+      (selectedCharacter ? of(selectedCharacter) : this.openHeroSelectDialog$()).subscribe((character) => {
+
+        if (character) {
+          party.size = party.size + 1;
+          const updatedTile: Tile = {
+            ...tile,
+            positionInParty: unusedIndex,
+            character,
+          }
+    
+          party.tiles[unusedIndex] = updatedTile;
+          this.matrix[updatedTile.id] = updatedTile;
+          this.calculateEvents();
+        }
+      });
     }
-    this.calculateEvents();
   }
 
-  public onAiChange = (tile: Tile) => {
-    const party = this.returnParty(tile.id);
-    const tileIndexInParty = party.tiles.findIndex((member) => member?.id === tile.id);
-    const updatedTile = {
-      ...tile,
-      value: tile.aiType + party.prefix + String(tileIndexInParty + 1) 
-    }
-
-    party.tiles[tileIndexInParty] = updatedTile;
-    this.matrix[tile.id] = updatedTile;
-    this.calculateEvents();
+  public onChangeCharacter = (tile: Tile) => {
+    this.openHeroSelectDialog$().subscribe((character) => {
+      if (!character) {
+        return;
+      }
+      const newTile: Tile = {
+        ...tile,
+        character
+      }
+      const party = this.returnParty(tile.id);
+      party.tiles[newTile.positionInParty] = newTile;
+      this.matrix[newTile.id] = newTile;
+      this.calculateEvents();
+    })
   }
 
   public generateMatrix = (): Array<Tile> => {
@@ -73,8 +90,7 @@ export class CalculatorComponent implements OnInit {
       const baseTile: Tile = {
         value: '',
         onClick: this.onTileClick,
-        onAiChange: this.onAiChange,
-        aiType: defaultAiType,
+        onChangeCharacter: this.onChangeCharacter,
         id: i
       }
       if (posInLine < 5) {
@@ -92,7 +108,10 @@ export class CalculatorComponent implements OnInit {
 
   public matrix: Array<Tile>;
 
-  constructor() { }
+  constructor(
+    private characterServiceService: CharacterService,
+    public dialog: MatDialog
+  ) { }
 
   ngOnInit() {
     console.log('init')
@@ -132,35 +151,63 @@ export class CalculatorComponent implements OnInit {
     return c;
   }
 
-  private calcTeamTarget(attackers: Array<Tile>, defenders: Array<Tile>, lineColour: TargetColour) {
-    const events: Array<string> = [];
-    attackers.reduce((alreadyInTarget, attcker) => {
-      attcker.targets = null;
-      attcker.lineColour = null;
-      if (!validTileId(attcker)) {
-        return alreadyInTarget;
-      }
-      let potentialTargets: Array<Tile> = [];
-
-      // Melee targets closest, untargeted
-      if (attcker.aiType === AiType.Melee) {
-        potentialTargets = defenders.filter((m) => !alreadyInTarget.includes(m) && validTileId(m));
-        // If all targets are taken occupied, just take closest one
-        if (!potentialTargets.length) {
-          potentialTargets = defenders.filter(validTileId);
-        }
-      // Ranged targets closest target
-      } else if (attcker.aiType === AiType.Ranged) {
+  private getTargets(attacker: Tile, attackerAi: AiType, attackers: Array<Tile>, defenders: Array<Tile>, alreadyInTarget: Array<Tile>) {
+    let potentialTargets: Array<Tile> = [];
+    // Melee targets closest, untargeted
+    if (attackerAi === AiType.Melee) {
+      potentialTargets = defenders.filter((m) => validTileId(m) && !alreadyInTarget.includes(m));
+      // If all targets are taken occupied, just take closest one
+      if (!potentialTargets.length) {
         potentialTargets = defenders.filter(validTileId);
       }
+    // Ranged targets closest target
+    } else if (attackerAi === AiType.Ranged) {
+      potentialTargets = defenders.filter(validTileId);
+    // Target closes friend
+    } else if (attackerAi === AiType.Ally) {
+      potentialTargets = attackers.filter((m) => validTileId(m) && !alreadyInTarget.includes(m) && attacker.id !== m.id);
+    } else if (attackerAi === AiType.Assassin) {
+      potentialTargets = defenders.filter((m) => validTileId(m) && m.character.class === CharacterClass.Ranged);
+    }
+    return potentialTargets;
+  }
+
+  private calcTeamTarget(attackers: Array<Tile>, defenders: Array<Tile>, lineColour: TargetColour, targeted: Array<Tile>) {
+    const events: Array<string> = [];
+    const targetedUpd = attackers.reduce((alreadyInTarget, attacker) => {
+      attacker.targets = null;
+      attacker.lineColour = null;
+      if (!validTileId(attacker)) {
+        return alreadyInTarget;
+      }
+      let usingAi: AiType = attacker.character.aiType;
+      let potentialTargets: Array<Tile> = this.getTargets(
+        attacker,
+        usingAi,
+        attackers,
+        defenders,
+        alreadyInTarget
+      );
 
       if (!potentialTargets.length) {
-        return alreadyInTarget;
+        if (attacker.character.fallbackAiType) {
+          usingAi = attacker.character.fallbackAiType;
+          potentialTargets = this.getTargets(
+            attacker,
+            usingAi,
+            attackers,
+            defenders,
+            alreadyInTarget
+          );
+        }
+        if (!potentialTargets.length) {
+          return alreadyInTarget;
+        }
       }
 
       const attackerPos: Coordinates = {
-        x: this.returnPositionInLine(attcker.id),
-        y: this.returnPositionInColumn(attcker.id)
+        x: this.returnPositionInLine(attacker.id),
+        y: this.returnPositionInColumn(attacker.id)
       }
       
       const target: TileDistance = potentialTargets.reduce((distanceArr, m) => {
@@ -174,30 +221,50 @@ export class CalculatorComponent implements OnInit {
           tile: m
         });
         return distanceArr;
-      }, [] as Array<TileDistance>).sort((a, b) => a.distance - b.distance)[0];
+      }, [] as Array<TileDistance>).sort((a, b) => {
+        if (usingAi === AiType.Assassin || usingAi === AiType.Ally) {
+          return b.distance - a.distance
+        }
+        return a.distance - b.distance
+      })[0];
 
       if (
         (lineColour === TargetColour.Ally && this.showAllyLinesChecked) ||
         (lineColour === TargetColour.Enemy && this.showEnemyLinesChecked)
       ) {
-        attcker.targets = target.tile;
-        attcker.lineColour = lineColour;
+        attacker.targets = target.tile;
+        attacker.lineColour = lineColour;
       }
-      events.push(`${attcker.value} targets ${target.tile.value} with a distance of ${target.distance.toFixed(2)}`);
+      events.push(`${attacker.character.name} targets ${target.tile.character.name} with a distance of ${target.distance.toFixed(2)}`);
       alreadyInTarget.push(target.tile);
 
       return alreadyInTarget;
-    }, [] as Array<Tile>);
-    return events;
+    }, targeted);
+    return {
+      events,
+      targeted: targetedUpd
+    };
   }
 
   public calculateEvents() {
+    const goodGuysResult = this.calcTeamTarget(this.goodParty.tiles, this.evilParty.tiles, TargetColour.Ally, []);
+    const badGuysResult = this.calcTeamTarget(this.evilParty.tiles, this.goodParty.tiles, TargetColour.Enemy, goodGuysResult.targeted);
     const newEvents = [
-      ...this.calcTeamTarget(this.goodParty.tiles, this.evilParty.tiles, TargetColour.Ally),
-      ...this.calcTeamTarget(this.evilParty.tiles, this.goodParty.tiles, TargetColour.Enemy)
+      ...goodGuysResult.events,
+      ...badGuysResult.events
     ];
     this.events = newEvents;
     this.matrix = [...this.matrix];
+    this.goodParty = {...this.goodParty};
+    this.evilParty = {...this.evilParty};
+  }
+
+  public openHeroSelectDialog$(): Observable<Character> {
+    const dialogRef = this.dialog.open(HeroSelectDialogComponent, {
+      width: '700px',
+      data: {}
+    })
+    return dialogRef.afterClosed();
   }
 
 }

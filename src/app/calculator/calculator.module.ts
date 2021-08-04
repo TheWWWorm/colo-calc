@@ -2,15 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CalculatorComponent } from './calculator.component';
 import { FieldModule } from '../field/field.module';
-import { AiToggleModule } from 'src/app/ai-toggle/ai-toggle.module';
 import { FormsModule } from '@angular/forms';
+import { HeroSelectDialogModule } from '../hero-select-dialog/hero-select-dialog.module';
+import { PartyModule } from '../party/party.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FieldModule,
-    AiToggleModule,
-    FormsModule
+    FormsModule,
+    HeroSelectDialogModule,
+    PartyModule
   ],
   declarations: [CalculatorComponent],
   exports: [CalculatorComponent]

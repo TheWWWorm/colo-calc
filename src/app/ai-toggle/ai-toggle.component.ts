@@ -1,6 +1,11 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
-import { AiType, Tile } from 'src/app/calculator/calculator.types';
+import { Tile } from 'src/app/calculator/calculator.types';
 import { validTileId } from 'src/fn/helpers';
+
+export enum CharType {
+  Melee = '🗡️',
+  Ranged = '🏹',
+}
 
 @Component({
   selector: 'app-ai-toggle',
@@ -17,14 +22,14 @@ export class AiToggleComponent implements OnInit, OnChanges {
   }
 
   public ngOnChanges() {
-    this.isChecked = !validTileId(this.tile) ? true: this.tile.aiType === AiType.Ranged;
+    //this.isChecked = !validTileId(this.tile) ? true: this.tile.aiType === CharType.Ranged;
   }
 
   public onUpdateToggle(e: any) {
-    const updatedAiType = e as AiType;
+    const updatedAiType = e as CharType;
     this.tile.onAiChange({
       ...this.tile,
-      aiType: updatedAiType
+      //aiType: updatedAiType
     });
   }
 

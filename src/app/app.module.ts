@@ -6,8 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CalculatorModule } from './calculator/calculator.module';
 
 @NgModule({
-  declarations: [	
-    AppComponent
+  declarations: [		
+    AppComponent,
    ],
   imports: [
     BrowserModule,

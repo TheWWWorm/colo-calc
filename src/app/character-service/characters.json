@@ -1,0 +1,415 @@
+[
+	{
+		"name": "Aisha",
+		"aiType": "Ally",
+    "fallbackAiType": "Melee",
+		"class": "Support",
+    "isRare": true,
+		"imgName": "Aisha.png"
+	},
+	{
+		"name": "Akayuki",
+		"aiType": "Melee",
+		"class": "Warrior",
+    "isRare": true,
+		"imgName": "Akayuki.png"
+	},
+	{
+		"name": "Alef",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Alef.png"
+	},
+	{
+		"name": "Amy",
+		"aiType": "Melee",
+		"class": "Warrior",
+    "isRare": true,
+		"imgName": "Amy.png"
+	},
+	{
+		"name": "Aoba",
+		"aiType": "Ranged",
+		"class": "Support",
+    "isRare": true,
+		"imgName": "Aoba.png"
+	},
+	{
+		"name": "Arabelle",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Arabelle.png"
+	},
+	{
+		"name": "Beach Sohee",
+		"aiType": "Assassin",
+    "fallbackAiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Beach Sohee.png"
+	},
+	{
+		"name": "Beach Yuze",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Beach Yuze.png"
+	},
+	{
+		"name": "Bari",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Bari.png"
+	},
+	{
+		"name": "Beth",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Beth.png"
+	},
+	{
+		"name": "Bianca",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Bianca.png"
+	},
+	{
+		"name": "Catherine",
+		"aiType": "Ranged",
+		"class": "Ranged",
+    "isRare": true,
+		"imgName": "Catherine.png"
+	},
+	{
+		"name": "Coco",
+		"aiType": "Ranged",
+		"class": "Ranged",
+    "isRare": true,
+		"imgName": "Coco.png"
+	},
+	{
+		"name": "Craig",
+		"aiType": "Melee",
+		"class": "Tank",
+    "isRare": true,
+		"imgName": "Craig.png"
+	},
+	{
+		"name": "Dolf",
+		"aiType": "Ranged",
+		"class": "Ranged",
+    "isRare": true,
+		"imgName": "Dolf.png"
+	},
+	{
+		"name": "Eleanor",
+		"aiType": "Ranged",
+		"class": "Support",
+		"imgName": "Eleanor.png"
+	},
+	{
+		"name": "Elvira",
+		"aiType": "Melee",
+		"class": "Ranged",
+    "isRare": true,
+		"imgName": "Elvira.png"
+	},
+	{
+		"name": "Eugene",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Eugene.png"
+	},
+	{
+		"name": "Eva",
+		"aiType": "Ranged",
+		"class": "Ranged",
+    "isRare": true,
+		"imgName": "Eva.png"
+	},
+	{
+		"name": "Favi",
+		"aiType": "Ranged",
+		"class": "Support",
+    "isRare": true,
+		"imgName": "Favi.png"
+	},
+	{
+		"name": "Fei",
+		"aiType": "Melee",
+		"class": "Warrior",
+    "isRare": true,
+		"imgName": "Fei.png"
+	},
+	{
+		"name": "Knight",
+		"aiType": "Warrior",
+		"class": "Warrior",
+    "isRare": true,
+		"imgName": "Female Knight.png"
+	},
+	{
+		"name": "Future Knight",
+		"aiType": "Ranged",
+		"class": "Warrior",
+		"imgName": "Future Knight.png"
+	},
+	{
+		"name": "Future Princess",
+		"aiType": "Melee",
+		"class": "Tank",
+		"imgName": "Future Princess.png"
+	},
+	{
+		"name": "Gabriel",
+		"aiType": "Ranged",
+		"class": "Support",
+		"imgName": "Gabriel.png"
+	},
+	{
+		"name": "Garam",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Garam.png"
+	},
+	{
+		"name": "Girgas",
+		"aiType": "Ranged",
+		"class": "Ranged",
+    "isRare": true,
+		"imgName": "Girgas.png"
+	},
+	{
+		"name": "Gremory",
+		"aiType": "Melee",
+		"class": "Support",
+    "isRare": true,
+		"imgName": "Gremory.png"
+	},
+	{
+		"name": "Hekate",
+		"aiType": "Ranged",
+		"class": "Ranged",
+    "isRare": true,
+		"imgName": "Hekate.png"
+	},
+	{
+		"name": "Idol Captain Eva",
+		"aiType": "Melee",
+		"class": "Support",
+		"imgName": "Idol Captain Eva.png"
+	},
+	{
+		"name": "Karina",
+		"aiType": "Ranged",
+		"class": "Support",
+    "isRare": true,
+		"imgName": "Karina.png"
+	},
+	{
+		"name": "Lahn",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Lahn.png"
+	},
+	{
+		"name": "Lapice",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Lapice.png"
+	},
+	{
+		"name": "Lavi",
+		"aiType": "Melee",
+		"class": "Tank",
+    "isRare": true,
+		"imgName": "Lavi.png"
+	},
+	{
+		"name": "Lilith",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Lilith.png"
+	},
+	{
+		"name": "Loriane",
+		"aiType": "Melee",
+		"class": "Support",
+    "isRare": true,
+		"imgName": "Loraine.png"
+	},
+	{
+		"name": "Lucy",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Lucy.png"
+	},
+	{
+		"name": "Lupina",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Lupina.png"
+	},
+	{
+		"name": "Lynn",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Lynn.png"
+	},
+	{
+		"name": "Marianne",
+		"aiType": "Ranged",
+		"class": "Ranged",
+    "isRare": true,
+		"imgName": "Marianne.png"
+	},
+	{
+		"name": "Marina",
+		"aiType": "Melee",
+		"class": "Tank",
+		"imgName": "Marina.png"
+	},
+	{
+		"name": "Marvin",
+		"aiType": "Melee",
+		"class": "Warrior",
+    "isRare": true,
+		"imgName": "Marvin.png"
+	},
+	{
+		"name": "Mayreel",
+		"aiType": "Ranged",
+		"class": "Support",
+		"imgName": "Mayreel.png"
+	},
+	{
+		"name": "Mei",
+		"aiType": "Melee",
+		"class": "Warrior",
+    "isRare": true,
+		"imgName": "Mei.png"
+	},
+	{
+		"name": "Miya",
+		"aiType": "Ranged",
+		"class": "Support",
+		"imgName": "Miya.png"
+	},
+	{
+		"name": "MK.99",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Mk.99.png"
+	},
+	{
+		"name": "Nari",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Nari.png"
+	},
+	{
+		"name": "Neva",
+		"aiType": "Melee",
+		"class": "Warrior",
+    "isRare": true,
+		"imgName": "Neva.png"
+	},
+	{
+		"name": "Noxia",
+		"aiType": "Ranged",
+		"class": "Support",
+    "summons": "Betsy",
+		"imgName": "Noxia.png"
+	},
+	{
+		"name": "Betsy",
+		"aiType": "Melee",
+		"class": "Warrior",
+    "isSummon": true,
+		"imgName": "Noxia Summon.png"
+	},
+	{
+		"name": "Oghma",
+		"aiType": "Melee",
+		"class": "Tank",
+		"imgName": "Oghma.png"
+	},
+	{
+		"name": "Plitvice",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Plitvice.png"
+	},
+	{
+		"name": "Rachel",
+		"aiType": "Ranged",
+		"class": "Ranged",
+    "isRare": true,
+		"imgName": "Rachel.png"
+	},
+	{
+		"name": "Ranpang",
+		"aiType": "Melee",
+		"class": "Tank",
+    "isRare": true,
+		"imgName": "Ranpang.png"
+	},
+	{
+		"name": "Rie",
+		"aiType": "Ranged",
+		"class": "Ranged",
+    "isRare": true,
+		"imgName": "Rie.png"
+	},
+	{
+		"name": "Rue",
+		"aiType": "Assassin",
+    "fallbackAiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Rue.png"
+	},
+	{
+		"name": "Sohee",
+		"aiType": "Ranged",
+		"class": "Ranged",
+    "isRare": true,
+		"imgName": "Sohee.png"
+	},
+  {
+    "name": "Scintillia",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Scintillia.png"
+  },
+	{
+		"name": "Tinia",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Tinia.png"
+	},
+	{
+		"name": "Veronica",
+		"aiType": "Ally",
+    "fallbackAiType": "Ranged",
+		"class": "Support",
+		"imgName": "Veronica.png"
+	},
+	{
+		"name": "Vishuvac",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Vishuvac.png"
+	},
+	{
+		"name": "White Beast",
+		"aiType": "Melee",
+		"class": "Warrior",
+    "isRare": true,
+		"imgName": "White Beast.png"
+	},
+	{
+		"name": "Yuze",
+		"aiType": "Melee",
+		"class": "Warrior",
+    "isRare": true,
+		"imgName": "Yuze.png"
+	}
+]
