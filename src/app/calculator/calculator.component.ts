@@ -109,7 +109,6 @@ export class CalculatorComponent implements OnInit {
   public matrix: Array<Tile>;
 
   constructor(
-    private characterServiceService: CharacterService,
     public dialog: MatDialog
   ) { }
 
@@ -120,8 +119,8 @@ export class CalculatorComponent implements OnInit {
 
   public reset() {
     this.matrix = this.generateMatrix();
-    this.goodParty = createParty('Good', 'A');
-    this.evilParty = createParty('Evil', 'E');
+    this.goodParty = createParty('Good', 'A', (party) => this.goodParty = party);
+    this.evilParty = createParty('Evil', 'E', (party) => this.evilParty = party);
   }
 
   private returnPositionInLine(id: number): number {

@@ -48,7 +48,8 @@ export interface Party {
   name: string;
   prefix: string;
   size: number;
-  tiles: Array<Tile>
+  tiles: Array<Tile>,
+  updateParty: (party: Party) => void;
 }
 
 export interface Coordinates {

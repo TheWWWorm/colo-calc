@@ -1,8 +1,8 @@
 <div>
   <h4>{{ title }}</h4>
   <div class="hero-list">
-    <span *ngFor="let character of heroList; let i = index">
-      <img *ngIf="character" [src]="character.imgName" [src]="character.imgName" [alt]="character.name" (click)="changeHero(i)" [title]="character.name">
+    <span *ngFor="let character of heroList; let i = index" (click)="changeHero(i)">
+      <img *ngIf="character" [src]="character.imgName" [src]="character.imgName" [alt]="character.name" [title]="character.name">
       <span *ngIf="!character">?</span>
     </span>
   </div>

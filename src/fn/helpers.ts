@@ -1,6 +1,6 @@
 import { Party, Tile } from "src/app/calculator/calculator.types"
 
-export function createParty(name: string, prefix: string): Party {
+export function createParty(name: string, prefix: string, updateParty: Party['updateParty']): Party {
   return {
     name,
     prefix,
@@ -11,6 +11,7 @@ export function createParty(name: string, prefix: string): Party {
         value: '❓' + prefix + (i + 1)
       }
     }),
+    updateParty
   }
 }
 

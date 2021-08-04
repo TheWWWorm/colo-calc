@@ -42,3 +42,7 @@ span {
 .actions > * {
   margin-right: 10px;
 }
+
+:host mat-label {
+  color: white !important;
+}
