@@ -164,9 +164,9 @@ export class CalculatorComponent implements OnInit {
       potentialTargets = defenders.filter(validTileId);
     // Target closes friend
     } else if (attackerAi === AiType.Ally) {
-      potentialTargets = attackers.filter((m) => validTileId(m) && !alreadyInTarget.includes(m) && attacker.id !== m.id);
+      potentialTargets = attackers.filter((m) => validTileId(m) && attacker.id !== m.id);
     } else if (attackerAi === AiType.Assassin) {
-      potentialTargets = defenders.filter((m) => validTileId(m) && m.character.class === CharacterClass.Ranged);
+      potentialTargets = defenders.filter((m) => validTileId(m) && !alreadyInTarget.includes(m) && m.character.class === CharacterClass.Ranged);
     }
     return potentialTargets;
   }
