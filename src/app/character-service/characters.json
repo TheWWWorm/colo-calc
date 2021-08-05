@@ -141,7 +141,7 @@
 	},
 	{
 		"name": "Knight",
-		"aiType": "Warrior",
+		"aiType": "Melee",
 		"class": "Warrior",
     "isRare": true,
 		"imgName": "Female Knight.png"
