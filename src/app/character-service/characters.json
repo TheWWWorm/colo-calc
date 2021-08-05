@@ -127,7 +127,7 @@
 	},
 	{
 		"name": "Favi",
-		"aiType": "Ranged",
+		"aiType": "Melee",
 		"class": "Support",
     "isRare": true,
 		"imgName": "Favi.png"
@@ -180,7 +180,7 @@
 	{
 		"name": "Gremory",
 		"aiType": "Melee",
-		"class": "Support",
+		"class": "Ranged",
     "isRare": true,
 		"imgName": "Gremory.png"
 	},
@@ -296,7 +296,7 @@
 	},
 	{
 		"name": "Miya",
-		"aiType": "Ranged",
+		"aiType": "Melee",
 		"class": "Support",
 		"imgName": "Miya.png"
 	},
@@ -402,7 +402,7 @@
 	{
 		"name": "Veronica",
 		"aiType": "Ally",
-    "fallbackAiType": "Ranged",
+    "fallbackAiType": "Melee",
 		"class": "Support",
 		"imgName": "Veronica.png"
 	},
