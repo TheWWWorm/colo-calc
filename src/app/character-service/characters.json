@@ -379,6 +379,12 @@
     "class": "Warrior",
     "imgName": "Scintillia.png"
   },
+  {
+    "name": "Shapira",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Shapira.png"
+  },
 	{
 		"name": "Tinia",
 		"aiType": "Ranged",

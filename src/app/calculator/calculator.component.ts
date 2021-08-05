@@ -221,7 +221,7 @@ export class CalculatorComponent implements OnInit {
         });
         return distanceArr;
       }, [] as Array<TileDistance>).sort((a, b) => {
-        if (usingAi === AiType.Assassin || usingAi === AiType.Ally) {
+        if (usingAi === AiType.Ally) {
           return b.distance - a.distance
         }
         return a.distance - b.distance
