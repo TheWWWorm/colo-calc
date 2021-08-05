@@ -8,7 +8,7 @@ import { LabelKeys, Language, mappedLangData } from './traslations.data';
 })
 export class LanguageService {
 
-  public language = Language.ru;
+  public language = Language.en;
   public characterList$ = new BehaviorSubject<Array<Character>>(mappedLangData[this.language].characters);
 
   constructor() { }
