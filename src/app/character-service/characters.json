@@ -383,6 +383,7 @@
     "name": "Shapira",
     "aiType": "Melee",
     "class": "Warrior",
+    "isRare": true,
     "imgName": "Shapira.png"
   },
 	{
