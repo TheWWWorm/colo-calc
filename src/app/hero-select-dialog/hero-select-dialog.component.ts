@@ -57,7 +57,7 @@ export class HeroSelectDialogComponent implements OnInit {
   public updateFilters() {
     const value: string = this.filterField.value;
     if (value && value.length > 1) {
-      this.displayCharacters = this.characterService.charList.filter((ch) => ch.name.toLowerCase().includes(value.toLowerCase()));
+      this.displayCharacters = this.characterService.fullCharList .filter((ch) => ch.name.toLowerCase().includes(value.toLowerCase()));
     } else {
       this.displayCharacters = this.characters;
     }

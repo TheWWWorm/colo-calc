@@ -204,6 +204,13 @@
     "isRare": true,
 		"imgName": "Karina.png"
 	},
+  {
+		"name": "Kang",
+		"aiType": "Melee",
+		"class": "Warrior",
+    "isSecret": true,
+		"imgName": "kang.gif"
+	},
 	{
 		"name": "Lahn",
 		"aiType": "Melee",

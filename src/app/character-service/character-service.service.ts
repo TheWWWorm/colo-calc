@@ -13,7 +13,7 @@ export class CharacterService {
       imgName: `/assets/CharacterPortraits/${ch.imgName}`
     } as Character
   })
-  public charList: Array<Character> = this.fullCharList.filter((ch) => !ch.isSummon);
+  public charList: Array<Character> = this.fullCharList.filter((ch) => !ch.isSummon && !ch.isSecret);
   public summonList: Array<Character> = this.fullCharList.filter((ch) => ch.isSummon);
   public uniqueList: Array<Character> = this.charList.filter((ch) => !ch.isRare);
 

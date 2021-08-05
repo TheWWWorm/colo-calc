@@ -28,6 +28,7 @@ export interface Character {
   imgName: string;
   isSummon?: boolean;
   isRare?: boolean;
+  isSecret?: boolean;
   summonName?: string;
 }
 
