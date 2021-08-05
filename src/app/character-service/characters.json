@@ -369,7 +369,7 @@
 	{
 		"name": "Rue",
 		"aiType": "Assassin",
-    "fallbackAiType": "Ranged",
+    "fallbackAiType": "Melee",
 		"class": "Ranged",
 		"imgName": "Rue.png"
 	},
