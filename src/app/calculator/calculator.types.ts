@@ -20,8 +20,8 @@ export enum CharacterClass {
   Tank = 'Tank',
 }
 
-export interface Character {
-  name: string;
+export interface RawChar {
+  id: string;
   aiType: AiType;
   fallbackAiType?: AiType;
   class: CharacterClass;
@@ -30,8 +30,14 @@ export interface Character {
   isRare?: boolean;
   isSecret?: boolean;
   summonName?: string;
-}
+};
 
+export interface TranslatedChar {
+  name: string;
+  alias?: Array<string>
+};
+
+export type Character = RawChar & TranslatedChar;
 
 export interface Tile {
   id: number;

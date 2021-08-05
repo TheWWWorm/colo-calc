@@ -1,0 +1,21 @@
+{
+  "appTitle": "Colosseum calculator",
+  "discordInviteTitle": "Any ideas? Feedback? Join our discord!",
+  "allyLineToggle": "Show ally lines",
+  "enemyLineToggle": "Show enemy lines",
+  "tableResetBtnTitle": "Reset table",
+  "partiesTitle": "Parties",
+  "allyTeam": "Your Team",
+  "enemyTeam": "Enemy Team",
+  "partyHint": "Click on the tiles to add/move heroes. Click on the party list to add/change heroes!",
+  "orderTitle": "Order of attacks:",
+  "dialogHeroSelectTitle": "Select your hero",
+  "dialogOnlyUniqueCheckbox": "Only unique heroes",
+  "dialogHint": "You can also press enter to select first hero in the list",
+  "dialogFilter": "Filter",
+  "dialogNothingFound": "No character was found!",
+  "supportLink": "Consider supporting me!",
+  "targets": "targets",
+  "withDistance": "with a distance of",
+  "language": "Language"
+}

@@ -1,0 +1,21 @@
+{
+  "appTitle": "Калькулятор коллизея",
+  "discordInviteTitle": "Присоединяйся к нашему дискорду!",
+  "allyLineToggle": "Линии союзников",
+  "enemyLineToggle": "Линии врагов",
+  "tableResetBtnTitle": "Сбросить таблицу",
+  "partiesTitle": "Команды",
+  "allyTeam": "Твоя команда",
+  "enemyTeam": "Команда врага",
+  "partyHint": "Жми на клетки чтобы добавить/двигать героев. Жми на список команд чтобы добавить/менять героев!",
+  "orderTitle": "Порядок атак:",
+  "dialogHeroSelectTitle": "Выбери героя",
+  "dialogOnlyUniqueCheckbox": "Только уникальные герои",
+  "dialogHint": "Ты можешь нажать enter чтобы выбрать первого героя в списке!",
+  "dialogFilter": "Фильтер",
+  "dialogNothingFound": "Ничего не найдено =(",
+  "supportLink": "Поддержи меня!",
+  "targets": "атакует",
+  "withDistance": "с расстоянием в",
+  "language": "Язык"
+}

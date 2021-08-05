@@ -1,6 +1,6 @@
 [
 	{
-		"name": "Aisha",
+		"id": "Aisha",
 		"aiType": "Ally",
     "fallbackAiType": "Melee",
 		"class": "Support",
@@ -8,419 +8,419 @@
 		"imgName": "Aisha.png"
 	},
 	{
-		"name": "Akayuki",
+		"id": "Akayuki",
 		"aiType": "Melee",
 		"class": "Warrior",
     "isRare": true,
 		"imgName": "Akayuki.png"
 	},
 	{
-		"name": "Alef",
+		"id": "Alef",
 		"aiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Alef.png"
 	},
 	{
-		"name": "Amy",
+		"id": "Amy",
 		"aiType": "Melee",
 		"class": "Warrior",
     "isRare": true,
 		"imgName": "Amy.png"
 	},
 	{
-		"name": "Aoba",
+		"id": "Aoba",
 		"aiType": "Ranged",
 		"class": "Support",
     "isRare": true,
 		"imgName": "Aoba.png"
 	},
 	{
-		"name": "Arabelle",
+		"id": "Arabelle",
 		"aiType": "Ranged",
 		"class": "Ranged",
 		"imgName": "Arabelle.png"
 	},
 	{
-		"name": "Beach Sohee",
+		"id": "Beach Sohee",
 		"aiType": "Assassin",
     "fallbackAiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Beach Sohee.png"
 	},
 	{
-		"name": "Beach Yuze",
+		"id": "Beach Yuze",
 		"aiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Beach Yuze.png"
 	},
 	{
-		"name": "Bari",
+		"id": "Bari",
 		"aiType": "Ranged",
 		"class": "Ranged",
 		"imgName": "Bari.png"
 	},
 	{
-		"name": "Beth",
+		"id": "Beth",
 		"aiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Beth.png"
 	},
 	{
-		"name": "Bianca",
+		"id": "Bianca",
 		"aiType": "Ranged",
 		"class": "Ranged",
 		"imgName": "Bianca.png"
 	},
 	{
-		"name": "Catherine",
+		"id": "Catherine",
 		"aiType": "Ranged",
 		"class": "Ranged",
     "isRare": true,
 		"imgName": "Catherine.png"
 	},
 	{
-		"name": "Coco",
+		"id": "Coco",
 		"aiType": "Ranged",
 		"class": "Ranged",
     "isRare": true,
 		"imgName": "Coco.png"
 	},
 	{
-		"name": "Craig",
+		"id": "Craig",
 		"aiType": "Melee",
 		"class": "Tank",
     "isRare": true,
 		"imgName": "Craig.png"
 	},
 	{
-		"name": "Dolf",
+		"id": "Dolf",
 		"aiType": "Ranged",
 		"class": "Ranged",
     "isRare": true,
 		"imgName": "Dolf.png"
 	},
 	{
-		"name": "Eleanor",
+		"id": "Eleanor",
 		"aiType": "Ranged",
 		"class": "Support",
 		"imgName": "Eleanor.png"
 	},
 	{
-		"name": "Elvira",
+		"id": "Elvira",
 		"aiType": "Melee",
 		"class": "Ranged",
     "isRare": true,
 		"imgName": "Elvira.png"
 	},
 	{
-		"name": "Eugene",
+		"id": "Eugene",
 		"aiType": "Ranged",
 		"class": "Warrior",
 		"imgName": "Eugene.png"
 	},
 	{
-		"name": "Eva",
+		"id": "Eva",
 		"aiType": "Melee",
 		"class": "Ranged",
     "isRare": true,
 		"imgName": "Eva.png"
 	},
 	{
-		"name": "Favi",
+		"id": "Favi",
 		"aiType": "Melee",
 		"class": "Support",
     "isRare": true,
 		"imgName": "Favi.png"
 	},
 	{
-		"name": "Fei",
+		"id": "Fei",
 		"aiType": "Melee",
 		"class": "Warrior",
     "isRare": true,
 		"imgName": "Fei.png"
 	},
 	{
-		"name": "Knight",
+		"id": "Knight",
 		"aiType": "Melee",
 		"class": "Warrior",
     "isRare": true,
 		"imgName": "Female Knight.png"
 	},
 	{
-		"name": "Future Knight",
+		"id": "Future Knight",
 		"aiType": "Ranged",
 		"class": "Warrior",
 		"imgName": "Future Knight.png"
 	},
 	{
-		"name": "Future Princess",
+		"id": "Future Princess",
 		"aiType": "Melee",
 		"class": "Tank",
 		"imgName": "Future Princess.png"
 	},
 	{
-		"name": "Gabriel",
+		"id": "Gabriel",
 		"aiType": "Ranged",
 		"class": "Support",
 		"imgName": "Gabriel.png"
 	},
 	{
-		"name": "Garam",
+		"id": "Garam",
 		"aiType": "Ranged",
 		"class": "Ranged",
 		"imgName": "Garam.png"
 	},
 	{
-		"name": "Girgas",
+		"id": "Girgas",
 		"aiType": "Ranged",
 		"class": "Ranged",
     "isRare": true,
 		"imgName": "Girgas.png"
 	},
 	{
-		"name": "Gremory",
+		"id": "Gremory",
 		"aiType": "Melee",
 		"class": "Ranged",
     "isRare": true,
 		"imgName": "Gremory.png"
 	},
 	{
-		"name": "Hekate",
+		"id": "Hekate",
 		"aiType": "Ranged",
 		"class": "Ranged",
     "isRare": true,
 		"imgName": "Hekate.png"
 	},
 	{
-		"name": "Idol Captain Eva",
+		"id": "Idol Captain Eva",
 		"aiType": "Melee",
 		"class": "Support",
 		"imgName": "Idol Captain Eva.png"
 	},
 	{
-		"name": "Karina",
+		"id": "Karina",
 		"aiType": "Ranged",
 		"class": "Support",
     "isRare": true,
 		"imgName": "Karina.png"
 	},
   {
-		"name": "Kang",
+		"id": "Kang",
 		"aiType": "Melee",
 		"class": "Warrior",
     "isSecret": true,
 		"imgName": "kang.gif"
 	},
 	{
-		"name": "Lahn",
+		"id": "Lahn",
 		"aiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Lahn.png"
 	},
 	{
-		"name": "Lapice",
+		"id": "Lapice",
 		"aiType": "Ranged",
 		"class": "Warrior",
 		"imgName": "Lapice.png"
 	},
 	{
-		"name": "Lavi",
+		"id": "Lavi",
 		"aiType": "Melee",
 		"class": "Tank",
     "isRare": true,
 		"imgName": "Lavi.png"
 	},
 	{
-		"name": "Lilith",
+		"id": "Lilith",
 		"aiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Lilith.png"
 	},
 	{
-		"name": "Loriane",
+		"id": "Loriane",
 		"aiType": "Melee",
 		"class": "Support",
     "isRare": true,
 		"imgName": "Loraine.png"
 	},
 	{
-		"name": "Lucy",
+		"id": "Lucy",
 		"aiType": "Ranged",
 		"class": "Ranged",
 		"imgName": "Lucy.png"
 	},
 	{
-		"name": "Lupina",
+		"id": "Lupina",
 		"aiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Lupina.png"
 	},
 	{
-		"name": "Lynn",
+		"id": "Lynn",
 		"aiType": "Ranged",
 		"class": "Warrior",
 		"imgName": "Lynn.png"
 	},
 	{
-		"name": "Marianne",
+		"id": "Marianne",
 		"aiType": "Ranged",
 		"class": "Ranged",
     "isRare": true,
 		"imgName": "Marianne.png"
 	},
 	{
-		"name": "Marina",
+		"id": "Marina",
 		"aiType": "Melee",
 		"class": "Tank",
 		"imgName": "Marina.png"
 	},
 	{
-		"name": "Marvin",
+		"id": "Marvin",
 		"aiType": "Ranged",
 		"class": "Warrior",
     "isRare": true,
 		"imgName": "Marvin.png"
 	},
 	{
-		"name": "Mayreel",
+		"id": "Mayreel",
 		"aiType": "Ranged",
 		"class": "Support",
 		"imgName": "Mayreel.png"
 	},
 	{
-		"name": "Mei",
+		"id": "Mei",
 		"aiType": "Melee",
 		"class": "Warrior",
     "isRare": true,
 		"imgName": "Mei.png"
 	},
 	{
-		"name": "Miya",
+		"id": "Miya",
 		"aiType": "Melee",
 		"class": "Support",
 		"imgName": "Miya.png"
 	},
 	{
-		"name": "MK.99",
+		"id": "MK.99",
 		"aiType": "Ranged",
 		"class": "Ranged",
 		"imgName": "Mk.99.png"
 	},
 	{
-		"name": "Nari",
+		"id": "Nari",
 		"aiType": "Ranged",
 		"class": "Ranged",
 		"imgName": "Nari.png"
 	},
 	{
-		"name": "Neva",
+		"id": "Neva",
 		"aiType": "Melee",
 		"class": "Warrior",
     "isRare": true,
 		"imgName": "Neva.png"
 	},
 	{
-		"name": "Noxia",
+		"id": "Noxia",
 		"aiType": "Ranged",
 		"class": "Support",
     "summons": "Betsy",
 		"imgName": "Noxia.png"
 	},
 	{
-		"name": "Betsy",
+		"id": "Betsy",
 		"aiType": "Melee",
 		"class": "Warrior",
     "isSummon": true,
 		"imgName": "Noxia Summon.png"
 	},
 	{
-		"name": "Oghma",
+		"id": "Oghma",
 		"aiType": "Melee",
 		"class": "Tank",
 		"imgName": "Oghma.png"
 	},
 	{
-		"name": "Plitvice",
+		"id": "Plitvice",
 		"aiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Plitvice.png"
 	},
 	{
-		"name": "Rachel",
+		"id": "Rachel",
 		"aiType": "Ranged",
 		"class": "Ranged",
     "isRare": true,
 		"imgName": "Rachel.png"
 	},
 	{
-		"name": "Ranpang",
+		"id": "Ranpang",
 		"aiType": "Melee",
 		"class": "Tank",
     "isRare": true,
 		"imgName": "Ranpang.png"
 	},
 	{
-		"name": "Rie",
+		"id": "Rie",
 		"aiType": "Melee",
 		"class": "Ranged",
     "isRare": true,
 		"imgName": "Rie.png"
 	},
 	{
-		"name": "Rue",
+		"id": "Rue",
 		"aiType": "Assassin",
     "fallbackAiType": "Melee",
 		"class": "Ranged",
 		"imgName": "Rue.png"
 	},
 	{
-		"name": "Sohee",
+		"id": "Sohee",
 		"aiType": "Ranged",
 		"class": "Ranged",
     "isRare": true,
 		"imgName": "Sohee.png"
 	},
   {
-    "name": "Scintillia",
+    "id": "Scintillia",
     "aiType": "Melee",
     "class": "Warrior",
     "imgName": "Scintillia.png"
   },
   {
-    "name": "Shapira",
+    "id": "Shapira",
     "aiType": "Melee",
     "class": "Warrior",
     "isRare": true,
     "imgName": "Shapira.png"
   },
 	{
-		"name": "Tinia",
+		"id": "Tinia",
 		"aiType": "Ranged",
 		"class": "Ranged",
 		"imgName": "Tinia.png"
 	},
 	{
-		"name": "Veronica",
+		"id": "Veronica",
 		"aiType": "Ally",
     "fallbackAiType": "Melee",
 		"class": "Support",
 		"imgName": "Veronica.png"
 	},
 	{
-		"name": "Vishuvac",
+		"id": "Vishuvac",
 		"aiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Vishuvac.png"
 	},
 	{
-		"name": "White Beast",
+		"id": "White Beast",
 		"aiType": "Melee",
 		"class": "Warrior",
     "isRare": true,
 		"imgName": "White Beast.png"
 	},
 	{
-		"name": "Yuze",
+		"id": "Yuze",
 		"aiType": "Melee",
 		"class": "Warrior",
     "isRare": true,

@@ -1,18 +1,28 @@
 <div class="calculator">
   <div>
-    <h2>Colosseum calculator</h2>
-    <a href="https://discord.gg/ghFPrvAnXt" target="_blank">Any ideas? Feedback? Join our discord!</a>
+    <h2>{{ 'appTitle' | _ }}</h2>
+    <div class="lang-switcher">
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'language' | _ }}</mat-label>
+        <mat-select [formControl]="langControl">
+          <mat-option *ngFor="let lang of langList" [value]="lang">
+            {{lang}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <a href="https://discord.gg/ghFPrvAnXt" target="_blank">{{ 'discordInviteTitle' | _ }}</a>
     <span class="actions">
-      <a>Show ally lines</a><input type="checkbox" [(ngModel)]="showAllyLinesChecked" (change)="calculateEvents()">
-      <a>Show enemy lines</a><input type="checkbox" [(ngModel)]="showEnemyLinesChecked" (change)="calculateEvents()">
-      <a (click)="reset()">Reset table</a>
+      <a>{{ 'allyLineToggle' | _ }}</a><input type="checkbox" [(ngModel)]="showAllyLinesChecked" (change)="calculateEvents()">
+      <a>{{ 'enemyLineToggle' | _ }}</a><input type="checkbox" [(ngModel)]="showEnemyLinesChecked" (change)="calculateEvents()">
+      <a (click)="reset()">{{ 'tableResetBtnTitle' | _ }}</a>
     </span>
     <app-field
       [matrix]="matrix"
     ></app-field>
   </div>
   <div>
-    <h3>Order of attacks:</h3>
+    <h3>{{ 'orderTitle' | _ }}</h3>
     <div class="attackOrder">
       <ol>
         <li *ngFor="let event of events">{{ event }}</li>
@@ -20,17 +30,17 @@
     </div>
   </div>
   <div class="unitSettings">
-    <h3>Parties</h3>
-    <div class="user-hint">Click on the tiles to add/move heroes. Click on the party list to add/change heroes!</div>
+    <h3>{{ 'partiesTitle' | _ }}</h3>
+    <div class="user-hint">{{ 'partyHint' | _ }}</div>
     <app-party
       [party]="goodParty"
-      title="Your team"
+      title="{{ 'allyTeam' | _ }}"
     ></app-party>
     <app-party
       [party]="evilParty"
-      title="Enemy team"
+      title="{{ 'enemyTeam' | _ }}"
     ></app-party>
     <!-- Also move clear button next to the party, instead of clearing the whole thing -->
   </div>
-  <div class="footer"><a class="help-me-link" href="https://ko-fi.com/wwworm" target="_blank">Consider supporting me!</a></div>
+  <div class="footer"><a class="help-me-link" href="https://ko-fi.com/wwworm" target="_blank">{{ 'supportLink' | _ }}</a></div>
 </div>

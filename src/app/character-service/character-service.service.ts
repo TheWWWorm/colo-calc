@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Character } from '../calculator/calculator.types';
+import { LanguageService } from '../language-service/language-service.service';
 import characters from './characters.json';
 
 @Injectable({
@@ -7,19 +8,27 @@ import characters from './characters.json';
 })
 export class CharacterService {
 
-  public fullCharList: Array<Character> = characters.map((ch) => {
-    return {
-      ...ch,
-      imgName: `/assets/CharacterPortraits/${ch.imgName}`
-    } as Character
-  })
-  public charList: Array<Character> = this.fullCharList.filter((ch) => !ch.isSummon && !ch.isSecret);
-  public summonList: Array<Character> = this.fullCharList.filter((ch) => ch.isSummon);
-  public uniqueList: Array<Character> = this.charList.filter((ch) => !ch.isRare);
+  public fullCharList: Array<Character>;
+  public charList: Array<Character>;
+  public summonList: Array<Character>;
+  public uniqueList: Array<Character>;
 
-  public defaultCharacter = this.charList[0];
+  public defaultCharacter: Character;
 
-  constructor() { }
+  constructor(private languageService: LanguageService) {
+    this.languageService.characterList$.subscribe((characters) => {
+      this.fullCharList = characters.map((ch) => {
+        return {
+          ...ch,
+          imgName: `/assets/CharacterPortraits/${ch.imgName}`
+        } as Character
+      });
+      this.charList = this.fullCharList.filter((ch) => !ch.isSummon && !ch.isSecret);
+      this.summonList = this.fullCharList.filter((ch) => ch.isSummon);
+      this.uniqueList = this.charList.filter((ch) => !ch.isRare);
+      this,this.defaultCharacter = this.charList[0];
+    });
+  }
 
   public getCharacter(name: string) {
     return this.charList.find((c) => c.name === name) || this.defaultCharacter;

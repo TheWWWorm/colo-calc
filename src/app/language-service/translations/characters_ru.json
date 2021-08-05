@@ -1,0 +1,226 @@
+{
+  "Aisha": {
+    "name": "Аиша"
+  },
+  "Akayuki": {
+    "name": "Акаюки"
+  },
+  "Alef": {
+    "name": "Алеф",
+    "alias": [
+      "поц"
+    ]
+  },
+  "Amy": {
+    "name": "Эми"
+  },
+  "Aoba": {
+    "name": "Аоба"
+  },
+  "Arabelle": {
+    "name": "Арабель"
+  },
+  "Beach Sohee": {
+    "name": "Пляжная Сохи"
+  },
+  "Beach Yuze": {
+    "name": "Пляжная Юзе"
+  },
+  "Bari": {
+    "name": "Бари"
+  },
+  "Beth": {
+    "name": "Бэт"
+  },
+  "Bianca": {
+    "name": "Бьянка"
+  },
+  "Catherine": {
+    "name": "Катерина"
+  },
+  "Coco": {
+    "name": "Коко"
+  },
+  "Craig": {
+    "name": "Крэйг"
+  },
+  "Dolf": {
+    "name": "Дольф"
+  },
+  "Eleanor": {
+    "name": "Элеанор"
+  },
+  "Elvira": {
+    "name": "Эльвира"
+  },
+  "Eugene": {
+    "name": "Юджин"
+  },
+  "Eva": {
+    "name": "Эва"
+  },
+  "Favi": {
+    "name": "Фави"
+  },
+  "Fei": {
+    "name": "Фэй"
+  },
+  "Knight": {
+    "name": "Рыцарь"
+  },
+  "Future Knight": {
+    "name": "Рыцарь из будущего",
+    "alias": [
+      "фк"
+    ]
+  },
+  "Future Princess": {
+    "name": "Принцесса из будущего",
+    "alias": [
+      "фп"
+    ]
+  },
+  "Gabriel": {
+    "name": "Габриель"
+  },
+  "Garam": {
+    "name": "Гарам"
+  },
+  "Girgas": {
+    "name": "Гиргас"
+  },
+  "Gremory": {
+    "name": "Гремори"
+  },
+  "Hekate": {
+    "name": "Хекате"
+  },
+  "Idol Captain Eva": {
+    "name": "Идол Эва"
+  },
+  "Karina": {
+    "name": "Карина"
+  },
+  "Kang": {
+    "name": "Канг"
+  },
+  "Lahn": {
+    "name": "Лан"
+  },
+  "Lapice": {
+    "name": "Лапис"
+  },
+  "Lavi": {
+    "name": "Лави"
+  },
+  "Lilith": {
+    "name": "Лилит"
+  },
+  "Loriane": {
+    "name": "Лорэйн"
+  },
+  "Lucy": {
+    "name": "Люси"
+  },
+  "Lupina": {
+    "name": "Люпина",
+    "alias": [
+      "лупа"
+    ]
+  },
+  "Lynn": {
+    "name": "Лин"
+  },
+  "Marianne": {
+    "name": "Марианн"
+  },
+  "Marina": {
+    "name": "Марина"
+  },
+  "Marvin": {
+    "name": "Марвин"
+  },
+  "Mayreel": {
+    "name": "Мэйрил",
+    "alias": [
+      "овца"
+    ]
+  },
+  "Mei": {
+    "name": "Мэй"
+  },
+  "Miya": {
+    "name": "Мия"
+  },
+  "MK.99": {
+    "name": "MK.99",
+    "alias": [
+      "mk99",
+      "mkay"
+    ]
+  },
+  "Nari": {
+    "name": "Нари",
+    "alias": [
+      "крыса",
+      "мышь"
+    ]
+  },
+  "Neva": {
+    "name": "Нэва"
+  },
+  "Noxia": {
+    "name": "Ноксия",
+    "alias": [
+      "нокия"
+    ]
+  },
+  "Betsy": {
+    "name": "Betsy"
+  },
+  "Oghma": {
+    "name": "Огма"
+  },
+  "Plitvice": {
+    "name": "Плитвайс",
+    "alias": [
+      "плита"
+    ]
+  },
+  "Rachel": {
+    "name": "Рэйчел"
+  },
+  "Ranpang": {
+    "name": "Ранпанг"
+  },
+  "Rie": {
+    "name": "Рие"
+  },
+  "Rue": {
+    "name": "Ру"
+  },
+  "Sohee": {
+    "name": "Сохи"
+  },
+  "Scintillia": {
+    "name": "Scintillia"
+  },
+  "Shapira": {
+    "name": "Шапира"
+  },
+  "Tinia": {
+    "name": "Тиния"
+  },
+  "Veronica": {
+    "name": "Вероника"
+  },
+  "Vishuvac": {
+    "name": "Вишувак"
+  },
+  "White Beast": {
+    "name": "Белый зверь"
+  },
+  "Yuze": {
+    "name": "Юзе"
+  }
+}

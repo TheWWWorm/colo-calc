@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { of } from 'rxjs';
 import { Observable } from 'rxjs';
 import { createParty, validTileId } from 'src/fn/helpers';
 import { CharacterService } from '../character-service/character-service.service';
 import { HeroSelectDialogComponent } from '../hero-select-dialog/hero-select-dialog.component';
+import { LanguageService } from '../language-service/language-service.service';
+import { Language, languageList } from '../language-service/traslations.data';
 import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, TargetColour, AiType, CharacterClass, Character } from './calculator.types';
 
 @Component({
@@ -13,6 +16,9 @@ import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, Targe
   styleUrls: ['./calculator.component.scss']
 })
 export class CalculatorComponent implements OnInit {
+
+  public langList = languageList;
+  public langControl = new FormControl(this.languageService.language);
 
   public showAllyLinesChecked = true;
   public showEnemyLinesChecked = true;
@@ -109,12 +115,17 @@ export class CalculatorComponent implements OnInit {
   public matrix: Array<Tile>;
 
   constructor(
-    public dialog: MatDialog
+    private dialog: MatDialog,
+    private languageService: LanguageService,
   ) { }
 
   ngOnInit() {
     console.log('init')
     this.reset();
+    this.langControl.valueChanges.subscribe((value) => {
+      this.languageService.changeLang(value);
+      this.calculateEvents();
+    })
   }
 
   public reset() {
@@ -234,7 +245,7 @@ export class CalculatorComponent implements OnInit {
         attacker.targets = target.tile;
         attacker.lineColour = lineColour;
       }
-      events.push(`${attacker.character.name} targets ${target.tile.character.name} with a distance of ${target.distance.toFixed(2)}`);
+      events.push(`${attacker.character.name} ${this.languageService.getLabel('targets')} ${target.tile.character.name} ${this.languageService.getLabel('withDistance')} ${target.distance.toFixed(2)}`);
       alreadyInTarget.push(target.tile);
 
       return alreadyInTarget;

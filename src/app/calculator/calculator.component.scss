@@ -55,3 +55,11 @@ h3 {
 .footer > .help-me-link {
   padding-right: 30px;
 }
+
+::ng-deep .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: #ce93d8 !important;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: #ce93d8 !important;
+}
