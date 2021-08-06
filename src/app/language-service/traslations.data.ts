@@ -11,13 +11,17 @@ import ruLabels from './translations/ru.json';
 import zhtwChars from './translations/character_zh-tw.json';
 import zhtwLabels from './translations/zh-tw.json';
 
+import deChars from './translations/characters_de.json';
+import deLabels from './translations/de.json';
+
 export enum Language {
   en = 'English',
   ru = 'Русский',
-  zhtw = '繁體中文'
+  zhtw = '繁體中文',
+  de = 'Deutsch'
 };
 
-export const languageList = [Language.en, Language.ru, Language.zhtw]
+export const languageList = [Language.en, Language.de, Language.ru, Language.zhtw]
 
 export type LabelKeys = keyof typeof enLabels;
 
@@ -55,5 +59,9 @@ export const mappedLangData = {
   [Language.zhtw]:  {
     labels: zhtwLabels,
     characters: applyCharacterLang(zhtwChars)
+  },
+  [Language.de]:  {
+    labels: deLabels,
+    characters: applyCharacterLang(deChars)
   },
 }
