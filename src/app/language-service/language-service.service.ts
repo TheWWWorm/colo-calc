@@ -9,7 +9,7 @@ import { BrowserLangCodeMap, LabelKeys, Language, mappedLangData } from './trasl
 })
 export class LanguageService {
 
-  public language: Language = this.localStorageService.get('lang') || this.findBrowserLanguage();
+  public language: Language = this.localStorageService.get('lang') || this.findBrowserLanguage() || Language.en;
   public characterList$ = new BehaviorSubject<Array<Character>>(mappedLangData[this.language].characters);
 
   constructor(
@@ -25,7 +25,7 @@ export class LanguageService {
         }
         foundLang = BrowserLangCodeMap[(lang.toLowerCase() as keyof typeof BrowserLangCodeMap)];
         return foundLang;
-      }, null)
+      }, null) || Language.en;
     } catch (error) {
       return Language.en;
     }

@@ -24,6 +24,7 @@ export enum Language {
 export const BrowserLangCodeMap = {
   'de': Language.de,
   'ru': Language.ru,
+  'ru-ru': Language.ru,
   'zh-tw': Language.zhtw,
   'en': Language.en
 };
