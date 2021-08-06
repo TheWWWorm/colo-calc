@@ -21,6 +21,13 @@ export enum Language {
   de = 'Deutsch'
 };
 
+export const BrowserLangCodeMap = {
+  'de': Language.de,
+  'ru': Language.ru,
+  'zh-tw': Language.zhtw,
+  'en': Language.en
+};
+
 export const languageList = [Language.en, Language.de, Language.ru, Language.zhtw]
 
 export type LabelKeys = keyof typeof enLabels;
