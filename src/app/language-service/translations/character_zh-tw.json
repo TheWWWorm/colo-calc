@@ -1,0 +1,388 @@
+{
+  "Aisha": {
+    "name": "艾伊莎",
+    "alias": [
+      "皇女"
+    ]
+  },
+  "Akayuki": {
+    "name": "赤雪"
+  },
+  "Alef": {
+    "name": "阿列夫",
+    "alias": [
+      "土正太"
+    ]
+  },
+  "Amy": {
+    "name": "愛彌",
+    "alias": [
+      "女僕"
+    ]
+  },
+  "Aoba": {
+    "name": "奧芭",
+    "alias": [
+      "土妖"
+    ]
+  },
+  "Arabelle": {
+    "name": "阿拉貝爾",
+    "alias": [
+      "暗砲",
+      "暗炮"
+    ]
+  },
+  "Beach Sohee": {
+    "name": "海灘蘇熙",
+    "alias": [
+      "海蘇西"
+    ]
+  },
+  "Beach Yuze": {
+    "name": "救生員優姬",
+    "alias": [
+      "救生員",
+      "噴水姬"
+    ]
+  },
+  "Bari": {
+    "name": "芭莉",
+    "alias": [
+        "土花"
+    ]
+  },
+  "Beth": {
+    "name": "貝絲",
+    "alias": [
+      "暗刀"
+    ]
+  },
+  "Bianca": {
+    "name": "比安卡",
+    "alias": [
+      "水魅"
+    ]
+  },
+  "Catherine": {
+    "name": "凱瑟琳",
+    "alias": [
+      "水弓",
+      "加拿大人"
+    ]
+  },
+  "Coco": {
+    "name": "可可"
+  },
+  "Craig": {
+    "name": "克雷格",
+    "alias": [
+      "土盾"
+    ]
+  },
+  "Dolf": {
+    "name": "多爾夫",
+    "alias": [
+      "火法"
+    ]
+  },
+  "Eleanor": {
+    "name": "艾利諾",
+    "alias": [
+      "光琴"
+    ]
+  },
+  "Elvira": {
+    "name": "艾薇拉",
+    "alias": [
+      "小紅帽"
+    ]
+  },
+  "Eugene": {
+    "name": "尤金",
+    "alias": [
+      "機車妹"
+    ]
+  },
+  "Eva": {
+    "name": "伊娃",
+    "alias": [
+      "團長"
+    ]
+  },
+  "Favi": {
+    "name": "法威",
+    "alias": [
+      "水補"
+    ]
+  },
+  "Fei": {
+    "name": "飛兒"
+  },
+  "Knight": {
+    "name": "騎士",
+    "alias": [
+      "主角",
+      "蠢臉"
+    ]
+  },
+  "Future Knight": {
+    "name": "未來騎士",
+    "alias": [
+      "未騎",
+	  "大騎士"
+    ]
+  },
+  "Future Princess": {
+    "name": "未來公主",
+    "alias": [
+      "公主",
+	    "大公主"
+    ]
+  },
+  "Gabriel": {
+    "name": "加百列",
+    "alias": [
+      "光天使",
+      "天使"
+    ]
+  },
+  "Garam": {
+    "name": "加拉姆",
+    "alias": [
+      "水狐",
+      "水壺",
+      "九尾"
+    ]
+  },
+  "Girgas": {
+    "name": "基魯加斯",
+    "alias": [
+      "火龍"
+    ]
+  },
+  "Gremory": {
+    "name": "葛蕾茉莉",
+    "alias": [
+      "燒瓶"
+    ]
+  },
+  "Hekate": {
+    "name": "赫卡蒂",
+    "alias": [
+      "土狙"
+    ]
+  },
+  "Idol Captain Eva": {
+    "name": "偶像伊娃",
+    "alias": [
+      "偶像"
+    ]
+  },
+  "Karina": {
+    "name": "卡麗娜",
+    "alias": [
+      "吸血鬼"
+    ]
+  },
+  "Kang": {
+    "name": "康兒"
+  },
+  "Lahn": {
+    "name": "蘭兒",
+    "alias": [
+      "殭屍"
+    ]
+  },
+  "Lapice": {
+    "name": "拉碧絲",
+    "alias": [
+      "傘妹"
+    ]
+  },
+  "Lavi": {
+    "name": "拉威",
+    "alias": [
+      "大猩猩"
+    ]
+  },
+  "Lilith": {
+    "name": "莉莉絲",
+    "alias": [
+      "暗爪"
+    ]
+  },
+  "Loriane": {
+    "name": "羅蘭茵",
+    "alias": [
+      "老闆娘",
+      "微笑之主"
+    ]
+  },
+  "Lucy": {
+    "name": "露西",
+    "alias": [
+      "怪盜",
+      "火怪盜"
+    ]
+  },
+  "Lupina": {
+    "name": " 瑞皮娜",
+    "alias": [
+      "暗狼"
+    ]
+  },
+  "Lynn": {
+    "name": "琳恩",
+    "alias": [
+      "火刀",
+      "火酒"
+    ]
+  },
+  "Marianne": {
+    "name": "瑪麗安",
+    "alias": [
+      "土鎗",
+      "土槍"
+    ]
+  },
+  "Marina": {
+    "name": "瑪麗娜",
+    "alias": [
+      "海軍"
+    ]
+  },
+  "Marvin": {
+    "name": "馬文",
+    "alias": [
+      "土拳"
+    ]
+  },
+  "Mayreel": {
+    "name": "梅麗兒",
+    "alias": [
+      "土羊",
+	  "羊駝"
+    ]
+  },
+  "Mei": {
+    "name": "梅兒"
+  },
+  "Miya": {
+    "name": "米雅",
+    "alias": [
+      "火補"
+    ]
+  },
+  "MK.99": {
+    "name": "MK.99",
+    "alias": [
+      "mk99",
+      "mk",
+	  "99"
+    ]
+  },
+  "Nari": {
+    "name": "奈里",
+    "alias": [
+      "狐狸",
+	  "破狐",
+	  "八尾"
+    ]
+  },
+  "Neva": {
+    "name": "涅娃"
+  },
+  "Noxia": {
+    "name": "諾克西亞",
+    "alias": [
+      "暗蘿"
+    ]
+  },
+  "Betsy": {
+    "name": "佩吉"
+  },
+  "Oghma": {
+    "name": "奧格瑪",
+    "alias": [
+      "暗坦"
+    ]
+  },
+  "Plitvice": {
+    "name": "普莉菲斯",
+    "alias": [
+      "鳳凰",
+      "布丁"
+    ]
+  },
+  "Rachel": {
+    "name": "瑞秋",
+    "alias": [
+      "海盜"
+    ]
+  },
+  "Ranpang": {
+    "name": "蘭芳",
+    "alias": [
+      "龍爪"
+    ]
+  },
+  "Rie": {
+    "name": "麗",
+    "alias": [
+      "棒球妹"
+    ]
+  },
+  "Rue": {
+    "name": "魯",
+    "alias": [
+      "鹿槍"
+    ]
+  },
+  "Sohee": {
+    "name": "蘇熙",
+    "alias": [
+      "抓鬼"
+    ]
+  },
+  "Scintillia": {
+    "name": "辛蒂拉",
+    "alias": [
+      "哈比",
+      "火焰哈比"
+    ]
+  },
+  "Shapira": {
+    "name": "夏碧拉",
+    "alias": [
+      "龍騎士"
+    ]
+  },
+  "Tinia": {
+    "name": "蒂尼亞",
+    "alias": [
+      "土弓"
+    ]
+  },
+  "Veronica": {
+    "name": "維蘿尼卡",
+    "alias": [
+      "水主教"
+    ]
+  },
+  "Vishuvac": {
+    "name": "比什巴赫",
+    "alias": [
+      "火爪"
+    ]
+  },
+  "White Beast": {
+    "name": "白獸",
+    "alias": [
+      "棉花糖"
+    ]
+  },
+  "Yuze": {
+    "name": "優姬"
+  }
+}
