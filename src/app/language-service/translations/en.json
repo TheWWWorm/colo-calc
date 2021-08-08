@@ -17,5 +17,8 @@
   "supportLink": "Consider supporting me!",
   "targets": "targets",
   "withDistance": "with a distance of",
-  "language": "Language"
+  "language": "Language",
+  "teamRememberCheckBox": "Remember my team",
+  "myTeamReset": "Reset my team",
+  "enemyTeamReset": "Enemy team reset"
 }

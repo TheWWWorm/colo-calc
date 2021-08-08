@@ -13,9 +13,8 @@
     </div>
     <a href="https://discord.gg/ghFPrvAnXt" target="_blank">{{ 'discordInviteTitle' | _ }}</a>
     <span class="actions">
-      <a>{{ 'allyLineToggle' | _ }}</a><input type="checkbox" [(ngModel)]="showAllyLinesChecked" (change)="calculateEvents()">
-      <a>{{ 'enemyLineToggle' | _ }}</a><input type="checkbox" [(ngModel)]="showEnemyLinesChecked" (change)="calculateEvents()">
-      <a (click)="reset()">{{ 'tableResetBtnTitle' | _ }}</a>
+      <span>{{ 'allyLineToggle' | _ }}</span><input type="checkbox" [(ngModel)]="showAllyLinesChecked" (change)="calculateEvents()">
+      <span>{{ 'enemyLineToggle' | _ }}</span><input type="checkbox" [(ngModel)]="showEnemyLinesChecked" (change)="calculateEvents()">
     </span>
     <app-field
       [matrix]="matrix"
@@ -32,10 +31,13 @@
   <div class="unitSettings">
     <h3>{{ 'partiesTitle' | _ }}</h3>
     <div class="user-hint">{{ 'partyHint' | _ }}</div>
+    <div><span>{{ 'teamRememberCheckBox' | _ }}</span><input type="checkbox" [(ngModel)]="rememberMyTeam" (change)="rememberMyTeamChecked()"></div>
+    <a (click)="resetGoodParty()">{{ 'myTeamReset' | _ }}</a>
     <app-party
       [party]="goodParty"
       title="{{ 'allyTeam' | _ }}"
     ></app-party>
+    <a (click)="resetEvilParty()">{{ 'enemyTeamReset' | _ }}</a>
     <app-party
       [party]="evilParty"
       title="{{ 'enemyTeam' | _ }}"

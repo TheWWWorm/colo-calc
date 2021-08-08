@@ -19,8 +19,6 @@
 
 a {
   color: #ce93d8;
-  padding-right: 5px;
-  padding-left: 10px;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -32,6 +30,11 @@ input[type="checkbox"] {
 
 .actions {
   float: right;
+}
+
+.actions > * {
+  padding-right: 5px;
+  padding-left: 10px;
 }
 
 h3 {

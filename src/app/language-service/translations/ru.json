@@ -17,5 +17,8 @@
   "supportLink": "Поддержи меня!",
   "targets": "атакует",
   "withDistance": "с расстоянием в",
-  "language": "Язык"
+  "language": "Язык",
+  "teamRememberCheckBox": "Запомнить мою команду",
+  "myTeamReset": "Сбросить мою команду",
+  "enemyTeamReset": "Сбросить команду врага"
 }

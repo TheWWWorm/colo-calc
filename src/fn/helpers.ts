@@ -1,14 +1,12 @@
 import { Party, Tile } from "src/app/calculator/calculator.types"
 
-export function createParty(name: string, prefix: string, updateParty: Party['updateParty']): Party {
+export function createParty(name: string, updateParty: Party['updateParty']): Party {
   return {
     name,
-    prefix,
     size: 0,
     tiles: Array.from(new Array(4), (_, i) => {
       return {
         id: null,
-        value: '❓' + prefix + (i + 1)
       }
     }),
     updateParty

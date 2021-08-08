@@ -8,6 +8,7 @@ import { CharacterService } from '../character-service/character-service.service
 import { HeroSelectDialogComponent } from '../hero-select-dialog/hero-select-dialog.component';
 import { LanguageService } from '../language-service/language-service.service';
 import { Language, languageList } from '../language-service/traslations.data';
+import { LocalStorageService } from '../local-storage-service/local-storage-service.service';
 import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, TargetColour, AiType, CharacterClass, Character } from './calculator.types';
 
 @Component({
@@ -16,14 +17,15 @@ import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, Targe
   styleUrls: ['./calculator.component.scss']
 })
 export class CalculatorComponent implements OnInit {
+  public myTeamKey = 'myTeam';
 
   public langList = languageList;
   public langControl = new FormControl(this.languageService.language);
 
   public showAllyLinesChecked = true;
   public showEnemyLinesChecked = true;
+  public rememberMyTeam = this.localStorageService.get('rememberMyTeam');;
   
-  // @TODO: local storage the "good" party
   public goodParty: Party;
   public evilParty: Party;
   // @TODO: good/evil summon party, like noxias pet
@@ -51,6 +53,7 @@ export class CalculatorComponent implements OnInit {
         positionInParty: null,
       }
       this.matrix[tile.id] = updatedTile;
+      this.syncMyTeam();
       this.calculateEvents();
     } else if (party.size < 4) {
       const unusedIndex = party.tiles.findIndex((member) => !validTileId(member));
@@ -68,6 +71,7 @@ export class CalculatorComponent implements OnInit {
     
           party.tiles[unusedIndex] = updatedTile;
           this.matrix[updatedTile.id] = updatedTile;
+          this.syncMyTeam();
           this.calculateEvents();
         }
       });
@@ -86,6 +90,7 @@ export class CalculatorComponent implements OnInit {
       const party = this.returnParty(tile.id);
       party.tiles[newTile.positionInParty] = newTile;
       this.matrix[newTile.id] = newTile;
+      this.syncMyTeam();
       this.calculateEvents();
     })
   }
@@ -117,21 +122,63 @@ export class CalculatorComponent implements OnInit {
   constructor(
     private dialog: MatDialog,
     private languageService: LanguageService,
+    private localStorageService: LocalStorageService,
+    private characterService: CharacterService
   ) { }
 
   ngOnInit() {
     console.log('init')
     this.reset();
+    this.resetGoodParty(true);
+    this.resetEvilParty();
+    console.log(this)
     this.langControl.valueChanges.subscribe((value) => {
       this.languageService.changeLang(value);
+      this.goodParty = this.updatePartyCharNames(this.goodParty);
+      this.evilParty = this.updatePartyCharNames(this.evilParty);
       this.calculateEvents();
     })
   }
 
   public reset() {
     this.matrix = this.generateMatrix();
-    this.goodParty = createParty('Good', 'A', (party) => this.goodParty = party);
-    this.evilParty = createParty('Evil', 'E', (party) => this.evilParty = party);
+  }
+
+  public updatePartyCharNames(party: Party) {
+    party = {...party}
+    party.tiles = party.tiles.map((tile) => {
+      return {
+        ...tile,
+        character: tile.character ? this.characterService.getCharacter(tile.character.id): null
+      }
+    });
+    return party;
+  }
+
+  public resetGoodParty(initial = false) {
+    if (initial) {
+      let localPartyData = this.localStorageService.get<Party>(this.myTeamKey);
+      if (localPartyData && localPartyData.tiles) {
+        localPartyData.updateParty = (party) => {
+          this.goodParty = party;
+          this.syncMyTeam();
+        }
+        localPartyData = this.updatePartyCharNames(localPartyData);
+        this.goodParty = localPartyData;
+        return;
+      }
+    }
+    this.goodParty = createParty('Good', (party) => {
+      this.goodParty = party;
+      this.syncMyTeam();
+    });
+    this.syncMyTeam();
+    this.calculateEvents();
+  }
+
+  public resetEvilParty() {
+    this.evilParty = createParty('Evil', (party) => this.evilParty = party);
+    this.calculateEvents();
   }
 
   private returnPositionInLine(id: number): number {
@@ -257,6 +304,9 @@ export class CalculatorComponent implements OnInit {
   }
 
   public calculateEvents() {
+    if (!this.goodParty || !this.evilParty) {
+      return;
+    }
     const goodGuysResult = this.calcTeamTarget(this.goodParty.tiles, this.evilParty.tiles, TargetColour.Ally, []);
     const badGuysResult = this.calcTeamTarget(this.evilParty.tiles, this.goodParty.tiles, TargetColour.Enemy, goodGuysResult.targeted);
     const newEvents = [
@@ -275,6 +325,47 @@ export class CalculatorComponent implements OnInit {
       data: {}
     })
     return dialogRef.afterClosed();
+  }
+
+  public syncMyTeam(key: string = this.myTeamKey, team: Party = this.goodParty, forced = false) {
+    if (!this.rememberMyTeam && !forced) {
+      return;
+    }
+    let teamToSave: Party;
+    if (team) {
+      teamToSave = {
+        ...team,
+        updateParty: null,
+        size: 0,
+        tiles: team.tiles.map((tile) => {
+          if (!tile) {
+            return tile;
+          } else {
+            return {
+              ...tile,
+              id: null,
+              lineColour: null,
+              onChangeCharacter: null,
+              targets: null,
+              onClick: null,
+            }
+          }
+        })
+      }
+    } else {
+      teamToSave = null;
+    }
+    console.log(teamToSave)
+    this.localStorageService.set<Party>(key, teamToSave);
+  }
+
+  public rememberMyTeamChecked() {
+    this.localStorageService.set('rememberMyTeam', this.rememberMyTeam);
+    if (this.rememberMyTeam) {
+      this.syncMyTeam(this.myTeamKey, this.goodParty, true);
+    } else {
+      this.syncMyTeam(this.myTeamKey, null, true);
+    }
   }
 
 }

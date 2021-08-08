@@ -30,8 +30,8 @@ export class CharacterService {
     });
   }
 
-  public getCharacter(name: string) {
-    return this.charList.find((c) => c.name === name) || this.defaultCharacter;
+  public getCharacter(id: string) {
+    return this.charList.find((c) => c.id === id) || this.defaultCharacter;
   }
 
 }
