@@ -1,41 +1,24 @@
 {
-
-"appTitle": "Kolosseum-Rechner",
-
-"discordInviteTitle": "Ideen? Feedback? Tritt unserem Discord-Server bei!",
-
-"allyLineToggle": "Eigene Linien anzeigen",
-
-"enemyLineToggle": "Gegnerische Linien anzeigen",
-
-"tableResetBtnTitle": "Tabelle zurücksetzen",
-
-"partiesTitle": "Gruppen",
-
-"allyTeam": "Dein Team",
-
-"enemyTeam": "Gegnerisches Team",
-
-"partyHint": "Klicke auf die Felder, um Helden hinzuzufügen oder zu bewegen. Klicke auf die Gruppenliste, um Helden hinzuzufügen oder auszutauschen!",
-
-"orderTitle": "Angriffsreihenfolge:",
-
-"dialogHeroSelectTitle": "Wähle deinen Helden aus",
-
-"dialogOnlyUniqueCheckbox": "Nur einzigartige Helden",
-
-"dialogHint": "Du kannst die Enter-Taste benutzen, um den ersten Helden in der Liste auszuwählen",
-
-"dialogFilter": "Filter",
-
-"dialogNothingFound": "Es wurde kein Held gefunden!",
-
-"supportLink": "Unterstütze mich hier!",
-
-"targets": "zielt auf",
-
-"withDistance": "mit einer Distanz von",
-
-"language": "Sprache"
-
+  "appTitle": "Kolosseum-Rechner",
+  "discordInviteTitle": "Ideen? Feedback? Tritt unserem Discord-Server bei!",
+  "allyLineToggle": "Eigene Linien anzeigen",
+  "enemyLineToggle": "Gegnerische Linien anzeigen",
+  "tableResetBtnTitle": "Tabelle zurücksetzen",
+  "partiesTitle": "Gruppen",
+  "allyTeam": "Dein Team",
+  "enemyTeam": "Gegnerisches Team",
+  "partyHint": "Klicke auf die Felder, um Helden hinzuzufügen oder zu bewegen. Klicke auf die Gruppenliste, um Helden hinzuzufügen oder auszutauschen!",
+  "orderTitle": "Angriffsreihenfolge:",
+  "dialogHeroSelectTitle": "Wähle deinen Helden aus",
+  "dialogOnlyUniqueCheckbox": "Nur einzigartige Helden",
+  "dialogHint": "Du kannst die Enter-Taste benutzen, um den ersten Helden in der Liste auszuwählen",
+  "dialogFilter": "Filter",
+  "dialogNothingFound": "Es wurde kein Held gefunden!",
+  "supportLink": "Unterstütze mich hier!",
+  "targets": "zielt auf",
+  "withDistance": "mit einer Distanz von",
+  "language": "Sprache",
+  "teamRememberCheckBox": "Team merken",
+  "myTeamReset": "Team zurücksetzen",
+  "enemyTeamReset": "Gegnerisches Team zurücksetzen"
 }
