@@ -17,5 +17,8 @@
   "supportLink": "考慮看看贊助我吧!",
   "targets": "攻擊",
   "withDistance": "而距離有",
-  "language": "語言"
+  "language": "語言",
+  "teamRememberCheckBox": "記住我的隊伍",
+  "myTeamReset": "重置我方隊伍",
+  "enemyTeamReset": "重置敵方隊伍"
 }
