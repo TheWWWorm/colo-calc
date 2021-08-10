@@ -147,15 +147,33 @@ export class CalculatorComponent implements OnInit {
   public updatePartyCharNames(party: Party) {
     party = {...party}
     party.tiles = party.tiles.map((tile) => {
-      return {
+      const updatedTile = {
         ...tile,
         character: tile.character ? this.characterService.getCharacter(tile.character.id): null
       }
+      if (validTileId(updatedTile)) {
+        this.matrix[tile.id] = updatedTile;
+      }
+      return updatedTile;
     });
     return party;
   }
 
+  public resetPartyTiles(oldParty: Party, newParty: Party) {
+    oldParty?.tiles.forEach((tile) => {
+      if (validTileId(tile)) {
+        this.matrix[tile.id] = {
+          value: '',
+          onClick: this.onTileClick,
+          onChangeCharacter: this.onChangeCharacter,
+          id: tile.id
+        }
+      }
+    });
+  }
+
   public resetGoodParty(initial = false) {
+    const oldParty = this.goodParty;
     if (initial) {
       let localPartyData = this.localStorageService.get<Party>(this.myTeamKey);
       if (localPartyData && localPartyData.tiles) {
@@ -172,12 +190,15 @@ export class CalculatorComponent implements OnInit {
       this.goodParty = party;
       this.syncMyTeam();
     });
+    this.resetPartyTiles(oldParty, this.goodParty);
     this.syncMyTeam();
     this.calculateEvents();
   }
 
   public resetEvilParty() {
+    const oldParty = this.evilParty;
     this.evilParty = createParty('Evil', (party) => this.evilParty = party);
+    this.resetPartyTiles(oldParty, this.evilParty);
     this.calculateEvents();
   }
 
