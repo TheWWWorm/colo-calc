@@ -10,11 +10,19 @@ import { BrowserLangCodeMap, LabelKeys, Language, mappedLangData } from './trasl
 export class LanguageService {
 
   public language: Language = this.localStorageService.get('lang') || this.findBrowserLanguage() || Language.en;
-  public characterList$ = new BehaviorSubject<Array<Character>>(mappedLangData[this.language].characters);
+  public characterList$: BehaviorSubject<Array<Character>>; 
 
   constructor(
     private localStorageService: LocalStorageService
-  ) { }
+  ) {
+    let charList = mappedLangData[this.language]?.characters;
+    if (!charList) {
+      this.language = Language.en;
+      this.localStorageService.set('lang', this.language);
+      charList = mappedLangData[Language.en].characters;
+    }
+    this.characterList$ = new BehaviorSubject<Array<Character>>(charList);
+  }
 
   public findBrowserLanguage(): Language {
     try {

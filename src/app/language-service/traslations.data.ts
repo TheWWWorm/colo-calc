@@ -14,11 +14,15 @@ import zhtwLabels from './translations/zh-tw.json';
 import deChars from './translations/characters_de.json';
 import deLabels from './translations/de.json';
 
+import ptbrChars from './translations/characters_pt-br.json';
+import ptbrLabels from './translations/pt-br.json';
+
 export enum Language {
   en = 'English',
+  de = 'Deutsch',
+  ptbr = 'Português Brasileiro',
   ru = 'Русский',
   zhtw = '繁體中文',
-  de = 'Deutsch'
 };
 
 export const BrowserLangCodeMap = {
@@ -26,10 +30,13 @@ export const BrowserLangCodeMap = {
   'ru': Language.ru,
   'ru-ru': Language.ru,
   'zh-tw': Language.zhtw,
-  'en': Language.en
+  'en': Language.en,
+  'pt-br': Language.ptbr,
+  'pt': Language.ptbr,
+  'br': Language.ptbr
 };
 
-export const languageList = [Language.en, Language.de, Language.ru, Language.zhtw]
+export const languageList = [Language.en, Language.de, Language.ptbr, Language.ru, Language.zhtw]
 
 export type LabelKeys = keyof typeof enLabels;
 
@@ -71,5 +78,9 @@ export const mappedLangData = {
   [Language.de]:  {
     labels: deLabels,
     characters: applyCharacterLang(deChars)
+  },
+  [Language.ptbr]:  {
+    labels: ptbrLabels,
+    characters: applyCharacterLang(ptbrChars)
   },
 }
