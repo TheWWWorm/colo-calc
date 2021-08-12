@@ -131,7 +131,7 @@ export class CalculatorComponent implements OnInit {
     this.reset();
     this.resetGoodParty(true);
     this.resetEvilParty();
-    console.log(this)
+
     this.langControl.valueChanges.subscribe((value) => {
       this.languageService.changeLang(value);
       this.goodParty = this.updatePartyCharNames(this.goodParty);
@@ -241,11 +241,17 @@ export class CalculatorComponent implements OnInit {
     // Ranged targets closest target
     } else if (attackerAi === AiType.Ranged) {
       potentialTargets = defenders.filter(validTileId);
-    // Target closes friend
+    // Target furtherest friend
     } else if (attackerAi === AiType.Ally) {
       potentialTargets = attackers.filter((m) => validTileId(m) && attacker.id !== m.id);
+    // 2 or MORE ranged - Attack closest untargeted ranged
+    // 1 ranged - Attack that ranged
+    // 0 ranged - melee AI fallback
     } else if (attackerAi === AiType.Assassin) {
-      potentialTargets = defenders.filter((m) => validTileId(m) && !alreadyInTarget.includes(m) && m.character.class === CharacterClass.Ranged);
+      potentialTargets = defenders.filter((m) => validTileId(m) && m.character.class === CharacterClass.Ranged);
+      if (potentialTargets.length > 1) {
+        potentialTargets = potentialTargets.filter((m) => !alreadyInTarget.includes(m));
+      }
     }
     return potentialTargets;
   }
@@ -376,7 +382,7 @@ export class CalculatorComponent implements OnInit {
     } else {
       teamToSave = null;
     }
-    console.log(teamToSave)
+
     this.localStorageService.set<Party>(key, teamToSave);
   }
 

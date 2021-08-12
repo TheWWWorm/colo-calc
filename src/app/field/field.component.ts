@@ -19,7 +19,7 @@ export class FieldComponent implements OnInit, OnChanges {
 
   public ngOnChanges(changes: SimpleChanges): void {
     this.lineService.clearLines();
-    console.log('here');
+
     this.matrix.forEach((tile) => {
       if (tile.targets) {
         // console.log(tile);
