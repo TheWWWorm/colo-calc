@@ -48,13 +48,16 @@
     "name": "Дольф"
   },
   "Eleanor": {
-    "name": "Элеанор"
+    "name": "Элеонора"
   },
   "Elvira": {
     "name": "Эльвира"
   },
   "Eugene": {
     "name": "Юджин"
+  },
+  "Erina": {
+    "name": "Эрина"
   },
   "Eva": {
     "name": "Эва"
@@ -132,7 +135,7 @@
     "name": "Лин"
   },
   "Marianne": {
-    "name": "Марианн"
+    "name": "Марианна"
   },
   "Marina": {
     "name": "Марина"
@@ -203,7 +206,8 @@
     "name": "Сохи"
   },
   "Scintillia": {
-    "name": "Scintillia"
+    "name": "Сцинтилла",
+    "alias": ["курица"]
   },
   "Shapira": {
     "name": "Шапира"

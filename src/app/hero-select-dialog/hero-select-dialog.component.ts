@@ -54,6 +54,9 @@ export class HeroSelectDialogComponent implements OnInit {
     this.updateFilters();
   }
 
+
+  // Allow filtering by hero types
+  // Also show more hero info on hover!
   public updateFilters() {
     const value: string = this.filterField.value;
     if (value && value.length > 0) {
