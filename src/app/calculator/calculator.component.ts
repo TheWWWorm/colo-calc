@@ -97,7 +97,7 @@ export class CalculatorComponent implements OnInit {
 
   public generateMatrix = (): Array<Tile> => {
     return Array.from(new Array(LINE_LENGTH * LINE_HEIGHT), (_, i): Tile => {
-      const posInLine = this.returnPositionInLine(i);
+      const posInLine = CalculatorComponent.returnPositionInLine(i);
       const baseTile: Tile = {
         value: '',
         onClick: this.onTileClick,
@@ -202,19 +202,19 @@ export class CalculatorComponent implements OnInit {
     this.calculateEvents();
   }
 
-  private returnPositionInLine(id: number): number {
+  public static returnPositionInLine(id: number): number {
     return (id % LINE_LENGTH) + 1;
   }
 
-  private returnPositionInColumn(id: number): number {
+  public static returnPositionInColumn(id: number): number {
     return Math.floor((id) / LINE_LENGTH) + 1;
   }
 
-  private returnParty(id: number): Party {
-    const posInLine = this.returnPositionInLine(id);
+  public returnParty(id: number): Party {
+    const posInLine = CalculatorComponent.returnPositionInLine(id);
     if (posInLine < 5) {
       return this.goodParty;
-    } if (posInLine > 10) {
+    } else if (posInLine > 10) {
       return this.evilParty;
     }
     throw Error('Invalid party id!');
@@ -290,14 +290,14 @@ export class CalculatorComponent implements OnInit {
       }
 
       const attackerPos: Coordinates = {
-        x: this.returnPositionInLine(attacker.id),
-        y: this.returnPositionInColumn(attacker.id)
+        x: CalculatorComponent.returnPositionInLine(attacker.id),
+        y: CalculatorComponent.returnPositionInColumn(attacker.id)
       }
       
       const target: TileDistance = potentialTargets.reduce((distanceArr, m) => {
         const defenderPos: Coordinates = {
-          x: this.returnPositionInLine(m.id),
-          y: this.returnPositionInColumn(m.id)
+          x: CalculatorComponent.returnPositionInLine(m.id),
+          y: CalculatorComponent.returnPositionInColumn(m.id)
         }
         const distance = this.calcDistance(attackerPos, defenderPos);
         distanceArr.push({

@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
+import { CalculatorComponent } from '../calculator/calculator.component';
 import { Tile } from '../calculator/calculator.types';
 
 @Component({
@@ -6,12 +7,26 @@ import { Tile } from '../calculator/calculator.types';
   templateUrl: './tile.component.html',
   styleUrls: ['./tile.component.scss']
 })
-export class TileComponent implements OnInit {
+export class TileComponent implements OnChanges {
   @Input() public tile: Tile = null;
+
+  public tileBackground: string;
 
   constructor() { }
 
-  ngOnInit() {
+  public ngOnChanges(): void {
+    if (this.tile.character) {
+      this.tileBackground = this.tile.character.imgName;
+    } else {
+      const posInLine = CalculatorComponent.returnPositionInLine(this.tile.id);
+      if (posInLine < 5) {
+        this.tileBackground = `/assets/blue_tile.png`;
+      } else if (posInLine > 10) {
+        this.tileBackground = `/assets/red_tile.png`;
+      } else {
+        this.tileBackground = null;
+      }
+    }
   }
 
   public clicked() {
