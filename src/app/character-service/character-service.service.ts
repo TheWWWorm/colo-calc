@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Character } from '../calculator/calculator.types';
 import { LanguageService } from '../language-service/language-service.service';
-import characters from './characters.json';
 
 @Injectable({
   providedIn: 'root'

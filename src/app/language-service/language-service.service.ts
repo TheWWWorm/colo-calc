@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Character } from '../calculator/calculator.types';
+import { Character, SelectOption } from '../calculator/calculator.types';
 import { LocalStorageService } from '../local-storage-service/local-storage-service.service';
 import { Background, backGroundList, BrowserLangCodeMap, LabelKeys, Language, mappedLangData } from './traslations.data';
 
@@ -13,10 +13,7 @@ export class LanguageService {
   public characterList$: BehaviorSubject<Array<Character>>;
 
   public background = this.localStorageService.get('bg') || Background.Solid;
-  public backgroundList$: BehaviorSubject<Array<{
-    code: string;
-    description: string;
-  }>>;
+  public backgroundList$: BehaviorSubject<Array<SelectOption>>;
 
   constructor(
     private localStorageService: LocalStorageService

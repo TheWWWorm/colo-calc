@@ -77,3 +77,8 @@ export interface TileDistance {
   tile: Tile;
   distance: number;
 }
+
+export interface SelectOption {
+  code: string;
+  description: string;
+}

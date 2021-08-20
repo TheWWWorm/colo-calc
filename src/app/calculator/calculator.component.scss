@@ -3,23 +3,32 @@
   padding-left: 50px;
   display: flex;
   flex-wrap: wrap;
-
-  //background: #303030;
 }
 
 .bg-image {
   position: fixed;
   z-index: -1;
-  // top: -10px;
-  // left: -10px;
-  transform: scale(1.1);
+  top: 0;
+  left: 0;
   background-color: #303030;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: blur(5px);
-  height: 102vh;
-  width: 102vw;
+  height: 100vh;
+  width: 100vw;
+}
+
+.bg-image::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px); /* apply the blur */
+  pointer-events: none; /* make the overlay click-through */
+}
+
+.bg-solid {
+  background-color: #303030;
 }
 
 .bg-library {
