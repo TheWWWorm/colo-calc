@@ -9,6 +9,8 @@ import { LineService } from '../line/line.service';
 })
 export class FieldComponent implements OnInit, OnChanges {
   @Input() public matrix: Array<Tile> = [];
+  // @TODO: change
+  @Input() public doClears = false;
 
   constructor(
     private lineService: LineService
@@ -18,8 +20,10 @@ export class FieldComponent implements OnInit, OnChanges {
   }
 
   public ngOnChanges(changes: SimpleChanges): void {
-    this.lineService.clearLines();
-
+    if (this.doClears) {
+      this.lineService.clearLines();
+    }
+    
     this.matrix.forEach((tile) => {
       if (tile.targets) {
         // console.log(tile);

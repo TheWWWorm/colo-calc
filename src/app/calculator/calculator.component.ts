@@ -18,6 +18,7 @@ import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, Targe
 })
 export class CalculatorComponent implements OnInit {
   public myTeamKey = 'myTeam';
+  public separatorImgSrc = `assets/grid_center.jpeg`;
 
   public langList = languageList;
   public langControl = new FormControl(this.languageService.language);

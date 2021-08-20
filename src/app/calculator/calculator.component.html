@@ -16,9 +16,16 @@
       <span>{{ 'allyLineToggle' | _ }}</span><input type="checkbox" [(ngModel)]="showAllyLinesChecked" (change)="calculateEvents()">
       <span>{{ 'enemyLineToggle' | _ }}</span><input type="checkbox" [(ngModel)]="showEnemyLinesChecked" (change)="calculateEvents()">
     </span>
-    <app-field
-      [matrix]="matrix"
-    ></app-field>
+    <div class="field">
+      <app-field
+        [doClears]="true"
+        [matrix]="matrix | subMatrix : 'good'"
+      ></app-field>
+      <img [src]="separatorImgSrc">
+      <app-field
+        [matrix]="matrix | subMatrix : 'bad'"
+      ></app-field>
+    </div>
   </div>
   <div class="attack-order">
     <h3>{{ 'orderTitle' | _ }}</h3>

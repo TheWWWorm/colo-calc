@@ -1,11 +1,11 @@
 .field {
   display: flex;
   flex-wrap: wrap;
-  max-width: calc(45px * 14 + 29px);
-  min-width: calc(45px * 14 + 29px);
-  margin-top: 10px;
-  padding: 10px;
-  border: 1px solid white;
+  max-width: calc(45px * 4 + 8px);
+  min-width: calc(45px * 4 + 8px);
+  //margin-top: 10px;
+  //padding: 10px;
+  //border: 1px solid white;
 }
 
 .field > * {

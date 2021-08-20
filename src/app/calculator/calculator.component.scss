@@ -70,3 +70,20 @@ h3 {
 .attack-order {
   padding-right: 15px;
 }
+
+.field {
+  width: 656px;
+  height: 240px;
+  display: flex;
+  padding: 10px;
+  padding-bottom: 7px;
+  margin-top: 10px;
+  border: 1px solid white;
+
+  > img {
+    height: 233px;
+    margin-top: 0px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+  }
+}
