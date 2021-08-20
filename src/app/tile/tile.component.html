@@ -1,6 +1,7 @@
 <div class="square" [ngClass]="{disabled: tile.disabled}" (click)="clicked()">
   <!-- Show unit number in the corner -->
-  <img *ngIf="tileBackground" [src]="tileBackground" [alt]="tile.character?.name">
-  <!-- @TODO: remove -->
-  <span *ngIf="tileBackground">{{ tile?.value }}</span>
+  <img *ngIf="tileBackground" [src]="tileBackground" [alt]="tile.character?.name" class="character-icon">
+  <img *ngIf="tileLead" [src]="tileLead" class="lead-icon">
+  <img *ngIf="tileElement" [src]="tileElement" class="element-icon">
+  <img *ngIf="tileClass" [src]="tileClass" class="class-icon">
 </div>

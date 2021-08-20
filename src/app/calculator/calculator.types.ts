@@ -20,11 +20,21 @@ export enum CharacterClass {
   Tank = 'Tank',
 }
 
+export enum Element {
+  Dark = 'Dark',
+  Light = 'Light',
+  Basic = 'Basic',
+  Earth = 'Earth',
+  Water = 'Water',
+  Fire = 'Fire',
+}
+
 export interface RawChar {
   id: string;
   aiType: AiType;
   fallbackAiType?: AiType;
   class: CharacterClass;
+  element: Element;
   imgName: string;
   isSummon?: boolean;
   isRare?: boolean;

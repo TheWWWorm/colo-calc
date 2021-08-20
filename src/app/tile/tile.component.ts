@@ -1,6 +1,25 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { CalculatorComponent } from '../calculator/calculator.component';
-import { Tile } from '../calculator/calculator.types';
+import { CharacterClass, Element, Tile } from '../calculator/calculator.types';
+
+const leadIcon = `assets/icons/icon_lead.png`;
+
+const elementIconMap = {
+  [Element.Basic]: `assets/icons/icon_basic.jpg`,
+  [Element.Dark]: `assets/icons/icon_dark.jpg`,
+  [Element.Light]: `assets/icons/icon_light.jpg`,
+  [Element.Fire]: `assets/icons/icon_fire.jpg`,
+  [Element.Water]: `assets/icons/icon_water.jpg`,
+  [Element.Earth]: `assets/icons/icon_earth.jpg`,
+}
+
+const classIconMap = {
+  [CharacterClass.Tank]: `assets/icons/icon_tank.jpg`,
+  [CharacterClass.Warrior]: `assets/icons/icon_warrior.jpg`,
+  [CharacterClass.Ranged]: `assets/icons/icon_ranged.jpg`,
+  [CharacterClass.Support]: `assets/icons/icon_support.jpg`,
+}
+
 
 @Component({
   selector: 'app-tile',
@@ -11,12 +30,23 @@ export class TileComponent implements OnChanges {
   @Input() public tile: Tile = null;
 
   public tileBackground: string;
+  public tileElement: string;
+  public tileLead: string;
+  public tileClass: string;
 
   constructor() { }
 
   public ngOnChanges(): void {
     if (this.tile.character) {
-      this.tileBackground = this.tile.character.imgName;
+      const { character, positionInParty } = this.tile;
+      this.tileBackground = character.imgName;
+      if (positionInParty === 0) {
+        this.tileLead = leadIcon;
+      } else {
+        this.tileLead = null;
+      }
+      this.tileClass = classIconMap[character.class];
+      this.tileElement = elementIconMap[character.element];
     } else {
       const posInLine = CalculatorComponent.returnPositionInLine(this.tile.id);
       if (posInLine < 5) {
@@ -26,6 +56,9 @@ export class TileComponent implements OnChanges {
       } else {
         this.tileBackground = null;
       }
+      this.tileLead = null;
+      this.tileClass = null;
+      this.tileElement = null;
     }
   }
 

@@ -24,3 +24,31 @@ img:before {
   width: inherit;
   background-image: url(/assets/CharacterPortraits/Boy.png);
 }
+
+.character-icon {}
+
+.lead-icon {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  margin-top: -8px;
+  margin-left: -5px;
+  z-index: 1;
+}
+
+.class-icon {
+  position: absolute;
+  margin-top: 35px;
+  height: 10px;
+  width: 10px;
+  z-index: 1;
+}
+
+.element-icon {
+  position: absolute;
+  margin-top: 35px;
+  margin-left: 35px;
+  height: 10px;
+  width: 10px;
+  z-index: 1;
+}
