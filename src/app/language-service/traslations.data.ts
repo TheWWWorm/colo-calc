@@ -25,6 +25,12 @@ export enum Language {
   zhtw = '繁體中文',
 };
 
+export enum Background {
+  Solid = 'backgroundSolid',
+  Library = 'backgroundLibrary',
+  Lava = 'backgroundLava',
+};
+
 export const BrowserLangCodeMap = {
   'de': Language.de,
   'ru': Language.ru,
@@ -37,6 +43,7 @@ export const BrowserLangCodeMap = {
 };
 
 export const languageList = [Language.en, Language.de, Language.ptbr, Language.ru, Language.zhtw]
+export const backGroundList = [Background.Solid, Background.Library, Background.Lava]
 
 export type LabelKeys = keyof typeof enLabels;
 

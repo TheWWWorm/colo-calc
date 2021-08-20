@@ -7,7 +7,7 @@ import { createParty, validTileId } from 'src/fn/helpers';
 import { CharacterService } from '../character-service/character-service.service';
 import { HeroSelectDialogComponent } from '../hero-select-dialog/hero-select-dialog.component';
 import { LanguageService } from '../language-service/language-service.service';
-import { Language, languageList } from '../language-service/traslations.data';
+import { Background, Language, languageList } from '../language-service/traslations.data';
 import { LocalStorageService } from '../local-storage-service/local-storage-service.service';
 import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, TargetColour, AiType, CharacterClass, Character } from './calculator.types';
 
@@ -19,6 +19,9 @@ import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, Targe
 export class CalculatorComponent implements OnInit {
   public myTeamKey = 'myTeam';
   public separatorImgSrc = `assets/grid_center.jpeg`;
+
+  public bgControl = new FormControl(this.languageService.background);;
+  public backgroundList$ = this.languageService.backgroundList$;
 
   public langList = languageList;
   public langControl = new FormControl(this.languageService.language);
@@ -138,6 +141,10 @@ export class CalculatorComponent implements OnInit {
       this.goodParty = this.updatePartyCharNames(this.goodParty);
       this.evilParty = this.updatePartyCharNames(this.evilParty);
       this.calculateEvents();
+    })
+
+    this.bgControl.valueChanges.subscribe((value) => {
+      this.languageService.changeBg(value);
     })
   }
 

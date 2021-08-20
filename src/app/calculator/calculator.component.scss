@@ -1,8 +1,33 @@
 .calculator {
-  margin-top: 20px;
-  margin-left: 20px;
+  padding-top: 20px;
+  padding-left: 50px;
   display: flex;
   flex-wrap: wrap;
+
+  //background: #303030;
+}
+
+.bg-image {
+  position: fixed;
+  z-index: -1;
+  // top: -10px;
+  // left: -10px;
+  transform: scale(1.1);
+  background-color: #303030;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(5px);
+  height: 102vh;
+  width: 102vw;
+}
+
+.bg-library {
+  background-image: url("/assets/backgrounds/library_noborder.png");
+}
+
+.bg-lava {
+  background-image: url("/assets/backgrounds/Dungeon_Kingdom.jpeg");
 }
 
 .attackOrder {
@@ -86,4 +111,8 @@ h3 {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
   }
+}
+
+.dropdown-options > *:not(:first-child) {
+  padding-left: 15px;
 }

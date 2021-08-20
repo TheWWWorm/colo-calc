@@ -1,4 +1,5 @@
 {
+  "langName": "Русский",
   "appTitle": "Калькулятор коллизея",
   "discordInviteTitle": "Присоединяйся к нашему дискорду!",
   "allyLineToggle": "Линии союзников",
@@ -20,5 +21,9 @@
   "language": "Язык",
   "teamRememberCheckBox": "Запомнить мою команду",
   "myTeamReset": "Сбросить мою команду",
-  "enemyTeamReset": "Сбросить команду врага"
+  "enemyTeamReset": "Сбросить команду врага",
+  "background": "Задний фон",
+  "backgroundSolid": "Темный",
+  "backgroundLibrary": "Библиотека",
+  "backgroundLava": "Лава"
 }

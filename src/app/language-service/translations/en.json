@@ -1,4 +1,5 @@
 {
+  "langName": "English",
   "appTitle": "Colosseum calculator",
   "discordInviteTitle": "Any ideas? Feedback? Join our discord!",
   "allyLineToggle": "Show ally lines",
@@ -20,5 +21,9 @@
   "language": "Language",
   "teamRememberCheckBox": "Remember my team",
   "myTeamReset": "Reset my team",
-  "enemyTeamReset": "Enemy team reset"
+  "enemyTeamReset": "Enemy team reset",
+  "background": "Background",
+  "backgroundSolid": "Solid",
+  "backgroundLibrary": "Library",
+  "backgroundLava": "Lava"
 }

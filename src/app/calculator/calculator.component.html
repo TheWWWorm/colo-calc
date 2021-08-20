@@ -1,12 +1,21 @@
 <div class="calculator">
+  <div class="bg-image bg-library"></div>
   <div>
     <h2>{{ 'appTitle' | _ }}</h2>
-    <div class="lang-switcher">
+    <div class="dropdown-options">
       <mat-form-field appearance="fill">
         <mat-label>{{ 'language' | _ }}</mat-label>
         <mat-select [formControl]="langControl">
           <mat-option *ngFor="let lang of langList" [value]="lang">
             {{lang}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'background' | _ }}</mat-label>
+        <mat-select [formControl]="bgControl">
+          <mat-option *ngFor="let bg of (backgroundList$ | async)" [value]="bg.code">
+            {{ bg.description }}
           </mat-option>
         </mat-select>
       </mat-form-field>
