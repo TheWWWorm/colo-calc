@@ -21,5 +21,9 @@
   "language": "Idioma",
   "teamRememberCheckBox": "Lembrar do meu time",
   "myTeamReset": "Reiniciar minha equipe",
-  "enemyTeamReset": "Reiniciar equipe inimiga"
+  "enemyTeamReset": "Reiniciar equipe inimiga",
+  "background": "Fundo",
+  "backgroundSolid": "Sólido",
+  "backgroundLibrary": "Biblioteca",
+  "backgroundLava": "Lava"
 }

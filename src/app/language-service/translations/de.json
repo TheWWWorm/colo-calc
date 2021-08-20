@@ -21,5 +21,9 @@
   "language": "Sprache",
   "teamRememberCheckBox": "Team merken",
   "myTeamReset": "Team zurücksetzen",
-  "enemyTeamReset": "Gegnerisches Team zurücksetzen"
+  "enemyTeamReset": "Gegnerisches Team zurücksetzen",
+  "background": "Hintergrund",
+  "backgroundSolid": "Einfarbig",
+  "backgroundLibrary": "Bibliothek",
+  "backgroundLava": "Lava"
 }
