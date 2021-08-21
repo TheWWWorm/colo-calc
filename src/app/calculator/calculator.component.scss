@@ -14,8 +14,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 .bg-image::after {
@@ -39,8 +39,17 @@
   background-image: url("/assets/backgrounds/Dungeon_Kingdom.jpeg");
 }
 
-.attackOrder {
+.attack-order {
   width: 300px;
+  margin-left: 10px;
+}
+
+.attackOrder {
+  //background: rgba(209, 209, 214, 0.20);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  border-radius: 20px;
 }
 
 .unitSettings {

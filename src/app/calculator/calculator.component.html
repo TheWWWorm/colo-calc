@@ -38,7 +38,7 @@
   </div>
   <div class="attack-order">
     <h3>{{ 'orderTitle' | _ }}</h3>
-    <div class="attackOrder">
+    <div class="attackOrder" *ngIf="events && events.length">
       <ol>
         <li *ngFor="let event of events">{{ event }}</li>
       </ol>
