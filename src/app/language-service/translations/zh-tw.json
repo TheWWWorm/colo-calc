@@ -21,5 +21,9 @@
   "language": "語言",
   "teamRememberCheckBox": "記住我的隊伍",
   "myTeamReset": "重置我方隊伍",
-  "enemyTeamReset": "重置敵方隊伍"
+  "enemyTeamReset": "重置敵方隊伍",
+  "background": "背景",
+  "backgroundSolid": "無",
+  "backgroundLibrary": "魔法學校",
+  "backgroundLava": "地下城王國"
 }
