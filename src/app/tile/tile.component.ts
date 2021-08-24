@@ -28,6 +28,8 @@ const classIconMap = {
 })
 export class TileComponent implements OnChanges {
   @Input() public tile: Tile = null;
+  @Input() public textValue = '';
+  @Input() public disabled = false;
 
   public tileBackground: string;
   public tileElement: string;
@@ -37,7 +39,7 @@ export class TileComponent implements OnChanges {
   constructor() { }
 
   public ngOnChanges(): void {
-    if (this.tile.character) {
+    if (this.tile?.character) {
       const { character, positionInParty } = this.tile;
       this.tileBackground = character.imgName;
       if (positionInParty === 0) {
@@ -47,7 +49,7 @@ export class TileComponent implements OnChanges {
       }
       this.tileClass = classIconMap[character.class];
       this.tileElement = elementIconMap[character.element];
-    } else {
+    } else if (this.tile) {
       const posInLine = CalculatorComponent.returnPositionInLine(this.tile.id);
       if (posInLine < 5) {
         this.tileBackground = `/assets/blue_tile.png`;
@@ -59,11 +61,16 @@ export class TileComponent implements OnChanges {
       this.tileLead = null;
       this.tileClass = null;
       this.tileElement = null;
+    } else {
+      this.tileBackground = null;
+      this.tileLead = null;
+      this.tileClass = null;
+      this.tileElement = null;
     }
   }
 
   public clicked() {
-    if (this.tile.disabled) {
+    if (this.tile?.disabled || !this.tile || !this.tile.onClick || this.disabled) {
       return;
     }
     this.tile.onClick(this.tile);

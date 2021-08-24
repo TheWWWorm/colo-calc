@@ -1,9 +1,13 @@
 <div>
   <h4>{{ title }}</h4>
   <div class="hero-list">
-    <span *ngFor="let character of heroList; let i = index" (click)="changeHero(i)">
-      <img *ngIf="character" [src]="character.imgName" [src]="character.imgName" [alt]="character.name" [title]="character.name">
-      <span *ngIf="!character">?</span>
+    <span *ngFor="let tile of tileList; let i = index" (click)="changeHero(i, $event)">
+      <app-tile
+        [tile]="tile.character ? tile : null"
+        [disabled]="true"
+        textValue="?"
+      >
+      </app-tile>
     </span>
   </div>
 </div>

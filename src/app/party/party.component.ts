@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { validTileId } from 'src/fn/helpers';
-import { Character, Party } from '../calculator/calculator.types';
+import { Character, Party, Tile } from '../calculator/calculator.types';
 import { HeroSelectDialogComponent } from '../hero-select-dialog/hero-select-dialog.component';
 
 @Component({
@@ -15,6 +15,7 @@ export class PartyComponent implements OnChanges {
   @Input() public title: string;
 
   public heroList: Array<Character>;
+  public tileList: Array<Tile>;
 
   constructor(
     public dialog: MatDialog
@@ -22,9 +23,12 @@ export class PartyComponent implements OnChanges {
 
   public ngOnChanges(changes: SimpleChanges): void {
     this.heroList = this.party.tiles.map((tile) => tile.character);
+    this.tileList = this.party.tiles;
   }
 
-  public changeHero(i: number) {
+  public changeHero(i: number, event: Event) {
+    console.log('change hero!')
+    event.stopPropagation();
     const tile = this.party.tiles[i];
     if (validTileId(tile)) {
       this.party.tiles[i]?.onChangeCharacter(this.party.tiles[i]);

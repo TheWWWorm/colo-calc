@@ -1,7 +1,8 @@
-<div class="square" [ngClass]="{disabled: tile.disabled}" (click)="clicked()">
+<div class="square" [ngClass]="{disabled: tile?.disabled || disabled}" (click)="clicked()">
   <!-- Show unit number in the corner -->
   <img *ngIf="tileBackground" [src]="tileBackground" [alt]="tile.character?.name" class="character-icon">
   <img *ngIf="tileLead" [src]="tileLead" class="lead-icon">
   <img *ngIf="tileElement" [src]="tileElement" class="element-icon">
   <img *ngIf="tileClass" [src]="tileClass" class="class-icon">
+  <div *ngIf="!tile" class="text-value"><span>{{ textValue }}</span></div>
 </div>

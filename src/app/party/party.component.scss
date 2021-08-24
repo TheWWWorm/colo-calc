@@ -4,20 +4,28 @@
   text-align: center; 
 }
 
-.hero-list > * {
-  display: grid;
-  place-items: center center;
-  flex-direction: column;
+// Behold! A bad css shrine!
+:host ::ng-deep .character-icon {
   height: 50px;
   width: 50px;
-  border: 1px solid white;
-  cursor: pointer;
-} 
+}
 
-.hero-list img {
-  flex-direction: column;
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  border: 1px solid white;
+:host ::ng-deep .square {
+  height: 50px !important;
+  width: 50px !important;
+  cursor: pointer !important;;
+}
+
+:host ::ng-deep .lead-icon {
+  margin-top: -10px !important;;
+  margin-left: -5px !important;;
+}
+
+:host ::ng-deep .class-icon {
+  margin-top: 40px !important;;
+}
+
+:host ::ng-deep .element-icon {
+  margin-top: 40px !important;;
+  margin-left: 40px !important;;
 }
