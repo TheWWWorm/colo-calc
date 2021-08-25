@@ -45,7 +45,8 @@ export const BrowserLangCodeMap = {
   'pt': Language.ptbr,
   'br': Language.ptbr,
   'es': Language.esla,
-  'es-la': Language.esla
+  'es-la': Language.esla,
+  'es-ar': Language.esla
 };
 
 export const languageList = [Language.en, Language.de, Language.esla, Language.ptbr, Language.ru, Language.zhtw]
