@@ -17,9 +17,13 @@ import deLabels from './translations/de.json';
 import ptbrChars from './translations/characters_pt-br.json';
 import ptbrLabels from './translations/pt-br.json';
 
+import eslaChars from './translations/characters_es-la.json';
+import eslaLabels from './translations/es-la.json';
+
 export enum Language {
   en = 'English',
   de = 'Deutsch',
+  esla = 'Español latino',
   ptbr = 'Português Brasileiro',
   ru = 'Русский',
   zhtw = '繁體中文',
@@ -39,10 +43,12 @@ export const BrowserLangCodeMap = {
   'en': Language.en,
   'pt-br': Language.ptbr,
   'pt': Language.ptbr,
-  'br': Language.ptbr
+  'br': Language.ptbr,
+  'es': Language.esla,
+  'es-la': Language.esla
 };
 
-export const languageList = [Language.en, Language.de, Language.ptbr, Language.ru, Language.zhtw]
+export const languageList = [Language.en, Language.de, Language.esla, Language.ptbr, Language.ru, Language.zhtw]
 export const backGroundList = [Background.Solid, Background.Library, Background.Lava]
 
 export type LabelKeys = keyof typeof enLabels;
@@ -89,5 +95,9 @@ export const mappedLangData = {
   [Language.ptbr]:  {
     labels: ptbrLabels,
     characters: applyCharacterLang(ptbrChars)
+  },
+  [Language.esla]:  {
+    labels: eslaLabels,
+    characters: applyCharacterLang(eslaChars)
   },
 }
