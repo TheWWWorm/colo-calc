@@ -26,5 +26,5 @@
   "backgroundSolid": "無",
   "backgroundLibrary": "魔法學校",
   "backgroundLava": "地下城王國",
-  "attackTemplate": "ATTACKER 瞄準了距離 RANGE 的TARGET"
+  "attackTemplate": "ATTACKER 瞄準了 距離RANGE 的 TARGET"
 }
