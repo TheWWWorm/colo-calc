@@ -22,6 +22,13 @@ export class LineService {
     })
   }
 
+  public infinityCheck(num: number): number {
+    if (isFinite(num)) {
+      return num;
+    }
+    return 1;
+  }
+
   public createLine(id_from: string, id_to: string, color: TargetColour) {
     const id = `line_container_${id_from}_${id_to}`;
     const pahtSubId = `line_${id_from}_${id_to}`;
@@ -51,12 +58,51 @@ export class LineService {
     }
     // console.log(test1_loc, test2_loc)
     // console.log(from, to)
-    if (from.x < to.x) {
-      to.x = to.x - test2_loc.width;
-      from.x = from.x + test1_loc.width / 2;
-    } else if (to.x < from.x) {
-      to.x = to.x + test2_loc.width;
-      from.x = from.x - test1_loc.width /2;
+    // @TODO: better targeting for ally units
+    const rangeX = Math.abs(from.x - to.x);
+    console.log(rangeX);
+    if (rangeX > 300) {
+      if (from.x < to.x) {
+        to.x = to.x - test2_loc.width;
+        from.x = from.x + test1_loc.width / 2;
+      } else if (to.x < from.x) {
+        to.x = to.x + test2_loc.width;
+        from.x = from.x - test1_loc.width /2;
+      }
+
+      if (from.y === to.y) {
+        if (color === TargetColour.Ally) {
+          from.y = from.y - 5;
+          to.y = to.y - 5;
+        }
+        if (color === TargetColour.Enemy) {
+          from.y = from.y + 5;
+          to.y = to.y + 5;
+        } 
+      }
+    } else {
+      console.log('hw', test2_loc.width, test2_loc.height)
+
+      const mod = 10;
+
+      const offsetX = test2_loc.width;
+      const offsetY = test2_loc.height;
+
+      const signX = from.x > to.x ? 1 : -1
+      const signY = from.y > to.y ? 1 : -1
+
+      const xDiff = Math.abs((from.x - to.x) / offsetX);
+      const yDiff = Math.abs((from.y - to.y) / offsetY);
+
+      console.log('to.x', to.x, 'signX', signX, 'offsetX', offsetX, 'yDiff', yDiff);
+      if (xDiff) {
+        to.x = to.x + (signX * (offsetX - (yDiff * mod)));
+
+      }
+      if (yDiff) {
+        to.y = to.y + (signY * (offsetY - (xDiff * mod)));
+      }
+      
     }
     const coords = (
       'M' + from.x
