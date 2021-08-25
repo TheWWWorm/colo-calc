@@ -14,6 +14,8 @@ export interface HeroSelectDialogData {
 })
 export class HeroSelectDialogComponent implements OnInit {
 
+  // @TODO: show by element rows, instead of just the whole thing!
+
   public filterField = new FormControl();
   public onlyUniques = true;
 
