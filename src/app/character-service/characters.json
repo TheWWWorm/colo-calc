@@ -250,6 +250,13 @@
 		"imgName": "kang.gif",
     "element": "Light"
 	},
+  {
+		"id": "Kamael",
+		"aiType": "Melee",
+		"class": "Support",
+		"imgName": "Kamael.png",
+    "element": "Earth"
+	},
 	{
 		"id": "Lahn",
 		"aiType": "Melee",
