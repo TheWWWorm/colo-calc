@@ -25,5 +25,6 @@
   "background": "Background",
   "backgroundSolid": "Solid",
   "backgroundLibrary": "Library",
-  "backgroundLava": "Lava"
+  "backgroundLava": "Lava",
+  "attackTemplate": "ATTACKER targets TARGET with a distance of RANGE"
 }

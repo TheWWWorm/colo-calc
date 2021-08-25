@@ -67,8 +67,11 @@ export class LanguageService {
     this.localStorageService.set('bg', bg);
   }
 
-  public getLabel(label: LabelKeys): string {
-    return mappedLangData[this.language as Language.en].labels[label] ||
-    mappedLangData[Language.en].labels[label] || label;
+  public getLabel(label: LabelKeys, fallback = true): string {
+    let translatedLabel: string = mappedLangData[this.language as Language.en].labels[label];
+    if (!label && fallback) {
+      translatedLabel = mappedLangData[Language.en].labels[label] || label;
+    }
+    return translatedLabel;
   }
 }

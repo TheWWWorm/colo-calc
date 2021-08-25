@@ -327,7 +327,17 @@ export class CalculatorComponent implements OnInit {
         attacker.targets = target.tile;
         attacker.lineColour = lineColour;
       }
-      events.push(`${attacker.character.name} ${this.languageService.getLabel('targets')} ${target.tile.character.name} ${this.languageService.getLabel('withDistance')} ${target.distance.toFixed(2)}`);
+
+      let event: string;
+      if (this.languageService.getLabel('attackTemplate', false)) {
+        event = this.languageService.getLabel('attackTemplate')
+          .replace('ATTACKER', attacker.character.name)
+          .replace('TARGET', target.tile.character.name)
+          .replace('RANGE', target.distance.toFixed(2));
+      } else {
+        event = `${attacker.character.name} ${this.languageService.getLabel('targets')} ${target.tile.character.name} ${this.languageService.getLabel('withDistance')} ${target.distance.toFixed(2)}`;
+      }
+      events.push(event);
       alreadyInTarget.push(target.tile);
 
       return alreadyInTarget;
