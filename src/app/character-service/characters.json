@@ -252,7 +252,7 @@
 	},
   {
 		"id": "Kamael",
-		"aiType": "Melee",
+		"aiType": "Ranged",
 		"class": "Support",
 		"imgName": "Kamael.png",
     "element": "Earth"
