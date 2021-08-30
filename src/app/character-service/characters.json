@@ -387,12 +387,12 @@
 		"id": "Noxia",
 		"aiType": "Ranged",
 		"class": "Support",
-    "summons": "Betsy",
+    "summons": "Noxias Summon",
 		"imgName": "Noxia.png",
     "element": "Dark"
 	},
 	{
-		"id": "Betsy",
+		"id": "Noxias Summon",
 		"aiType": "Melee",
 		"class": "Warrior",
     "isSummon": true,

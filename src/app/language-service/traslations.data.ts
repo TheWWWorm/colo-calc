@@ -33,6 +33,7 @@ export enum Background {
   Solid = 'backgroundSolid',
   Library = 'backgroundLibrary',
   Lava = 'backgroundLava',
+  Desert = 'backgroundDesert',
 };
 
 export const BrowserLangCodeMap = {
@@ -50,7 +51,7 @@ export const BrowserLangCodeMap = {
 };
 
 export const languageList = [Language.en, Language.de, Language.esla, Language.ptbr, Language.ru, Language.zhtw]
-export const backGroundList = [Background.Solid, Background.Library, Background.Lava]
+export const backGroundList = [Background.Solid, Background.Library, Background.Lava, Background.Desert]
 
 export type LabelKeys = keyof typeof enLabels;
 

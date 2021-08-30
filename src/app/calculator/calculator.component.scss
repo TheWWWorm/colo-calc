@@ -28,15 +28,33 @@
 }
 
 .bg-solid {
-  background-color: #303030;
+  > .bg-image {
+    background-color: #303030;
+  }
 }
 
 .bg-library {
-  background-image: url("/assets/backgrounds/library_noborder.png");
+  > .bg-image {
+    background-image: url("/assets/backgrounds/library_noborder.png");
+  }
 }
 
 .bg-lava {
-  background-image: url("/assets/backgrounds/Dungeon_Kingdom.jpeg");
+  > .bg-image {
+    background-image: url("/assets/backgrounds/Dungeon_Kingdom.jpeg");
+  }
+}
+
+.bg-desert {
+  > .bg-image {
+    background-image: url("/assets/backgrounds/desert.jpeg");
+  }
+
+  a {
+    color: #283161
+  }
+
+  color: #4a2a2a;
 }
 
 .attack-order {

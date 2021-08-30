@@ -25,5 +25,6 @@
   "background": "Задний фон",
   "backgroundSolid": "Темный",
   "backgroundLibrary": "Библиотека",
-  "backgroundLava": "Лава"
+  "backgroundLava": "Лава",
+  "backgroundDesert": "Пустыня"
 }

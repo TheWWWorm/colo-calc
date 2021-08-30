@@ -7,7 +7,8 @@ import { map, startWith } from 'rxjs/operators';
 const valueToClassName = {
   [Background.Solid]: 'bg-solid',
   [Background.Library]: 'bg-library',
-  [Background.Lava]: 'bg-lava'
+  [Background.Lava]: 'bg-lava',
+  [Background.Desert]: 'bg-desert'
 }
 
 type ClassKey = keyof typeof valueToClassName;

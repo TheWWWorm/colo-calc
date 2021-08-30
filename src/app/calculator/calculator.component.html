@@ -1,5 +1,5 @@
-<div class="calculator">
-  <div class="bg-image" [ngClass]="bgControl | getBgClass | async"></div>
+<div class="calculator" [ngClass]="bgControl | getBgClass | async">
+  <div class="bg-image"></div>
   <div>
     <h2>{{ 'appTitle' | _ }}</h2>
     <div class="dropdown-options">

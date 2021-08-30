@@ -69,7 +69,7 @@ export class LanguageService {
 
   public getLabel(label: LabelKeys, fallback = true): string {
     let translatedLabel: string = mappedLangData[this.language as Language.en].labels[label];
-    if (!label && fallback) {
+    if (!translatedLabel && fallback) {
       translatedLabel = mappedLangData[Language.en].labels[label] || label;
     }
     return translatedLabel;
