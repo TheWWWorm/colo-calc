@@ -25,5 +25,6 @@
   "background": "Hintergrund",
   "backgroundSolid": "Einfarbig",
   "backgroundLibrary": "Bibliothek",
-  "backgroundLava": "Lava"
+  "backgroundLava": "Lava",
+  "backgroundDesert": "Wüste"
 }

@@ -10,10 +10,42 @@
       >
     </mat-form-field>
     <span>{{ 'dialogOnlyUniqueCheckbox' | _ }}</span><input type="checkbox" [(ngModel)]="onlyUniques" (change)="toggleRares()">
+    <span>{{ 'dialogHeroSeparateByElement' | _ }}</span><input type="checkbox" [(ngModel)]="separateByElement" (change)="toggleRares()">
   </div>
-  <div *ngIf="displayCharacters && displayCharacters.length" class="hero-list">
-    <img *ngFor="let character of displayCharacters" [src]="character.imgName" [src]="character.imgName" [alt]="character.name" (click)="heroSelected(character)" [title]="character.name">
+  <div *ngIf="displayCharacters && displayCharacters.length && !separateByElement" class="hero-list">
+    <span 
+      *ngFor="let character of displayCharacters"
+      (click)="heroSelected(character)"
+    >
+      <app-tile
+        [tile]="character | characterToTile"
+        [disabled]="true"
+      >
+      </app-tile>
+    </span>
   </div>
+
+  <div *ngIf="displayCharacters && displayCharacters.length && separateByElement" class="hero-list">
+    <div
+      *ngFor="let item of elements | keyvalue"
+      class="elemental-char-list-wrap"
+    >
+      <div *ngIf="(displayCharacters | filterCharacters : item.key).length" class="elemental-char-list">
+        <img [src]="item.value" class="element-row-icon">
+        <span
+          *ngFor="let character of displayCharacters | filterCharacters : item.key"
+          (click)="heroSelected(character)"
+        >
+          <app-tile
+            [tile]="character | characterToTile"
+            [disabled]="true"
+          >
+          </app-tile>
+        </span>
+      </div>
+    </div>
+  </div>
+  
   <div *ngIf="!displayCharacters || !displayCharacters.length">
     <h3>{{ 'dialogNothingFound' | _ }}</h3>
   </div>

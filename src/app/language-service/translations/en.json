@@ -11,6 +11,7 @@
   "partyHint": "Click on the tiles to add/move heroes. Click on the party list to add/change heroes!",
   "orderTitle": "Order of attacks:",
   "dialogHeroSelectTitle": "Select your hero",
+  "dialogHeroSeparateByElement": "Separate by element",
   "dialogOnlyUniqueCheckbox": "Only unique heroes",
   "dialogHint": "You can also press enter to select first hero in the list",
   "dialogFilter": "Filter",

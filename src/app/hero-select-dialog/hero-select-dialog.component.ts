@@ -1,8 +1,10 @@
 import { Component, ElementRef, HostListener, Inject, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { Character } from '../calculator/calculator.types';
+import { Character, Element } from '../calculator/calculator.types';
 import { CharacterService } from '../character-service/character-service.service';
+import { LocalStorageService } from '../local-storage-service/local-storage-service.service';
+import { elementIconMap } from '../tile/tile.component';
 
 export interface HeroSelectDialogData {
 
@@ -17,10 +19,13 @@ export class HeroSelectDialogComponent implements OnInit {
   // @TODO: show by element rows, instead of just the whole thing!
 
   public filterField = new FormControl();
-  public onlyUniques = true;
+  public onlyUniques = this.localStorageService.get('onlyUniques');
+  public separateByElement = this.localStorageService.get('separateByElement');
 
   public characters: Array<Character>;
   public displayCharacters: Array<Character>;
+
+  public elements = elementIconMap;
 
   @ViewChild('heroFilter') private filterElement: ElementRef;
 
@@ -34,8 +39,17 @@ export class HeroSelectDialogComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<HeroSelectDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: HeroSelectDialogData,
-    private characterService: CharacterService
+    private characterService: CharacterService,
+    private localStorageService: LocalStorageService
   ) {
+    // Filter those out by default
+    if (this.onlyUniques === undefined) {
+      this.onlyUniques = true;
+    }
+    // Filter those out by default
+    if (this.separateByElement === undefined) {
+      this.separateByElement = false;
+    }
     this.toggleRares();
     this.filterField.valueChanges.subscribe(() => {
       this.updateFilters();
@@ -47,6 +61,8 @@ export class HeroSelectDialogComponent implements OnInit {
   }
 
   public toggleRares() {
+    this.localStorageService.set('onlyUniques', this.onlyUniques);
+    this.localStorageService.set('separateByElement', this.separateByElement);
     if (this.onlyUniques) {
       this.characters = this.characterService.uniqueList;
     } else {

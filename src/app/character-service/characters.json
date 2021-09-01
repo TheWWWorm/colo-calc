@@ -387,12 +387,12 @@
 		"id": "Noxia",
 		"aiType": "Ranged",
 		"class": "Support",
-    "summons": "Noxias Summon",
+    "summons": "Dark Spirit",
 		"imgName": "Noxia.png",
     "element": "Dark"
 	},
 	{
-		"id": "Noxias Summon",
+		"id": "Dark Spirit",
 		"aiType": "Melee",
 		"class": "Warrior",
     "isSummon": true,

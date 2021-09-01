@@ -12,6 +12,7 @@
   "orderTitle": "Порядок атак:",
   "dialogHeroSelectTitle": "Выбери героя",
   "dialogOnlyUniqueCheckbox": "Только уникальные герои",
+  "dialogHeroSeparateByElement": "Разделить по элементам",
   "dialogHint": "Ты можешь нажать enter чтобы выбрать первого героя в списке!",
   "dialogFilter": "Фильтр",
   "dialogNothingFound": "Ничего не найдено =(",

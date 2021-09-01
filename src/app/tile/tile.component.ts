@@ -2,9 +2,11 @@ import { Component, Input, OnChanges } from '@angular/core';
 import { CalculatorComponent } from '../calculator/calculator.component';
 import { CharacterClass, Element, Tile } from '../calculator/calculator.types';
 
-const leadIcon = `assets/icons/icon_lead.png`;
+export const leadIcon = `assets/icons/icon_lead.png`;
 
-const elementIconMap = {
+export const elementIconMap : {
+  [key in Element]: string;
+} = {
   [Element.Basic]: `assets/icons/icon_basic.jpg`,
   [Element.Dark]: `assets/icons/icon_dark.jpg`,
   [Element.Light]: `assets/icons/icon_light.jpg`,
@@ -13,7 +15,9 @@ const elementIconMap = {
   [Element.Earth]: `assets/icons/icon_earth.jpg`,
 }
 
-const classIconMap = {
+export const classIconMap : {
+  [key in CharacterClass]: string;
+} = {
   [CharacterClass.Tank]: `assets/icons/icon_tank.jpg`,
   [CharacterClass.Warrior]: `assets/icons/icon_warrior.jpg`,
   [CharacterClass.Ranged]: `assets/icons/icon_ranged.jpg`,
