@@ -5,7 +5,7 @@
   "allyLineToggle": "Mostrar linhas aliadas",
   "enemyLineToggle": "Mostrar linhas inimigas",
   "tableResetBtnTitle": "Reiniciar o tabuleiro",
-  "partiesTitle": "Grupos",
+  "partiesTitle": "Equipes",
   "allyTeam": "Sua Equipe",
   "enemyTeam": "Equipe Inimiga",
   "partyHint": "Clique nos quadrados para adicionar/mover heróis. Clique na lista da equipe para adicionar/alterar heróis!",
@@ -25,5 +25,7 @@
   "background": "Fundo",
   "backgroundSolid": "Sólido",
   "backgroundLibrary": "Biblioteca",
-  "backgroundLava": "Lava"
+  "backgroundLava": "Lava",
+  "backgroundDesert": "Deserto",
+  "attackTemplate": "ATTACKER irá focar em TARGET com uma distância de RANGE"
 }
