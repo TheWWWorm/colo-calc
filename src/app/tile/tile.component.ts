@@ -15,6 +15,17 @@ export const elementIconMap : {
   [Element.Earth]: `assets/icons/icon_earth.jpg`,
 }
 
+export const transparentElementIconMap : {
+  [key in Element]: string;
+} = {
+  [Element.Basic]: `assets/element_icons_transparent/basic.png`,
+  [Element.Dark]: `assets/element_icons_transparent/dark.png`,
+  [Element.Light]: `assets/element_icons_transparent/light.png`,
+  [Element.Fire]: `assets/element_icons_transparent/fire.png`,
+  [Element.Water]: `assets/element_icons_transparent/water.png`,
+  [Element.Earth]: `assets/element_icons_transparent/earth.png`,
+}
+
 export const classIconMap : {
   [key in CharacterClass]: string;
 } = {

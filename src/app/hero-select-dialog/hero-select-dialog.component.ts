@@ -1,10 +1,10 @@
 import { Component, ElementRef, HostListener, Inject, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { Character, Element } from '../calculator/calculator.types';
+import { Character } from '../calculator/calculator.types';
 import { CharacterService } from '../character-service/character-service.service';
 import { LocalStorageService } from '../local-storage-service/local-storage-service.service';
-import { elementIconMap } from '../tile/tile.component';
+import { transparentElementIconMap } from '../tile/tile.component';
 
 export interface HeroSelectDialogData {
 
@@ -25,7 +25,7 @@ export class HeroSelectDialogComponent implements OnInit {
   public characters: Array<Character>;
   public displayCharacters: Array<Character>;
 
-  public elements = elementIconMap;
+  public elements = transparentElementIconMap;
 
   @ViewChild('heroFilter') private filterElement: ElementRef;
 
