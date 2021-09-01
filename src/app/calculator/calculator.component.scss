@@ -1,3 +1,101 @@
+/* --------------------------------------------*/
+/* ---------->>> Title and Logo <<<-----------*/
+/* ------------------------------------------*/
+
+// Title
+h2 {
+    display: inline-block;
+    font-size: 30px;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: 'Lilita One', cursive;
+    color: #fff;
+}
+
+ //Logo
+ .logo {
+  display: inline-block;
+  position: relative;
+  bottom: -6px;
+  margin-left: 5px;
+  height: 50px;
+  width: 50px;
+}
+
+
+/* ----------------------------------------------*/
+/* ---------->>> Dropdown Options <<<-----------*/
+/* --------------------------------------------*/
+
+// [Buttons] Color
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  border-radius: 4px !important;
+  padding: 0.75em 0.75em 0 0.75em;
+  background-color: #3e2e2e;
+  border: 1px solid #544141;
+  box-shadow: 0px 0px 0px 2px #3e2e2e;
+  display: inline-flex;
+  align-items: baseline;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+// [Buttons] Underline
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-underline::before {
+  background-color: transparent !important;
+}
+
+// [Buttons] Underline (Hover)
+::ng-deep .mat-form-field-ripple {
+  background-color: transparent !important;
+}
+
+// [Buttons] Select Title
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: #ffcf11 !important;
+}
+
+// [Buttons] Arrow
+::ng-deep .mat-select-arrow {
+  color: #fff;
+}
+
+// [Buttons] Selected Arrow
+::ng-deep .mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+  color: #ffcf11;
+}
+
+// [Dropdown] Background
+::ng-deep .mat-select-panel {
+  background: #3e2e2e;
+  border: 1px solid #544141;
+}
+
+// [Dropdown] Selected Option
+::ng-deep .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+  background: #ffcf11;
+  border: 1px solid #ffe413;
+  border-bottom: 4px solid #bc761c;
+}
+
+// [Dropdown] Selected Option Text
+::ng-deep .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: rgb(0, 0, 0) !important;
+}
+
+// [Dropdwon] Padding
+.dropdown-options > *:not(:first-child) {
+  padding-left: 15px;
+}
+
+
+/* ------------------------------------------*/
+/* ---------->>> Attack Order <<<-----------*/
+/* ----------------------------------------*/
+
+// "Order of attacks" and "Parties" display
 .calculator {
   padding-top: 20px;
   padding-left: 50px;
@@ -5,6 +103,101 @@
   flex-wrap: wrap;
 }
 
+// "Order of attacks" and "Parties" Padding
+h3 {
+  padding-top: 10px;
+}
+
+// Margin and Padding
+.attack-order {
+  width: 300px;
+  margin-left: 10px;
+  padding-right: 15px;
+}
+
+// Background
+.attackOrder {
+  //background: rgba(209, 209, 214, 0.20);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  border-radius: 20px;
+}
+
+
+/* -------------------------------------*/
+/* ---------->>> Parties <<<-----------*/
+/* -----------------------------------*/
+
+// Margin and Padding
+.unitSettings {
+  margin-top: 10px;
+  > * {
+    padding-bottom: 10px;
+    display: block;
+  }
+}
+
+// Checkboxes Position
+input[type="checkbox"] {
+  position: relative;
+  top: 2px;
+}
+
+// Colored Texts
+a {
+  color: #ce93d8;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+// "Click on the tiles" Text
+.user-hint {
+  max-width: 200px;
+}
+
+
+/*-------------------------------------------*/
+/* ---------->>> Battle Field <<<-----------*/
+/* ----------------------------------------*/
+
+// Grid
+.field {
+  width: 656px;
+  height: 244px;
+  display: flex;
+  padding: 10px;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  //border: 1px solid white;
+  background-image: url(/assets/grid_back.png);
+
+  // Center Image
+  > img {
+    height: 233px;
+    margin-top: 0px;
+    border-top: 1px solid #5a451e;
+    border-bottom: 1px solid #5a451e;
+  }
+}
+
+// Show Lines Options
+.actions {
+  float: right;
+}
+
+// Show Lines Options Padding
+.actions > * {
+  padding-right: 5px;
+  padding-left: 10px;
+}
+
+
+/* ----------------------------------------*/
+/* ---------->>> Background <<<-----------*/
+/* --------------------------------------*/
+
+// Invisible Background
 .bg-image {
   position: fixed;
   z-index: -1;
@@ -18,94 +211,59 @@
   width: 100%;
 }
 
+// Blur Effect
 .bg-image::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(5px); /* apply the blur */
-  pointer-events: none; /* make the overlay click-through */
+  /* apply the blur */
+  backdrop-filter: blur(5px);
+  /* make the overlay click-through */
+  pointer-events: none;
 }
 
+/* Background Options */
+
+// Solid Background
 .bg-solid {
   > .bg-image {
     background-color: #303030;
   }
 }
 
+// Library Background
 .bg-library {
   > .bg-image {
-    background-image: url("/assets/backgrounds/library_noborder.png");
+    background-image: url("/assets/backgrounds/library.png");
   }
 }
 
+// Lava Background
 .bg-lava {
   > .bg-image {
-    background-image: url("/assets/backgrounds/Dungeon_Kingdom.jpeg");
+    background-image: url("/assets/backgrounds/lava.png");
   }
 }
 
+// Desert Background
 .bg-desert {
   > .bg-image {
-    background-image: url("/assets/backgrounds/desert.jpeg");
+    background-image: url("/assets/backgrounds/desert.png");
   }
-
+  /* change the text color */
   a {
-    color: #283161
+    color: #283161;
   }
-
   color: #4a2a2a;
 }
 
-.attack-order {
-  width: 300px;
-  margin-left: 10px;
-}
 
-.attackOrder {
-  //background: rgba(209, 209, 214, 0.20);
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 5px;
-  border-radius: 20px;
-}
+/* ------------------------------------*/
+/* ---------->>> Footer <<<-----------*/
+/* ----------------------------------*/
 
-.unitSettings {
-  margin-top: 10px;
-  > * {
-    padding-bottom: 10px;
-    display: block;
-  }
-}
-
-a {
-  color: #ce93d8;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-input[type="checkbox"] {
-  position: relative;
-  top: 2px;
-}
-
-.actions {
-  float: right;
-}
-
-.actions > * {
-  padding-right: 5px;
-  padding-left: 10px;
-}
-
-h3 {
-  padding-top: 10px;
-}
-
-.user-hint {
-  max-width: 200px;
-}
-
+// Footer
 .footer {
   position: fixed;
   left: 0;
@@ -116,39 +274,7 @@ h3 {
   padding: 0 10px 10px 10px;
 }
 
+// Ko-fi link
 .footer > .help-me-link {
   padding-right: 30px;
-}
-
-::ng-deep .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
-  color: #ce93d8 !important;
-}
-
-::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
-  color: #ce93d8 !important;
-}
-
-.attack-order {
-  padding-right: 15px;
-}
-
-.field {
-  width: 656px;
-  height: 240px;
-  display: flex;
-  padding: 10px;
-  padding-bottom: 5px;
-  margin-top: 10px;
-  border: 1px solid white;
-
-  > img {
-    height: 233px;
-    margin-top: 0px;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-  }
-}
-
-.dropdown-options > *:not(:first-child) {
-  padding-left: 15px;
 }

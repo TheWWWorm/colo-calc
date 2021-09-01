@@ -1,58 +1,81 @@
+/* -------------------------------------*/
+/* ---------->>> Squares <<<-----------*/
+/* -----------------------------------*/
+
+// Squares Border
 .square {
-  height: 45px;
-  width: 45px;
-  border: 1px solid white;
-  display: grid;
-  cursor: pointer;
+    height: 45px;
+    width: 45px;
+    border: 1px solid #5A451E;
+    display: grid;
+    cursor: pointer;
 }
 
+// Square Disabled
 .square.disabled {
-  cursor: default;
+    cursor: default;
 }
 
-img {
-  height: inherit;
-  width: inherit;
-}
-
-img:before {
-  content: ' ';
-  display: block;
-  background-size: contain;
-  height: inherit;
-  width: inherit;
-  background-image: url(/assets/CharacterPortraits/Boy.png);
-}
-
-.character-icon {}
-
-.lead-icon {
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  margin-top: -8px;
-  margin-left: -5px;
-  z-index: 1;
-}
-
-.class-icon {
-  position: absolute;
-  margin-top: 35px;
-  height: 10px;
-  width: 10px;
-  z-index: 1;
-}
-
-.element-icon {
-  position: absolute;
-  margin-top: 35px;
-  margin-left: 35px;
-  height: 10px;
-  width: 10px;
-  z-index: 1;
-}
-
+// + Display
 .text-value {
-  display: grid;
-  align-items: center;
+    display: grid;
+    align-items: center;
+}
+
+
+/* ---------------------------------------*/
+/* ---------->>> Portraits <<<-----------*/
+/* -------------------------------------*/
+
+// Portrait Adjustment
+img {
+    height: inherit;
+    width: inherit;
+}
+
+// Generic Portrait
+img:before {
+    content: ' ';
+    display: block;
+    background-size: contain;
+    height: inherit;
+    width: inherit;
+    background-image: url(/assets/CharacterPortraits/Boy.png);
+}
+
+
+/* -----------------------------------*/
+/* ---------->>> Icons <<<-----------*/
+/* ---------------------------------*/
+
+//.character-icon {
+//}
+
+// Lead
+.lead-icon {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    margin-top: -8px;
+    margin-left: -5px;
+    z-index: 1;
+}
+
+// Class
+.class-icon {
+    position: absolute;
+    margin-top: 35px;
+    height: 10px;
+    width: 10px;
+    z-index: 1;
+}
+
+// Element
+.element-icon {
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 35px;
+    height: 10px;
+    width: 10px;
+    z-index: 1;
 }

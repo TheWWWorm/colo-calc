@@ -1,30 +1,51 @@
+/* ----------------------------------*/
+/* ---------->>> List <<<-----------*/
+/* --------------------------------*/
+
+// List Display
 .hero-list {
   display: flex;
   flex-wrap: wrap;
   text-align: center; 
 }
 
-// Behold! A bad css shrine!
+// Portraits
 :host ::ng-deep .character-icon {
   height: 50px;
   width: 50px;
 }
 
+// Squares Border
 :host ::ng-deep .square {
   height: 50px !important;
   width: 50px !important;
   cursor: pointer !important;;
+  border: 1px solid #544141;
+  background: #3e2e2e !important;
 }
 
+// + Color
+:host ::ng-deep .text-value{
+  color: #fff;
+}
+
+
+/* -----------------------------------*/
+/* ---------->>> Icons <<<-----------*/
+/* ---------------------------------*/
+
+// Lead
 :host ::ng-deep .lead-icon {
   margin-top: -10px !important;;
   margin-left: -5px !important;;
 }
 
+// Class
 :host ::ng-deep .class-icon {
   margin-top: 40px !important;;
 }
 
+// Element
 :host ::ng-deep .element-icon {
   margin-top: 40px !important;;
   margin-left: 40px !important;;
