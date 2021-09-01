@@ -56,21 +56,17 @@ span {
   width: 50px;
 }
 
-// Lead
-:host ::ng-deep .lead-icon {
-  margin-top: -10px !important;;
-  margin-left: -5px !important;;
-}
-
 // Class
 :host ::ng-deep .class-icon {
-  margin-top: 40px !important;;
+  margin-top: -10px !important;
+  position: relative !important;;
 }
 
 // Element
 :host ::ng-deep .element-icon {
-  margin-top: 40px !important;;
+  margin-top: -10px !important;
   margin-left: 40px !important;;
+  position: relative !important;;
 }
 
 .elemental-char-list-wrap {
@@ -105,7 +101,7 @@ span {
   box-sizing: border-box;
   overflow: auto;
   width: 100%;
-  height: 100%;
+  height: unset;
   min-height: inherit;
   max-height: inherit;
   border: 2px solid #5a451e;
