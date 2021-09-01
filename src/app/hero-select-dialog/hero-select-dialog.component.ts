@@ -46,7 +46,7 @@ export class HeroSelectDialogComponent implements OnInit {
     if (this.onlyUniques === null) {
       this.onlyUniques = true;
     }
-    // Disable by default
+    // Enable by default
     if (this.separateByElement === null) {
       this.separateByElement = true;
     }
