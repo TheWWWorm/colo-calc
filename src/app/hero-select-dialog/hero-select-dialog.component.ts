@@ -46,9 +46,9 @@ export class HeroSelectDialogComponent implements OnInit {
     if (this.onlyUniques === null) {
       this.onlyUniques = true;
     }
-    // Disable by default, also TODO: mobile fix
+    // Disable by default
     if (this.separateByElement === null) {
-      this.separateByElement = false;
+      this.separateByElement = true;
     }
     this.toggleRares();
     this.filterField.valueChanges.subscribe(() => {
