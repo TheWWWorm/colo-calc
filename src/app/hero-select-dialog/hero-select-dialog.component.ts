@@ -43,11 +43,11 @@ export class HeroSelectDialogComponent implements OnInit {
     private localStorageService: LocalStorageService
   ) {
     // Filter those out by default
-    if (this.onlyUniques === undefined) {
+    if (this.onlyUniques === null) {
       this.onlyUniques = true;
     }
-    // Filter those out by default
-    if (this.separateByElement === undefined) {
+    // Disable by default, also TODO: mobile fix
+    if (this.separateByElement === null) {
       this.separateByElement = false;
     }
     this.toggleRares();
