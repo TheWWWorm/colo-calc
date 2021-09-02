@@ -12,6 +12,7 @@
   "orderTitle": "Angriffsreihenfolge:",
   "dialogHeroSelectTitle": "Wähle deinen Helden aus",
   "dialogOnlyUniqueCheckbox": "Nur einzigartige Helden",
+  "dialogHeroSeparateByElement": "Nach Element aufteilen",
   "dialogHint": "Du kannst die Enter-Taste benutzen, um den ersten Helden in der Liste auszuwählen",
   "dialogFilter": "Filter",
   "dialogNothingFound": "Es wurde kein Held gefunden!",

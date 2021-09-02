@@ -12,6 +12,7 @@
   "orderTitle": "Ordem dos ataques:",
   "dialogHeroSelectTitle": "Selecione o seu herói",
   "dialogOnlyUniqueCheckbox": "Mostrar apenas heróis únicos",
+  "dialogHeroSeparateByElement": "Separar por elemento",
   "dialogHint": "Você também pode pressionar a tecla ENTER para selecionar o primeiro herói da lista",
   "dialogFilter": "Filtro",
   "dialogNothingFound": "Nenhum personagem foi encontrado!",

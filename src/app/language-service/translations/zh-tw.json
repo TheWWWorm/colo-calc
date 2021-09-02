@@ -12,6 +12,7 @@
   "orderTitle": "進攻順序：",
   "dialogHeroSelectTitle": "選擇你的英雄：",
   "dialogOnlyUniqueCheckbox": "僅顯示獨特英雄",
+  "dialogHeroSeparateByElement": "以屬性分別",
   "dialogHint": "你也可以按下Enter來選擇列表中的第一位英雄",
   "dialogFilter": "篩選器",
   "dialogNothingFound": "查無腳色!",
