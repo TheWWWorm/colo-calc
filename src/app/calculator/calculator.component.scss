@@ -210,6 +210,10 @@ a {
   background-size: cover;
   height: 100%;
   width: 100%;
+  @-moz-document url-prefix() {
+    filter: blur(5px);
+    transform: scale(1.1);
+  }
 }
 
 // Blur Effect
