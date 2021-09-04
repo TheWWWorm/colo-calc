@@ -12,7 +12,7 @@ export class LanguageService {
   public language: Language = this.localStorageService.get('lang') || this.findBrowserLanguage() || Language.en;
   public characterList$: BehaviorSubject<Array<Character>>;
 
-  public background = this.localStorageService.get('bg') || Background.Solid;
+  public background = this.localStorageService.get('bg') || Background.Chess;
   public backgroundList$: BehaviorSubject<Array<SelectOption>>;
 
   constructor(

@@ -27,5 +27,7 @@
   "backgroundSolid": "Темный",
   "backgroundLibrary": "Библиотека",
   "backgroundLava": "Лава",
-  "backgroundDesert": "Пустыня"
+  "backgroundDesert": "Пустыня",
+  "backgroundChess": "Шахматы",
+  "backgroundTraining": "Тренировка"
 }

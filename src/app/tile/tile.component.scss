@@ -79,3 +79,8 @@ img:before {
     width: 10px;
     z-index: 1;
 }
+
+.with-summon {
+  clip: rect(0, 25px, 100px, 0);
+  position: absolute;
+}

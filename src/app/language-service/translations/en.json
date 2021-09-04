@@ -28,5 +28,7 @@
   "backgroundLibrary": "Library",
   "backgroundLava": "Lava",
   "backgroundDesert": "Desert",
+  "backgroundChess": "Chess",
+  "backgroundTraining": "Training",
   "attackTemplate": "ATTACKER targets TARGET with a distance of RANGE"
 }
