@@ -375,6 +375,7 @@ export class CalculatorComponent implements OnInit {
     const badGuysResult = this.calcTeamTarget(this.evilParty.tiles, this.goodParty.tiles, TargetColour.Enemy, goodGuysResult.targeted);
 
     const goodGuysSummonsResult = this.calcTeamTarget(this.goodParty.tiles, this.evilParty.tiles, TargetColour.Ally, badGuysResult.targeted, true);
+    // @TODO: account for spawned good party summons when calculating enemy summon AI
     const badGuysSummonsResult = this.calcTeamTarget(this.evilParty.tiles, this.goodParty.tiles, TargetColour.Enemy, goodGuysSummonsResult.targeted, true);
 
     const newEvents = [
