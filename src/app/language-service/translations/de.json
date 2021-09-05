@@ -27,5 +27,7 @@
   "backgroundSolid": "Einfarbig",
   "backgroundLibrary": "Bibliothek",
   "backgroundLava": "Lava",
-  "backgroundDesert": "Wüste"
+  "backgroundDesert": "Wüste",
+  "backgroundChess": "Schachbrett",
+  "backgroundTraining": "Training"
 }

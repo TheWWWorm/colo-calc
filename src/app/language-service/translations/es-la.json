@@ -27,5 +27,7 @@
   "backgroundSolid": "Sólido",
   "backgroundLibrary": "Biblioteca",
   "backgroundLava": "Lava",
-  "backgroundDesert": "Desierto"
+  "backgroundDesert": "Desierto",
+  "backgroundChess": "Ajedrez",
+  "backgroundTraining": "Entrenamiento"
 }

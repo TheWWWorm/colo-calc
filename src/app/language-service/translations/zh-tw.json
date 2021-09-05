@@ -28,5 +28,7 @@
   "backgroundLibrary": "魔法學校",
   "backgroundLava": "地下城王國",
   "backgroundDesert": "瘋狂沙漠",
-  "attackTemplate": "ATTACKER 瞄準了 距離RANGE 的 TARGET"
+  "attackTemplate": "ATTACKER 瞄準了 距離RANGE 的 TARGET",
+  "backgroundChess": "通常",
+  "backgroundTraining": "訓練室"
 }

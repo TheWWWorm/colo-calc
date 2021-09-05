@@ -28,5 +28,7 @@
   "backgroundLibrary": "Biblioteca",
   "backgroundLava": "Lava",
   "backgroundDesert": "Deserto",
+  "backgroundChess": "Xadrez",
+  "backgroundTraining": "Treinamento",
   "attackTemplate": "ATTACKER irá focar em TARGET com uma distância de RANGE"
 }
