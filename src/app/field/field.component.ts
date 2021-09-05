@@ -26,11 +26,18 @@ export class FieldComponent implements OnInit, OnChanges {
     
     this.matrix.forEach((tile) => {
       if (tile.targets) {
-        // console.log(tile);
         this.lineService.createLine(
           'tile' + tile.id,
           'tile' + tile.targets.id,
           tile.lineColour
+        )
+      }
+      if (tile.summonTargets) {
+        this.lineService.createLine(
+          'tile' + tile.id,
+          'tile' + tile.summonTargets.id,
+          tile.lineColour,
+          true
         )
       }
     });

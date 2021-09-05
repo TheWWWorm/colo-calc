@@ -39,7 +39,7 @@ export interface RawChar {
   isSummon?: boolean;
   isRare?: boolean;
   isSecret?: boolean;
-  summonName?: string;
+  summonId?: string;
 };
 
 export interface TranslatedChar {
@@ -58,6 +58,7 @@ export interface Tile {
   onClick?: (tile: Tile) => void;
   onChangeCharacter?: (tile: Tile) => void;
   targets?: Tile;
+  summonTargets?: Tile;
   lineColour?: TargetColour;
 }
 

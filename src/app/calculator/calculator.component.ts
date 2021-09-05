@@ -53,6 +53,7 @@ export class CalculatorComponent implements OnInit {
       const updatedTile: Tile = {
         ...tile,
         targets: null,
+        summonTargets: null,
         character: null,
         positionInParty: null,
       }
@@ -264,15 +265,28 @@ export class CalculatorComponent implements OnInit {
     return potentialTargets;
   }
 
-  private calcTeamTarget(attackers: Array<Tile>, defenders: Array<Tile>, lineColour: TargetColour, targeted: Array<Tile>) {
+  private calcTeamTarget(
+    attackers: Array<Tile>,
+    defenders: Array<Tile>,
+    lineColour: TargetColour,
+    targeted: Array<Tile>,
+    summonMode: boolean = false,
+  ) {
     const events: Array<string> = [];
     const targetedUpd = attackers.reduce((alreadyInTarget, attacker) => {
-      attacker.targets = null;
-      attacker.lineColour = null;
-      if (!validTileId(attacker)) {
+      if (summonMode) {
+        attacker.summonTargets = null;
+      } else {
+        attacker.targets = null;
+      }
+
+      if (!validTileId(attacker) || (summonMode && !attacker.character.summonId)) {
         return alreadyInTarget;
       }
-      let usingAi: AiType = attacker.character.aiType;
+
+      const attackerCharacter: Character = summonMode ? this.characterService.getCharacter(attacker.character.summonId) : attacker.character;
+
+      let usingAi: AiType = attackerCharacter.aiType;
       let potentialTargets: Array<Tile> = this.getTargets(
         attacker,
         usingAi,
@@ -282,8 +296,8 @@ export class CalculatorComponent implements OnInit {
       );
 
       if (!potentialTargets.length) {
-        if (attacker.character.fallbackAiType) {
-          usingAi = attacker.character.fallbackAiType;
+        if (attackerCharacter.fallbackAiType) {
+          usingAi = attackerCharacter.fallbackAiType;
           potentialTargets = this.getTargets(
             attacker,
             usingAi,
@@ -324,18 +338,23 @@ export class CalculatorComponent implements OnInit {
         (lineColour === TargetColour.Ally && this.showAllyLinesChecked) ||
         (lineColour === TargetColour.Enemy && this.showEnemyLinesChecked)
       ) {
-        attacker.targets = target.tile;
-        attacker.lineColour = lineColour;
+        if (summonMode) {
+          attacker.summonTargets = target.tile;
+          attacker.lineColour = lineColour;
+        } else {
+          attacker.targets = target.tile;
+          attacker.lineColour = lineColour;
+        }
       }
 
       let event: string;
       if (this.languageService.getLabel('attackTemplate', false)) {
         event = this.languageService.getLabel('attackTemplate')
-          .replace('ATTACKER', attacker.character.name)
+          .replace('ATTACKER', attackerCharacter.name)
           .replace('TARGET', target.tile.character.name)
           .replace('RANGE', target.distance.toFixed(2));
       } else {
-        event = `${attacker.character.name} ${this.languageService.getLabel('targets')} ${target.tile.character.name} ${this.languageService.getLabel('withDistance')} ${target.distance.toFixed(2)}`;
+        event = `${attackerCharacter.name} ${this.languageService.getLabel('targets')} ${target.tile.character.name} ${this.languageService.getLabel('withDistance')} ${target.distance.toFixed(2)}`;
       }
       events.push(event);
       alreadyInTarget.push(target.tile);
@@ -354,9 +373,15 @@ export class CalculatorComponent implements OnInit {
     }
     const goodGuysResult = this.calcTeamTarget(this.goodParty.tiles, this.evilParty.tiles, TargetColour.Ally, []);
     const badGuysResult = this.calcTeamTarget(this.evilParty.tiles, this.goodParty.tiles, TargetColour.Enemy, goodGuysResult.targeted);
+
+    const goodGuysSummonsResult = this.calcTeamTarget(this.goodParty.tiles, this.evilParty.tiles, TargetColour.Ally, badGuysResult.targeted, true);
+    const badGuysSummonsResult = this.calcTeamTarget(this.evilParty.tiles, this.goodParty.tiles, TargetColour.Enemy, goodGuysSummonsResult.targeted, true);
+
     const newEvents = [
       ...goodGuysResult.events,
-      ...badGuysResult.events
+      ...badGuysResult.events,
+      ...goodGuysSummonsResult.events,
+      ...badGuysSummonsResult.events,
     ];
     this.events = newEvents;
     this.matrix = [...this.matrix];
@@ -392,6 +417,7 @@ export class CalculatorComponent implements OnInit {
               lineColour: null,
               onChangeCharacter: null,
               targets: null,
+              summonTargets: null,
               onClick: null,
             }
           }

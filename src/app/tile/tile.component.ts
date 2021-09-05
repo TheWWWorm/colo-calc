@@ -1,6 +1,7 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { CalculatorComponent } from '../calculator/calculator.component';
-import { CharacterClass, Element, Tile } from '../calculator/calculator.types';
+import { Character, CharacterClass, Element, Tile } from '../calculator/calculator.types';
+import { CharacterService } from '../character-service/character-service.service';
 
 export const leadIcon = `assets/icons/icon_lead.png`;
 
@@ -51,7 +52,11 @@ export class TileComponent implements OnChanges {
   public tileLead: string;
   public tileClass: string;
 
-  constructor() { }
+  public summon: Character;
+
+  constructor(
+    private characterService: CharacterService
+  ) { }
 
   public ngOnChanges(): void {
     if (this.tile?.character) {
@@ -64,6 +69,10 @@ export class TileComponent implements OnChanges {
       }
       this.tileClass = classIconMap[character.class];
       this.tileElement = elementIconMap[character.element];
+
+      if (this.tile.character.summonId) {
+        this.summon = this.characterService.getCharacter(this.tile.character.summonId);
+      }
     } else if (this.tile) {
       const posInLine = CalculatorComponent.returnPositionInLine(this.tile.id);
       if (posInLine < 5) {
@@ -76,11 +85,13 @@ export class TileComponent implements OnChanges {
       this.tileLead = null;
       this.tileClass = null;
       this.tileElement = null;
+      this.summon = null;
     } else {
       this.tileBackground = null;
       this.tileLead = null;
       this.tileClass = null;
       this.tileElement = null;
+      this.summon = null;
     }
   }
 

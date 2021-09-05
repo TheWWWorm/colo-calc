@@ -29,10 +29,15 @@ export class LineService {
     return 1;
   }
 
-  public createLine(id_from: string, id_to: string, color: TargetColour) {
-    const id = `line_container_${id_from}_${id_to}`;
-    const pahtSubId = `line_${id_from}_${id_to}`;
-    const arrowSubId = `arrow_line_${id_from}_${id_to}`;
+  public createLine(
+    id_from: string,
+    id_to: string,
+    color: TargetColour,
+    summonMode: boolean = false
+  ) {
+    const id = `line_container_${id_from}_${id_to}${summonMode ? '_summon' : ''}`;
+    const pahtSubId = `line_${id_from}_${id_to}${summonMode ? '_summon' : ''}`;
+    const arrowSubId = `arrow_line_${id_from}_${id_to}${summonMode ? '_summon' : ''}`;
     // console.log(id_from, id_to);
     this.lines.push(id);
     //SVG that will not appear until points towards the element that we want is given
@@ -70,7 +75,7 @@ export class LineService {
         from.x = from.x - test1_loc.width /2;
       }
 
-      if (from.y === to.y) {
+      if (from.y === to.y && !summonMode) {
         if (color === TargetColour.Ally) {
           from.y = from.y - 5;
           to.y = to.y - 5;
@@ -79,6 +84,9 @@ export class LineService {
           from.y = from.y + 5;
           to.y = to.y + 5;
         } 
+      } else if (from.y !== to.y && !summonMode) {
+        from.y = from.y + 10;
+        to.y = to.y + 10;
       }
     } else {
       console.log('hw', test2_loc.width, test2_loc.height)

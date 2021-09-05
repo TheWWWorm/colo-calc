@@ -9,6 +9,21 @@
     border: 1px solid #5A451E;
     display: grid;
     cursor: pointer;
+
+  &:hover {
+    .summon {
+      display: initial;
+      clip: rect(0, 50px, 50px, 0px);
+      animation-name: summonReveal;
+      animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      animation-duration: 1.5s;
+    }
+  }
+}
+
+@keyframes summonReveal {
+  from {clip: rect(0, 0px, 50px, 0);}
+  to {clip: rect(0, 50px, 50px, 0px);}
 }
 
 // Square Disabled
@@ -81,6 +96,12 @@ img:before {
 }
 
 .with-summon {
-  clip: rect(0, 25px, 100px, 0);
+  //clip: rect(0, 25px, 100px, 0);
+  //position: absolute;
+}
+
+.summon {
+  //clip: rect(0, 50px, 50px, 50px);
+  display: none;
   position: absolute;
 }

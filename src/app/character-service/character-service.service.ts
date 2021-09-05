@@ -30,7 +30,7 @@ export class CharacterService {
   }
 
   public getCharacter(id: string) {
-    return this.charList.find((c) => c.id === id) || this.defaultCharacter;
+    return this.fullCharList.find((c) => c.id === id) || this.defaultCharacter;
   }
 
 }

@@ -387,7 +387,7 @@
 		"id": "Noxia",
 		"aiType": "Ranged",
 		"class": "Support",
-    "summons": "Dark Spirit",
+    "summonId": "Dark Spirit",
 		"imgName": "Noxia.png",
     "element": "Dark"
 	},

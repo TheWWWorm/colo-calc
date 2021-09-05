@@ -1,6 +1,10 @@
 <div class="square" [ngClass]="{disabled: tile?.disabled || disabled}" (click)="clicked()">
   <!-- Show unit number in the corner -->
-  <img *ngIf="tileBackground" [src]="tileBackground" [alt]="tile.character?.name" class="character-icon">
+  <img *ngIf="tileBackground && !summon" [src]="tileBackground" [alt]="tile.character?.name" class="character-icon">
+
+  <img *ngIf="tileBackground && summon" [src]="tileBackground" [alt]="tile.character?.name" class="character-icon with-summon">
+  <img *ngIf="tileBackground && summon" [src]="summon.imgName" [alt]="summon?.name" class="character-icon summon">
+
   <img *ngIf="tileLead" [src]="tileLead" class="lead-icon">
   <img *ngIf="tileElement" [src]="tileElement" class="element-icon">
   <img *ngIf="tileClass" [src]="tileClass" class="class-icon">
