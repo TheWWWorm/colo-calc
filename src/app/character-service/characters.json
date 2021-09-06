@@ -157,6 +157,15 @@
 		"class": "Support",
     "isRare": true,
 		"imgName": "Favi.png",
+    "element": "Water",
+    "summonId": "Jack Frost"
+	},
+  {
+		"id": "Jack Frost",
+		"aiType": "Ranged",
+		"class": "Ranged",
+    "isSummon": true,
+		"imgName": "Jack Frost.png",
     "element": "Water"
 	},
 	{
