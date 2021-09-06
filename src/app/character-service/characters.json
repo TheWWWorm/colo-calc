@@ -477,8 +477,7 @@
 	},
 	{
 		"id": "Veronica",
-		"aiType": "Ally",
-    "fallbackAiType": "Melee",
+		"aiType": "Melee",
 		"class": "Support",
 		"imgName": "Veronica.png",
     "element": "Water"
