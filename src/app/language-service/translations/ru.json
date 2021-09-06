@@ -29,5 +29,6 @@
   "backgroundLava": "Лава",
   "backgroundDesert": "Пустыня",
   "backgroundChess": "Шахматы",
-  "backgroundTraining": "Тренировка"
+  "backgroundTraining": "Тренировка",
+  "backgroundDungeon": "Подземелье"
 }

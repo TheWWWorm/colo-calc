@@ -30,5 +30,6 @@
   "backgroundDesert": "Desert",
   "backgroundChess": "Chess",
   "backgroundTraining": "Training",
+  "backgroundDungeon": "Dungeon",
   "attackTemplate": "ATTACKER targets TARGET with a distance of RANGE"
 }

@@ -277,6 +277,13 @@ a {
   }
 }
 
+// Dungeon Background
+.bg-dungeon {
+  > .bg-image {
+    background-image: url("/assets/backgrounds/dungeon.jpeg");
+  }
+}
+
 
 /* ------------------------------------*/
 /* ---------->>> Footer <<<-----------*/

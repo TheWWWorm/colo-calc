@@ -9,6 +9,7 @@ const valueToClassName = {
   [Background.Library]: 'bg-library',
   [Background.Lava]: 'bg-lava',
   [Background.Desert]: 'bg-desert',
+  [Background.Dungeon]: 'bg-dungeon',
   [Background.Chess]: 'bg-chess',
   [Background.Training]: 'bg-training'
 }
