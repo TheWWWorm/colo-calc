@@ -377,6 +377,13 @@
 		"imgName": "Mk.99.png",
     "element": "Light"
 	},
+  {
+		"id": "MK.2",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "MK.2.png",
+    "element": "Dark"
+	},
 	{
 		"id": "Nari",
 		"aiType": "Ranged",
