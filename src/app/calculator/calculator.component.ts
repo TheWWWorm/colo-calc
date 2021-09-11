@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
 import { Observable } from 'rxjs';
 import { createParty, validTileId } from 'src/fn/helpers';
 import { CharacterService } from '../character-service/character-service.service';
 import { HeroSelectDialogComponent } from '../hero-select-dialog/hero-select-dialog.component';
 import { LanguageService } from '../language-service/language-service.service';
-import { Background, Language, languageList } from '../language-service/traslations.data';
+import { languageList } from '../language-service/traslations.data';
 import { LocalStorageService } from '../local-storage-service/local-storage-service.service';
+import { ShareDialogComponent } from '../share-dialog/share-dialog.component';
 import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, TargetColour, AiType, CharacterClass, Character } from './calculator.types';
 
 @Component({
@@ -128,14 +130,39 @@ export class CalculatorComponent implements OnInit {
     private dialog: MatDialog,
     private languageService: LanguageService,
     private localStorageService: LocalStorageService,
-    private characterService: CharacterService
+    private characterService: CharacterService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     console.log('init')
     this.reset();
-    this.resetGoodParty(true);
-    this.resetEvilParty();
+
+    let shareLoaded = false;
+
+    this.route.queryParamMap.forEach((param) => {
+      console.log(param)
+      if (param.has('share')) {
+        const stringed = atob(param.get('share'));
+        const [good, evil] = stringed.split(';');
+        console.log(JSON.parse(good), JSON.parse(evil));
+        this.goodParty = this.partyFromShare('Good', good, (party) => {
+          this.goodParty = party;
+          this.syncMyTeam();
+        });
+        this.evilParty = this.partyFromShare('Evil', evil, (party) => this.evilParty = party);
+        this.matrix = [...this.matrix];
+        this.calculateEvents();
+        shareLoaded = true;
+        console.log(stringed);
+      }
+    });
+
+    if (!shareLoaded) {
+      this.resetGoodParty(true);
+      this.resetEvilParty();
+    }
+
 
     this.langControl.valueChanges.subscribe((value) => {
       this.languageService.changeLang(value);
@@ -438,6 +465,61 @@ export class CalculatorComponent implements OnInit {
     } else {
       this.syncMyTeam(this.myTeamKey, null, true);
     }
+  }
+
+  public partyToShare(party: Party): string {
+    const reduced = party.tiles.reduce((acc, e) => {
+      if (e.character) {
+        acc.push([e.id, e.character.id]);
+      }
+      return acc;
+    }, []);
+    return JSON.stringify(reduced);
+  }
+
+  // @TODO: fix party icon blinking
+  // @TODO: fix party not updating
+  // @TODO unify the update party method/restore from local storage method!
+  public partyFromShare(name: string, stringParty: string, cb: Party['updateParty']): Party {
+    const parsed: Array<Array<string>> = JSON.parse(stringParty);
+
+    const party = createParty(name, cb);
+
+    parsed.forEach(([id, char], i) => {
+      let tile: Tile;
+      let character: Character;
+      if (char) {
+        character = this.characterService.getCharacter(char);
+      }
+      if (id !== null && id !== undefined) {
+        tile = this.matrix[id as unknown as number];
+      } else {
+        tile = party.tiles[i];
+      }
+      console.log('tile', tile, 'id', id)
+
+      if (tile && character) {
+        tile.character = character;
+        party.size = party.size + 1;
+      }
+      party.tiles[i] = tile;
+    });
+
+    console.log('party', party)
+
+    return party; 
+  }
+
+  public shareBtnClick() {
+    const partyString = `${this.partyToShare(this.goodParty)};${this.partyToShare(this.evilParty)}`;
+    console.log(partyString);
+    const url = `${window.location.host}?share=${btoa(partyString)}`;
+    this.dialog.open(ShareDialogComponent, {
+      width: '700px',
+      data: {
+        url
+      }
+    })
   }
 
 }

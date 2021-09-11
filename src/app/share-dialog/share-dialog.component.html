@@ -1,0 +1,11 @@
+<div>
+  <h3>{{ 'shareDialogInfo' | _ }}</h3>
+  <mat-form-field>
+    <mat-label>{{ 'url' | _ }}</mat-label>
+    <input
+      #shareLink
+      matInput
+      [formControl]="link"
+    >
+  </mat-form-field>
+</div>

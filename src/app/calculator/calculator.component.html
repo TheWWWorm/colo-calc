@@ -27,6 +27,7 @@
     <span class="actions">
       <span>{{ 'allyLineToggle' | _ }}</span><input type="checkbox" [(ngModel)]="showAllyLinesChecked" (change)="calculateEvents()">
       <span>{{ 'enemyLineToggle' | _ }}</span><input type="checkbox" [(ngModel)]="showEnemyLinesChecked" (change)="calculateEvents()">
+      <mat-icon class="share-btn" (click)="shareBtnClick()">share</mat-icon>
     </span>
     <div class="field">
       <app-field
