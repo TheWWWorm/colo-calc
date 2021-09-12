@@ -8,6 +8,7 @@ export class LocalStorageService {
   constructor() { }
 
   public get<T>(key: string): T {
+    console.log('parse', key, localStorage.getItem(key))
     return JSON.parse(localStorage.getItem(key));
   }
 
@@ -16,7 +17,13 @@ export class LocalStorageService {
   }
 
   public set<T>(key: string, value: T) {
-    localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value));
+    let parsable = true;
+    try {
+      JSON.parse(value as unknown as string);
+    } catch (error) {
+      parsable = false;
+    }
+    localStorage.setItem(key, parsable ? value as unknown as string : JSON.stringify(value));
   }
 
 }

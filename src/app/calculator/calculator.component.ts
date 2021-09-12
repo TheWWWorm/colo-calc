@@ -19,6 +19,7 @@ import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, Targe
   styleUrls: ['./calculator.component.scss']
 })
 export class CalculatorComponent implements OnInit {
+  public shareIconName = /(Mac|iPhone|iPod|iPad)/i.test(navigator?.platform || '') ? 'ios_share' : 'share';
   public myTeamKey = 'myTeam';
   public separatorImgSrc = `assets/grid_center.jpeg`;
 
@@ -398,9 +399,6 @@ export class CalculatorComponent implements OnInit {
     }
 
     let teamToSave = this.partyToShare(team);
-
-    console.log('sync!', teamToSave)
-
     this.localStorageService.set(key, teamToSave);
   }
 
