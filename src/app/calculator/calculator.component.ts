@@ -459,9 +459,9 @@ export class CalculatorComponent implements OnInit {
             tile = party.tiles[i];
           }
           console.log('tile', tile, 'id', id)
-    
+          
+          tile.character = character;
           if (validTileId(tile) && character) {
-            tile.character = character;
             party.size = party.size + 1;
           }
           tile.positionInParty = i;
@@ -475,6 +475,7 @@ export class CalculatorComponent implements OnInit {
     const oldParty = this[partyKey];
     this[partyKey] = party;
     this.resetPartyTiles(oldParty, this[partyKey]);
+    this.syncMyTeam();
     this.calculateEvents();
   }
 
