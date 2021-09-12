@@ -19,7 +19,7 @@ import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, Targe
   styleUrls: ['./calculator.component.scss']
 })
 export class CalculatorComponent implements OnInit {
-  public clearParams = false;
+  public clearParams = true;
 
   public shareIconName = /(Mac|iPhone|iPod|iPad)/i.test(navigator?.platform || '') ? 'ios_share' : 'share';
   public myTeamKey = 'myTeam';
