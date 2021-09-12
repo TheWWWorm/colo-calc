@@ -481,7 +481,7 @@ export class CalculatorComponent implements OnInit {
   public shareBtnClick() {
     const partyString = `${this.partyToShare(this.goodParty)};${this.partyToShare(this.evilParty)}`;
     console.log(partyString);
-    const url = `${window.location.host}?share=${btoa(partyString)}`;
+    const url = `${window.location.origin}?share=${btoa(partyString)}`;
     this.dialog.open(ShareDialogComponent, {
       width: '700px',
       data: {
