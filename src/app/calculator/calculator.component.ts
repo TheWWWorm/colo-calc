@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
 import { Observable } from 'rxjs';
 import { createParty, validTileId } from 'src/fn/helpers';
 import { CharacterService } from '../character-service/character-service.service';
 import { HeroSelectDialogComponent } from '../hero-select-dialog/hero-select-dialog.component';
 import { LanguageService } from '../language-service/language-service.service';
-import { Background, Language, languageList } from '../language-service/traslations.data';
+import { languageList } from '../language-service/traslations.data';
 import { LocalStorageService } from '../local-storage-service/local-storage-service.service';
+import { ShareDialogComponent } from '../share-dialog/share-dialog.component';
 import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, TargetColour, AiType, CharacterClass, Character } from './calculator.types';
 
 @Component({
@@ -17,6 +19,9 @@ import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, Targe
   styleUrls: ['./calculator.component.scss']
 })
 export class CalculatorComponent implements OnInit {
+  public clearParams = true;
+
+  public shareIconName = /(Mac|iPhone|iPod|iPad)/i.test(navigator?.platform || '') ? 'ios_share' : 'share';
   public myTeamKey = 'myTeam';
   public separatorImgSrc = `assets/grid_center.jpeg`;
 
@@ -32,7 +37,6 @@ export class CalculatorComponent implements OnInit {
   
   public goodParty: Party;
   public evilParty: Party;
-  // @TODO: good/evil summon party, like noxias pet
   
   public events: Array<string> = [];
 
@@ -94,6 +98,8 @@ export class CalculatorComponent implements OnInit {
       }
       const party = this.returnParty(tile.id);
       party.tiles[newTile.positionInParty] = newTile;
+      console.log(newTile)
+      console.log(this.goodParty)
       this.matrix[newTile.id] = newTile;
       this.syncMyTeam();
       this.calculateEvents();
@@ -128,14 +134,44 @@ export class CalculatorComponent implements OnInit {
     private dialog: MatDialog,
     private languageService: LanguageService,
     private localStorageService: LocalStorageService,
-    private characterService: CharacterService
+    private characterService: CharacterService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     console.log('init')
-    this.reset();
-    this.resetGoodParty(true);
-    this.resetEvilParty();
+    this.matrix = this.generateMatrix();
+
+    let goodPartyString: string = this.localStorageService.getUnparsed(this.myTeamKey);;
+    let evilPartyString: string;
+
+    this.route.queryParamMap.forEach((param) => {
+      if (param.has('share')) {
+        try {
+          const stringed = atob(param.get('share'));
+          const partyData = stringed.split(';');
+          goodPartyString = partyData[0];
+          evilPartyString = partyData[1]; 
+        } catch (error) {
+          console.error('Errored trying to work with share param!', error)
+        }
+
+        if (this.clearParams) {
+          window.history.pushState({}, document.title, window.location.pathname);
+          this.rememberMyTeam = false;
+        }
+      }
+    });
+
+    this.resetParty(
+      'Good',
+      'goodParty',
+      goodPartyString
+    );
+    this.resetParty('Evil', 'evilParty', evilPartyString);
+    this.matrix = [...this.matrix];
+    this.calculateEvents();
+
 
     this.langControl.valueChanges.subscribe((value) => {
       this.languageService.changeLang(value);
@@ -147,10 +183,6 @@ export class CalculatorComponent implements OnInit {
     this.bgControl.valueChanges.subscribe((value) => {
       this.languageService.changeBg(value);
     })
-  }
-
-  public reset() {
-    this.matrix = this.generateMatrix();
   }
 
   public updatePartyCharNames(party: Party) {
@@ -179,36 +211,6 @@ export class CalculatorComponent implements OnInit {
         }
       }
     });
-  }
-
-  public resetGoodParty(initial = false) {
-    const oldParty = this.goodParty;
-    if (initial) {
-      let localPartyData = this.localStorageService.get<Party>(this.myTeamKey);
-      if (localPartyData && localPartyData.tiles) {
-        localPartyData.updateParty = (party) => {
-          this.goodParty = party;
-          this.syncMyTeam();
-        }
-        localPartyData = this.updatePartyCharNames(localPartyData);
-        this.goodParty = localPartyData;
-        return;
-      }
-    }
-    this.goodParty = createParty('Good', (party) => {
-      this.goodParty = party;
-      this.syncMyTeam();
-    });
-    this.resetPartyTiles(oldParty, this.goodParty);
-    this.syncMyTeam();
-    this.calculateEvents();
-  }
-
-  public resetEvilParty() {
-    const oldParty = this.evilParty;
-    this.evilParty = createParty('Evil', (party) => this.evilParty = party);
-    this.resetPartyTiles(oldParty, this.evilParty);
-    this.calculateEvents();
   }
 
   public static returnPositionInLine(id: number): number {
@@ -402,33 +404,9 @@ export class CalculatorComponent implements OnInit {
     if (!this.rememberMyTeam && !forced) {
       return;
     }
-    let teamToSave: Party;
-    if (team) {
-      teamToSave = {
-        ...team,
-        updateParty: null,
-        size: 0,
-        tiles: team.tiles.map((tile) => {
-          if (!tile) {
-            return tile;
-          } else {
-            return {
-              ...tile,
-              id: null,
-              lineColour: null,
-              onChangeCharacter: null,
-              targets: null,
-              summonTargets: null,
-              onClick: null,
-            }
-          }
-        })
-      }
-    } else {
-      teamToSave = null;
-    }
 
-    this.localStorageService.set<Party>(key, teamToSave);
+    let teamToSave = this.partyToShare(team);
+    this.localStorageService.set(key, teamToSave);
   }
 
   public rememberMyTeamChecked() {
@@ -438,6 +416,75 @@ export class CalculatorComponent implements OnInit {
     } else {
       this.syncMyTeam(this.myTeamKey, null, true);
     }
+  }
+
+  public partyToShare(party: Party): string {
+    const reduced = party.tiles.reduce((acc, e) => {
+      if (e.character) {
+        acc.push([e.id, e.character.id]);
+      }
+      return acc;
+    }, []);
+    return JSON.stringify(reduced);
+  }
+
+   // @TODO: fix party icon blinking
+  // @ALSO refactor this component. try to remove saving options. Also, use the method bellow to store the data to "save my party" option.
+  // Consider "party" class!
+  public resetParty(
+    partyName: string,
+    partyKey: 'evilParty' | 'goodParty',
+    partyString?: string
+  ) {
+    const party = createParty(partyName, (party) => {
+      this[partyKey] = party;
+      this.syncMyTeam();
+    },);
+
+    if (partyString) {
+      try {
+        const parsed: Array<Array<string>> = JSON.parse(partyString);
+        parsed.forEach(([id, char], i) => {
+          let tile: Tile;
+          let character: Character;
+          if (char) {
+            character = this.characterService.getCharacter(char);
+          }
+          if (id !== null && id !== undefined) {
+            tile = this.matrix[id as unknown as number];
+          } else {
+            tile = party.tiles[i];
+          }
+          console.log('tile', tile, 'id', id)
+    
+          if (tile.id && character) {
+            tile.character = character;
+            party.size = party.size + 1;
+          }
+          tile.positionInParty = i;
+          party.tiles[i] = tile;
+        });
+      } catch (error) {
+        console.log('Errored working with partyString:', partyString, error)
+      }
+    }
+
+    const oldParty = this[partyKey];
+    this[partyKey] = party;
+    this.resetPartyTiles(oldParty, this[partyKey]);
+    this.calculateEvents();
+  }
+
+  public shareBtnClick() {
+    const partyString = `${this.partyToShare(this.goodParty)};${this.partyToShare(this.evilParty)}`;
+    console.log(partyString);
+    const url = `${window.location.host}?share=${btoa(partyString)}`;
+    this.dialog.open(ShareDialogComponent, {
+      width: '700px',
+      data: {
+        url
+      }
+    })
   }
 
 }

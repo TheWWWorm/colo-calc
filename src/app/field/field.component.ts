@@ -19,11 +19,10 @@ export class FieldComponent implements OnInit, OnChanges {
   ngOnInit() {
   }
 
-  public ngOnChanges(changes: SimpleChanges): void {
+  public drawLines() {
     if (this.doClears) {
       this.lineService.clearLines();
     }
-    
     this.matrix.forEach((tile) => {
       if (tile.targets) {
         this.lineService.createLine(
@@ -41,5 +40,18 @@ export class FieldComponent implements OnInit, OnChanges {
         )
       }
     });
+  }
+ 
+  public ngOnChanges(changes: SimpleChanges): void {
+    try {
+      this.drawLines();
+    } catch (error) {
+      console.error(error)
+      try {
+        setTimeout(() => this.drawLines(), 100);
+      } catch (error) {
+        console.error('We tried :(', error)
+      }
+    }
   }
 }

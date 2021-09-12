@@ -1,0 +1,13 @@
+<div>
+  <h3 class="info">{{ 'shareDialogInfo' | _ }}</h3>
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>{{ 'url' | _ }}</mat-label>
+    <textarea
+      #shareLink
+      matInput
+      [formControl]="link"
+      rows="5"
+    >
+    </textarea>
+  </mat-form-field>
+</div>
