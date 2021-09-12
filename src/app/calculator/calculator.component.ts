@@ -19,7 +19,7 @@ import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, Targe
   styleUrls: ['./calculator.component.scss']
 })
 export class CalculatorComponent implements OnInit {
-  public clearParams = true;
+  public clearParams = false;
 
   public shareIconName = /(Mac|iPhone|iPod|iPad)/i.test(navigator?.platform || '') ? 'ios_share' : 'share';
   public myTeamKey = 'myTeam';
@@ -242,24 +242,25 @@ export class CalculatorComponent implements OnInit {
 
   private getTargets(attacker: Tile, attackerAi: AiType, attackers: Array<Tile>, defenders: Array<Tile>, alreadyInTarget: Array<Tile>) {
     let potentialTargets: Array<Tile> = [];
+    defenders = defenders.filter((m) => validTileId(m) && m?.character)
     // Melee targets closest, untargeted
     if (attackerAi === AiType.Melee) {
-      potentialTargets = defenders.filter((m) => validTileId(m) && !alreadyInTarget.includes(m));
+      potentialTargets = defenders.filter((m) => !alreadyInTarget.includes(m));
       // If all targets are taken occupied, just take closest one
       if (!potentialTargets.length) {
-        potentialTargets = defenders.filter(validTileId);
+        potentialTargets = defenders;
       }
     // Ranged targets closest target
     } else if (attackerAi === AiType.Ranged) {
-      potentialTargets = defenders.filter(validTileId);
+      potentialTargets = defenders;
     // Target furtherest friend
     } else if (attackerAi === AiType.Ally) {
-      potentialTargets = attackers.filter((m) => validTileId(m) && attacker.id !== m.id);
+      potentialTargets = attackers.filter((m) => attacker.id !== m.id);
     // 2 or MORE ranged - Attack closest untargeted ranged
     // 1 ranged - Attack that ranged
     // 0 ranged - melee AI fallback
     } else if (attackerAi === AiType.Assassin) {
-      potentialTargets = defenders.filter((m) => validTileId(m) && m.character.class === CharacterClass.Ranged);
+      potentialTargets = defenders.filter((m) => m.character.class === CharacterClass.Ranged);
       if (potentialTargets.length > 1) {
         potentialTargets = potentialTargets.filter((m) => !alreadyInTarget.includes(m));
       }
@@ -282,9 +283,11 @@ export class CalculatorComponent implements OnInit {
         attacker.targets = null;
       }
 
-      if (!validTileId(attacker) || (summonMode && !attacker.character.summonId)) {
+      if (!validTileId(attacker) || (summonMode && !attacker.character?.summonId) || !attacker.character) {
         return alreadyInTarget;
       }
+
+      console.log('attacker', attacker)
 
       const attackerCharacter: Character = summonMode ? this.characterService.getCharacter(attacker.character.summonId) : attacker.character;
 
@@ -457,7 +460,7 @@ export class CalculatorComponent implements OnInit {
           }
           console.log('tile', tile, 'id', id)
     
-          if (tile.id && character) {
+          if (validTileId(tile) && character) {
             tile.character = character;
             party.size = party.size + 1;
           }
