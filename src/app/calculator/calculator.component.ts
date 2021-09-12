@@ -34,7 +34,6 @@ export class CalculatorComponent implements OnInit {
   
   public goodParty: Party;
   public evilParty: Party;
-  // @TODO: good/evil summon party, like noxias pet
   
   public events: Array<string> = [];
 
@@ -96,6 +95,8 @@ export class CalculatorComponent implements OnInit {
       }
       const party = this.returnParty(tile.id);
       party.tiles[newTile.positionInParty] = newTile;
+      console.log(newTile)
+      console.log(this.goodParty)
       this.matrix[newTile.id] = newTile;
       this.syncMyTeam();
       this.calculateEvents();
@@ -136,32 +137,32 @@ export class CalculatorComponent implements OnInit {
 
   ngOnInit() {
     console.log('init')
-    this.reset();
+    this.matrix = this.generateMatrix();
 
-    let shareLoaded = false;
+    let goodPartyString: string = this.localStorageService.getUnparsed(this.myTeamKey);;
+    let evilPartyString: string;
 
     this.route.queryParamMap.forEach((param) => {
-      console.log(param)
       if (param.has('share')) {
-        const stringed = atob(param.get('share'));
-        const [good, evil] = stringed.split(';');
-        console.log(JSON.parse(good), JSON.parse(evil));
-        this.goodParty = this.partyFromShare('Good', good, (party) => {
-          this.goodParty = party;
-          this.syncMyTeam();
-        });
-        this.evilParty = this.partyFromShare('Evil', evil, (party) => this.evilParty = party);
-        this.matrix = [...this.matrix];
-        this.calculateEvents();
-        shareLoaded = true;
-        console.log(stringed);
+        try {
+          const stringed = atob(param.get('share'));
+          const partyData = stringed.split(';');
+          goodPartyString = partyData[0];
+          evilPartyString = partyData[1]; 
+        } catch (error) {
+          console.error('Errored trying to work with share param!', error)
+        }
       }
     });
 
-    if (!shareLoaded) {
-      this.resetGoodParty(true);
-      this.resetEvilParty();
-    }
+    this.resetParty(
+      'Good',
+      'goodParty',
+      goodPartyString
+    );
+    this.resetParty('Evil', 'evilParty', evilPartyString);
+    this.matrix = [...this.matrix];
+    this.calculateEvents();
 
 
     this.langControl.valueChanges.subscribe((value) => {
@@ -174,10 +175,6 @@ export class CalculatorComponent implements OnInit {
     this.bgControl.valueChanges.subscribe((value) => {
       this.languageService.changeBg(value);
     })
-  }
-
-  public reset() {
-    this.matrix = this.generateMatrix();
   }
 
   public updatePartyCharNames(party: Party) {
@@ -206,36 +203,6 @@ export class CalculatorComponent implements OnInit {
         }
       }
     });
-  }
-
-  public resetGoodParty(initial = false) {
-    const oldParty = this.goodParty;
-    if (initial) {
-      let localPartyData = this.localStorageService.get<Party>(this.myTeamKey);
-      if (localPartyData && localPartyData.tiles) {
-        localPartyData.updateParty = (party) => {
-          this.goodParty = party;
-          this.syncMyTeam();
-        }
-        localPartyData = this.updatePartyCharNames(localPartyData);
-        this.goodParty = localPartyData;
-        return;
-      }
-    }
-    this.goodParty = createParty('Good', (party) => {
-      this.goodParty = party;
-      this.syncMyTeam();
-    });
-    this.resetPartyTiles(oldParty, this.goodParty);
-    this.syncMyTeam();
-    this.calculateEvents();
-  }
-
-  public resetEvilParty() {
-    const oldParty = this.evilParty;
-    this.evilParty = createParty('Evil', (party) => this.evilParty = party);
-    this.resetPartyTiles(oldParty, this.evilParty);
-    this.calculateEvents();
   }
 
   public static returnPositionInLine(id: number): number {
@@ -429,33 +396,12 @@ export class CalculatorComponent implements OnInit {
     if (!this.rememberMyTeam && !forced) {
       return;
     }
-    let teamToSave: Party;
-    if (team) {
-      teamToSave = {
-        ...team,
-        updateParty: null,
-        size: 0,
-        tiles: team.tiles.map((tile) => {
-          if (!tile) {
-            return tile;
-          } else {
-            return {
-              ...tile,
-              id: null,
-              lineColour: null,
-              onChangeCharacter: null,
-              targets: null,
-              summonTargets: null,
-              onClick: null,
-            }
-          }
-        })
-      }
-    } else {
-      teamToSave = null;
-    }
 
-    this.localStorageService.set<Party>(key, teamToSave);
+    let teamToSave = this.partyToShare(team);
+
+    console.log('sync!', teamToSave)
+
+    this.localStorageService.set(key, teamToSave);
   }
 
   public rememberMyTeamChecked() {
@@ -477,37 +423,51 @@ export class CalculatorComponent implements OnInit {
     return JSON.stringify(reduced);
   }
 
-  // @TODO: fix party icon blinking
-  // @TODO: fix party not updating
-  // @TODO unify the update party method/restore from local storage method!
-  public partyFromShare(name: string, stringParty: string, cb: Party['updateParty']): Party {
-    const parsed: Array<Array<string>> = JSON.parse(stringParty);
+   // @TODO: fix party icon blinking
+  // @ALSO refactor this component. try to remove saving options. Also, use the method bellow to store the data to "save my party" option.
+  // Consider "party" class!
+  public resetParty(
+    partyName: string,
+    partyKey: 'evilParty' | 'goodParty',
+    partyString?: string
+  ) {
+    const party = createParty(partyName, (party) => {
+      this[partyKey] = party;
+      this.syncMyTeam();
+    },);
 
-    const party = createParty(name, cb);
-
-    parsed.forEach(([id, char], i) => {
-      let tile: Tile;
-      let character: Character;
-      if (char) {
-        character = this.characterService.getCharacter(char);
+    if (partyString) {
+      try {
+        const parsed: Array<Array<string>> = JSON.parse(partyString);
+        parsed.forEach(([id, char], i) => {
+          let tile: Tile;
+          let character: Character;
+          if (char) {
+            character = this.characterService.getCharacter(char);
+          }
+          if (id !== null && id !== undefined) {
+            tile = this.matrix[id as unknown as number];
+          } else {
+            tile = party.tiles[i];
+          }
+          console.log('tile', tile, 'id', id)
+    
+          if (tile.id && character) {
+            tile.character = character;
+            party.size = party.size + 1;
+          }
+          tile.positionInParty = i;
+          party.tiles[i] = tile;
+        });
+      } catch (error) {
+        console.log('Errored working with partyString:', partyString, error)
       }
-      if (id !== null && id !== undefined) {
-        tile = this.matrix[id as unknown as number];
-      } else {
-        tile = party.tiles[i];
-      }
-      console.log('tile', tile, 'id', id)
+    }
 
-      if (tile && character) {
-        tile.character = character;
-        party.size = party.size + 1;
-      }
-      party.tiles[i] = tile;
-    });
-
-    console.log('party', party)
-
-    return party; 
+    const oldParty = this[partyKey];
+    this[partyKey] = party;
+    this.resetPartyTiles(oldParty, this[partyKey]);
+    this.calculateEvents();
   }
 
   public shareBtnClick() {

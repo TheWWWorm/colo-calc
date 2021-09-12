@@ -11,8 +11,12 @@ export class LocalStorageService {
     return JSON.parse(localStorage.getItem(key));
   }
 
+  public getUnparsed(key: string): string {
+    return localStorage.getItem(key);
+  }
+
   public set<T>(key: string, value: T) {
-    localStorage.setItem(key, JSON.stringify(value));
+    localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value));
   }
 
 }
