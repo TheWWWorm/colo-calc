@@ -30,5 +30,8 @@
   "backgroundDesert": "瘋狂沙漠",
   "attackTemplate": "ATTACKER 瞄準了 距離RANGE 的 TARGET",
   "backgroundChess": "通常",
-  "backgroundTraining": "訓練室"
+  "backgroundTraining": "訓練室",
+  "backgroundDungeon": "坎特貝雷城堡",
+  "shareDialogInfo": "複製這個連結來分享你的隊伍配置!",
+  "url": "URL"
 }

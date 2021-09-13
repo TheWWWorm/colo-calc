@@ -20,6 +20,9 @@ import ptbrLabels from './translations/pt-br.json';
 import eslaChars from './translations/characters_es-la.json';
 import eslaLabels from './translations/es-la.json';
 
+import pirateChars from './translations/characters_pirate.json';
+import pirateLabels from './translations/pirate.json';
+
 export enum Language {
   en = 'English',
   de = 'Deutsch',
@@ -27,6 +30,7 @@ export enum Language {
   ptbr = 'Português Brasileiro',
   ru = 'Русский',
   zhtw = '繁體中文',
+  pirate = 'Pirate',
 };
 
 export enum Background {
@@ -53,7 +57,7 @@ export const BrowserLangCodeMap = {
   'es-ar': Language.esla
 };
 
-export const languageList = [Language.en, Language.de, Language.esla, Language.ptbr, Language.ru, Language.zhtw];
+export const languageList = [Language.en, Language.de, Language.esla, Language.ptbr, Language.ru, Language.zhtw, Language.pirate];
 export const backGroundList = [Background.Solid, Background.Chess, Background.Training, Background.Library, Background.Lava, Background.Desert, Background.Dungeon];
 
 export type LabelKeys = keyof typeof enLabels;
@@ -104,5 +108,9 @@ export const mappedLangData = {
   [Language.esla]:  {
     labels: eslaLabels,
     characters: applyCharacterLang(eslaChars)
+  },
+  [Language.pirate]:  {
+    labels: pirateLabels,
+    characters: applyCharacterLang(pirateChars)
   },
 }
