@@ -117,7 +117,6 @@ h3 {
 // Margin and Padding
 .attack-order {
   width: 300px;
-  margin-left: 10px;
   padding-right: 15px;
 }
 
@@ -180,6 +179,7 @@ a {
   padding-bottom: 5px;
   margin-top: 35px;
   margin-left: -5px;
+  margin-right: 10px;
   //border: 1px solid white;
   // TODO: refactor to use CSS, instead of image
   background-image: url(/assets/grid_back.png);
