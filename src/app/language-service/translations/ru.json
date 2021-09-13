@@ -30,5 +30,7 @@
   "backgroundDesert": "Пустыня",
   "backgroundChess": "Шахматы",
   "backgroundTraining": "Тренировка",
-  "backgroundDungeon": "Подземелье"
+  "backgroundDungeon": "Подземелье",
+  "shareDialogInfo": "Скопируйте это ссылку чтобы поделится раскладкой!",
+  "url": "URL"
 }

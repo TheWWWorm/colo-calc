@@ -1,5 +1,6 @@
 {
   "langName": "English",
+  "attackTemplate": "ATTACKER targets TARGET with a distance of RANGE",
   "appTitle": "Colosseum calculator",
   "discordInviteTitle": "Any ideas? Feedback? Join our discord!",
   "allyLineToggle": "Show ally lines",
@@ -31,7 +32,6 @@
   "backgroundChess": "Chess",
   "backgroundTraining": "Training",
   "backgroundDungeon": "Dungeon",
-  "attackTemplate": "ATTACKER targets TARGET with a distance of RANGE",
-  "shareDialogInfo": "Copy this link to share your setup!",
+  "shareDialogInfo": "Copy this link to share your layout!",
   "url": "URL"
 }
