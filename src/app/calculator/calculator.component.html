@@ -23,12 +23,14 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <a href="https://discord.gg/ghFPrvAnXt" target="_blank">{{ 'discordInviteTitle' | _ }}</a>
-    <span class="actions">
-      <span>{{ 'allyLineToggle' | _ }}</span><input type="checkbox" [(ngModel)]="showAllyLinesChecked" (change)="calculateEvents()">
-      <span>{{ 'enemyLineToggle' | _ }}</span><input type="checkbox" [(ngModel)]="showEnemyLinesChecked" (change)="calculateEvents()">
-      <mat-icon class="share-btn" (click)="shareBtnClick()">{{shareIconName}}</mat-icon>
-    </span>
+    <div class="actions-container">
+      <a href="https://discord.gg/ghFPrvAnXt" target="_blank" class="ds-invite">{{ 'discordInviteTitle' | _ }}</a>
+      <span class="actions">
+        <span>{{ 'allyLineToggle' | _ }}</span><input type="checkbox" [(ngModel)]="showAllyLinesChecked" (change)="calculateEvents()">
+        <span>{{ 'enemyLineToggle' | _ }}</span><input type="checkbox" [(ngModel)]="showEnemyLinesChecked" (change)="calculateEvents()">
+        <mat-icon class="share-btn" (click)="shareBtnClick()">{{shareIconName}}</mat-icon>
+      </span>
+    </div>
     <div class="field">
       <app-field
         [doClears]="true"

@@ -157,6 +157,10 @@ a {
   text-decoration: underline;
 }
 
+.ds-invite {
+  display: block;
+}
+
 // "Click on the tiles" Text
 .user-hint {
   max-width: 200px;
@@ -174,7 +178,8 @@ a {
   display: flex;
   padding: 10px;
   padding-bottom: 5px;
-  margin-top: 10px;
+  margin-top: 35px;
+  margin-left: -5px;
   //border: 1px solid white;
   // TODO: refactor to use CSS, instead of image
   background-image: url(/assets/grid_back.png);
@@ -188,15 +193,21 @@ a {
   }
 }
 
+.actions-container {
+  max-width: 656px;
+}
+
 // Show Lines Options
 .actions {
-  float: right;
+  float: left;
 }
 
 // Show Lines Options Padding
+.actions > *:not(:first-child) {
+  padding-left: 10px;
+}
 .actions > * {
   padding-right: 5px;
-  padding-left: 10px;
 }
 
 .share-btn {
