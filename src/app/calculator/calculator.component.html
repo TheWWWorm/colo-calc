@@ -24,7 +24,9 @@
       </mat-form-field>
     </div>
     <div class="actions-container">
-      <a href="https://discord.gg/ghFPrvAnXt" target="_blank" class="ds-invite">{{ 'discordInviteTitle' | _ }}</a>
+      <div>
+        <a href="https://discord.gg/ghFPrvAnXt" target="_blank" class="ds-invite">{{ 'discordInviteTitle' | _ }}</a>
+      </div>
       <span class="actions">
         <span>{{ 'allyLineToggle' | _ }}</span><input type="checkbox" [(ngModel)]="showAllyLinesChecked" (change)="calculateEvents()">
         <span>{{ 'enemyLineToggle' | _ }}</span><input type="checkbox" [(ngModel)]="showEnemyLinesChecked" (change)="calculateEvents()">

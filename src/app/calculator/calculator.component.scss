@@ -156,15 +156,12 @@ a {
   text-decoration: underline;
 }
 
-.ds-invite {
-  display: block;
-}
+.ds-invite {}
 
 // "Click on the tiles" Text
 .user-hint {
   max-width: 200px;
 }
-
 
 /*-------------------------------------------*/
 /* ---------->>> Battle Field <<<-----------*/
@@ -328,4 +325,15 @@ a {
 // Ko-fi link
 .footer > .help-me-link {
   padding-right: 30px;
+}
+
+
+// General
+@media (max-width: 1200px) {
+  .unitSettings {
+    order: 0;
+  }
+  .attack-order {
+    order: 1;
+  }
 }
