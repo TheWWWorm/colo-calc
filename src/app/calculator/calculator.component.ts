@@ -423,9 +423,7 @@ export class CalculatorComponent implements OnInit {
 
   public partyToShare(party: Party): string {
     const reduced = party.tiles.reduce((acc, e) => {
-      if (e.character) {
-        acc.push([e.id, e.character.id]);
-      }
+      acc.push([e?.id || null, e.character?.id || null]);
       return acc;
     }, []);
     return JSON.stringify(reduced);
