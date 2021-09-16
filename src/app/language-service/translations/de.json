@@ -29,5 +29,8 @@
   "backgroundLava": "Lava",
   "backgroundDesert": "Wüste",
   "backgroundChess": "Schachbrett",
-  "backgroundTraining": "Training"
+  "backgroundTraining": "Training",
+  "backgroundDungeon": "Schloss",
+  "shareDialogInfo": "Kopiere diesen Link, um deine Formation zu teilen!",
+  "url": "URL"
 }

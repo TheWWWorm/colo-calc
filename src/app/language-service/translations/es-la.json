@@ -29,5 +29,8 @@
   "backgroundLava": "Lava",
   "backgroundDesert": "Desierto",
   "backgroundChess": "Ajedrez",
-  "backgroundTraining": "Entrenamiento"
+  "backgroundTraining": "Entrenamiento",
+  "backgroundDungeon": "Castillo",
+  "shareDialogInfo": "Copia este link para compartir tus posiciones",
+  "url": "URL"
 }
