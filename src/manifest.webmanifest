@@ -1,7 +1,7 @@
 {
   "name": "Colloseum Calculator",
-  "short_name": "Coloc Calc",
-  "theme_color": "#1976d2",
+  "short_name": "Colo Calc",
+  "theme_color": "#3e2e2d",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
