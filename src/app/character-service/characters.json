@@ -384,6 +384,13 @@
 		"imgName": "MK.2.png",
     "element": "Dark"
 	},
+  {
+		"id": "Orca",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Orca.png",
+    "element": "Water"
+	},
 	{
 		"id": "Nari",
 		"aiType": "Ranged",
