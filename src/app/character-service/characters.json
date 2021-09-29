@@ -477,10 +477,10 @@
     "element": "Light"
 	},
   {
-    "id": "Scintillia",
+    "id": "Scintilla",
     "aiType": "Melee",
     "class": "Warrior",
-    "imgName": "Scintillia.png",
+    "imgName": "Scintilla.png",
     "element": "Fire"
   },
   {
