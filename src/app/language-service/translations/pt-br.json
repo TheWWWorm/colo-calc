@@ -30,6 +30,8 @@
   "backgroundDesert": "Deserto",
   "backgroundChess": "Xadrez",
   "backgroundTraining": "Treinamento",
+  "backgroundKamazone": "Kama-ZONE",
+  "backgroundSnow": "Neve",
   "attackTemplate": "ATTACKER irá focar em TARGET com uma distância de RANGE",
   "backgroundDungeon": "Castelo",
   "shareDialogInfo": "Copie este link para compartilhar seu posicionamento!",

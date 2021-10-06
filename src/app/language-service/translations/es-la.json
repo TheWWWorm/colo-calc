@@ -31,6 +31,8 @@
   "backgroundChess": "Ajedrez",
   "backgroundTraining": "Entrenamiento",
   "backgroundDungeon": "Castillo",
+  "backgroundKamazone": "Kamazon",
+  "backgroundSnow": "Nieve",
   "shareDialogInfo": "Copia este link para compartir tus posiciones",
   "url": "URL"
 }
