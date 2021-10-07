@@ -11,6 +11,9 @@ import ruLabels from './translations/ru.json';
 import zhtwChars from './translations/character_zh-tw.json';
 import zhtwLabels from './translations/zh-tw.json';
 
+import jpChars from './translations/characters_jp.json';
+import jpLabels from './translations/jp.json';
+
 import deChars from './translations/characters_de.json';
 import deLabels from './translations/de.json';
 
@@ -30,6 +33,7 @@ export enum Language {
   ptbr = 'Português Brasileiro',
   ru = 'Русский',
   zhtw = '繁體中文',
+  jp = '日本語',
   pirate = 'Pirate',
 };
 
@@ -56,10 +60,13 @@ export const BrowserLangCodeMap = {
   'br': Language.ptbr,
   'es': Language.esla,
   'es-la': Language.esla,
-  'es-ar': Language.esla
+  'es-ar': Language.esla,
+  'ja-jp': Language.jp,
+  'jp-jp': Language.jp,
+  'ja-ja': Language.jp,
 };
 
-export const languageList = [Language.en, Language.de, Language.esla, Language.ptbr, Language.ru, Language.zhtw, Language.pirate];
+export const languageList = [Language.en, Language.de, Language.esla, Language.ptbr, Language.ru, Language.zhtw, Language.jp, Language.pirate];
 export const backGroundList = [Background.Solid, Background.Chess, Background.Training, Background.Library, Background.Lava, Background.Desert, Background.Dungeon, Background.Kamazone, Background.Snow];
 
 export type LabelKeys = keyof typeof enLabels;
@@ -98,6 +105,10 @@ export const mappedLangData = {
   [Language.zhtw]:  {
     labels: zhtwLabels,
     characters: applyCharacterLang(zhtwChars)
+  },
+  [Language.jp]:  {
+    labels: jpLabels,
+    characters: applyCharacterLang(jpChars)
   },
   [Language.de]:  {
     labels: deLabels,
