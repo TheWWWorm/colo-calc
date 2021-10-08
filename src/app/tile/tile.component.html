@@ -1,8 +1,15 @@
-<div class="square" [ngClass]="{disabled: tile?.disabled || disabled}" (click)="clicked()">
+<div
+  class="square"
+  [ngClass]="{disabled: tile?.disabled || disabled}"
+  (click)="clicked()"
+  richTooltip
+  [character]="this.tile?.character"
+  [summon]="summon"
+>
   <!-- Show unit number in the corner -->
-  <img *ngIf="tileBackground && !summon" [src]="tileBackground" [alt]="tile.character?.name" [title]="tile.character?.name || ''" class="character-icon">
+  <img *ngIf="tileBackground && !summon" [src]="tileBackground" [alt]="tile.character?.name" class="character-icon">
 
-  <img *ngIf="tileBackground && summon" [src]="tileBackground" [alt]="tile.character?.name" class="character-icon with-summon" [title]="tile.character?.name + '/' + summon?.name">
+  <img *ngIf="tileBackground && summon" [src]="tileBackground" [alt]="tile.character?.name" class="character-icon with-summon">
   <img *ngIf="tileBackground && summon" [src]="summon.imgName" [alt]="summon?.name" class="character-icon summon">
 
   <img *ngIf="tileLead" [src]="tileLead" class="lead-icon">

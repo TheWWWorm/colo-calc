@@ -19,7 +19,8 @@ export class CharacterService {
       this.fullCharList = characters.map((ch) => {
         return {
           ...ch,
-          imgName: `/assets/CharacterPortraits/${ch.imgName}`
+          imgName: `/assets/CharacterPortraits/${ch.imgName}`,
+          jpImgName: ch.jpImgName ? `/assets/CharacterPortraitsJP/${ch.jpImgName}` : '',
         } as Character
       });
       this.charList = this.fullCharList.filter((ch) => !ch.isSummon && !ch.isSecret);

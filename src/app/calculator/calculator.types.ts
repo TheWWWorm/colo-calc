@@ -29,10 +29,19 @@ export enum Element {
   Fire = 'Fire',
 }
 
+export enum ChainType {
+  All = 'All',
+  Airborne = 'Airborne',
+  Injured = 'Injured',
+  Downed = 'Downed'
+}
+
 export interface RawChar {
   id: string;
   aiType: AiType;
   fallbackAiType?: AiType;
+  chainsFrom?: ChainType;
+  chainsTo?: ChainType;
   class: CharacterClass;
   element: Element;
   imgName: string;

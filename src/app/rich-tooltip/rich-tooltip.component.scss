@@ -1,0 +1,42 @@
+.content-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  animation-duration: 0.1s;
+  animation-name: zoomIn;
+  transform-origin: center;
+  color: #fff;
+  border-radius: 4px;
+  padding: 0 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
+}
+
+.content-overlay .content {
+  margin:  6px 0;
+  font-size: 15px;
+}
+
+.chain {
+  height: 35px;
+  width: 35px;
+}
+
+.chainTo {
+  font-size: 35px;
+  line-height: 35px;
+  position: relative;
+  bottom: 5px;
+  color:white;
+  padding: 0 5px;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
