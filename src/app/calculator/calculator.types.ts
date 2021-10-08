@@ -36,6 +36,7 @@ export interface RawChar {
   class: CharacterClass;
   element: Element;
   imgName: string;
+  jpImgName?: string;
   isSummon?: boolean;
   isRare?: boolean;
   isSecret?: boolean;
