@@ -1,7 +1,7 @@
 <div class="content-overlay">
   <div class="content">
     <div>{{ summon ? (character.name + '/' + summon.name) : character.name }}</div>
-    <div>{{ summon ? (character.aiType + '/' + summon.aiType) : character.aiType }} AI</div>
+    <div>{{ (summon ? ((character.aiType | _) + '/' + (summon.aiType | _)) : (character.aiType | _)) + ' ' + ('AI' | _)}} </div>
     <div *ngIf="character.chainsFrom && character.chainsTo">
       <img class="chain" [src]="character.chainsFrom | getStatusPath">
       <span class="chainTo">></span>

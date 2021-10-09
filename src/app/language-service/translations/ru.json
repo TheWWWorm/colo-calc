@@ -34,5 +34,14 @@
   "backgroundKamazone": "Кама-ЗОНА",
   "backgroundSnow": "Снег",
   "shareDialogInfo": "Скопируйте это ссылку чтобы поделится раскладкой!",
-  "url": "URL"
+  "url": "URL",
+  "All": "Все",
+  "Injured": "Ранен",
+  "Downed": "Сбит",
+  "Airborne": "Авиа",
+  "Melee": "Ближний",
+  "Ranged": "Дальний",
+  "Ally": "Баффер",
+  "Assassin": "Убийца",
+  "AI": "ИИ"
 }

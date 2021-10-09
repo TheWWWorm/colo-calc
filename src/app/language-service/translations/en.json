@@ -35,5 +35,14 @@
   "backgroundKamazone": "Kama-ZONE",
   "backgroundSnow": "Snow",
   "shareDialogInfo": "Copy this link to share your layout!",
-  "url": "URL"
+  "url": "URL",
+  "All": "All",
+  "Injured": "Injured",
+  "Downed": "Downed",
+  "Airborne": "Airborne",
+  "Melee": "Melee",
+  "Ranged": "Ranged",
+  "Ally": "Buffer",
+  "Assassin": "Assassin",
+  "AI": "AI"
 }
