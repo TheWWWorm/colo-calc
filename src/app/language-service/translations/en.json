@@ -49,7 +49,7 @@
   "helpDialogCharAiTypes": "Character AI types",
   "helpDialogCharAiTypesDesc": "Heroes have a couple different AI presets, that matter during the targets selection.",
   "helpDialogMeleeAiInfo": "Heroes with Melee AI, target nearest untargeted hero. If none are available, they target nearest hero instread.",
-  "helpDialogRangedAiInfo": "Heroes with ranged AI target the nearest untargeted hero.",
+  "helpDialogRangedAiInfo": "Heroes with ranged AI target the nearest hero.",
   "helpDialogAllyAiInfo": "Heroes with Buffer AI, try to buff their allies, they target the furthest ally hero.",
   "helpDialogAssassinAiInfo": "Heroes with Assassin A target heroes with ranged class. If there are multiple ranged class enemy heroes they try target closes untargeted ranged class hero. If there is a single ranged class hero in the enemy team, they target it regardless if it's targeted or not. If enemy team has no ranged class heroes, Assassin AI heroes use Melee targeting instead.",
   "helpDialogOrderMatters": "Hero order matters!",
