@@ -52,7 +52,7 @@
   "helpDialogRangedAiInfo": "Heroes with ranged AI target the nearest untargeted hero.",
   "helpDialogAllyAiInfo": "Heroes with Buffer AI, try to buff their allies, they target the furthest ally hero.",
   "helpDialogAssassinAiInfo": "Heroes with Assassin A target heroes with ranged class. If there are multiple ranged class enemy heroes they try target closes untargeted ranged class hero. If there is a single ranged class hero in the enemy team, they target it regardless if it's targeted or not. If enemy team has no ranged class heroes, Assassin AI heroes use Melee targeting instead.",
-  "helpDialogOrderMatters": "Hero oder matters!",
+  "helpDialogOrderMatters": "Hero order matters!",
   "helpDialogOrderMattersDesc": "When planning, don't forget correct order of heroes in your team! Targeting goes from lead to last character in your team, so order matters a lot. Same is true for enemy team as well.",
   "helpDialogThingsToConsirer": "Other things to consired",
   "helpDialogThingsToConsirerDesc": "There are more things to Colosseum, then initial targeting. Advanced Colosseum players should also consider taunts and target reset! For target reset info, consider watching this <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=936HEjWxHhA\"> video</a>"
