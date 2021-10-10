@@ -34,5 +34,14 @@
   "backgroundKamazone": "Kama-ZONE",
   "backgroundSnow": "Schnee",
   "shareDialogInfo": "Kopiere diesen Link, um deine Formation zu teilen!",
-  "url": "URL"
+  "url": "URL",
+  "All": "Alle",
+  "Injured": "Verletzt",
+  "Downed": "Gestürzt",
+  "Airborne": "Abgehoben",
+  "Melee": "Nahkampf",
+  "Ranged": "Fernkampf",
+  "Ally": "Buffer",
+  "Assassin": "Assassine",
+  "AI": "KI"
 }

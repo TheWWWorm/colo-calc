@@ -35,5 +35,14 @@
   "attackTemplate": "ATTACKER irá focar em TARGET com uma distância de RANGE",
   "backgroundDungeon": "Castelo",
   "shareDialogInfo": "Copie este link para compartilhar seu posicionamento!",
-  "url": "URL"
+  "url": "URL",
+  "All": "Todos",
+  "Injured": "Machucado",
+  "Downed": "Derrubado",
+  "Airborne": "Aerotransportado",
+  "Melee": "Corpo a corpo",
+  "Ranged": "À distância",
+  "Ally": "Buffer",
+  "Assassin": "Assassino",
+  "AI": "IA"
 }

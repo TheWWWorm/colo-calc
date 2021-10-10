@@ -403,7 +403,7 @@
 		"class": "Warrior",
 		"imgName": "Lynn.png",
 		"chainsFrom": "Downed",
-		"chainsTo": "Kinured",
+		"chainsTo": "Injured",
 		"element": "Fire"
 	},
 	{

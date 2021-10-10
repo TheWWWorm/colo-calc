@@ -34,5 +34,14 @@
   "backgroundKamazone": "Kamazon",
   "backgroundSnow": "Nieve",
   "shareDialogInfo": "Copia este link para compartir tus posiciones",
-  "url": "URL"
+  "url": "URL",
+  "All": "Todo",
+  "Injured": "Lesionado",
+  "Downed": "Derribado",
+  "Airborne": "Suspendido",
+  "Melee": "Melee",
+  "Ranged": "Rango",
+  "Ally": "Buffer",
+  "Assassin": "Asesino",
+  "AI": "IA"
 }

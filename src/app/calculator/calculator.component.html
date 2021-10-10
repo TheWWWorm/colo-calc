@@ -68,5 +68,8 @@
     ></app-party>
     <!-- Also move clear button next to the party, instead of clearing the whole thing -->
   </div>
-  <div class="footer"><a class="help-me-link" href="https://ko-fi.com/wwworm" target="_blank">{{ 'supportLink' | _ }}</a></div>
+  <div class="footer">
+    <img class="help-info-button" (click)="helpBtnClick()" src="assets/icons/question_mark.png"/>
+    <a class="help-me-link" href="https://ko-fi.com/wwworm" target="_blank">{{ 'supportLink' | _ }}</a>
+  </div>
 </div>

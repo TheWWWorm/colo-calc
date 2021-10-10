@@ -15,9 +15,6 @@ export interface HeroSelectDialogData {
   styleUrls: ['./hero-select-dialog.component.scss']
 })
 export class HeroSelectDialogComponent implements OnInit {
-
-  // @TODO: show by element rows, instead of just the whole thing!
-
   public filterField = new FormControl();
   public onlyUniques = this.localStorageService.get('onlyUniques');
   public separateByElement = this.localStorageService.get('separateByElement');

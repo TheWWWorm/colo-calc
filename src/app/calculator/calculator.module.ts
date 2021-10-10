@@ -10,6 +10,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { ShareDialogModule } from '../share-dialog/share-dialog.module';
+import { HelpDialogModule } from '../help-dialog/help-dialog.module';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { ShareDialogModule } from '../share-dialog/share-dialog.module';
     FormsModule,
     HeroSelectDialogModule,
     ShareDialogModule,
+    HelpDialogModule,
     PartyModule,
     PipesModule,
     MatSelectModule,

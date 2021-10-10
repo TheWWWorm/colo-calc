@@ -6,6 +6,7 @@ import { of } from 'rxjs';
 import { Observable } from 'rxjs';
 import { createParty, validTileId } from 'src/fn/helpers';
 import { CharacterService } from '../character-service/character-service.service';
+import { HelpDialogComponent } from '../help-dialog/help-dialog.component';
 import { HeroSelectDialogComponent } from '../hero-select-dialog/hero-select-dialog.component';
 import { LanguageService } from '../language-service/language-service.service';
 import { languageList } from '../language-service/traslations.data';
@@ -488,6 +489,13 @@ export class CalculatorComponent implements OnInit {
       data: {
         url
       }
+    })
+  }
+
+  public helpBtnClick() {    
+    this.dialog.open(HelpDialogComponent, {
+      width: '700px',
+      data: {}
     })
   }
 

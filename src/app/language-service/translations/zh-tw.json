@@ -35,5 +35,14 @@
   "backgroundKamazone": "卡馬遜園區",
   "backgroundSnow": "顫慄之山",
   "shareDialogInfo": "複製這個連結來分享你的隊伍配置!",
-  "url": "URL"
+  "url": "URL",
+  "All": "所有",
+  "Injured": "受傷",
+  "Downed": "消沉",
+  "Airborne": "滯空",
+  "Melee": "戰士",
+  "Ranged": "遠程",
+  "Ally": "輔助",
+  "Assassin": "刺客",
+  "AI": "AI"
 }
