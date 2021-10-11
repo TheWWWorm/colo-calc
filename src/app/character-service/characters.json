@@ -169,7 +169,7 @@
 		"class": "Warrior",
 		"imgName": "Eugene.png",
 		"chainsFrom": "Airborne",
-		"chainsTo": "",
+		"chainsTo": "Injured",
 		"element": "Light"
 	},
 	{
