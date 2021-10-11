@@ -49,15 +49,15 @@
   "helpDialogCharAiTypes": "Character AI types",
   "helpDialogCharAiTypesDesc": "Heroes have a couple different AI presets, that matter during the target selection.",
   "helpDialogMeleeAiInfo": "Melee AI",
-  "helpDialogMeleeAiInfoDesc": "Heroes with Melee AI, target nearest untargeted hero. If none are available, they target nearest hero instead.",
+  "helpDialogMeleeAiInfoDesc": "Heroes with Melee AI, target the nearest untargeted hero. If none are available, they target the nearest hero instead.",
   "helpDialogRangedAiInfo": "Ranged AI",
-  "helpDialogRangedAiInfoDesc": "Heroes with ranged AI target the nearest hero.",
+  "helpDialogRangedAiInfoDesc": "Heroes with Ranged AI target the nearest hero.",
   "helpDialogAllyAiInfo": "Buffer AI",
-  "helpDialogAllyAiInfoDesc": "Heroes with Buffer AI, try to buff their allies, they target the furthest ally hero.",
+  "helpDialogAllyAiInfoDesc": "Heroes with Buffer AI, try to buff their allies; they target the furthest allied hero.",
   "helpDialogAssassinAiInfo": "Assassin AI",
-  "helpDialogAssassinAiInfoDesc": "Heroes with Assassin AI target heroes with ranged class. If there are multiple ranged class enemy heroes they try to target closest untargeted ranged class hero. If there is a single ranged class hero in the enemy team, they target it regardless if it's targeted or not. If enemy team has no ranged class heroes, Assassin AI heroes use Melee targeting instead.",
+  "helpDialogAssassinAiInfoDesc": "Heroes with Assassin AI target heroes of the ranged class. If there are multiple ranged class enemy heroes, they try to target the closest untargeted ranged class hero. If there is a single ranged class hero in the enemy team, they target it, regardless if it's targeted or not. If the enemy team has no ranged class heroes, Assassin AI heroes use Melee targeting instead.",
   "helpDialogOrderMatters": "Hero order matters!",
-  "helpDialogOrderMattersDesc": "When planning, don't forget correct order of heroes in your team! Targeting goes from lead to last character in your team, so order matters a lot. Same is true for enemy team as well.",
-  "helpDialogThingsToConsirer": "Other things to consired",
-  "helpDialogThingsToConsirerDesc": "There are more things to Colosseum, then initial targeting. Advanced Colosseum players should also consider taunts and target reset! For target reset info, consider watching this <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=936HEjWxHhA\"> video</a>"
+  "helpDialogOrderMattersDesc": "When planning, don't forget to make sure, that your heroes are in the correct order! Targeting goes from party leader to the last character in your team, so the order matters a lot. The same goes for the enemy team.",
+  "helpDialogThingsToConsider": "Other things to consider",
+  "helpDialogThingsToConsiderDesc": "There are more things to Colosseum, than initial targeting. Advanced Colosseum players should also consider taunts and target reset! For target reset info, consider watching this <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=936HEjWxHhA\"> video</a>"
 }
