@@ -55,5 +55,9 @@
   "helpDialogOrderMatters": "英雄的排列順序很重要!",
   "helpDialogOrderMattersDesc": "當開始策劃時, 別忘了在隊伍擺上正確的英雄順序! 英雄的瞄準順序是從隊長排到隊尾的最後一個英雄, 所以隊伍的排列順序非常重要, 對於敵方隊伍來說也是。",
   "helpDialogThingsToConsirer": "其他需要納入考量的各種因素",
-  "helpDialogThingsToConsirerDesc": "在羅馬競技場中除了開場前的目標瞄準, 還有更多需要考量的因素。進階的羅馬競技場玩家同時也該考慮嘲諷帶來的影響與目標重置!  關於目標重置的資訊, 請看 <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=936HEjWxHhA\"> 這部影片</a>。"
+  "helpDialogThingsToConsirerDesc": "在羅馬競技場中除了開場前的目標瞄準, 還有更多需要考量的因素。進階的羅馬競技場玩家同時也該考慮嘲諷帶來的影響與目標重置!  關於目標重置的資訊, 請看 <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=936HEjWxHhA\"> 這部影片</a>。",
+  "helpDialogMeleeAiInfo": "戰士AI",
+  "helpDialogRangedAiInfo": "遠程AI",
+  "helpDialogAllyAiInfo": "輔助AI",
+  "helpDialogAssassinAiInfo": "刺客AI"
 }

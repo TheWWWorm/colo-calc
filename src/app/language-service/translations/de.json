@@ -43,5 +43,20 @@
   "Ranged": "Fernkampf",
   "Ally": "Buffer",
   "Assassin": "Assassine",
-  "AI": "KI"
+  "AI": "KI",
+  "helpDialogTitle": "Info",
+  "helpDialogCharAiTypes": "Helden KI Typen",
+  "helpDialogCharAiTypesDesc": "Helden haben eine Reihe von KI-Typen, die bei der Auswahl eines Ziels eine Rolle spielen.",
+  "helpDialogMeleeAiInfo": "Nahkämpfer-KI",
+  "helpDialogMeleeAiInfoDesc": "Helden mit einer Nahkämpfer-KI zielen auf den nächstgelegenen, bisher nicht anvisierten Gegner. Wenn kein nicht anvisierter Held zur Verfügung steht, wird stattdessen der nächstgelegene Gegner ins Ziel genommen.",
+  "helpDialogRangedAiInfo": "Fernkämpfer-KI",
+  "helpDialogRangedAiInfoDesc": "Helden mit einer Fernkämpfer-KI zielen auf den nächstgelegenen Gegner.",
+  "helpDialogAllyAiInfo": "Buffer-KI",
+  "helpDialogAllyAiInfoDesc": "Helden mit einer Buffer-KI, versuchen ihr eigenes Team zu buffen. Sie zielen auf den verbündeten Helden der am weitesten von ihnen entfernt liegt.",
+  "helpDialogAssassinAiInfo": "Assassinen-KI",
+  "helpDialogAssassinAiInfoDesc": "Helden mit einer Assassinen-KI zielen auf gegnerische Helden der Fernkämpfer-Klasse. Wenn mehrere Fernkämpfer zur Verfügung stehen, wird auf den nächstgelegenen, bisher nicht anvisierten gezielt. Wenn nur ein Fernkämpfer im gegnerischen Team ist, wird dieser ins Ziel genommen, unabhängig davon, ob er bereits anvisiert wurde oder nicht. Wenn das gegnerische Team keine Fernkämpfer hat, benutzten Helden mit der Assassinen-KI, stattdessen die Nahkämpfer-KI.",
+  "helpDialogOrderMatters": "Die Reihenfolge der Helden ist wichtig!",
+  "helpDialogOrderMattersDesc": "Denk, bei der Zusammenstellung deines Teams, an die Reihenfolge! Deine Helden wählen ihre Ziele der Reihe nach vom Teamleiter abwärts. Dasselbe gilt für das gegnerische Team.",
+  "helpDialogThingsToConsirer": "Zusätzliche Informationen",
+  "helpDialogThingsToConsirerDesc": "Es gibt mehr im Kolosseum zu beachten, als nur das anvisieren am Anfang. Fortgeschrittene Kolosseum Spieler sollten auch Taunts und Target Resets (Ziel Zurücksetzung) in Betracht ziehen! Weitere Informationen zu diesen Themen finden sich (auf Englisch) in diesem <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=936HEjWxHhA\"> Video</a>"
 }
