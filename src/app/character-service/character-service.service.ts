@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Character } from '../calculator/calculator.types';
 import { LanguageService } from '../language-service/language-service.service';
+import { LocalStorageService } from '../local-storage-service/local-storage-service.service';
 
 @Injectable({
   providedIn: 'root'
@@ -14,13 +15,18 @@ export class CharacterService {
 
   public defaultCharacter: Character;
 
-  constructor(private languageService: LanguageService) {
+  public useJPArt: boolean = this.localStorageService.get<boolean>('useJPArt');
+
+  constructor(
+    private languageService: LanguageService,
+    private localStorageService: LocalStorageService,
+  ) {
     this.languageService.characterList$.subscribe((characters) => {
       this.fullCharList = characters.map((ch) => {
         return {
           ...ch,
           imgName: `/assets/CharacterPortraits/${ch.imgName}`,
-          jpImgName: ch.jpImgName ? `/assets/CharacterPortraitsJP/${ch.jpImgName}` : '',
+          jpImgName: `/assets/CharacterPortraitsJP/${ch.imgName}`,
         } as Character
       });
       this.charList = this.fullCharList.filter((ch) => !ch.isSummon && !ch.isSecret);
@@ -32,6 +38,11 @@ export class CharacterService {
 
   public getCharacter(id: string) {
     return this.fullCharList.find((c) => c.id === id) || this.defaultCharacter;
+  }
+
+  public updateArtChoice(useJPArt: boolean) {
+    this.useJPArt = useJPArt;
+    this.localStorageService.set('useJPArt', this.useJPArt);
   }
 
 }

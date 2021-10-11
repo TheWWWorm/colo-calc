@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from "@angular/core";
-import { validTileId } from "src/fn/helpers";
 import { CalculatorComponent } from "../calculator/calculator.component";
 import { Tile } from "../calculator/calculator.types";
 

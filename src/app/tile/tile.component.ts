@@ -48,6 +48,7 @@ export class TileComponent implements OnChanges {
   @Input() public disabled = false;
 
   public tileBackground: string;
+  public tileSummonBackground: string;
   public tileElement: string;
   public tileLead: string;
   public tileClass: string;
@@ -61,7 +62,7 @@ export class TileComponent implements OnChanges {
   public ngOnChanges(): void {
     if (this.tile?.character) {
       const { character, positionInParty } = this.tile;
-      this.tileBackground = character.imgName;
+      this.tileBackground = this.characterService.useJPArt ? character.jpImgName : character.imgName;
       if (positionInParty === 0) {
         this.tileLead = leadIcon;
       } else {
@@ -72,6 +73,7 @@ export class TileComponent implements OnChanges {
 
       if (this.tile.character.summonId) {
         this.summon = this.characterService.getCharacter(this.tile.character.summonId);
+        this.tileSummonBackground = this.characterService.useJPArt ? this.summon.jpImgName : this.summon.imgName;
       }
     } else if (this.tile) {
       const posInLine = CalculatorComponent.returnPositionInLine(this.tile.id);
@@ -100,5 +102,10 @@ export class TileComponent implements OnChanges {
       return;
     }
     this.tile.onClick(this.tile);
+  }
+
+  public imgErrored() {
+    this.tileBackground = this.tile?.character?.imgName;
+    this.tileSummonBackground = this.summon?.imgName;
   }
 }

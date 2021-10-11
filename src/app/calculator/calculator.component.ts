@@ -34,7 +34,8 @@ export class CalculatorComponent implements OnInit {
 
   public showAllyLinesChecked = true;
   public showEnemyLinesChecked = true;
-  public rememberMyTeam = this.localStorageService.get('rememberMyTeam');;
+  public useJPArt = this.characterService.useJPArt;
+  public rememberMyTeam = this.localStorageService.get('rememberMyTeam');
   
   public goodParty: Party;
   public evilParty: Party;
@@ -136,7 +137,7 @@ export class CalculatorComponent implements OnInit {
     private languageService: LanguageService,
     private localStorageService: LocalStorageService,
     private characterService: CharacterService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) { }
 
   ngOnInit() {
@@ -499,4 +500,10 @@ export class CalculatorComponent implements OnInit {
     })
   }
 
+  public useJPArtClick() {
+    this.characterService.updateArtChoice(this.useJPArt);
+    this.goodParty = this.updatePartyCharNames(this.goodParty);
+    this.evilParty = this.updatePartyCharNames(this.evilParty);
+    this.matrix = [...this.matrix]
+  }
 }
