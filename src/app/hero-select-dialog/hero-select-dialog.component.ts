@@ -96,11 +96,11 @@ export class HeroSelectDialogComponent implements OnInit {
       this.displayCharacters = this.characters;
     }
 
-    if (this.selectedChars.length) {
-      this.displayCharacters = this.displayCharacters.filter((char) => {
-        return !this.selectedChars.find((selectedChar) => selectedChar.id === char.id);
-      });
-    }
+    // if (this.selectedChars.length) {
+    //   this.displayCharacters = this.displayCharacters.filter((char) => {
+    //     return !this.selectedChars.find((selectedChar) => selectedChar.id === char.id);
+    //   });
+    // }
   }
   
   ngOnInit() {
