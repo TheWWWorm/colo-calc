@@ -19,7 +19,7 @@
 :host ::ng-deep .square {
   height: 50px !important;
   width: 50px !important;
-  cursor: pointer !important;;
+  cursor: pointer !important;
   border: 1px solid #544141;
   background: #3e2e2e !important;
 }
@@ -36,17 +36,21 @@
 
 // Lead
 :host ::ng-deep .lead-icon {
-  margin-top: -10px !important;;
-  margin-left: -5px !important;;
+  margin-top: -10px !important;
+  margin-left: -5px !important;
 }
 
 // Class
 :host ::ng-deep .class-icon {
-  margin-top: 40px !important;;
+  margin-top: 40px !important;
+}
+
+:host ::ng-deep .summon-icon {
+  margin-left: 40px !important;
 }
 
 // Element
 :host ::ng-deep .element-icon {
-  margin-top: 40px !important;;
-  margin-left: 40px !important;;
+  margin-top: 40px !important;
+  margin-left: 40px !important;
 }

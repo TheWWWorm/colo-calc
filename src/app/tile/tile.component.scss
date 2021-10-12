@@ -4,11 +4,11 @@
 
 // Squares Border
 .square {
-    height: 45px;
-    width: 45px;
-    border: 1px solid #5A451E;
-    display: grid;
-    cursor: pointer;
+  height: 45px;
+  width: 45px;
+  border: 1px solid #5a451e;
+  display: grid;
+  cursor: pointer;
 
   &:hover {
     .summon {
@@ -22,21 +22,24 @@
 }
 
 @keyframes summonReveal {
-  from {clip: rect(0, 0px, 50px, 0);}
-  to {clip: rect(0, 50px, 50px, 0px);}
+  from {
+    clip: rect(0, 0px, 50px, 0);
+  }
+  to {
+    clip: rect(0, 50px, 50px, 0px);
+  }
 }
 
 // Square Disabled
 .square.disabled {
-    cursor: default;
+  cursor: default;
 }
 
 // + Display
 .text-value {
-    display: grid;
-    align-items: center;
+  display: grid;
+  align-items: center;
 }
-
 
 /* ---------------------------------------*/
 /* ---------->>> Portraits <<<-----------*/
@@ -44,20 +47,19 @@
 
 // Portrait Adjustment
 img {
-    height: inherit;
-    width: inherit;
+  height: inherit;
+  width: inherit;
 }
 
 // Generic Portrait
 img:before {
-    content: ' ';
-    display: block;
-    background-size: contain;
-    height: inherit;
-    width: inherit;
-    background-image: url(/assets/CharacterPortraits/Boy.png);
+  content: " ";
+  display: block;
+  background-size: contain;
+  height: inherit;
+  width: inherit;
+  background-image: url(/assets/CharacterPortraits/Boy.png);
 }
-
 
 /* -----------------------------------*/
 /* ---------->>> Icons <<<-----------*/
@@ -68,31 +70,40 @@ img:before {
 
 // Lead
 .lead-icon {
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    margin-top: -8px;
-    margin-left: -5px;
-    z-index: 1;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  margin-top: -8px;
+  margin-left: -5px;
+  z-index: 1;
 }
 
 // Class
 .class-icon {
-    position: absolute;
-    margin-top: 35px;
-    height: 10px;
-    width: 10px;
-    z-index: 1;
+  position: absolute;
+  margin-top: 35px;
+  height: 10px;
+  width: 10px;
+  z-index: 1;
 }
 
 // Element
 .element-icon {
-    position: absolute;
-    margin-top: 35px;
-    margin-left: 35px;
-    height: 10px;
-    width: 10px;
-    z-index: 1;
+  position: absolute;
+  margin-top: 35px;
+  margin-left: 35px;
+  height: 10px;
+  width: 10px;
+  z-index: 1;
+}
+
+.summon-icon {
+  position: absolute;
+  margin-top: 0;
+  margin-left: 35px;
+  height: 10px;
+  width: 10px;
+  z-index: 1;
 }
 
 .with-summon {

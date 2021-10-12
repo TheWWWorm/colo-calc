@@ -4,7 +4,7 @@
     <div>{{ (summon ? ((character.aiType | _) + '/' + (summon.aiType | _)) : (character.aiType | _)) + ' ' + ('AI' | _)}} </div>
     <div *ngIf="character.chainsFrom && character.chainsTo">
       <img class="chain" [src]="character.chainsFrom | getStatusPath">
-      <span class="chainTo">></span>
+      <img class="chainTo" src="/assets/icons/chain.png">
       <img class="chain" [src]="character.chainsTo | getStatusPath">
     </div>
   </div>
