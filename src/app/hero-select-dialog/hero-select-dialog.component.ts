@@ -1,13 +1,13 @@
 import { Component, ElementRef, HostListener, Inject, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { Character } from '../calculator/calculator.types';
+import { Character, Party } from '../calculator/calculator.types';
 import { CharacterService } from '../character-service/character-service.service';
 import { LocalStorageService } from '../local-storage-service/local-storage-service.service';
 import { transparentElementIconMap } from '../tile/tile.component';
 
 export interface HeroSelectDialogData {
-
+  party: Party
 }
 
 @Component({
@@ -24,6 +24,8 @@ export class HeroSelectDialogComponent implements OnInit {
 
   public elements = transparentElementIconMap;
 
+  public selectedChars: Array<Character>
+
   @ViewChild('heroFilter') private filterElement: ElementRef;
 
   @HostListener('window:keyup.Enter', ['$event'])
@@ -39,6 +41,15 @@ export class HeroSelectDialogComponent implements OnInit {
     private characterService: CharacterService,
     private localStorageService: LocalStorageService
   ) {
+    if (this.data.party) {
+      this.selectedChars = this.data.party.tiles.reduce((acc, tile) => {
+        if (tile.character) {
+          acc.push(tile.character);
+        }
+        return acc;
+      }, []);
+    }
+  
     // Filter those out by default
     if (this.onlyUniques === null) {
       this.onlyUniques = true;
@@ -83,6 +94,12 @@ export class HeroSelectDialogComponent implements OnInit {
       });
     } else {
       this.displayCharacters = this.characters;
+    }
+
+    if (this.selectedChars.length) {
+      this.displayCharacters = this.displayCharacters.filter((char) => {
+        return !this.selectedChars.find((selectedChar) => selectedChar.id === char.id);
+      });
     }
   }
   

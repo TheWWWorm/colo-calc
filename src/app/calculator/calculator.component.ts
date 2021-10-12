@@ -70,7 +70,7 @@ export class CalculatorComponent implements OnInit {
       const unusedIndex = party.tiles.findIndex((member) => !validTileId(member));
       const selectedCharacter = party.tiles[unusedIndex].character;
 
-      (selectedCharacter ? of(selectedCharacter) : this.openHeroSelectDialog$()).subscribe((character) => {
+      (selectedCharacter ? of(selectedCharacter) : this.openHeroSelectDialog$(party)).subscribe((character) => {
 
         if (character) {
           party.size = party.size + 1;
@@ -90,7 +90,8 @@ export class CalculatorComponent implements OnInit {
   }
 
   public onChangeCharacter = (tile: Tile) => {
-    this.openHeroSelectDialog$().subscribe((character) => {
+    const party = this.returnParty(tile.id);
+    this.openHeroSelectDialog$(party).subscribe((character) => {
       if (!character) {
         return;
       }
@@ -98,7 +99,6 @@ export class CalculatorComponent implements OnInit {
         ...tile,
         character
       }
-      const party = this.returnParty(tile.id);
       party.tiles[newTile.positionInParty] = newTile;
       console.log(newTile)
       console.log(this.goodParty)
@@ -397,10 +397,12 @@ export class CalculatorComponent implements OnInit {
     this.evilParty = {...this.evilParty};
   }
 
-  public openHeroSelectDialog$(): Observable<Character> {
+  public openHeroSelectDialog$(party: Party): Observable<Character> {
     const dialogRef = this.dialog.open(HeroSelectDialogComponent, {
       width: '700px',
-      data: {}
+      data: {
+        party 
+      }
     })
     return dialogRef.afterClosed();
   }

@@ -40,7 +40,9 @@ export class PartyComponent implements OnChanges {
   public preSelectHero(i: number) {
     const dialogRef = this.dialog.open(HeroSelectDialogComponent, {
       width: '700px',
-      data: {}
+      data: {
+        party: this.party,
+      }
     })
     return dialogRef.afterClosed().subscribe((character) => {
       const tiles = [...this.party.tiles];
