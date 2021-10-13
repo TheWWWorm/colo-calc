@@ -39,6 +39,13 @@ export class RichTooltipDirective {
       this.tooltipService.showTooltip(this.character, this.summon, this.pos);
       this.timeout = null;
     }, 500)
+
+    const interval = setInterval(() => {
+      if (!document.body.contains(this.el.nativeElement)) {
+        this.clearTooltip();
+        clearInterval(interval);
+      }
+    }, 300)
   }
 
   @HostListener('mouseleave') public onMouseLeave() {

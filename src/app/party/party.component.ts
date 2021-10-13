@@ -42,21 +42,22 @@ export class PartyComponent implements OnChanges {
       width: '700px',
       data: {
         party: this.party,
+        index: i
       }
     })
-    return dialogRef.afterClosed().subscribe((character) => {
-      const tiles = [...this.party.tiles];
-      tiles[i] = {
-        ...tiles[i],
-        character
-      }
-      if (character) {
-        this.party.updateParty({
-          ...this.party,
-          tiles
-        })
-      }
-    })
+    // return dialogRef.afterClosed().subscribe((character) => {
+    //   const tiles = [...this.party.tiles];
+    //   tiles[i] = {
+    //     ...tiles[i],
+    //     character
+    //   }
+    //   if (character) {
+    //     this.party.updateParty({
+    //       ...this.party,
+    //       tiles
+    //     })
+    //   }
+    // })
   }
 
 }

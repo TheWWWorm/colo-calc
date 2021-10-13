@@ -1,13 +1,16 @@
 import { Component, ElementRef, HostListener, Inject, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { Character, Party } from '../calculator/calculator.types';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { validId, validTileId } from 'src/fn/helpers';
+import { Character, Party, Tile } from '../calculator/calculator.types';
 import { CharacterService } from '../character-service/character-service.service';
 import { LocalStorageService } from '../local-storage-service/local-storage-service.service';
 import { transparentElementIconMap } from '../tile/tile.component';
 
 export interface HeroSelectDialogData {
-  party: Party
+  party: Party;
+  index: number;
+  tile?: Tile;
 }
 
 @Component({
@@ -31,7 +34,7 @@ export class HeroSelectDialogComponent implements OnInit {
   @HostListener('window:keyup.Enter', ['$event'])
   onDialogClick(event: KeyboardEvent): void {
     //if (this.displayCharacters.length === 1) {
-    this.dialogRef.close(this.displayCharacters[0]);
+    this.heroSelected(this.displayCharacters[0])
     //}
   }
 
@@ -41,6 +44,7 @@ export class HeroSelectDialogComponent implements OnInit {
     private characterService: CharacterService,
     private localStorageService: LocalStorageService
   ) {
+    console.log(data);
     if (this.data.party) {
       this.selectedChars = this.data.party.tiles.reduce((acc, tile) => {
         if (tile.character) {
@@ -49,7 +53,7 @@ export class HeroSelectDialogComponent implements OnInit {
         return acc;
       }, []);
     }
-  
+
     // Filter those out by default
     if (this.onlyUniques === null) {
       this.onlyUniques = true;
@@ -63,9 +67,52 @@ export class HeroSelectDialogComponent implements OnInit {
       this.updateFilters();
     });
   }
+  
+  // If selected hero exists and this party slot has a hero - swap them
+  // If selected hero exists and this party slot doesn't have a hero - remove the hero from old spot 
+  public handleExistingHero(character: Character) {
+    const { index, party, tile } = this.data;
+    const heroExistsAt = party.tiles.findIndex((tile) => tile?.character?.id === character.id);
+    if (~heroExistsAt) {
+      if (party.tiles[index].character?.id) {
+        party.tiles[heroExistsAt] = {
+          ...party.tiles[heroExistsAt],
+          character: party.tiles[index].character
+        }
+      } else {
+        party.tiles[heroExistsAt] = {
+          ...party.tiles[heroExistsAt],
+          id: null,
+          character: null,
+        }
+      }
+    }
 
-  public heroSelected(hero: Character): void {
-    this.dialogRef.close(hero);
+    party.tiles[index] = {
+      ...party.tiles[index],
+      positionInParty: index,
+      character: character,
+      id: validTileId(tile) ? tile.id : party.tiles[index].id,
+    }
+
+    if (tile) {
+      party.tiles[index].onChangeCharacter = tile.onChangeCharacter;
+      party.tiles[index].onClick = tile.onClick;
+    }
+
+    const tiles = [...party.tiles];
+    console.log(party);
+    if (character) {
+      party.updateParty({
+        ...party,
+        tiles
+      })
+    }
+  }
+
+  public heroSelected(character: Character): void {
+    this.handleExistingHero(character);
+    this.dialogRef.close(character);
   }
 
   public toggleRares() {
@@ -102,7 +149,7 @@ export class HeroSelectDialogComponent implements OnInit {
     //   });
     // }
   }
-  
+
   ngOnInit() {
   }
 }

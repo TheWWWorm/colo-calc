@@ -47,6 +47,7 @@ export enum Background {
   Training = 'backgroundTraining',
   Kamazone = 'backgroundKamazone',
   Snow = 'backgroundSnow',
+  Arena = 'backgroundArena',
 };
 
 export const BrowserLangCodeMap = {
@@ -67,7 +68,7 @@ export const BrowserLangCodeMap = {
 };
 
 export const languageList = [Language.en, Language.de, Language.esla, Language.ptbr, Language.ru, Language.zhtw, Language.jp, Language.pirate];
-export const backGroundList = [Background.Solid, Background.Chess, Background.Training, Background.Library, Background.Lava, Background.Desert, Background.Dungeon, Background.Kamazone, Background.Snow];
+export const backGroundList = [Background.Solid, Background.Chess, Background.Training, Background.Library, Background.Lava, Background.Desert, Background.Dungeon, Background.Kamazone, Background.Snow, Background.Arena];
 
 export type LabelKeys = keyof typeof enLabels;
 

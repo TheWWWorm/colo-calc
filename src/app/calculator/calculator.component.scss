@@ -337,6 +337,21 @@ a {
   color: #fbfbfb; 
 }
 
+// Arena Background
+.bg-arena {
+  > .bg-image {
+    background-image: url("/assets/backgrounds/arena.png");
+  }
+
+  a {
+    color: #fbfbfb;
+  }
+  h2 {
+    color: #fbfbfb;
+  }
+  color: #fbfbfb;
+}
+
 
 /* ------------------------------------*/
 /* ---------->>> Footer <<<-----------*/

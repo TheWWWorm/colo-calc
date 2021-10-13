@@ -74,7 +74,6 @@ export interface Tile {
 
 export interface Party {
   name: string;
-  size: number;
   tiles: Array<Tile>,
   updateParty: (party: Party) => void;
 }

@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
-import { of } from 'rxjs';
+import { NEVER, of } from 'rxjs';
 import { Observable } from 'rxjs';
+import { switchMap, switchMapTo } from 'rxjs/operators';
 import { createParty, validTileId } from 'src/fn/helpers';
 import { CharacterService } from '../character-service/character-service.service';
 import { HelpDialogComponent } from '../help-dialog/help-dialog.component';
@@ -45,8 +46,9 @@ export class CalculatorComponent implements OnInit {
   // Handle when user clicks on the tile - set/unset value, recalc stuff
   public onTileClick = (tile: Tile) => {
     const party = this.returnParty(tile.id);
+    const partySize = party.tiles.filter((tile) => tile.character && validTileId(tile)).length;
 
-    const tileIndexInParty = party.tiles.findIndex((member) => member?.id === tile.id);
+    const tileIndexInParty = party.tiles.findIndex((partyTile) => partyTile?.id === tile.id);
 
     if (~tileIndexInParty) {
       party.tiles[tileIndexInParty] = {
@@ -55,7 +57,6 @@ export class CalculatorComponent implements OnInit {
         character: tile.character,
         positionInParty: tileIndexInParty
       };
-      party.size = party.size - 1;
       const updatedTile: Tile = {
         ...tile,
         targets: null,
@@ -66,46 +67,30 @@ export class CalculatorComponent implements OnInit {
       this.matrix[tile.id] = updatedTile;
       this.syncMyTeam();
       this.calculateEvents();
-    } else if (party.size < 4) {
+    } else if (partySize < 4  ) {
       const unusedIndex = party.tiles.findIndex((member) => !validTileId(member));
       const selectedCharacter = party.tiles[unusedIndex].character;
 
-      (selectedCharacter ? of(selectedCharacter) : this.openHeroSelectDialog$(party)).subscribe((character) => {
-
-        if (character) {
-          party.size = party.size + 1;
-          const updatedTile: Tile = {
-            ...tile,
-            positionInParty: unusedIndex,
-            character,
-          }
-    
-          party.tiles[unusedIndex] = updatedTile;
-          this.matrix[updatedTile.id] = updatedTile;
-          this.syncMyTeam();
-          this.calculateEvents();
+      if (selectedCharacter) {
+        const updatedTile: Tile = {
+          ...tile,
+          positionInParty: unusedIndex,
+          character: selectedCharacter,
         }
-      });
+  
+        party.tiles[unusedIndex] = updatedTile;
+        this.matrix[updatedTile.id] = updatedTile;
+        this.syncMyTeam();
+        this.calculateEvents();
+      } else {
+        this.openHeroSelectDialog(party, unusedIndex, tile)
+      }
     }
   }
 
   public onChangeCharacter = (tile: Tile) => {
     const party = this.returnParty(tile.id);
-    this.openHeroSelectDialog$(party).subscribe((character) => {
-      if (!character) {
-        return;
-      }
-      const newTile: Tile = {
-        ...tile,
-        character
-      }
-      party.tiles[newTile.positionInParty] = newTile;
-      console.log(newTile)
-      console.log(this.goodParty)
-      this.matrix[newTile.id] = newTile;
-      this.syncMyTeam();
-      this.calculateEvents();
-    })
+    this.openHeroSelectDialog(party, tile.positionInParty, tile);
   }
 
   public generateMatrix = (): Array<Tile> => {
@@ -289,8 +274,6 @@ export class CalculatorComponent implements OnInit {
         return alreadyInTarget;
       }
 
-      console.log('attacker', attacker)
-
       const attackerCharacter: Character = summonMode ? this.characterService.getCharacter(attacker.character.summonId) : attacker.character;
 
       let usingAi: AiType = attackerCharacter.aiType;
@@ -397,14 +380,15 @@ export class CalculatorComponent implements OnInit {
     this.evilParty = {...this.evilParty};
   }
 
-  public openHeroSelectDialog$(party: Party): Observable<Character> {
+  public openHeroSelectDialog(party: Party, i: number, tile?: Tile)  {
     const dialogRef = this.dialog.open(HeroSelectDialogComponent, {
       width: '700px',
       data: {
-        party 
+        party,
+        index: i,
+        tile
       }
-    })
-    return dialogRef.afterClosed();
+    });
   }
 
   public syncMyTeam(key: string = this.myTeamKey, team: Party = this.goodParty, forced = false) {
@@ -435,7 +419,7 @@ export class CalculatorComponent implements OnInit {
     return JSON.stringify(reduced);
   }
 
-   // @TODO: fix party icon blinking
+  // @TODO: fix party icon blinking
   // @ALSO refactor this component. try to remove saving options. Also, use the method bellow to store the data to "save my party" option.
   // Consider "party" class!
   public resetParty(
@@ -444,9 +428,15 @@ export class CalculatorComponent implements OnInit {
     partyString?: string
   ) {
     const party = createParty(partyName, (party) => {
-      this[partyKey] = party;
+      this[partyKey] = {
+        ...party,
+        tiles: [...party.tiles],
+      };
+      this.syncMatrixToTeams();
+      this.calculateEvents();
       this.syncMyTeam();
-    },);
+      console.log(this[partyKey]);
+    });
 
     if (partyString) {
       try {
@@ -462,12 +452,8 @@ export class CalculatorComponent implements OnInit {
           } else {
             tile = party.tiles[i];
           }
-          console.log('tile', tile, 'id', id)
           
           tile.character = character;
-          if (validTileId(tile) && character) {
-            party.size = party.size + 1;
-          }
           tile.positionInParty = i;
           party.tiles[i] = tile;
         });
@@ -485,7 +471,6 @@ export class CalculatorComponent implements OnInit {
 
   public shareBtnClick() {
     const partyString = `${this.partyToShare(this.goodParty)};${this.partyToShare(this.evilParty)}`;
-    console.log(partyString);
     const url = `${window.location.origin}?share=${btoa(partyString)}`;
     this.dialog.open(ShareDialogComponent, {
       width: '700px',
@@ -507,5 +492,28 @@ export class CalculatorComponent implements OnInit {
     this.goodParty = this.updatePartyCharNames(this.goodParty);
     this.evilParty = this.updatePartyCharNames(this.evilParty);
     this.matrix = [...this.matrix]
+  }
+
+  public syncParty(party: Party, matrix: Array<Tile>) {
+    party.tiles.forEach((tile) => {
+      if (validTileId(tile)) {
+        matrix[tile.id] = tile;
+      }
+    });
+  }
+
+  public syncMatrixToTeams() {
+    const matrix = this.matrix.map((tile) => {
+      return {
+        ...tile,
+        character: null,
+        positionInParty: null,
+        targets: null,
+        summonTargets: null,
+      }
+    });
+    this.syncParty(this.goodParty, matrix);
+    this.syncParty(this.evilParty, matrix);
+    this.matrix = matrix;
   }
 }

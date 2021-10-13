@@ -13,7 +13,8 @@ const valueToClassName = {
   [Background.Chess]: 'bg-chess',
   [Background.Training]: 'bg-training',
   [Background.Kamazone]: 'bg-kamazone',
-  [Background.Snow]: 'bg-snow'
+  [Background.Snow]: 'bg-snow',
+  [Background.Arena]: 'bg-arena'
 }
 
 type ClassKey = keyof typeof valueToClassName;

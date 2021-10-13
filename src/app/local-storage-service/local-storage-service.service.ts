@@ -8,7 +8,6 @@ export class LocalStorageService {
   constructor() { }
 
   public get<T>(key: string): T {
-    console.log('parse', key, localStorage.getItem(key))
     return JSON.parse(localStorage.getItem(key));
   }
 
