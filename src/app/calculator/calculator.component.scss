@@ -179,7 +179,7 @@ a {
 /* ----------------------------------------*/
 
 // General
-@media (max-width: 1400px) {
+@media (max-width: 1500px) {
   .attack-order {
     display: none !important;
   }
@@ -205,6 +205,9 @@ a {
     top: 187px;
     padding-right: 15px;
     width: 370px;
+    ol {
+      padding-inline-start: 20px;
+    }
   }
 
   .unit-settings {
