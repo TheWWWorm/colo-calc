@@ -459,3 +459,8 @@ a {
     transform: scale(1.5);
   }
 }
+
+
+:host ::ng-deep .square{
+  position: relative !important;
+}
