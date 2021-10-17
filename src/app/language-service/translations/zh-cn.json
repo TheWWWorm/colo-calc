@@ -1,5 +1,5 @@
 {
-  "langName": "语言",
+  "langName": "简体中文",
   "attackTemplate": "ATTACKER选择TARGET为目标 (距离为RANGE)",
   "appTitle": "圆形角斗场模拟器",
   "discordInviteTitle": "意见、建议、反馈请加入我们的Discord! (只说英文)",
@@ -21,7 +21,7 @@
   "supportLink": "点击进行赞助!",
   "targets": "为目标",
   "withDistance": "距离为",
-  "language": "预言",
+  "language": "语言",
   "teamRememberCheckBox": "记住我方队伍",
   "myTeamReset": "重置我方队伍",
   "enemyTeamReset": "重置敌方队伍",
