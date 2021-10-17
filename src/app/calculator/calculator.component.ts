@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
@@ -20,7 +20,7 @@ import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, Targe
   templateUrl: './calculator.component.html',
   styleUrls: ['./calculator.component.scss']
 })
-export class CalculatorComponent implements OnInit {
+export class CalculatorComponent implements OnInit, OnDestroy {
   public clearParams = true;
 
   public shareIconName = /(Mac|iPhone|iPod|iPad)/i.test(navigator?.platform || '') ? 'ios_share' : 'share';
@@ -42,6 +42,8 @@ export class CalculatorComponent implements OnInit {
   public evilParty: Party;
   
   public events: Array<string> = [];
+
+  private interval: any;
 
   // Handle when user clicks on the tile - set/unset value, recalc stuff
   public onTileClick = (tile: Tile) => {
@@ -169,7 +171,43 @@ export class CalculatorComponent implements OnInit {
 
     this.bgControl.valueChanges.subscribe((value) => {
       this.languageService.changeBg(value);
-    })
+    });
+
+    // Hacky stuff, to fix lines
+    let timeout: any;
+
+    const setRecalc =() => {
+      if (timeout) {
+        return;
+      }
+      timeout = setTimeout(() => {
+        console.log('call')
+        this.matrix = [...this.matrix];
+        this.calculateEvents();
+        timeout = null;
+      }, 500);
+    }
+
+    (() => {
+      // Poll the pixel width of the window; invoke zoom listeners
+      // if the width has been changed.
+      var lastWidth = visualViewport.width;
+      const pollZoomFireEvent = () => {
+        var widthNow = visualViewport.width;
+        if (lastWidth == widthNow) {
+          return;
+        };
+        lastWidth = widthNow;
+        setRecalc();
+      }
+      setInterval(pollZoomFireEvent, 500);
+    })();
+  }
+
+  public ngOnDestroy() {
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
   }
 
   public updatePartyCharNames(party: Party) {
