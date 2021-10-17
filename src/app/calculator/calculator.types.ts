@@ -92,3 +92,5 @@ export interface SelectOption {
   code: string;
   description: string;
 }
+
+export const dialogWidth: string = '700px';

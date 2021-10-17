@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { validTileId } from 'src/fn/helpers';
-import { Character, Party, Tile } from '../calculator/calculator.types';
+import { Character, dialogWidth, Party, Tile } from '../calculator/calculator.types';
 import { HeroSelectDialogComponent } from '../hero-select-dialog/hero-select-dialog.component';
 
 @Component({
@@ -38,26 +38,13 @@ export class PartyComponent implements OnChanges {
   }
 
   public preSelectHero(i: number) {
-    const dialogRef = this.dialog.open(HeroSelectDialogComponent, {
-      width: '700px',
+    this.dialog.open(HeroSelectDialogComponent, {
+      width: dialogWidth,
       data: {
         party: this.party,
         index: i
       }
     })
-    // return dialogRef.afterClosed().subscribe((character) => {
-    //   const tiles = [...this.party.tiles];
-    //   tiles[i] = {
-    //     ...tiles[i],
-    //     character
-    //   }
-    //   if (character) {
-    //     this.party.updateParty({
-    //       ...this.party,
-    //       tiles
-    //     })
-    //   }
-    // })
   }
 
 }

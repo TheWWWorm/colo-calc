@@ -13,7 +13,7 @@ import { LanguageService } from '../language-service/language-service.service';
 import { languageList } from '../language-service/traslations.data';
 import { LocalStorageService } from '../local-storage-service/local-storage-service.service';
 import { ShareDialogComponent } from '../share-dialog/share-dialog.component';
-import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, TargetColour, AiType, CharacterClass, Character } from './calculator.types';
+import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, TargetColour, AiType, CharacterClass, Character, dialogWidth } from './calculator.types';
 
 @Component({
   selector: 'app-calculator',
@@ -381,8 +381,8 @@ export class CalculatorComponent implements OnInit {
   }
 
   public openHeroSelectDialog(party: Party, i: number, tile?: Tile)  {
-    const dialogRef = this.dialog.open(HeroSelectDialogComponent, {
-      width: '700px',
+    this.dialog.open(HeroSelectDialogComponent, {
+      width: dialogWidth,
       data: {
         party,
         index: i,
@@ -473,7 +473,7 @@ export class CalculatorComponent implements OnInit {
     const partyString = `${this.partyToShare(this.goodParty)};${this.partyToShare(this.evilParty)}`;
     const url = `${window.location.origin}?share=${btoa(partyString)}`;
     this.dialog.open(ShareDialogComponent, {
-      width: '700px',
+      width: dialogWidth,
       data: {
         url
       }
@@ -482,7 +482,7 @@ export class CalculatorComponent implements OnInit {
 
   public helpBtnClick() {    
     this.dialog.open(HelpDialogComponent, {
-      width: '700px',
+      width: dialogWidth,
       data: {}
     })
   }
