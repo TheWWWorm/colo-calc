@@ -36,7 +36,7 @@ export enum Language {
   ptbr = 'Português Brasileiro',
   ru = 'Русский',
   zhtw = '繁體中文',
-  zhcn = '简体中文',
+  zhcn = '语言',
   jp = '日本語',
   pirate = 'Pirate',
 };
