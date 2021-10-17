@@ -1,5 +1,4 @@
 <div>
-  <h4>{{ title }}</h4>
   <div class="hero-list">
     <span *ngFor="let tile of tileList; let i = index" (click)="changeHero(i, $event)">
       <app-tile
@@ -10,4 +9,5 @@
       </app-tile>
     </span>
   </div>
+  <h4>{{ title }}</h4>
 </div>

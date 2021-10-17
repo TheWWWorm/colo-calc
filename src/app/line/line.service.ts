@@ -41,7 +41,7 @@ export class LineService {
     //console.log(id_from, id_to);
     this.lines.push(id);
     //SVG that will not appear until points towards the element that we want is given
-    const create_svg = `<span id="${id}" style="position: absolute; pointer-events: none; top: 0; left: 0;"> <svg width="1000" height="500" >    <defs>    <marker id="${arrowSubId}" markerWidth="13" markerHeight="13" refx="2" refy="6" orient="auto">        <path d="M2,1 L2,10 L10,6 L2,2" style="fill:${color};" />      </marker>    </defs>    <path id="${pahtSubId}" d="" style="stroke:${color}; stroke-width: 3px; fill: none; marker-end: url(#${arrowSubId});"/>  </svg> </span>`;
+    const create_svg = `<span id="${id}" style="position: absolute; pointer-events: none; top: 0; left: 0; z-index: 10"> <svg width="700" height="300" style="overflow: visible;">    <defs>    <marker id="${arrowSubId}" markerWidth="13" markerHeight="13" refx="2" refy="6" orient="auto">        <path d="M2,1 L2,10 L10,6 L2,2" style="fill:${color};" />      </marker>    </defs>    <path id="${pahtSubId}" d="" style="stroke:${color}; stroke-width: 3px; fill: none; marker-end: url(#${arrowSubId});"/>  </svg> </span>`;
 
     const parsed = parseHTML(create_svg);
     document.querySelector("#" + id_from).before(parsed);

@@ -1,6 +1,24 @@
 /* --------------------------------------------*/
-/* ---------->>> Title and Logo <<<-----------*/
+/* ---------->>> Header <<<-----------*/
 /* ------------------------------------------*/
+
+// General
+@media (max-width: 730px) {
+  .app-title {
+    display: none !important;
+  }
+}
+.header {
+  width: 100%;
+  .logo-wrap {
+    display: inline-block;
+  }
+  .dropdown-options {
+    position: absolute;
+    display: inline-block;
+    right: 20px;
+  }
+}
 
 // Title
 h2 {
@@ -115,12 +133,6 @@ h3 {
   padding-top: 10px;
 }
 
-// Margin and Padding
-.attack-order {
-  width: 300px;
-  padding-right: 15px;
-}
-
 // Background
 .attackOrder {
   //background: rgba(209, 209, 214, 0.20);
@@ -136,7 +148,7 @@ h3 {
 /* -----------------------------------*/
 
 // Margin and Padding
-.unitSettings {
+.unit-settings {
   margin-top: 10px;
   > * {
     padding-bottom: 10px;
@@ -157,11 +169,59 @@ a {
   text-decoration: underline;
 }
 
-.ds-invite {}
-
 // "Click on the tiles" Text
 .user-hint {
   max-width: 200px;
+}
+
+
+/*-------------------------------------------*/
+/* ---------->>> Body <<<-----------*/
+/* ----------------------------------------*/
+
+// General
+@media (max-width: 1400px) {
+  .attack-order {
+    display: none !important;
+  }
+}
+
+.body {
+  width: 100%;
+  .field-wrap {
+    width: 670px;
+    margin: 0 auto;
+  }
+  .attack-order {
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+    top: 187px;
+    padding-right: 15px;
+    width: 370px;
+  }
+
+  .unit-settings {
+    margin-top: 10px;
+    position: relative;
+    .your-team {
+      display: inline-block;
+      position: relative;
+      left: 0px;
+    }
+
+    .user-hint {
+      display: inline-block;
+      position: absolute;
+      left: 245px;
+    }
+
+    .enemy-team {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+    }
+  }
 }
 
 /*-------------------------------------------*/
@@ -370,36 +430,17 @@ a {
 }
 
 // Help button
-.footer > .help-info-button {
-  float: left;
-  //padding-left: 30px;
+.footer .links {
+  padding-right: 30px;
+  float: right;
+}
+.footer .icon {
+  margin-left: 20px;
   height: 50px;
   cursor: pointer;
   transition: all .2s ease-in-out;
 
   &:hover {
-    //height: 75px;
     transform: scale(1.5);
-  }
-}
-
-// Ko-fi link
-.footer > .help-me-link {
-  float: right;
-  padding-right: 30px;
-  position: relative;
-  bottom: 0;
-  position: relative;
-  top: 20px;
-}
-
-
-// General
-@media (max-width: 1253px) {
-  .unitSettings {
-    order: 1;
-  }
-  .attack-order {
-    order: 2;
   }
 }
