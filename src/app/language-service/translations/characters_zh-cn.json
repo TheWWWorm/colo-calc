@@ -1,0 +1,322 @@
+{
+  "Aisha": {
+    "name": "阿依莎",
+    "alias": [
+      "皇女"
+    ]
+  },
+  "Akayuki": {
+    "name": "赤雪"
+  },
+  "Alef": {
+    "name": "阿勒夫",
+    "alias": [
+      "正太"
+    ]
+  },
+  "Amy": {
+    "name": "艾米",
+    "alias": [
+      "女仆"
+    ]
+  },
+  "Aoba": {
+    "name": "青叶",
+    "alias": [
+      "土奶"
+    ]
+  },
+  "Arabelle": {
+    "name": "阿拉贝尔",
+    "alias": [
+      "暗炮"
+    ]
+  },
+  "Beach Sohee": {
+    "name": "Beach Sohee"
+  },
+  "Beach Yuze": {
+    "name": "Beach Yuze"
+  },
+  "Bari": {
+    "name": "芭莉",
+    "alias": [
+      "土花"
+    ]
+  },
+  "Beth": {
+    "name": "贝丝",
+    "alias": [
+      "暗刀"
+    ]
+  },
+  "Bianca": {
+    "name": "比安卡",
+    "alias": [
+      "水剑"
+    ]
+  },
+  "Catherine": {
+    "name": "Catherine"
+  },
+  "Coco": {
+    "name": "可可"
+  },
+  "Craig": {
+    "name": "克雷格",
+    "alias": [
+      "土盾"
+    ]
+  },
+  "Dolf": {
+    "name": "道尔夫"
+  },
+  "Eleanor": {
+    "name": "Eleanor"
+  },
+  "Erina": {
+    "name": "Erina"
+  },
+  "Elvira": {
+    "name": "埃尔韦拉",
+    "alias": [
+      "小红帽"
+    ]
+  },
+  "Eugene": {
+    "name": "尤金",
+    "alias": [
+      "摩托"
+    ]
+  },
+  "Eva": {
+    "name": "伊娃"
+  },
+  "Favi": {
+    "name": "帕比"
+  },
+  "Fei": {
+    "name": "佩儿"
+  },
+  "Knight": {
+    "name": "骑士"
+  },
+  "Future Knight": {
+    "name": "未来骑士",
+    "alias": [
+      "fk"
+    ]
+  },
+  "Future Princess": {
+    "name": "未来公主",
+    "alias": [
+      "fp"
+    ]
+  },
+  "Gabriel": {
+    "name": "加百列",
+    "alias": [
+      "光弓"
+    ]
+  },
+  "Garam": {
+    "name": "佳岚",
+    "alias": [
+      "水壶",
+      "水狐"
+    ]
+  },
+  "Girgas": {
+    "name": "吉尔瓦斯"
+  },
+  "Gremory": {
+    "name": "吉蒙里",
+    "alias": [
+      "烧瓶"
+    ]
+  },
+  "Hekate": {
+    "name": "赫卡忒"
+  },
+  "Idol Captain Eva": {
+    "name": "伊娃",
+    "alias": [
+      "偶像"
+    ]
+  },
+  "Karina": {
+    "name": "卡瑞娜",
+    "alias": [
+      "吸血鬼"
+    ]
+  },
+  "Kamael": {
+    "name": "Kamael"
+  },
+  "Kang": {
+    "name": "康儿"
+  },
+  "Lahn": {
+    "name": "兰儿"
+  },
+  "Lapice": {
+    "name": "拉碧丝",
+    "alias": [
+      "光伞",
+      "光刺"
+    ]
+  },
+  "Lavi": {
+    "name": "拉比"
+  },
+  "Lilith": {
+    "name": "Lilith"
+  },
+  "Loraine": {
+    "name": "罗兰茵",
+    "alias": [
+      "老板娘"
+    ]
+  },
+  "Lucy": {
+    "name": "Lucy"
+  },
+  "Lupina": {
+    "name": "瑞皮娜",
+    "alias": [
+      "暗狼"
+    ]
+  },
+  "Lynn": {
+    "name": "琳",
+    "alias": [
+      "火刀"
+    ]
+  },
+  "Marianne": {
+    "name": "玛丽安",
+    "alias": [
+      "土狙"
+    ]
+  },
+  "Marina": {
+    "name": "玛丽娜",
+    "alias": [
+      "船长"
+    ]
+  },
+  "Marvin": {
+    "name": "马修",
+    "alias": [
+      "大叔"
+    ]
+  },
+  "Mayreel": {
+    "name": "Mayreel",
+    "alias": [
+      "sheep"
+    ]
+  },
+  "Mei": {
+    "name": "梅儿"
+  },
+  "Miya": {
+    "name": "美娅",
+    "alias": [
+      "火奶"
+    ]
+  },
+  "MK.99": {
+    "name": "MK.99",
+    "alias": [
+      "mk99",
+      "mkay"
+    ]
+  },
+  "MK.2": {
+    "name": "MK.2",
+    "alias": [
+      "mk2"
+    ]
+  },
+  "Nari": {
+    "name": "奈莉",
+    "alias": [
+      "狐狸"
+    ]
+  },
+  "Neva": {
+    "name": "奈娃"
+  },
+  "Noxia": {
+    "name": "Noxia"
+  },
+  "Dark Spirit": {
+    "name": "Dark Spirit"
+  },
+  "Oghma": {
+    "name": "欧格玛",
+    "alias": [
+      "暗盾",
+      "高达"
+    ]
+  },
+  "Plitvice": {
+    "name": "普利特维采",
+    "alias": [
+      "女神"
+    ]
+  },
+  "Rachel": {
+    "name": "瑞秋",
+    "alias": [
+      "海贼",
+      "海盗"
+    ]
+  },
+  "Ranpang": {
+    "name": "岚芳"
+  },
+  "Rie": {
+    "name": "莉耶"
+  },
+  "Rue": {
+    "name": "Rue"
+  },
+  "Sohee": {
+    "name": "索菲"
+  },
+  "Scintilla": {
+    "name": "Scintilla"
+  },
+  "Shapira": {
+    "name": "夏皮拉"
+  },
+  "Tinia": {
+    "name": "蒂尼亚",
+    "alias": [
+      "土弓"
+    ]
+  },
+  "Veronica": {
+    "name": "Veronica"
+  },
+  "Vishuvac": {
+    "name": "比什巴赫",
+    "alias": [
+      "火拳"
+    ]
+  },
+  "White Beast": {
+    "name": "白兽"
+  },
+  "Yuze": {
+    "name": "柚子"
+  },
+  "Jack Frost": {
+    "name": "Jack Frost"
+  },
+  "Orca": {
+    "name": "Orca"
+  }
+}
