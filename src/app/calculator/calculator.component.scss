@@ -8,6 +8,15 @@
     display: none !important;
   }
 }
+@media (max-width: 440px) {
+  .header {
+    height: 130px !important;
+  }
+  .dropdown-options > *:not(:first-child) {
+    display: block;
+    padding-left: 0px !important;
+  }
+}
 .header {
   width: 100%;
   height: 60px;
