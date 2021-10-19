@@ -137,7 +137,7 @@ export class HeroSelectDialogComponent implements OnInit {
         const query = value.toLowerCase();
         return ch.id.toLowerCase().includes(query) ||
           ch.name.toLowerCase().includes(query) ||
-          ch.alias?.some((al) => al.includes(query));
+          ch.alias?.some((al) => al.toLowerCase().includes(query));
       });
     } else {
       this.displayCharacters = this.characters;
