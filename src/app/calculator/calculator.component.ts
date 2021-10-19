@@ -35,6 +35,7 @@ export class CalculatorComponent implements OnInit, OnDestroy {
 
   public showAllyLinesChecked = true;
   public showEnemyLinesChecked = true;
+  public showAttackOrder = this.localStorageService.get('showAttackOrder');
   public useJPArt = this.characterService.useJPArt;
   public rememberMyTeam = this.localStorageService.get('rememberMyTeam');
   
@@ -172,6 +173,11 @@ export class CalculatorComponent implements OnInit, OnDestroy {
     this.bgControl.valueChanges.subscribe((value) => {
       this.languageService.changeBg(value);
     });
+
+    if (this.showAttackOrder === null) {
+      this.showAttackOrder = true;
+      this.showAttackOrderClick();
+    } 
 
     // Hacky stuff, to fix lines
     let timeout: any;
@@ -363,12 +369,22 @@ export class CalculatorComponent implements OnInit, OnDestroy {
       })[0];
 
       if (
-        (lineColour === TargetColour.Ally && this.showAllyLinesChecked) ||
-        (lineColour === TargetColour.Enemy && this.showEnemyLinesChecked)
+        (
+          (
+            lineColour === TargetColour.Ally ||
+            lineColour === TargetColour.AllySummon
+          ) && this.showAllyLinesChecked
+        ) ||
+        (
+          (
+            lineColour === TargetColour.Enemy ||
+            lineColour === TargetColour.EnemySummon
+          ) && this.showEnemyLinesChecked
+        )
       ) {
         if (summonMode) {
           attacker.summonTargets = target.tile;
-          attacker.lineColour = lineColour;
+          attacker.summonLineColour = lineColour;
         } else {
           attacker.targets = target.tile;
           attacker.lineColour = lineColour;
@@ -402,9 +418,9 @@ export class CalculatorComponent implements OnInit, OnDestroy {
     const goodGuysResult = this.calcTeamTarget(this.goodParty.tiles, this.evilParty.tiles, TargetColour.Ally, []);
     const badGuysResult = this.calcTeamTarget(this.evilParty.tiles, this.goodParty.tiles, TargetColour.Enemy, goodGuysResult.targeted);
 
-    const goodGuysSummonsResult = this.calcTeamTarget(this.goodParty.tiles, this.evilParty.tiles, TargetColour.Ally, badGuysResult.targeted, true);
+    const goodGuysSummonsResult = this.calcTeamTarget(this.goodParty.tiles, this.evilParty.tiles, TargetColour.AllySummon, badGuysResult.targeted, true);
     // @TODO: account for spawned good party summons when calculating enemy summon AI
-    const badGuysSummonsResult = this.calcTeamTarget(this.evilParty.tiles, this.goodParty.tiles, TargetColour.Enemy, goodGuysSummonsResult.targeted, true);
+    const badGuysSummonsResult = this.calcTeamTarget(this.evilParty.tiles, this.goodParty.tiles, TargetColour.EnemySummon, goodGuysSummonsResult.targeted, true);
 
     const newEvents = [
       ...goodGuysResult.events,
@@ -412,7 +428,9 @@ export class CalculatorComponent implements OnInit, OnDestroy {
       ...goodGuysSummonsResult.events,
       ...badGuysSummonsResult.events,
     ];
-    this.events = newEvents;
+    if (this.showAttackOrder) {
+      this.events = newEvents;
+    }
     this.matrix = [...this.matrix];
     this.goodParty = {...this.goodParty};
     this.evilParty = {...this.evilParty};
@@ -530,6 +548,15 @@ export class CalculatorComponent implements OnInit, OnDestroy {
     this.goodParty = this.updatePartyCharNames(this.goodParty);
     this.evilParty = this.updatePartyCharNames(this.evilParty);
     this.matrix = [...this.matrix]
+  }
+
+  public showAttackOrderClick() {
+    this.localStorageService.set('showAttackOrder', this.showAttackOrder);
+    if (this.showAttackOrder) {
+      this.calculateEvents();
+    } else {
+      this.events = [];
+    }
   }
 
   public syncParty(party: Party, matrix: Array<Tile>) {

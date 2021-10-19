@@ -39,6 +39,7 @@
             (change)="calculateEvents()">
           <span>{{ 'enemyLineToggle' | _ }}</span><input type="checkbox" [(ngModel)]="showEnemyLinesChecked"
             (change)="calculateEvents()">
+          <span>{{ 'showAttackOrder' | _ }}</span><input type="checkbox" [(ngModel)]="showAttackOrder" (change)="showAttackOrderClick()">
           <span>{{ 'useJPArt' | _ }}</span><input type="checkbox" [(ngModel)]="useJPArt" (change)="useJPArtClick()">
           <mat-icon class="share-btn" (click)="shareBtnClick()">{{shareIconName}}</mat-icon>
         </span>

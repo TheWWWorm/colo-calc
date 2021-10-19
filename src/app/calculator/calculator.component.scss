@@ -189,9 +189,19 @@ a {
 /* ----------------------------------------*/
 
 // General
+@media (max-width: 1300px) {
+  .attack-order {
+    // display: none !important;
+    position: initial !important;
+    margin: 0 auto !important;
+    display: block !important;
+    padding-top: 20px !important;
+    width: fit-content !important;;
+  }
+}
 @media (max-width: 1500px) {
   .attack-order {
-    display: none !important;
+    width: 300px !important;
   }
 }
 
@@ -279,12 +289,9 @@ a {
   float: left;
 }
 
-// Show Lines Options Padding
-.actions > *:not(:first-child) {
-  padding-left: 10px;
-}
 .actions > * {
-  padding-right: 5px;
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .share-btn {

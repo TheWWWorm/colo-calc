@@ -35,7 +35,7 @@ export class FieldComponent implements OnInit, OnChanges {
         this.lineService.createLine(
           'tile' + tile.id,
           'tile' + tile.summonTargets.id,
-          tile.lineColour,
+          tile.summonLineColour,
           true
         )
       }

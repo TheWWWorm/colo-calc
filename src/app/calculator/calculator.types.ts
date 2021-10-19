@@ -3,7 +3,9 @@ export const LINE_HEIGHT = 5;
 
 export enum TargetColour {
   Ally = '#f3ff81b3',
-  Enemy = '#ff1818ba'
+  Enemy = '#ff1818ba',
+  AllySummon = '#7c56baba',
+  EnemySummon = '#d64bc3ba',
 }
 
 export enum AiType {
@@ -70,6 +72,7 @@ export interface Tile {
   targets?: Tile;
   summonTargets?: Tile;
   lineColour?: TargetColour;
+  summonLineColour?: TargetColour;
 }
 
 export interface Party {
