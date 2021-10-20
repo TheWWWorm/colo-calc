@@ -323,6 +323,15 @@
 		"imgName": "kang.gif",
 		"element": "Light"
 	},
+  {
+		"id": "Kanna",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Kanna.png",
+    "chainsFrom": "All",
+		"chainsTo": "Downed",
+		"element": "Basic"
+	},
 	{
 		"id": "Kamael",
 		"aiType": "Ranged",

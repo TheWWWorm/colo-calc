@@ -108,7 +108,16 @@
     "name": "Kamael"
   },
   "Kang": {
-    "name": "Kang"
+    "name": "Kang",
+    "alias": [
+      "Kannas brother"
+    ]
+  },
+  "Kanna": {
+    "name": "Kanna",
+    "alias": [
+      "Kangs sister"
+    ]
   },
   "Lahn": {
     "name": "Lahn"
