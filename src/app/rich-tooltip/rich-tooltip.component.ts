@@ -9,4 +9,18 @@ import { AiType, Character } from "../calculator/calculator.types";
 export class TooltipViewComponent{
   @Input() character: Character;
   @Input() summon: Character;
+  @Input() useJPArt: boolean;
+
+  public artSrc: string;
+
+  public init() {
+    if (!this.character) {
+      return;
+    }
+    this.artSrc = this.useJPArt ? this.character.jpImgName : this.character.imgName;
+  }
+
+  public imgErrored() {
+    this.artSrc = this.character.imgName;
+  }
 }

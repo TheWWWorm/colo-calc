@@ -1,5 +1,6 @@
 <div class="content-overlay">
   <div class="content">
+    <img class="char-img" [src]="artSrc" (error)="imgErrored()">
     <div>{{ summon ? (character.name + '/' + summon.name) : character.name }}</div>
     <div>{{ (summon ? ((character.aiType | _) + '/' + (summon.aiType | _)) : (character.aiType | _)) + ' ' + ('AI' | _)}} </div>
     <div *ngIf="character.chainsFrom && character.chainsTo">
