@@ -76,22 +76,28 @@ span {
 }
 
 .elemental-char-list-wrap {
-  width: 100%;
 }
 
 .elemental-char-list {
   padding-bottom: 10px;
   display: flex;
+}
+
+.element-row {
+  display: flex;
   flex-wrap: wrap;
-  width: 100%;
 }
 
 .element-row-icon {
-  height: 30px;
-  width: 30px;
+  display: inline-block;
   margin-right: 10px;
-  position: relative;
-  top: 12px;
+  > img {
+    height: 45px;
+    width: 45px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 

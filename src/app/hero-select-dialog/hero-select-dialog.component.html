@@ -31,17 +31,21 @@
       class="elemental-char-list-wrap"
     >
       <div *ngIf="(displayCharacters | filterCharacters : item.key).length" class="elemental-char-list">
-        <img [src]="item.value" class="element-row-icon">
-        <span
-          *ngFor="let character of displayCharacters | filterCharacters : item.key"
-          (click)="heroSelected(character)"
-        >
-          <app-tile
-            [tile]="character | characterToTile"
-            [disabled]="true"
+        <div class="element-row-icon">
+          <img [src]="item.value">
+        </div>
+        <div class="element-row">
+          <span
+            *ngFor="let character of displayCharacters | filterCharacters : item.key"
+            (click)="heroSelected(character)"
           >
-          </app-tile>
-        </span>
+            <app-tile
+              [tile]="character | characterToTile"
+              [disabled]="true"
+            >
+            </app-tile>
+          </span>
+        </div>
       </div>
     </div>
   </div>
