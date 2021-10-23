@@ -106,6 +106,9 @@ export class TileComponent implements OnChanges {
 
   public imgErrored() {
     this.tileBackground = this.tile?.character?.imgName;
+  }
+
+  public imgSummonErrored() {
     this.tileSummonBackground = this.summon?.imgName;
   }
 }
