@@ -47,19 +47,22 @@ span {
   width: 50px !important;
   cursor: pointer !important;
   border: 1px solid #544141;
-  background: #3e2e2e !important;
+  border-radius: 10%;
+  background: #141312 !important;
 }
 
 // Portraits
 :host ::ng-deep .character-icon {
   height: 50px;
   width: 50px;
+  border-radius: 10%;
 }
 
 // Class
 :host ::ng-deep .class-icon {
   margin-top: -10px !important;
   position: relative !important;
+  border-bottom-left-radius: 3px;
 }
 
 // Element
@@ -67,28 +70,31 @@ span {
   margin-top: -10px !important;
   margin-left: 40px !important;
   position: relative !important;
+  border-bottom-right-radius: 3px;
 }
 
+// Summoner
 :host ::ng-deep .summon-icon {
   margin-top: -50px !important;
   margin-left: 40px !important;
   position: relative !important;
+  border-top-right-radius: 3px;
 }
 
+// Elemental Char List
 .elemental-char-list-wrap {
   width: 100%;
 }
-
 .elemental-char-list {
   padding-bottom: 10px;
   display: flex;
 }
 
+// Element Divider
 .element-row {
   display: flex;
   flex-wrap: wrap;
 }
-
 .element-row-icon {
   display: inline-block;
   margin-right: 10px;
@@ -117,10 +123,8 @@ span {
   height: unset;
   min-height: inherit;
   max-height: inherit;
-  border: 2px solid #5a451e;
-  box-shadow: 0px 0px 0px 5px #171211;
-  //box-shadow: 0px 11px 15px -7px rgb(0 0 0 / 20%), 0px 24px 38px 3px rgb(0 0 0 / 14%), 0px 9px 46px 8px rgb(0 0 0 / 12%);
-  background: #171211;
+  background-color: #171211;
+  box-shadow: 0px 0px 0px 1px #171211, 0px 0px 0px 3px #5a451e, 0px 0px 0px 9px #171211;
   color: #fff;
 }
 

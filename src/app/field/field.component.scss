@@ -13,19 +13,21 @@
   flex-direction: column;
 }
 
+// Tiles
 :host ::ng-deep .square{
-  border: 2.5px solid black !important;
-  border-radius: 20% !important;
+  border: 2.5px solid #100C0B !important;
+  background-color: #141312;
+  border-radius: 10% !important;
   > .character-icon {
-    border-radius: 20% !important;
+    border-radius: 10% !important;
   }
 
   > .class-icon {
-    border-bottom-left-radius: 9px;
+    border-bottom-left-radius: 3px;
   }
 
   > .element-icon {
-    border-bottom-right-radius: 9px;
+    border-bottom-right-radius: 3px;
   }
 
   > .summon-icon {

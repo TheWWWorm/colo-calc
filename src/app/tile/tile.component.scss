@@ -1,15 +1,16 @@
-/* -------------------------------------*/
-/* ---------->>> Squares <<<-----------*/
 /* -----------------------------------*/
+/* ---------->>> Tiles <<<-----------*/
+/* ---------------------------------*/
 
 // Squares Border
 .square {
   height: 45px;
   width: 45px;
-  border: 1px solid #5a451e;
+  border: 1px solid #3F221A;
   display: grid;
   cursor: pointer;
 
+  // Summon Reveal Animation
   &:hover {
     .summon {
       display: initial;
@@ -17,10 +18,12 @@
       animation-name: summonReveal;
       animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
       animation-duration: 1.5s;
+      animation-fill-mode: backwards;
     }
   }
 }
 
+// Show Summon
 @keyframes summonReveal {
   from {
     clip: rect(0, 0px, 50px, 0);
@@ -40,6 +43,7 @@
   display: grid;
   align-items: center;
 }
+
 
 /* ---------------------------------------*/
 /* ---------->>> Portraits <<<-----------*/
@@ -61,6 +65,7 @@ img:before {
   background-image: url(/assets/CharacterPortraits/Boy.png);
 }
 
+
 /* -----------------------------------*/
 /* ---------->>> Icons <<<-----------*/
 /* ---------------------------------*/
@@ -71,7 +76,7 @@ img:before {
 // Lead
 .lead-icon {
   position: absolute;
-  height: 20px;
+  height: 18px;
   width: 20px;
   margin-top: -8px;
   margin-left: -5px;
@@ -97,6 +102,7 @@ img:before {
   z-index: 1;
 }
 
+// Summon
 .summon-icon {
   position: absolute;
   margin-top: 0;
@@ -111,12 +117,14 @@ img:before {
   //position: absolute;
 }
 
+// Summon Portrait
 .summon {
   //clip: rect(0, 50px, 50px, 50px);
   display: none;
   position: absolute;
 }
 
+// + Icon
 .plus-icon {
   height: 12px;
   width: 12px;
@@ -124,4 +132,3 @@ img:before {
   top: 39%;
   left: 39%;
 }
-
