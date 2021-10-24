@@ -271,22 +271,20 @@ a {
 
 // Grid
 .field {
-  width: 699px;
-  height: 246px;
+  width: fit-content;
+  height: fit-content;
+  // width: -webkit-fill-available;
+  // width: -moz-available;
+  // height: -moz-available;;
   display: flex;
   //padding: 10px;
-  padding: 2px 2px 7px 2px;
+  padding: 2px;
   //border: 1px solid white;
   // TODO: refactor to use CSS, instead of image
   //background-image: url(/assets/grid_back.png);
   background-color: black;
   border: solid 2px #3e2e2e;
   border-radius: 6px;
-
-  @-moz-document url-prefix() {
-    width: 694px !important;
-    height: 241px !important;
-  }
   
 
   // Center Image
@@ -299,14 +297,14 @@ a {
 }
 
 .actions-container {
-  max-width: 656px;
+  max-width: 704px;
 }
 
 // Show Lines Options
 .actions {
   float: left;
   padding-bottom: 3px;
-  padding-left: 2px;
+  padding-left: 3px;
 }
 
 .actions > * {
