@@ -36,7 +36,10 @@ export class AttackOrderComponent implements OnChanges {
     private languageService: LanguageService,
     private characterService: CharacterService,
   ) { }
-
+  
+  // @TODO: show range
+  // @TODO: show by team attack order
+  // @TODO: nicer img look
   ngOnChanges(changes: SimpleChanges): void {
     if (this.textMode) {
       this.textEvents = this.events.map((event) => this.toStringEvent(event));
