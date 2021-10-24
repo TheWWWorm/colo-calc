@@ -1,6 +1,6 @@
-/* --------------------------------------------*/
+/* ------------------------------------*/
 /* ---------->>> Header <<<-----------*/
-/* ------------------------------------------*/
+/* ----------------------------------*/
 
 // General
 @media (max-width: 820px) {
@@ -156,15 +156,6 @@ h3 {
 /* ---------->>> Parties <<<-----------*/
 /* -----------------------------------*/
 
-// Margin and Padding
-.unit-settings {
-  margin-top: 10px;
-  > * {
-    padding-bottom: 10px;
-    display: block;
-  }
-}
-
 // Checkboxes Position
 input[type="checkbox"] {
   position: relative;
@@ -178,15 +169,10 @@ a {
   text-decoration: underline;
 }
 
-// "Click on the tiles" Text
-.user-hint {
-  max-width: 200px;
-}
 
-
-/*-------------------------------------------*/
+/*-----------------------------------*/
 /* ---------->>> Body <<<-----------*/
-/* ----------------------------------------*/
+/* --------------------------------*/
 
 // General
 @media (max-width: 1300px) {
@@ -230,6 +216,8 @@ a {
     width: 705px;
     margin: 0 auto;
   }
+
+  // Attack Order
   .attack-order {
     display: inline-block;
     position: absolute;
@@ -242,21 +230,28 @@ a {
     }
   }
 
+  // Team/Party Lists
   .unit-settings {
-    margin-top: 10px;
+    margin-top: 15px;
     position: relative;
+
+    // Ally Team List
     .your-team {
       display: inline-block;
       position: relative;
       left: 0px;
     }
 
+    // "Click on the tiles" Text
     .user-hint {
       display: inline-block;
+      text-align: center;
       position: absolute;
       left: 245px;
+      max-width: 200px;
     }
 
+    // Enemy Team List
     .enemy-team {
       display: inline-block;
       position: absolute;
@@ -264,6 +259,7 @@ a {
     }
   }
 }
+
 
 /*-------------------------------------------*/
 /* ---------->>> Battle Field <<<-----------*/
@@ -276,42 +272,36 @@ a {
   // width: -webkit-fill-available;
   // width: -moz-available;
   // height: -moz-available;;
-  display: flex;
   //padding: 10px;
-  padding: 2px;
   //border: 1px solid white;
-  // TODO: refactor to use CSS, instead of image
-  //background-image: url(/assets/grid_back.png);
-  background-color: black;
-  border: solid 2px #3e2e2e;
-  border-radius: 6px;
+  display: flex;
+  padding: 3px;
+  background-color: #100C0B;
+  box-shadow: 0px 0px 0px 1px #100C0B, 0px 0px 0px 3px #3F221A, 0px 0px 0px 9px #161110;
+  border-radius: 3px;
   
-
   // Center Image
   > img {
     height: 249px;
     margin-top: 0px;
-    // border-top: 1px solid #5a451e;
-    // border-bottom: 1px solid #5a451e;
   }
 }
 
+// Options
+.actions {
+  float: left;
+  padding-bottom: 8px;
+  padding-left: 2px;
+}
+.actions > * {
+  display: inline-block;
+  margin-right: 8px;
+}
 .actions-container {
   max-width: 704px;
 }
 
-// Show Lines Options
-.actions {
-  float: left;
-  padding-bottom: 3px;
-  padding-left: 3px;
-}
-
-.actions > * {
-  display: inline-block;
-  margin-right: 10px;
-}
-
+// Share Layout
 .share-btn {
   cursor: pointer;
   top: 5px;
@@ -431,7 +421,6 @@ a {
   > .bg-image {
     background-image: url("/assets/backgrounds/kamazone.png");
   }
-  
   a {
     color: #fbfbfb;
   }
@@ -446,7 +435,6 @@ a {
   > .bg-image {
     background-image: url("/assets/backgrounds/arena.png");
   }
-
   a {
     color: #fbfbfb;
   }
@@ -474,11 +462,11 @@ a {
   bottom: 0;
   width: 100%;
   color: white;
-  padding: 20px 0px 10px 0px;
+  padding: 12px 0px 10px 0px;
   height: 60px;
 }
 
-// Help button
+// Icons (Help, Discord and Ko-fi)
 .footer .links {
   padding-right: 30px;
   float: right;
@@ -488,12 +476,11 @@ a {
   height: 50px;
   cursor: pointer;
   transition: all .2s ease-in-out;
-
+  // Zoom Effect
   &:hover {
-    transform: scale(1.5);
+    transform: scale(1.3);
   }
 }
-
 
 :host ::ng-deep .square{
   position: relative !important;
