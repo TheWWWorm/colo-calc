@@ -303,7 +303,6 @@ export class CalculatorComponent implements OnInit, OnDestroy {
   }
 
 
-  // @TODO: fix Ally targeting type
   private calcTeamTarget(
     attackers: Array<Tile>,
     defenders: Array<Tile>,
