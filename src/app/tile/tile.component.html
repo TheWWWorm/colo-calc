@@ -16,5 +16,6 @@
   <img *ngIf="tileElement" [src]="tileElement" class="element-icon">
   <img *ngIf="tileClass" [src]="tileClass" class="class-icon">
   <img *ngIf="summon" src="/assets/icons/icon_summoner.jpg" class="summon-icon">
-  <div *ngIf="!tile" class="text-value"><span>{{ textValue }}</span></div>
+
+  <img *ngIf="!tile && showPlus" src="/assets/icons/plus.png" class="plus-icon">
 </div>

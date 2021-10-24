@@ -44,7 +44,7 @@ export const classIconMap : {
 })
 export class TileComponent implements OnChanges {
   @Input() public tile: Tile = null;
-  @Input() public textValue = '';
+  @Input() public showPlus = false;
   @Input() public disabled = false;
 
   public tileBackground: string;
