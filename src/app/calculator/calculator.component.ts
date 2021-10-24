@@ -547,6 +547,7 @@ export class CalculatorComponent implements OnInit, OnDestroy {
     this.characterService.updateArtChoice(this.useJPArt);
     this.goodParty = this.updatePartyCharNames(this.goodParty);
     this.evilParty = this.updatePartyCharNames(this.evilParty);
+    this.calculateEvents();
     this.matrix = [...this.matrix]
   }
 
