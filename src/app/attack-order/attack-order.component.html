@@ -1,0 +1,17 @@
+<div>
+  <div *ngIf="textMode">
+    <h3>{{ 'orderTitle' | _ }}</h3>
+    <div class="text-attack-order">
+      <ol>
+        <li *ngFor="let event of textEvents">{{ event }}</li>
+      </ol>
+    </div>
+  </div>
+  <div *ngIf="!textMode">
+    <div *ngFor="let event of imgEvents">
+      <img class="char-icon" [src]="event.attackerImg" (error)="imgErrored(event, 'attackerImg', event.attackerFallbackImg)">
+      <img class="action-icon" [src]="event.targetingImg">
+      <img class="char-icon" [src]="event.defenderImg" (error)="imgErrored(event, 'defenderImg', event.defenderFallbackImg)">
+    </div>
+  </div>
+</div>

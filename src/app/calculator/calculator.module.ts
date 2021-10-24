@@ -11,6 +11,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { ShareDialogModule } from '../share-dialog/share-dialog.module';
 import { HelpDialogModule } from '../help-dialog/help-dialog.module';
+import { AttackOrderModule } from '../attack-order/attack-order.module';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import { HelpDialogModule } from '../help-dialog/help-dialog.module';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatIconModule,
+    AttackOrderModule
   ],
   declarations: [CalculatorComponent],
   exports: [CalculatorComponent]

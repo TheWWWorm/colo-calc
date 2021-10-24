@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { createParty, validTileId } from 'src/fn/helpers';
+import { TargetEvent } from '../attack-order/attack-order.component';
 import { CharacterService } from '../character-service/character-service.service';
 import { HelpDialogComponent } from '../help-dialog/help-dialog.component';
 import { HeroSelectDialogComponent } from '../hero-select-dialog/hero-select-dialog.component';
@@ -39,7 +40,7 @@ export class CalculatorComponent implements OnInit, OnDestroy {
   public goodParty: Party;
   public evilParty: Party;
   
-  public events: Array<string> = [];
+  public events: Array<TargetEvent> = [];
 
   private interval: any;
 
@@ -283,7 +284,12 @@ export class CalculatorComponent implements OnInit, OnDestroy {
       potentialTargets = defenders;
     // Target furtherest friend
     } else if (attackerAi === AiType.Ally) {
-      potentialTargets = attackers.filter((m) => attacker.id !== m.id);
+      potentialTargets = attackers.filter(
+        (m) => {
+          return validTileId(m) &&
+          !alreadyInTarget.includes(m) &&
+          attacker.id !== m.id
+        });
     // 2 or MORE ranged - Attack closest untargeted ranged
     // 1 ranged - Attack that ranged
     // 0 ranged - melee AI fallback
@@ -296,6 +302,8 @@ export class CalculatorComponent implements OnInit, OnDestroy {
     return potentialTargets;
   }
 
+
+  // @TODO: fix Ally targeting type
   private calcTeamTarget(
     attackers: Array<Tile>,
     defenders: Array<Tile>,
@@ -303,7 +311,7 @@ export class CalculatorComponent implements OnInit, OnDestroy {
     targeted: Array<Tile>,
     summonMode: boolean = false,
   ) {
-    const events: Array<string> = [];
+    const events: Array<TargetEvent> = [];
     const targetedUpd = attackers.reduce((alreadyInTarget, attacker) => {
       if (summonMode) {
         attacker.summonTargets = null;
@@ -388,16 +396,12 @@ export class CalculatorComponent implements OnInit, OnDestroy {
         }
       }
 
-      let event: string;
-      if (this.languageService.getLabel('attackTemplate', false)) {
-        event = this.languageService.getLabel('attackTemplate')
-          .replace('ATTACKER', attackerCharacter.name)
-          .replace('TARGET', target.tile.character.name)
-          .replace('RANGE', target.distance.toFixed(2));
-      } else {
-        event = `${attackerCharacter.name} ${this.languageService.getLabel('targets')} ${target.tile.character.name} ${this.languageService.getLabel('withDistance')} ${target.distance.toFixed(2)}`;
-      }
-      events.push(event);
+      events.push({
+        attacker: attackerCharacter,
+        defender: target.tile.character,
+        range: target.distance.toFixed(2),
+        allyTarget: usingAi === AiType.Ally,
+      });
       alreadyInTarget.push(target.tile);
 
       return alreadyInTarget;

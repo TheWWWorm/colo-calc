@@ -67,12 +67,10 @@
     </div>
     <!-- Body/Attack order -->
     <div class="attack-order" *ngIf="events && events.length">
-      <h3>{{ 'orderTitle' | _ }}</h3>
-      <div class="attackOrder">
-        <ol>
-          <li *ngFor="let event of events">{{ event }}</li>
-        </ol>
-      </div>
+      <app-attack-order
+        [textMode]="true"
+        [events]="events"
+      ></app-attack-order>
     </div>
   </div>
   <!-- Footer -->
