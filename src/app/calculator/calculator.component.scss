@@ -211,6 +211,12 @@ a {
   }
 }
 
+@media (max-height: 690px) {
+  .body {
+    margin-top: 10px !important;
+  }
+}
+
 .body {
   width: 100%;
   margin-top: 80px;
