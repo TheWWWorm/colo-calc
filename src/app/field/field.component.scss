@@ -1,8 +1,8 @@
 .field {
   display: flex;
   flex-wrap: wrap;
-  max-width: calc(45px * 4 + 8px);
-  min-width: calc(45px * 4 + 8px);
+  max-width: calc(45px * 4 + 20px);
+  min-width: calc(45px * 4 + 20px);
   //margin-top: 10px;
   //padding: 10px;
   //border: 1px solid white;
@@ -11,4 +11,24 @@
 .field > * {
   //flex: 1 0 calc(25% - 40px);
   flex-direction: column;
+}
+
+:host ::ng-deep .square{
+  border: 2.5px solid black !important;
+  border-radius: 20% !important;
+  > .character-icon {
+    border-radius: 20% !important;
+  }
+
+  > .class-icon {
+    border-bottom-left-radius: 9px;
+  }
+
+  > .element-icon {
+    border-bottom-right-radius: 9px;
+  }
+
+  > .summon-icon {
+    border-top-right-radius: 3px;
+  }
 }

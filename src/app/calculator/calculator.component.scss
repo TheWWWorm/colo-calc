@@ -196,12 +196,12 @@ a {
     margin: 0 auto !important;
     display: block !important;
     padding-top: 20px !important;
-    width: fit-content !important;;
+    width: fit-content !important;
   }
 }
-@media (max-width: 1500px) {
+@media (min-width: 1301px) and (max-width: 1500px) {
   .attack-order {
-    width: 300px !important;
+    width: 255px !important;
   }
 }
 
@@ -209,11 +209,17 @@ a {
   .body {
     margin-top: 10px !important;
   }
+  .attack-order {
+    top: 105px !important;
+  }
 }
 
 @media (max-height: 690px) {
   .body {
     margin-top: 10px !important;
+  }
+  .attack-order {
+    top: 105px !important;
   }
 }
 
@@ -221,16 +227,16 @@ a {
   width: 100%;
   margin-top: 80px;
   .field-wrap {
-    width: 670px;
+    width: 705px;
     margin: 0 auto;
   }
   .attack-order {
     display: inline-block;
     position: absolute;
     left: 20px;
-    top: 187px;
+    top: 176px;
     padding-right: 15px;
-    width: 370px;
+    width: 350px;
     ol {
       padding-inline-start: 20px;
     }
@@ -265,24 +271,30 @@ a {
 
 // Grid
 .field {
-  width: 656px;
-  height: 244px;
+  width: 699px;
+  height: 246px;
   display: flex;
-  padding: 10px;
-  padding-bottom: 5px;
-  margin-top: 35px;
-  margin-left: -5px;
-  margin-right: 10px;
+  //padding: 10px;
+  padding: 2px 2px 7px 2px;
   //border: 1px solid white;
   // TODO: refactor to use CSS, instead of image
-  background-image: url(/assets/grid_back.png);
+  //background-image: url(/assets/grid_back.png);
+  background-color: black;
+  border: solid 2px #3e2e2e;
+  border-radius: 6px;
+
+  @-moz-document url-prefix() {
+    width: 694px !important;
+    height: 241px !important;
+  }
+  
 
   // Center Image
   > img {
-    height: 233px;
+    height: 249px;
     margin-top: 0px;
-    border-top: 1px solid #5a451e;
-    border-bottom: 1px solid #5a451e;
+    // border-top: 1px solid #5a451e;
+    // border-bottom: 1px solid #5a451e;
   }
 }
 
@@ -293,6 +305,8 @@ a {
 // Show Lines Options
 .actions {
   float: left;
+  padding-bottom: 3px;
+  padding-left: 2px;
 }
 
 .actions > * {
