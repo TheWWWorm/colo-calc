@@ -9,9 +9,9 @@
   </div>
   <div *ngIf="!textMode">
     <div *ngFor="let event of imgEvents">
-      <img class="char-icon" [src]="event.attackerImg" (error)="imgErrored(event, 'attackerImg', event.attackerFallbackImg)">
+      <img [ngClass]="event | getCharIconClass : true" [src]="event.attackerImg" (error)="imgErrored(event, 'attackerImg', event.attackerFallbackImg)">
       <img class="action-icon" [src]="event.targetingImg">
-      <img class="char-icon" [src]="event.defenderImg" (error)="imgErrored(event, 'defenderImg', event.defenderFallbackImg)">
+      <img [ngClass]="event | getCharIconClass : false" [src]="event.defenderImg" (error)="imgErrored(event, 'defenderImg', event.defenderFallbackImg)">
     </div>
   </div>
 </div>

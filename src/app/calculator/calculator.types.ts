@@ -97,3 +97,8 @@ export interface SelectOption {
 }
 
 export const dialogWidth: string = '700px';
+
+export enum PartyTypes {
+  good = 'Good',
+  evil = 'Evil'
+}

@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { Character } from '../calculator/calculator.types';
+import { Character, PartyTypes } from '../calculator/calculator.types';
 import { CharacterService } from '../character-service/character-service.service';
 import { LanguageService } from '../language-service/language-service.service';
 
@@ -8,6 +8,7 @@ export type TargetEvent = {
   defender: Character;
   range: string;
   allyTarget: boolean;
+  side: PartyTypes;
 }
 
 export type ImgEvent = {
@@ -17,6 +18,8 @@ export type ImgEvent = {
   defenderFallbackImg: string
   targetingImg: string;
   range: string;
+  attackerSide: PartyTypes;
+  defenderSide: PartyTypes;
 }
 
 @Component({
@@ -60,7 +63,7 @@ export class AttackOrderComponent implements OnChanges {
   }
 
   public toImgEvent(event: TargetEvent): ImgEvent {
-    const { attacker, defender, range, allyTarget } = event;
+    const { attacker, defender, range, allyTarget, side } = event;
     const useJPArt = this.characterService.useJPArt;
     return {
       attackerImg: useJPArt ? attacker.jpImgName : attacker.imgName,
@@ -69,6 +72,10 @@ export class AttackOrderComponent implements OnChanges {
       defenderFallbackImg: defender.imgName,
       targetingImg: allyTarget ? '/assets/icons/staff.png' : '/assets/icons/sword_1.png',
       range,
+      attackerSide: side,
+      defenderSide: allyTarget ?
+        side :
+        side === PartyTypes.evil ? PartyTypes.good : PartyTypes.evil 
     }
   }
 

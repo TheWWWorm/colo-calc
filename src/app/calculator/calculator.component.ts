@@ -11,7 +11,7 @@ import { LanguageService } from '../language-service/language-service.service';
 import { languageList } from '../language-service/traslations.data';
 import { LocalStorageService } from '../local-storage-service/local-storage-service.service';
 import { ShareDialogComponent } from '../share-dialog/share-dialog.component';
-import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, TargetColour, AiType, CharacterClass, Character, dialogWidth } from './calculator.types';
+import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, TargetColour, AiType, CharacterClass, Character, dialogWidth, PartyTypes } from './calculator.types';
 
 @Component({
   selector: 'app-calculator',
@@ -152,11 +152,11 @@ export class CalculatorComponent implements OnInit, OnDestroy {
     });
 
     this.resetParty(
-      'Good',
+      PartyTypes.good,
       'goodParty',
       goodPartyString
     );
-    this.resetParty('Evil', 'evilParty', evilPartyString);
+    this.resetParty(PartyTypes.evil, 'evilParty', evilPartyString);
     this.matrix = [...this.matrix];
     this.calculateEvents();
 
@@ -308,6 +308,7 @@ export class CalculatorComponent implements OnInit, OnDestroy {
     defenders: Array<Tile>,
     lineColour: TargetColour,
     targeted: Array<Tile>,
+    attackedSide: PartyTypes,
     summonMode: boolean = false,
   ) {
     const events: Array<TargetEvent> = [];
@@ -400,6 +401,7 @@ export class CalculatorComponent implements OnInit, OnDestroy {
         defender: target.tile.character,
         range: target.distance.toFixed(2),
         allyTarget: usingAi === AiType.Ally,
+        side: attackedSide
       });
       alreadyInTarget.push(target.tile);
 
@@ -415,12 +417,12 @@ export class CalculatorComponent implements OnInit, OnDestroy {
     if (!this.goodParty || !this.evilParty) {
       return;
     }
-    const goodGuysResult = this.calcTeamTarget(this.goodParty.tiles, this.evilParty.tiles, TargetColour.Ally, []);
-    const badGuysResult = this.calcTeamTarget(this.evilParty.tiles, this.goodParty.tiles, TargetColour.Enemy, goodGuysResult.targeted);
+    const goodGuysResult = this.calcTeamTarget(this.goodParty.tiles, this.evilParty.tiles, TargetColour.Ally, [], PartyTypes.good);
+    const badGuysResult = this.calcTeamTarget(this.evilParty.tiles, this.goodParty.tiles, TargetColour.Enemy, goodGuysResult.targeted, PartyTypes.evil);
 
-    const goodGuysSummonsResult = this.calcTeamTarget(this.goodParty.tiles, this.evilParty.tiles, TargetColour.AllySummon, badGuysResult.targeted, true);
+    const goodGuysSummonsResult = this.calcTeamTarget(this.goodParty.tiles, this.evilParty.tiles, TargetColour.AllySummon, badGuysResult.targeted, PartyTypes.good, true);
     // @TODO: account for spawned good party summons when calculating enemy summon AI
-    const badGuysSummonsResult = this.calcTeamTarget(this.evilParty.tiles, this.goodParty.tiles, TargetColour.EnemySummon, goodGuysSummonsResult.targeted, true);
+    const badGuysSummonsResult = this.calcTeamTarget(this.evilParty.tiles, this.goodParty.tiles, TargetColour.EnemySummon, goodGuysSummonsResult.targeted, PartyTypes.evil, true);
 
     const newEvents = [
       ...goodGuysResult.events,

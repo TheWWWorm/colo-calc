@@ -10,6 +10,17 @@ $char-size: 50px;
 .char-icon {
   height: $char-size;
   width: $char-size;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 30px;
+}
+
+.good-border {
+  border-color: #68739d;
+}
+
+.evil-border {
+  border-color: #bd4343;
 }
 
 $action-size: 25px;
