@@ -7,11 +7,14 @@
       </ol>
     </div>
   </div>
-  <div *ngIf="!textMode">
+  <div *ngIf="!textMode" class="img-event-order-wrap">
+    <h3>{{ 'orderTitle' | _ }}</h3>
     <div *ngFor="let event of imgEvents">
-      <img [ngClass]="event | getCharIconClass : true" [src]="event.attackerImg" (error)="imgErrored(event, 'attackerImg', event.attackerFallbackImg)">
+      <span class="attacker-wrap">
+        <img *ngFor="let attacker of event.attackers; let i = index" [ngClass]="event | getCharIconClass : true" [src]="attacker.img" (error)="attacker.imgErrored()" [style]="i | getCharIconStyle : event.attackers.length">
+      </span>
       <img class="action-icon" [src]="event.targetingImg">
-      <img [ngClass]="event | getCharIconClass : false" [src]="event.defenderImg" (error)="imgErrored(event, 'defenderImg', event.defenderFallbackImg)">
+      <img [ngClass]="event | getCharIconClass : false" [src]="event.defender.img" (error)="event.defender.imgErrored()">
     </div>
   </div>
 </div>

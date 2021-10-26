@@ -11,11 +11,17 @@ export type TargetEvent = {
   side: PartyTypes;
 }
 
+export type SimpleCharacter = {
+  id: string;
+  img: string;
+  fallbackImg: string;
+  side: PartyTypes;
+  imgErrored?: () => void;
+}
+
 export type ImgEvent = {
-  attackerImg: string;
-  defenderImg: string;
-  attackerFallbackImg: string;
-  defenderFallbackImg: string
+  attackers: Array<SimpleCharacter>;
+  defender: SimpleCharacter;
   targetingImg: string;
   range: string;
   attackerSide: PartyTypes;
@@ -34,6 +40,8 @@ export class AttackOrderComponent implements OnChanges {
 
   public textEvents: Array<string> = [];
   public imgEvents: Array<ImgEvent> = [];
+  public allyImgEvents: Array<ImgEvent> = [];
+  public enemyImgEvents: Array<ImgEvent> = [];
 
   constructor(
     private languageService: LanguageService,
@@ -41,13 +49,14 @@ export class AttackOrderComponent implements OnChanges {
   ) { }
   
   // @TODO: show range
-  // @TODO: show by team attack order
   // @TODO: nicer img look
+  // @TODO: show in a max size box, use fit-content to resize things and max-values to keep things sane
   ngOnChanges(changes: SimpleChanges): void {
+    console.log('changes!');
     if (this.textMode) {
       this.textEvents = this.events.map((event) => this.toStringEvent(event));
     } else {
-      this.imgEvents = this.events.map((event) => this.toImgEvent(event));
+      this.toImgEvents(this.events);
     }
   }
 
@@ -62,25 +71,50 @@ export class AttackOrderComponent implements OnChanges {
     return `${attacker.name} ${this.languageService.getLabel('targets')} ${defender.name} ${this.languageService.getLabel('withDistance')} ${range}`;
   }
 
-  public toImgEvent(event: TargetEvent): ImgEvent {
-    const { attacker, defender, range, allyTarget, side } = event;
+  public toImgEvents(events: Array<TargetEvent>) {
+    const allyEvents: Array<ImgEvent> = [];
+    const enemyEvents: Array<ImgEvent> = [];
+    events.forEach((event: TargetEvent) => {
+      const { attacker, defender, range, allyTarget, side } = event;
+      const targetSide = allyTarget ?
+            side :
+            side === PartyTypes.evil ? PartyTypes.good : PartyTypes.evil
+      let affectedArray = targetSide === PartyTypes.good ?
+        allyTarget ? enemyEvents : allyEvents :
+        allyTarget ? allyEvents : enemyEvents  ;
+      let editedEvent: ImgEvent = affectedArray.find((imgEvent) => {
+        return imgEvent.defender.id === event.defender.id;
+      })
+      if (editedEvent) {
+        editedEvent.attackers.push(this.toSimpleCharacter(attacker, side));
+      } else {
+        editedEvent = {
+          attackerSide: side,
+          defenderSide: targetSide,
+          attackers: [this.toSimpleCharacter(attacker, side)],
+          defender: this.toSimpleCharacter(defender, targetSide),
+          range,
+          targetingImg: allyTarget ? '/assets/icons/staff.png' : '/assets/icons/sword_1.png'
+        }
+        affectedArray.push(editedEvent);
+      }      
+    });
+    this.allyImgEvents = allyEvents;
+    this.enemyImgEvents = enemyEvents;
+    this.imgEvents = [...enemyEvents, ...allyEvents];
+  }
+
+  public toSimpleCharacter(char: Character, side: PartyTypes): SimpleCharacter {
     const useJPArt = this.characterService.useJPArt;
-    return {
-      attackerImg: useJPArt ? attacker.jpImgName : attacker.imgName,
-      defenderImg: useJPArt ? defender.jpImgName : defender.imgName,
-      attackerFallbackImg: attacker.imgName,
-      defenderFallbackImg: defender.imgName,
-      targetingImg: allyTarget ? '/assets/icons/staff.png' : '/assets/icons/sword_1.png',
-      range,
-      attackerSide: side,
-      defenderSide: allyTarget ?
-        side :
-        side === PartyTypes.evil ? PartyTypes.good : PartyTypes.evil 
+    const simpleChar: SimpleCharacter = {
+      id: char.id,
+      img: useJPArt ? char.jpImgName : char.imgName,
+      fallbackImg: char.imgName,
+      side,
     }
+    simpleChar.imgErrored = () => {
+      simpleChar.img = simpleChar.fallbackImg;
+    };
+    return simpleChar;
   }
-
-  public imgErrored(event: ImgEvent, key: 'attackerImg' | 'defenderImg', fallback: string) {
-    event[key] = fallback;
-  }
-
 }

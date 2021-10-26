@@ -6,13 +6,54 @@
   border-radius: 20px;
 }
 
+.img-event-order-wrap {
+  margin-left: 10px;
+}
+
 $char-size: 50px;
 .char-icon {
   height: $char-size;
   width: $char-size;
   border-style: solid;
-  border-width: 2px;
+  border-width: 3px;
   border-radius: 30px;
+  position: relative;
+}
+
+
+$large-char-size: 55px;
+$small-char-size: 45px;
+@media (min-width: 1501px) {
+  .char-icon {
+    height: $large-char-size;
+    width: $large-char-size;
+  }
+}
+@media (min-width: 1301px) and (max-width: 1400px) {
+  .char-icon {
+    height: $small-char-size;
+    width: $small-char-size;
+  }
+}
+
+@media (max-width: 1300px) {
+  .img-event-order-wrap {
+    max-width: 637px;
+    padding-bottom: 10px;
+    //display: flex;
+    > div {
+      padding-right: 100px;
+      //display: inline-block;
+      //flex: 2;
+     // padding-right: 15px;
+    }
+  }
+}
+
+.attacker-wrap {
+  .char-icon:not(:first-child) {
+    margin-left: -25px;
+  }
 }
 
 .good-border {
