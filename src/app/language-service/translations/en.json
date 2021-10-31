@@ -48,6 +48,7 @@
   "Ally": "Buffer",
   "Assassin": "Assassin",
   "AI": "AI",
+
   "helpDialogTitle": "Info",
   "helpDialogCharAiTypes": "Character AI types",
   "helpDialogCharAiTypesDesc": "Heroes have a couple different AI presets, that matter during the target selection.",
@@ -62,5 +63,21 @@
   "helpDialogOrderMatters": "Hero order matters!",
   "helpDialogOrderMattersDesc": "When planning, don't forget to make sure, that your heroes are in the correct order! Targeting goes from party leader to the last character in your team, so the order matters a lot. The same goes for the enemy team.",
   "helpDialogThingsToConsider": "Other things to consider",
-  "helpDialogThingsToConsiderDesc": "There are more things to Colosseum, than initial targeting. Advanced Colosseum players should also consider taunts and target reset! For target reset info, consider watching this <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=936HEjWxHhA\"> video</a>"
+  "helpDialogThingsToConsiderDesc": "There are more things to Colosseum, than initial targeting. Advanced Colosseum players should also consider taunts and target reset! For target reset info, consider watching this <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=936HEjWxHhA\"> video</a>",
+
+  "creditsDialogTitle": "About",
+  "creditsDialogInfoDesc": "This web app was created thanks to continuous support of many people. This is list of these great people!",
+  "creditsDialogDevelopThanks": "Development",
+  "creditsDialogDonationsThanks": "Donations",
+  "creditsDialogDonationsThanksDesc": "Big thanks everyone who donated!",
+  "creditsDialogRestThanks": "Rest",
+  "creditsDialogRestThanksDesc": "Thank you for Kong studios and Kakaogames for making this awesome game, 1D-Gamer for lots of information about Colosseum inner workings and another big thanks to you, the user!",
+
+  "creditsDialogDevelopThanksDescWorm": "TheWorm - Idea, Programming, Design, Russian translation",
+  "creditsDialogDevelopThanksDesczMash": "zMash - Design, Brazilian Portuguese translation",
+  "creditsDialogDevelopThanksDescPoteto": "Poteto aka Oukaya aka FleurDeLis - I ahve to thank the owner of all those names for Design and German translation(and for putting hats on cats)",
+  "creditsDialogDevelopThanksDescHim157": "Him157 - Traditional Chinese translation",
+  "creditsDialogDevelopThanksDesXocatl": "Xocatl - Latin Spanish translation",
+  "creditsDialogDevelopThanksDescProcyon": "Procyon - Simplified Chinese and Japanese translation"
+
 }

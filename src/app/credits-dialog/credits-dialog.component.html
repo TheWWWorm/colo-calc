@@ -1,0 +1,16 @@
+<div>
+  <h2 class="info">{{ 'creditsDialogTitle' | _ }}</h2>
+
+  <p>{{ 'creditsDialogInfoDesc' | _ }}</p>
+  <h3 class="sub-point">{{ 'creditsDialogDevelopThanks' | _ }}</h3>
+  <ul>
+    <li *ngFor="let author of authors">{{ author | _ }}</li>
+  </ul>
+  <h3 class="sub-point">{{ 'creditsDialogDonationsThanks' | _ }}</h3>
+  <ul>
+    <li *ngFor="let donator of donators">{{ donator }}</li>
+  </ul>
+  <p>{{ 'creditsDialogDonationsThanksDesc' | _ }}</p>
+  <h3 class="sub-point">{{ 'creditsDialogRestThanks' | _ }}</h3>
+  <p>{{ 'creditsDialogRestThanksDesc' | _ }}</p>
+</div>

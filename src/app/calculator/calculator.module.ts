@@ -12,6 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ShareDialogModule } from '../share-dialog/share-dialog.module';
 import { HelpDialogModule } from '../help-dialog/help-dialog.module';
 import { AttackOrderModule } from '../attack-order/attack-order.module';
+import { CreditsDialogModule } from '../credits-dialog/credits-dialog.module';
 
 @NgModule({
   imports: [
@@ -21,13 +22,14 @@ import { AttackOrderModule } from '../attack-order/attack-order.module';
     HeroSelectDialogModule,
     ShareDialogModule,
     HelpDialogModule,
+    CreditsDialogModule,
     PartyModule,
     PipesModule,
     MatSelectModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatIconModule,
-    AttackOrderModule
+    AttackOrderModule,
   ],
   declarations: [CalculatorComponent],
   exports: [CalculatorComponent]

@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { createParty, validTileId } from 'src/fn/helpers';
 import { TargetEvent } from '../attack-order/attack-order.component';
 import { CharacterService } from '../character-service/character-service.service';
+import { CreditsDialogComponent } from '../credits-dialog/credits-dialog.component';
 import { HelpDialogComponent } from '../help-dialog/help-dialog.component';
 import { HeroSelectDialogComponent } from '../hero-select-dialog/hero-select-dialog.component';
 import { LanguageService } from '../language-service/language-service.service';
@@ -540,6 +541,13 @@ export class CalculatorComponent implements OnInit, OnDestroy {
 
   public helpBtnClick() {    
     this.dialog.open(HelpDialogComponent, {
+      width: dialogWidth,
+      data: {}
+    })
+  }
+
+  public creditsBtnClick() {    
+    this.dialog.open(CreditsDialogComponent, {
       width: dialogWidth,
       data: {}
     })
