@@ -61,5 +61,20 @@
   "helpDialogOrderMatters": "Die Reihenfolge der Helden ist wichtig!",
   "helpDialogOrderMattersDesc": "Denk, bei der Zusammenstellung deines Teams, an die Reihenfolge! Deine Helden wählen ihre Ziele der Reihe nach vom Teamleiter abwärts. Dasselbe gilt für das gegnerische Team.",
   "helpDialogThingsToConsider": "Zusätzliche Informationen",
-  "helpDialogThingsToConsiderDesc": "Es gibt mehr im Kolosseum zu beachten, als nur das anvisieren am Anfang. Fortgeschrittene Kolosseum Spieler sollten auch Taunts und Target Resets (Ziel Zurücksetzung) in Betracht ziehen! Weitere Informationen zu diesen Themen finden sich (auf Englisch) in diesem <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=936HEjWxHhA\"> Video</a>"
+  "helpDialogThingsToConsiderDesc": "Es gibt mehr im Kolosseum zu beachten, als nur das anvisieren am Anfang. Fortgeschrittene Kolosseum Spieler sollten auch Taunts und Target Resets (Ziel Zurücksetzung) in Betracht ziehen! Weitere Informationen zu diesen Themen finden sich (auf Englisch) in diesem <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=936HEjWxHhA\"> Video</a>",
+
+  "creditsDialogTitle": "Über Kolosseum-Rechner",
+  "creditsDialogInfoDesc": "Diese Web-Applikation wurde dank der Unterstützung mehrerer Mitglieder der Guardian Tales Community geschaffen.",
+  "creditsDialogDevelopThanks": "Development",
+  "creditsDialogDonationsThanks": "Spenden",
+  "creditsDialogDonationsThanksDesc": "Vielen Dank an alle die Unterstützer!",
+  "creditsDialogRestThanks": "Rest",
+  "creditsDialogRestThanksDesc": "Vielen Dank an Kong Studios und Kakaogames für dieses fantastische Spiel, 1D-Gamer für Einsichten in das Innenleben des Kolosseums und ein großes Dankeschön auch an dich, den Benutzer!",
+
+  "creditsDialogDevelopThanksDescWorm": "TheWorm - Idee, Programmierung, Design, russische Übersetzung",
+  "creditsDialogDevelopThanksDesczMash": "zMash - Design, brasilianisch-portugiesische Übersetzung",
+  "creditsDialogDevelopThanksDescPoteto": "Poteto aka Oukaya aka FleurDeLis - Design, deutsche Übersetzung (und für das photoshoppen von Hütten auf Katzen)",
+  "creditsDialogDevelopThanksDescHim157": "Him157 - traditionelle chinesisch Übersetzung",
+  "creditsDialogDevelopThanksDesXocatl": "Xocatl - lateinisch-spanische Übersetzung",
+  "creditsDialogDevelopThanksDescProcyon": "Procyon - vereinfachtes chinesisch und japanische Übersetzung"
 }

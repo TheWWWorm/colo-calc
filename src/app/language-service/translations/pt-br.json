@@ -62,5 +62,19 @@
   "helpDialogOrderMatters": "A ordem dos personagens é importante!",
   "helpDialogOrderMattersDesc": "Ao planejar o ataque, não se esqueça da ordem correta dos heróis em sua equipe! O alvo principal sempre vai ser o líder, então a organização é muito importante. O mesmo vale para a equipe inimiga.",
   "helpDialogThingsToConsider": "Outras coisas a se considerar",
-  "helpDialogThingsToConsiderDesc": "O Coliseu possui mais mecânicas do que a segmentação inicial. Jogadores avançados do Coliseu também devem considerar as provocações (taunts) e a redefinição de alvo! Para obter informações sobre isto, considere assistir este <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=936HEjWxHhA\"> vídeo! (OBS: O vídeo está em inglês)</a>"
+  "helpDialogThingsToConsiderDesc": "O Coliseu possui mais mecânicas do que a segmentação inicial. Jogadores avançados do Coliseu também devem considerar as provocações (taunts) e a redefinição de alvo! Para obter informações sobre isto, considere assistir este <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=936HEjWxHhA\"> vídeo! (OBS: O vídeo está em inglês)</a>",
+  "creditsDialogTitle": "Sobre",
+  "creditsDialogInfoDesc": "Esta ferramenta foi criada graças ao apoio contínuo de muitas pessoas. Aqui vem uma lista dessa gente maravilhosa!",
+  "creditsDialogDevelopThanks": "Desenvolvimento",
+  "creditsDialogDonationsThanks": "Doações",
+  "creditsDialogDonationsThanksDesc": "Muito obrigado a todos que doaram!",
+  "creditsDialogRestThanks": "De resto",
+  "creditsDialogRestThanksDesc": "Obrigado ao Kong Studios e Kakaogames por fazerem este jogo incrível, ao 1D-Gamer por muitas informações sobre o funcionamento interno do Coliseu e outro grande agradecimento a você, o usuário!",
+
+  "creditsDialogDevelopThanksDescWorm": "TheWorm - Ideia, programação, design, tradução para Russo",
+  "creditsDialogDevelopThanksDesczMash": "zMash - Design, tradução para Português Brasileiro",
+  "creditsDialogDevelopThanksDescPoteto": "Poteto/Oukaya/FleurDeLis - Tenho que agradecer ao dono de todos esses nomes pelo Design e tradução para Alemão (e por colocar chapéus em gatos)",
+  "creditsDialogDevelopThanksDescHim157": "Him157 - Tradução para Chinês Tradicional",
+  "creditsDialogDevelopThanksDesXocatl": "Xocatl - Tradução para Espanhol Latino",
+  "creditsDialogDevelopThanksDescProcyon": "Procyon - Tradução para Chinês Simplificado e Japonês"
 }
