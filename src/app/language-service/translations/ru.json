@@ -61,5 +61,20 @@
   "helpDialogOrderMatters": "Порядок героев важен!",
   "helpDialogOrderMattersDesc": "При планировании, не забудь удостворится что герои находятся в правильном порядке! Выбор целей в твоей команде происходит о лидера команды, к последнему ее участнику. То же самое применимо к вражеской команде!",
   "helpDialogThingsToConsider": "Другие вещи о которых стоит знать",
-  "helpDialogThingsToConsiderDesc": "Помимо выбора начальных целей, в колизее так же есть и другие вещи которые стоит брать в учет! Серьезным игрокам стоит думать о эффектах провокации, а так же о сбросе цели. Больше информации о сбросе цели можно найти в этом англоязычном <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=936HEjWxHhA\"> видео</a>"
+  "helpDialogThingsToConsiderDesc": "Помимо выбора начальных целей, в колизее так же есть и другие вещи которые стоит брать в учет! Серьезным игрокам стоит думать о эффектах провокации, а так же о сбросе цели. Больше информации о сбросе цели можно найти в этом англоязычном <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=936HEjWxHhA\"> видео</a>",
+
+  "creditsDialogTitle": "О приложении",
+  "creditsDialogInfoDesc": "Это веб приложение созданно благодаря поддержке множества замечательных людей. Это их список!",
+  "creditsDialogDevelopThanks": "Разработка",
+  "creditsDialogDonationsThanks": "Пожертвования",
+  "creditsDialogDonationsThanksDesc": "Спасибо всем кто поддержал!",
+  "creditsDialogRestThanks": "Остальное",
+  "creditsDialogRestThanksDesc": "Cпасибо Kong studios и Kakaogames за разработку этой офигенной игры, 1D-Gamer за кучу информации о работе Колизея и большое спасибо тебе - Пользователю!",
+
+  "creditsDialogDevelopThanksDescWorm": "TheWorm - Идея, Программиирование, Дизайн, перевод на Русский",
+  "creditsDialogDevelopThanksDesczMash": "zMash - Дизайн, перевод на Бразильский Португальский",
+  "creditsDialogDevelopThanksDescPoteto": "Poteto или Oukaya или FleurDeLis - Выражаю большую благодарность обладательнице всех этих имен за Дизайн и перевод на немецкий(и за того что даешь котам шапки!)",
+  "creditsDialogDevelopThanksDescHim157": "Him157 - Перевод на Традиционный китайский",
+  "creditsDialogDevelopThanksDesXocatl": "Xocatl - Перевод на Латинский испанский",
+  "creditsDialogDevelopThanksDescProcyon": "Procyon - Перевод на Упрощенный Китайский и Японский"
 }

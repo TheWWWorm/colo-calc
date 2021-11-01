@@ -62,5 +62,19 @@
   "helpDialogMeleeAiInfo": "戰士AI",
   "helpDialogRangedAiInfo": "遠程AI",
   "helpDialogAllyAiInfo": "輔助AI",
-  "helpDialogAssassinAiInfo": "刺客AI"
+  "helpDialogAssassinAiInfo": "刺客AI",
+  "creditsDialogTitle": "關於",
+  "creditsDialogInfoDesc": "這個網站有至今的成功都是因為許多人才達成的。 下列是那一群超酷的人!",
+  "creditsDialogDevelopThanks": "開發",
+  "creditsDialogDonationsThanks": "贊助",
+  "creditsDialogDonationsThanksDesc": "非常感謝有贊助的各位!",
+  "creditsDialogRestThanks": "其餘的部分",
+  "creditsDialogRestThanksDesc": "感謝Kong studios和Kakaogames創造出這個超棒的遊戲, 和1D-Gamer提供了許多關於羅馬競技場運作方式的資訊, 和另一個需要感謝的人, 就是使用者你!",
+
+  "creditsDialogDevelopThanksDescWorm": "TheWorm - 最初想出這點子的人, 負責程式代碼,設計,和俄羅斯語翻譯",
+  "creditsDialogDevelopThanksDesczMash": "zMash - 設計,巴西葡萄牙語翻譯",
+  "creditsDialogDevelopThanksDescPoteto": "Poteto別稱 Oukaya別稱FleurDeLis - 我比須感謝那些名字主人提供的設計和德語翻譯(還有把許多帽子放到貓上)",
+  "creditsDialogDevelopThanksDescHim157": "Him157 - 繁體中文翻譯",
+  "creditsDialogDevelopThanksDesXocatl": "Xocatl - 拉丁西班牙語翻譯",
+  "creditsDialogDevelopThanksDescProcyon": "Procyon - 簡體中文和日文翻譯"
 }
