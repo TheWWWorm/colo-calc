@@ -61,5 +61,19 @@
   "helpDialogOrderMatters": "组队顺序很重要！",
   "helpDialogOrderMattersDesc": "构建队伍时，必须留意英雄是否以正确顺序放入队伍。在开场时，英雄依序决定首个目标，顺序为：进攻方从左到右依次决定，然后轮到防守方从左到右依次决定。由于多个模式会考虑敌方英雄是否已经被其他英雄选为目标，顺序会对目标选定造成很大影响。",
   "helpDialogThingsToConsider": "其他注意事项",
-  "helpDialogThingsToConsiderDesc": "圆形角斗场的初始目标选定不总会持续到战斗结束。角斗场的高手们请务必也学习关于挑衅和目标重置的知识！请参考这段<a target=\"_blank\" href=\"https://www.youtube.com/watch?v=936HEjWxHhA\">视频</a>"
+  "helpDialogThingsToConsiderDesc": "圆形角斗场的初始目标选定不总会持续到战斗结束。角斗场的高手们请务必也学习关于挑衅和目标重置的知识！请参考这段<a target=\"_blank\" href=\"https://www.youtube.com/watch?v=936HEjWxHhA\">视频</a>",
+  "creditsDialogTitle": "致谢声明",
+  "creditsDialogInfoDesc": "这个模拟器的成长离不开许多人持续的帮助，下面是我想要感谢的人们!",
+  "creditsDialogDevelopThanks": "开发",
+  "creditsDialogDonationsThanks": "捐赠",
+  "creditsDialogDonationsThanksDesc": "对所有捐赠的人致以最高的谢意！",
+  "creditsDialogRestThanks": "其他",
+  "creditsDialogRestThanksDesc": "感谢Kong studio和Kakaogame做出这个优秀的游戏，感谢1D-Gamer挖掘出的斗技场的内在逻辑，当然最重要的是感谢你，模拟器的用户!",
+
+  "creditsDialogDevelopThanksDescWorm": "TheWorm - 模拟器设计、编程，俄语翻译",
+  "creditsDialogDevelopThanksDesczMash": "zMash - 模拟器设计、巴西葡语翻译",
+  "creditsDialogDevelopThanksDescPoteto": "Poteto又名Oukaya又名FleurDeLis - 必须感谢这些名字的拥有者的设计付出，及德语翻译 (以及为康儿的表情包戴上各种帽子!)",
+  "creditsDialogDevelopThanksDescHim157": "Him157 - 繁体中文翻译",
+  "creditsDialogDevelopThanksDesXocatl": "Xocatl - 拉丁语、西班牙语翻译",
+  "creditsDialogDevelopThanksDescProcyon": "Procyon - 简体中文、日语翻译"
 }
