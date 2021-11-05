@@ -239,5 +239,13 @@
   },
   "Orca": {
     "name": "Orca"
+  },
+  "Hana": {
+    "name": "Hana",
+    "alias": [
+      "grim",
+      "reaper",
+      "grim reaper"
+    ]
   }
 }

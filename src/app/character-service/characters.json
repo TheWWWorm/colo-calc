@@ -415,6 +415,15 @@
 		"chainsTo": "Injured",
 		"element": "Fire"
 	},
+  {
+		"id": "Hana",
+		"aiType": "Ranged",
+		"class": "Warrior",
+		"imgName": "Hana.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Downed",
+		"element": "Water"
+	},
 	{
 		"id": "Marianne",
 		"aiType": "Ranged",
