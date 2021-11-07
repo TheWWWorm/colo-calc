@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
@@ -125,6 +125,7 @@ export class CalculatorComponent implements OnInit, OnDestroy {
     private localStorageService: LocalStorageService,
     private characterService: CharacterService,
     private route: ActivatedRoute,
+    private changeDetectorRef: ChangeDetectorRef,
   ) { }
 
   ngOnInit() {
@@ -549,7 +550,13 @@ export class CalculatorComponent implements OnInit, OnDestroy {
   public creditsBtnClick() {    
     this.dialog.open(CreditsDialogComponent, {
       width: dialogWidth,
-      data: {}
+      data: {
+        updateField: () => {
+          this.matrix = this.matrix.map((tile) => {
+            return tile ? { ...tile } : tile;
+          })
+        }
+      }
     })
   }
 

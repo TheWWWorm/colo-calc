@@ -13,4 +13,5 @@
   <p>{{ 'creditsDialogDonationsThanksDesc' | _ }}</p>
   <h3 class="sub-point">{{ 'creditsDialogRestThanks' | _ }}</h3>
   <p>{{ 'creditsDialogRestThanksDesc' | _ }}</p>
+  <img *ngIf="!kangClicked" (click)="toggleKangMode()" class="kang" src="/assets/kang_blep.png">
 </div>

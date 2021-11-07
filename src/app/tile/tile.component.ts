@@ -2,6 +2,7 @@ import { Component, Input, OnChanges } from '@angular/core';
 import { CalculatorComponent } from '../calculator/calculator.component';
 import { Character, CharacterClass, Element, Tile } from '../calculator/calculator.types';
 import { CharacterService } from '../character-service/character-service.service';
+import { LocalStorageService } from '../local-storage-service/local-storage-service.service';
 
 export const leadIcon = `assets/icons/icon_lead.png`;
 
@@ -56,7 +57,8 @@ export class TileComponent implements OnChanges {
   public summon: Character;
 
   constructor(
-    private characterService: CharacterService
+    private characterService: CharacterService,
+    private localStorageService: LocalStorageService,
   ) { }
 
   public ngOnChanges(): void {
@@ -78,9 +80,9 @@ export class TileComponent implements OnChanges {
     } else if (this.tile) {
       const posInLine = CalculatorComponent.returnPositionInLine(this.tile.id);
       if (posInLine < 5) {
-        this.tileBackground = `/assets/blue_tile.png`;
+        this.tileBackground = this.localStorageService.get('kangMode') ? `/assets/blue_tile_kang.png` : `/assets/blue_tile.png`;
       } else if (posInLine > 10) {
-        this.tileBackground = `/assets/red_tile.png`;
+        this.tileBackground = this.localStorageService.get('kangMode') ? `/assets/red_tile_kang.png` :`/assets/red_tile.png`;
       } else {
         this.tileBackground = null;
       }
