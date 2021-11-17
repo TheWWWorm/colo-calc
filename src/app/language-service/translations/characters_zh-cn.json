@@ -299,7 +299,11 @@
     ]
   },
   "Veronica": {
-    "name": "Veronica"
+    "name": "维罗妮卡",
+    "alias": [
+      "水教",
+	  "水饺"
+    ]
   },
   "Vishuvac": {
     "name": "比什巴赫",
