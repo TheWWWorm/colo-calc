@@ -1,4 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+/* -------------------------------------------*/
+/* ---------->>> Global Styles <<<-----------*/
+/* -----------------------------------------*/
 
 html,
 body {
@@ -9,6 +11,7 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   color: hsla(0, 0%, 100%, 0.7);
   img {
+    /* Prevent the drag of tiles and other images */
     user-drag: none;
     -webkit-user-drag: none;
     user-select: none;
@@ -16,4 +19,34 @@ body {
     -webkit-user-select: none;
     -ms-user-select: none;
   }
+}
+
+
+/* ----------------------------------------*/
+/* ---------->>> Scrollbars <<<-----------*/
+/* --------------------------------------*/
+
+/* Ps: Only works on webkit browsers, Firefox and Internet Explorer sucks xD */
+
+// Scrollbar size
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+// Track
+::-webkit-scrollbar-track {
+  background: #4C483D;
+  border-radius: 5px;
+}
+
+// Handle
+::-webkit-scrollbar-thumb {
+  background: #BFB0A8;
+  border-radius: 5px;
+}
+
+// Handle on hover
+::-webkit-scrollbar-thumb:hover {
+  background: #AD9F98;
+  border-radius: 5px;
 }
