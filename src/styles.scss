@@ -30,12 +30,12 @@ body {
 
 // Scrollbar size
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 7px;
 }
 
 // Track
 ::-webkit-scrollbar-track {
-  background: #4C483D;
+  background: none;
   border-radius: 5px;
 }
 
@@ -46,7 +46,4 @@ body {
 }
 
 // Handle on hover
-::-webkit-scrollbar-thumb:hover {
-  background: #AD9F98;
-  border-radius: 5px;
-}
+::-webkit-scrollbar-thumb:hover {}
