@@ -247,5 +247,11 @@
       "reaper",
       "grim reaper"
     ]
+  },
+  "Carol": {
+    "name": "Carol",
+    "alias": [
+      "bunny"
+    ]
   }
 }

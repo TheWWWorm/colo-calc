@@ -114,6 +114,15 @@
 		"chainsTo": "Injured",
 		"element": "Water"
 	},
+  {
+		"id": "Carol",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Carol.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Downed",
+		"element": "Light"
+	},
 	{
 		"id": "Coco",
 		"aiType": "Ranged",
