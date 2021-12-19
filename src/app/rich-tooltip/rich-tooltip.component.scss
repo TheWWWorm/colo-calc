@@ -1,26 +1,20 @@
-.content-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  animation-duration: 0.1s;
-  animation-name: zoomIn;
-  transform-origin: center;
-  color: #fff;
-  border-radius: 4px;
-  padding: 0 4px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 13px;
-}
+/* -------------------------------------------------*/
+/* ---------->>> Char Info (Tooltip) <<<-----------*/
+/* -----------------------------------------------*/
 
+// Text
 .content-overlay .content {
   margin:  6px 0;
   font-size: 15px;
 }
 
+// Chain Effect
 .chain {
   height: 35px;
   width: 35px;
 }
 
+// Chain Icon
 .chainTo {
   position: relative;
   bottom: 5px;
@@ -28,11 +22,29 @@
   height: 22px;
 }
 
+// Char Portrait
 .char-img {
   width: 100px;
   height: 100px;
 }
 
+// Background
+.content-overlay {
+  background-color: #F2E2CB;
+  box-shadow: 0px 0px 0px 2px #1C1816;
+  border-bottom: 5px solid #B79C76;
+  border-radius: 5px;
+  animation-duration: 0.1s;
+  animation-name: zoomIn;
+  transform-origin: center;
+  color: black;
+  padding: 0 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
+}
+
+// Zoom Animation
 @keyframes zoomIn {
   0% {
     transform: scale(0.5);

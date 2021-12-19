@@ -1,9 +1,30 @@
+/* -------------------------------------*/
+/* ---------->>> Credits <<<-----------*/
+/* -----------------------------------*/
+
+// "About" Text
 .info {
   text-align: center;
 }
 
+// Width
 .full-width {
   width: 100%;
+}
+
+// Subpoint
+.sub-point {
+  margin: 10px 10px 10px 0;
+  padding-left: 5px;
+  display: inline-block;
+  border-left: 3px solid red;
+}
+
+// Kang Icon
+.kang {
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
 }
 
 // Background
@@ -19,24 +40,6 @@
   max-height: inherit;
   border: 2px solid #5a451e;
   box-shadow: 0px 0px 0px 5px #171211;
-  //box-shadow: 0px 11px 15px -7px rgb(0 0 0 / 20%), 0px 24px 38px 3px rgb(0 0 0 / 14%), 0px 9px 46px 8px rgb(0 0 0 / 12%);
   background: #171211;
   color: #fff;
-
-  a {
-    color: #fd836b;
-  }
-}
-
-.sub-point {
-  margin: 10px 10px 10px 0;
-  padding-left: 5px;
-  display: inline-block;
-  border-left: 3px solid red;
-}
-
-.kang {
-  margin: 0 auto;
-  display: block;
-  cursor: pointer;
 }
