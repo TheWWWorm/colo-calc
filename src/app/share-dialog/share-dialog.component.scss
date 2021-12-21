@@ -1,7 +1,13 @@
+/* ------------------------------------------*/
+/* ---------->>> Share Layout <<<-----------*/
+/* ----------------------------------------*/
+
+// "Copy this link" text
 .info {
   text-align: center;
 }
 
+// Url Box Size
 .full-width {
   width: 100%;
 }
@@ -19,7 +25,6 @@
   max-height: inherit;
   border: 2px solid #5a451e;
   box-shadow: 0px 0px 0px 5px #171211;
-  //box-shadow: 0px 11px 15px -7px rgb(0 0 0 / 20%), 0px 24px 38px 3px rgb(0 0 0 / 14%), 0px 9px 46px 8px rgb(0 0 0 / 12%);
   background: #171211;
   color: #fff;
 }
