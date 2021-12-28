@@ -10,6 +10,7 @@
   border-radius: 15%;
   display: grid;
   cursor: pointer;
+  position: relative;
 
   // Summon Reveal Animation
   &:hover {
@@ -21,7 +22,16 @@
       animation-duration: 1.5s;
       animation-fill-mode: backwards;
     }
+    .with-summon {
+      //display: none;
+    }
   }
+}
+
+// Summon Portrait
+.summon {
+  display: none;
+  position: absolute;
 }
 
 // Show Summon
@@ -71,9 +81,6 @@ img:before {
 /* ---------->>> Icons <<<-----------*/
 /* ---------------------------------*/
 
-//.character-icon {
-//}
-
 // Lead
 .lead-icon {
   position: absolute;
@@ -111,18 +118,6 @@ img:before {
   height: 10px;
   width: 10px;
   z-index: 1;
-}
-
-.with-summon {
-  //clip: rect(0, 25px, 100px, 0);
-  //position: absolute;
-}
-
-// Summon Portrait
-.summon {
-  //clip: rect(0, 50px, 50px, 50px);
-  display: none;
-  position: absolute;
 }
 
 // + Icon
