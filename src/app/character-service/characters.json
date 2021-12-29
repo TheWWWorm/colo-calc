@@ -123,6 +123,15 @@
 		"chainsTo": "Downed",
 		"element": "Light"
 	},
+  {
+		"id": "Clara",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Clara.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Injured",
+		"element": "Fire"
+	},
 	{
 		"id": "Coco",
 		"aiType": "Ranged",
