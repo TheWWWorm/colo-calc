@@ -581,6 +581,15 @@
 		"chainsTo": "Downed",
 		"element": "Fire"
 	},
+  {
+		"id": "Parvati",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Parvati.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Injured",
+		"element": "Earth"
+	},
 	{
 		"id": "Rachel",
 		"aiType": "Ranged",
