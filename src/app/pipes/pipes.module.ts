@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { TranslatePipe } from '../language-service/translate.pipe';
+import { AITypePipe } from './ai-type.pipe';
 import { CharacterToTilePipe } from './character-to-tile.pipe';
 import { FilterCharactersPipe } from './filter-characters.pipe';
 import { GetBgClassPipe } from './get-bg-class.pipe';
@@ -18,7 +19,8 @@ const pipes = [
   FilterCharactersPipe,
   GetStatusPathPipe,
   GetCharIconClassPipe,
-  GetCharIconStylePipe
+  GetCharIconStylePipe,
+  AITypePipe
 ];
 
 @NgModule({

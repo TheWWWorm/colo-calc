@@ -52,6 +52,7 @@ export interface RawChar {
   isRare?: boolean;
   isSecret?: boolean;
   summonId?: string;
+  assassinTarget?: CharacterClass;
 };
 
 export interface TranslatedChar {

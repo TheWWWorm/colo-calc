@@ -292,11 +292,11 @@ export class CalculatorComponent implements OnInit, OnDestroy {
           !alreadyInTarget.includes(m) &&
           attacker.id !== m.id
         });
-    // 2 or MORE ranged - Attack closest untargeted ranged
-    // 1 ranged - Attack that ranged
-    // 0 ranged - melee AI fallback
+    // 2 or MORE hunted class heroes - Attack closest untargeted ranged
+    // 1 hunted class hero - Attack that ranged
+    // 0 hunted class heroes - melee AI fallback
     } else if (attackerAi === AiType.Assassin) {
-      potentialTargets = defenders.filter((m) => m.character.class === CharacterClass.Ranged);
+      potentialTargets = defenders.filter((m) => m.character.class === attacker.character.assassinTarget);
       if (potentialTargets.length > 1) {
         potentialTargets = potentialTargets.filter((m) => !alreadyInTarget.includes(m));
       }

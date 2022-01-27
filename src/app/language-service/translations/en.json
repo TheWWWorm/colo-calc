@@ -59,7 +59,7 @@
   "helpDialogAllyAiInfo": "Buffer AI",
   "helpDialogAllyAiInfoDesc": "Heroes with Buffer AI, try to buff their allies; they target the furthest allied hero.",
   "helpDialogAssassinAiInfo": "Assassin AI",
-  "helpDialogAssassinAiInfoDesc": "Heroes with Assassin AI target heroes of the ranged class. If there are multiple ranged class enemy heroes, they try to target the closest untargeted ranged class hero. If there is a single ranged class hero in the enemy team, they target it, regardless if it's targeted or not. If the enemy team has no ranged class heroes, Assassin AI heroes use Melee targeting instead.",
+  "helpDialogAssassinAiInfoDesc": "Heroes with Assassin AI target heroes with a specific class. If there are multiple enemy heroes of that class, they try to target the closest untargeted hero with that class. If there is a hero with that class in the enemy team, they target it, regardless if it's targeted or not. If the enemy team has no heroes with that class, Assassin AI heroes use Melee targeting instead. You can check which class is being targeted by the, by hovering over the hero portrait.",
   "helpDialogOrderMatters": "Hero order matters!",
   "helpDialogOrderMattersDesc": "When planning, don't forget to make sure, that your heroes are in the correct order! Targeting goes from party leader to the last character in your team, so the order matters a lot. The same goes for the enemy team.",
   "helpDialogThingsToConsider": "Other things to consider",
@@ -78,6 +78,9 @@
   "creditsDialogDevelopThanksDescPoteto": "Poteto aka Oukaya aka FleurDeLis - I ahve to thank the owner of all those names for Design and German translation(and for putting hats on cats)",
   "creditsDialogDevelopThanksDescHim157": "Him157 - Traditional Chinese translation",
   "creditsDialogDevelopThanksDesXocatl": "Xocatl - Latin Spanish translation",
-  "creditsDialogDevelopThanksDescProcyon": "Procyon - Simplified Chinese and Japanese translation"
-
+  "creditsDialogDevelopThanksDescProcyon": "Procyon - Simplified Chinese and Japanese translation",
+  "WarriorClass": "Warrior",
+  "RangedClass": "Ranged",
+  "SupportClass": "Support",
+  "TankClass": "Tanker"
 }

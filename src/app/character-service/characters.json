@@ -61,6 +61,7 @@
 	{
 		"id": "Beach Sohee",
 		"aiType": "Assassin",
+    "assassinTarget": "Ranged",
 		"fallbackAiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Beach Sohee.png",
@@ -583,7 +584,9 @@
 	},
   {
 		"id": "Parvati",
-		"aiType": "Melee",
+		"aiType": "Assassin",
+    "assassinTarget": "Support",
+    "fallbackAiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Parvati.png",
 		"chainsFrom": "Downed",
@@ -623,6 +626,7 @@
 	{
 		"id": "Rue",
 		"aiType": "Assassin",
+    "assassinTarget": "Ranged",
 		"fallbackAiType": "Melee",
 		"class": "Ranged",
 		"imgName": "Rue.png",
