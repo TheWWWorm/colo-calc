@@ -57,7 +57,7 @@
   "helpDialogAllyAiInfo": "Buffer-KI",
   "helpDialogAllyAiInfoDesc": "Helden mit einer Buffer-KI, versuchen ihr eigenes Team zu buffen. Sie zielen auf den verbündeten Helden der am weitesten von ihnen entfernt liegt.",
   "helpDialogAssassinAiInfo": "Assassinen-KI",
-  "helpDialogAssassinAiInfoDesc": "Helden mit einer Assassinen-KI zielen auf gegnerische Helden der Fernkämpfer-Klasse. Wenn mehrere Fernkämpfer zur Verfügung stehen, wird auf den nächstgelegenen, bisher nicht anvisierten gezielt. Wenn nur ein Fernkämpfer im gegnerischen Team ist, wird dieser ins Ziel genommen, unabhängig davon, ob er bereits anvisiert wurde oder nicht. Wenn das gegnerische Team keine Fernkämpfer hat, benutzten Helden mit der Assassinen-KI, stattdessen die Nahkämpfer-KI.",
+  "helpDialogAssassinAiInfoDesc": "Helden mit einer Assassinen-KI zielen auf gegnerische Helden mit einer bestimmten Klasse. Sind mehrere Helden dieser Klasse vorhanden, nehmen sie den nächstgelegenen ins Ziel. Wenn sich ein Held dieser Klasse im gegnerischen Team befindet, zielen sie auf diesen, unabhängig davon ob er bereits anvisiert wurde. Wenn keine entsprechender Held vorhanden ist, benutzen sie stattdessen Nahkämpfer-KI. Halte den Mauszeiger über das Hero-Portrait, um die anvisierte Helden-Klasse einzusehen.",
   "helpDialogOrderMatters": "Die Reihenfolge der Helden ist wichtig!",
   "helpDialogOrderMattersDesc": "Denk, bei der Zusammenstellung deines Teams, an die Reihenfolge! Deine Helden wählen ihre Ziele der Reihe nach vom Teamleiter abwärts. Dasselbe gilt für das gegnerische Team.",
   "helpDialogThingsToConsider": "Zusätzliche Informationen",
@@ -76,5 +76,9 @@
   "creditsDialogDevelopThanksDescPoteto": "Poteto aka Oukaya aka FleurDeLis - Design, deutsche Übersetzung (und das photoshoppen von Hüten auf Katzen)",
   "creditsDialogDevelopThanksDescHim157": "Him157 - traditionelle chinesisch Übersetzung",
   "creditsDialogDevelopThanksDesXocatl": "Xocatl - lateinisch-spanische Übersetzung",
-  "creditsDialogDevelopThanksDescProcyon": "Procyon - vereinfachtes chinesisch und japanische Übersetzung"
+  "creditsDialogDevelopThanksDescProcyon": "Procyon - vereinfachtes chinesisch und japanische Übersetzung",
+  "WarriorClass": "Nahkampf",
+  "RangedClass": "Fernkampf",
+  "SupportClass": "Support",
+  "TankClass": "Tank"
 }

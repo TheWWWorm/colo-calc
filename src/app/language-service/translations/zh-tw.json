@@ -54,8 +54,7 @@
   "helpDialogMeleeAiInfoDesc": "擁有戰士AI的英雄會瞄準距離最近, 且尚未被瞄準的敵方英雄。 如果沒有符合條件的目標則會瞄準距離最近的敵方英雄。",
   "helpDialogRangedAiInfoDesc": "擁有遠程AI的英雄會瞄準距離最近的敵方英雄。",
   "helpDialogAllyAiInfoDesc": "擁有輔助AI的英雄會試著去buff友方英雄, 瞄準距離最遠的友方英雄。",
-  "helpDialogAssassinAiInfoDesc": "擁有刺客AI的英雄會瞄準敵方的\"遠程英雄\"(擁有弓箭標示的英雄，並非只是造成遠程傷害的英雄)。 如果場上同時擁有多個\"遠程英雄\",則刺客英雄會試著瞄準距離最近且尚未被瞄準的敵方\"遠程英雄\"。  如果場上只有一個敵方\"遠程英雄\", 刺客英雄則會瞄準該英雄, 不論該英雄是否已經被瞄準了。 如果敵方沒有\"遠程英雄\", 則刺客英雄會使用戰士英雄的AI。",
-  "helpDialogOrderMatters": "英雄的排列順序很重要!",
+  "helpDialogAssassinAiInfoDesc": "有著刺客AI的英雄會瞄準有著特定職業的英雄。 如果場上敵方同時有著多位同職業的英雄，那他們將會試著瞄準距離最近且尚未被瞄準的敵方英雄。 如果敵方只有一位那職業的英雄，那麼他們將不論如何都會瞄準那位英雄。 如果敵方沒有那職業的英雄，則有著刺客AI的英雄將使用近戰英雄的瞄準規則。你可以透過把游標移動到英雄上，來查看哪個職業會被瞄準。",
   "helpDialogOrderMattersDesc": "當開始策劃時, 別忘了在隊伍擺上正確的英雄順序! 英雄的瞄準順序是從隊長排到隊尾的最後一個英雄, 所以隊伍的排列順序非常重要, 對於敵方隊伍來說也是。",
   "helpDialogThingsToConsider": "其他需要納入考量的各種因素",
   "helpDialogThingsToConsiderDesc": "在羅馬競技場中除了開場前的目標瞄準, 還有更多需要考量的因素。進階的羅馬競技場玩家同時也該考慮嘲諷帶來的影響與目標重置!  關於目標重置的資訊, 請看 <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=936HEjWxHhA\"> 這部影片</a>。",
@@ -76,5 +75,9 @@
   "creditsDialogDevelopThanksDescPoteto": "Poteto別稱 Oukaya別稱FleurDeLis - 我比須感謝那些名字主人提供的設計和德語翻譯(還有把許多帽子放到貓上)",
   "creditsDialogDevelopThanksDescHim157": "Him157 - 繁體中文翻譯",
   "creditsDialogDevelopThanksDesXocatl": "Xocatl - 拉丁西班牙語翻譯",
-  "creditsDialogDevelopThanksDescProcyon": "Procyon - 簡體中文和日文翻譯"
+  "creditsDialogDevelopThanksDescProcyon": "Procyon - 簡體中文和日文翻譯",
+  "WarriorClass": "戰士",
+  "RangedClass": "射手",
+  "SupportClass": "輔助",
+  "TankClass": "坦克"
 }

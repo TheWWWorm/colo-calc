@@ -285,6 +285,15 @@
 		"chainsTo": "Airborne",
 		"element": "Water"
 	},
+  {
+		"id": "Gourry",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Gourry.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Airborne",
+		"element": "Light"
+	},
 	{
 		"id": "Girgas",
 		"aiType": "Ranged",
@@ -396,6 +405,15 @@
 		"chainsFrom": "Injured",
 		"chainsTo": "Downed",
 		"element": "Dark"
+	},
+  {
+		"id": "Lina",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Lina.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Airborne",
+		"element": "Fire"
 	},
 	{
 		"id": "Loraine",
