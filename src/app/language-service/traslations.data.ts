@@ -11,7 +11,8 @@ import ruChars from './translations/characters_ru.json';
 import ruWeapons from './translations/weapons_ru.json';
 import ruLabels from './translations/ru.json';
 
-import zhtwChars from './translations/character_zh-tw.json';  
+import zhtwChars from './translations/characters_zh-tw.json';  
+import zhtwWeapons from './translations/weapons_zh-tw.json';  
 import zhtwLabels from './translations/zh-tw.json';
 
 import zhcnChars from './translations/characters_zh-cn.json';
@@ -130,7 +131,7 @@ export const mappedLangData = {
   [Language.zhtw]:  {
     labels: zhtwLabels,
     characters: applyCharacterLang(zhtwChars),
-    weapons: applyWeaponLang({})
+    weapons: applyWeaponLang(zhtwWeapons)
   },
   [Language.zhcn]: {
     labels: zhcnLabels,
