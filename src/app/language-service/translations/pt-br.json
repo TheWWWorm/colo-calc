@@ -80,5 +80,6 @@
   "WarriorClass": "Guerreiro",
   "RangedClass": "Atirador",
   "SupportClass": "Suporte",
-  "TankClass": "Tanque"
+  "TankClass": "Tanque",
+  "dialogWeaponSelectTitle": "Selecione a arma"
 }

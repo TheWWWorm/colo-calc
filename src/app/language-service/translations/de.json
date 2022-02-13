@@ -80,5 +80,6 @@
   "WarriorClass": "Nahkampf",
   "RangedClass": "Fernkampf",
   "SupportClass": "Support",
-  "TankClass": "Tank"
+  "TankClass": "Tank",
+  "dialogWeaponSelectTitle": "Wähle eine Waffe aus"
 }
