@@ -21,6 +21,7 @@ import jpChars from './translations/characters_jp.json';
 import jpLabels from './translations/jp.json';
 
 import deChars from './translations/characters_de.json';
+import deWeapons from './translations/weapons_de.json';
 import deLabels from './translations/de.json';
 
 import ptbrChars from './translations/characters_pt-br.json';
@@ -143,7 +144,7 @@ export const mappedLangData = {
   [Language.de]:  {
     labels: deLabels,
     characters: applyCharacterLang(deChars),
-    weapons: applyWeaponLang({})
+    weapons: applyWeaponLang(deWeapons)
   },
   [Language.ptbr]:  {
     labels: ptbrLabels,
