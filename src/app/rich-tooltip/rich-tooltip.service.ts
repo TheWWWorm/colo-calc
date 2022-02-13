@@ -36,6 +36,6 @@ export class TooltipService {
   }
 
   public hideTooltip() {
-    //this.overlayRef.detach();
+    this.overlayRef.detach();
   }
 }
