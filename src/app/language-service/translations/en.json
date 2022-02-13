@@ -82,5 +82,6 @@
   "WarriorClass": "Warrior",
   "RangedClass": "Ranged",
   "SupportClass": "Support",
-  "TankClass": "Tanker"
+  "TankClass": "Tanker",
+  "dialogWeaponSelectTitle": "Select the weapon"
 }

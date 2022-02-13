@@ -1,0 +1,151 @@
+/* -----------------------------------*/
+/* ---------->>> Texts <<<-----------*/
+/* ---------------------------------*/
+
+// "Select" and "Press Enter" Text
+.container {
+  text-align: center;
+}
+
+// "Filter" Text
+:host mat-label {
+  color: #fff !important;
+}
+
+// Search Align
+.actions {
+  text-align: left;
+  margin-top: -20px;
+  margin-bottom: 15px;
+}
+
+// "Press Enter" Text
+.enter-hint {
+  text-align: right;
+  font-size: 11px;
+}
+
+// Colored Texts
+span {
+  color: #ce93d8;
+}
+
+
+/* ---------------------------------------*/
+/* ---------->>> Hero List <<<-----------*/
+/* -------------------------------------*/
+
+// Display
+.hero-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Squares Border
+:host ::ng-deep .square {
+  height: 50px !important;
+  width: 50px !important;
+  cursor: pointer !important;
+  border: 1px solid #544141;
+  border-radius: 10%;
+  background: #141312 !important;
+}
+
+// Portraits
+:host ::ng-deep .character-icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 10%;
+}
+
+// Class
+:host ::ng-deep .class-icon {
+  margin-top: -10px !important;
+  position: relative !important;
+  border-bottom-left-radius: 3px;
+}
+
+// Element
+:host ::ng-deep .element-icon {
+  margin-top: -10px !important;
+  margin-left: 40px !important;
+  position: relative !important;
+  border-bottom-right-radius: 3px;
+}
+
+// Summoner
+:host ::ng-deep .summon-icon {
+  margin-top: -50px !important;
+  margin-left: 40px !important;
+  position: relative !important;
+  border-top-right-radius: 3px;
+}
+
+// Elemental Char List
+.elemental-char-list-wrap {
+  width: 100%;
+}
+.elemental-char-list {
+  padding-bottom: 10px;
+  display: flex;
+}
+
+// Element Divider
+.element-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.element-row-icon {
+  display: inline-block;
+  margin-right: 10px;
+  > img {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+
+/* -----------------------------------------------*/
+/* ---------->>> Window Background <<<-----------*/
+/* ---------------------------------------------*/
+
+// Background
+::ng-deep .mat-dialog-container {
+  display: block;
+  padding: 24px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: auto;
+  width: 100%;
+  height: unset;
+  min-height: inherit;
+  max-height: inherit;
+  background-color: #171211;
+  box-shadow: 0px 0px 0px 1px #171211, 0px 0px 0px 3px #5a451e, 0px 0px 0px 9px #171211;
+  color: #fff;
+}
+
+
+/* -----------------------------------------*/
+/* ---------->>> Other Stuff <<<-----------*/
+/* ---------------------------------------*/
+
+// Checkbox Margin
+.actions > * {
+  margin-right: 10px;
+}
+
+// Char Portrait
+.char-img {
+  width: 175px;
+  height: 175px;
+  display:block;
+  margin:auto;
+}
+
+.weapon-element {
+  cursor: pointer;
+}

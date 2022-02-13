@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeroSelectDialogComponent } from './hero-select-dialog.component';
+import { WeaponSelectDialogComponent } from './weapon-select-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { PipesModule } from '../pipes/pipes.module';
 import { TileModule } from '../tile/tile.module';
-import { WeaponSelectDialogModule } from '../weapon-select-dialog/weapon-select-dialog.module';
 
 @NgModule({
   imports: [
@@ -18,11 +17,10 @@ import { WeaponSelectDialogModule } from '../weapon-select-dialog/weapon-select-
     ReactiveFormsModule,
     MatFormFieldModule,
     PipesModule,
-    TileModule,
-    WeaponSelectDialogModule
+    TileModule
   ],
-  declarations: [HeroSelectDialogComponent],
-  exports: [HeroSelectDialogComponent],
-  providers: [HeroSelectDialogComponent]
+  declarations: [WeaponSelectDialogComponent],
+  exports: [WeaponSelectDialogComponent],
+  providers: [WeaponSelectDialogComponent]
 })
-export class HeroSelectDialogModule { }
+export class WeaponSelectDialogModule { }

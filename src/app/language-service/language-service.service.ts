@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Character, SelectOption } from '../calculator/calculator.types';
+import { Character, SelectOption, Weapon } from '../calculator/calculator.types';
 import { LocalStorageService } from '../local-storage-service/local-storage-service.service';
 import { Background, backGroundList, BrowserLangCodeMap, LabelKeys, Language, mappedLangData } from './traslations.data';
 
@@ -11,6 +11,7 @@ export class LanguageService {
 
   public language: Language = this.localStorageService.get('lang') || this.findBrowserLanguage() || Language.en;
   public characterList$: BehaviorSubject<Array<Character>>;
+  public weaponList$: BehaviorSubject<Array<Weapon>>;
 
   public background = this.localStorageService.get('bg') || Background.Chess;
   public backgroundList$: BehaviorSubject<Array<SelectOption>>;
@@ -25,6 +26,8 @@ export class LanguageService {
       charList = mappedLangData[Language.en].characters;
     }
     this.characterList$ = new BehaviorSubject<Array<Character>>(charList);
+    const weaponsList = mappedLangData[this.language]?.weapons || mappedLangData[Language.en].weapons;;
+    this.weaponList$ = new BehaviorSubject<Array<Weapon>>(weaponsList);
     this.backgroundList$ =  new BehaviorSubject(null);
     this.setBackgoundList();
   }
@@ -59,6 +62,7 @@ export class LanguageService {
     this.language = lang;
     this.localStorageService.set('lang', lang);
     this.characterList$.next(mappedLangData[this.language].characters);
+    this.weaponList$.next(mappedLangData[this.language].weapons);
     this.setBackgoundList();
   }
 

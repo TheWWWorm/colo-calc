@@ -1,0 +1,18 @@
+[
+  {
+    "id": "Atomic Destroyer",
+    "imgName": "Atomic Destroyer.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Injured",
+    "aiType": "Melee",
+    "usedBy": "Future Knight"
+  },
+  {
+    "id": "Cosmic Destroyer",
+    "imgName": "Cosmic Destroyer.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "aiType": "Ranged",
+    "usedBy": "Future Knight"
+  }
+]

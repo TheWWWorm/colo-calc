@@ -1,0 +1,13 @@
+<div class="container">
+  <h3>{{ 'dialogWeaponSelectTitle' | _ }}</h3>
+  <div class="hero-list">
+    <span 
+      *ngFor="let weapon of weapons"
+      (click)="weaponSelected(weapon)"
+      class="weapon-element"
+    >
+      <img class="char-img" [src]="weapon.imgName">
+      <span>{{ weapon.name }}</span>
+    </span>
+  </div>
+</div>

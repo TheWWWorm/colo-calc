@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Character } from '../calculator/calculator.types';
+import { Character, Weapon } from '../calculator/calculator.types';
 import { LanguageService } from '../language-service/language-service.service';
 import { LocalStorageService } from '../local-storage-service/local-storage-service.service';
 
@@ -12,6 +12,8 @@ export class CharacterService {
   public charList: Array<Character>;
   public summonList: Array<Character>;
   public uniqueList: Array<Character>;
+
+  public fullWeaponList: Array<Weapon>;
 
   public defaultCharacter: Character;
 
@@ -34,10 +36,40 @@ export class CharacterService {
       this.uniqueList = this.charList.filter((ch) => !ch.isRare);
       this,this.defaultCharacter = this.charList[0];
     });
+
+    this.languageService.weaponList$.subscribe((weapons) => {
+      this.fullWeaponList = weapons.map((wp) => {
+        return {
+          ...wp,
+          imgName: `/assets/CharacterWeapons/${wp.imgName}`,
+        } as Weapon;
+      });
+    });
   }
 
-  public getCharacter(id: string) {
+  public getCharacter(id: string): Character {
     return this.fullCharList.find((c) => c.id === id) || this.defaultCharacter;
+  }
+
+  public getWeapon(id: string): Weapon {
+    return this.fullWeaponList.find((w) => w.id === id) || null;
+  }
+
+  public getCharacterWithWeapon(charId: string, weaponId: string): Character {
+    const char = this.getCharacter(charId);
+    const weapon = this.getWeapon(weaponId);
+
+    if (!weapon) {
+      return this.getCharacter(charId);
+    }
+
+    return {
+      ...char,
+      aiType: weapon.aiType,
+      chainsFrom: weapon.chainsFrom,
+      chainsTo: weapon.chainsTo,
+      weaponEquipped: weapon
+    }
   }
 
   public updateArtChoice(useJPArt: boolean) {

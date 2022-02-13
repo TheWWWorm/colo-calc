@@ -53,6 +53,8 @@ export interface RawChar {
   isSecret?: boolean;
   summonId?: string;
   assassinTarget?: CharacterClass;
+  weapons?: Array<string>;
+  weaponEquipped?: Weapon;
 };
 
 export interface TranslatedChar {
@@ -61,6 +63,21 @@ export interface TranslatedChar {
 };
 
 export type Character = RawChar & TranslatedChar;
+
+export interface RawWeapon {
+  id: string;
+  imgName: string;
+  chainsFrom: ChainType;
+  chainsTo: ChainType;
+  aiType: AiType;
+  usedBy: string;
+};
+
+export interface TranslatedWeapon {
+  name: string;
+};
+
+export type Weapon = RawWeapon & TranslatedWeapon;
 
 export interface Tile {
   id: number;

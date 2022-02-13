@@ -256,7 +256,11 @@
 		"imgName": "Future Knight.png",
 		"chainsFrom": "Downed",
 		"chainsTo": "Airborne",
-		"element": "Basic"
+		"element": "Basic",
+    "weapons": [
+      "Atomic Destroyer",
+      "Cosmic Destroyer"
+    ]
 	},
 	{
 		"id": "Future Princess",

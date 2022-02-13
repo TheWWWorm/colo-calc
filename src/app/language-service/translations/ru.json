@@ -80,5 +80,6 @@
   "WarriorClass": "Воин",
   "RangedClass": "Дальний бой",
   "SupportClass": "Поддержка",
-  "TankClass": "Танкер"
+  "TankClass": "Танкер",
+  "dialogWeaponSelectTitle": "Выбери оружие"
 }

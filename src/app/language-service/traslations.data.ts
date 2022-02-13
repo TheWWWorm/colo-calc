@@ -1,14 +1,17 @@
-import { Character, RawChar, TranslatedChar } from "../calculator/calculator.types"
+import { Character, RawChar, RawWeapon, TranslatedChar, TranslatedWeapon, Weapon } from "../calculator/calculator.types"
 
 import characters from '../character-service/characters.json';
+import weapons from '../character-service/weapons.json';
 
 import enChars from './translations/characters_en.json';
+import enWeapons from './translations/weapons_en.json';
 import enLabels from './translations/en.json';
 
 import ruChars from './translations/characters_ru.json';
+import ruWeapons from './translations/weapons_ru.json';
 import ruLabels from './translations/ru.json';
 
-import zhtwChars from './translations/character_zh-tw.json';
+import zhtwChars from './translations/character_zh-tw.json';  
 import zhtwLabels from './translations/zh-tw.json';
 
 import zhcnChars from './translations/characters_zh-cn.json';
@@ -99,41 +102,62 @@ function applyCharacterLang(translated: {
   });
 }
 
+function applyWeaponLang(translated: {
+  [key in string]: TranslatedWeapon
+}): Array<Weapon> {
+  return (weapons as Array<RawWeapon>).map((weapon): Weapon => {
+    const translatedWeapon = translated[weapon.id];
+    return {
+      ...weapon,
+      name: translatedWeapon?.name || weapon.id,
+    }
+  });
+}
+
 export const mappedLangData = {
   [Language.en]: {
     labels: enLabels,
-    characters: applyCharacterLang(enChars)
+    characters: applyCharacterLang(enChars),
+    weapons: applyWeaponLang(enWeapons)
   },
   [Language.ru]: {
     labels: ruLabels,
-    characters: applyCharacterLang(ruChars)
+    characters: applyCharacterLang(ruChars),
+    weapons: applyWeaponLang(ruWeapons)
   },
   [Language.zhtw]:  {
     labels: zhtwLabels,
-    characters: applyCharacterLang(zhtwChars)
+    characters: applyCharacterLang(zhtwChars),
+    weapons: applyWeaponLang({})
   },
   [Language.zhcn]: {
     labels: zhcnLabels,
-    characters: applyCharacterLang(zhcnChars)
+    characters: applyCharacterLang(zhcnChars),
+    weapons: applyWeaponLang({})
   },
   [Language.jp]:  {
     labels: jpLabels,
-    characters: applyCharacterLang(jpChars)
+    characters: applyCharacterLang(jpChars),
+    weapons: applyWeaponLang({})
   },
   [Language.de]:  {
     labels: deLabels,
-    characters: applyCharacterLang(deChars)
+    characters: applyCharacterLang(deChars),
+    weapons: applyWeaponLang({})
   },
   [Language.ptbr]:  {
     labels: ptbrLabels,
-    characters: applyCharacterLang(ptbrChars)
+    characters: applyCharacterLang(ptbrChars),
+    weapons: applyWeaponLang({})
   },
   [Language.esla]:  {
     labels: eslaLabels,
-    characters: applyCharacterLang(eslaChars)
+    characters: applyCharacterLang(eslaChars),
+    weapons: applyWeaponLang({})
   },
   [Language.pirate]:  {
     labels: pirateLabels,
-    characters: applyCharacterLang(pirateChars)
+    characters: applyCharacterLang(pirateChars),
+    weapons: applyWeaponLang({})
   },
 }

@@ -221,7 +221,7 @@ export class CalculatorComponent implements OnInit, OnDestroy {
     party.tiles = party.tiles.map((tile) => {
       const updatedTile = {
         ...tile,
-        character: tile.character ? this.characterService.getCharacter(tile.character.id): null
+        character: tile.character ? this.characterService.getCharacterWithWeapon(tile.character.id, tile.character.weaponEquipped?.id): null
       }
       if (validTileId(updatedTile)) {
         this.matrix[tile.id] = updatedTile;
@@ -473,7 +473,7 @@ export class CalculatorComponent implements OnInit, OnDestroy {
     const reduced = party.tiles.reduce((acc, e) => {
       const id = e?.id !== undefined && e?.id !== null ? e?.id : null;
       const characterId = e.character?.id || null;
-      acc.push([id, characterId]);
+      acc.push([id, characterId, e.character?.weaponEquipped?.id]);
       return acc;
     }, []);
     return JSON.stringify(reduced);
@@ -501,11 +501,11 @@ export class CalculatorComponent implements OnInit, OnDestroy {
     if (partyString) {
       try {
         const parsed: Array<Array<string>> = JSON.parse(partyString);
-        parsed.forEach(([id, char], i) => {
+        parsed.forEach(([id, char, weapon], i) => {
           let tile: Tile;
           let character: Character;
           if (char) {
-            character = this.characterService.getCharacter(char);
+            character = this.characterService.getCharacterWithWeapon(char, weapon);
           }
           if (id !== null && id !== undefined) {
             tile = this.matrix[id as unknown as number];

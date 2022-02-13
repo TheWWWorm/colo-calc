@@ -1,11 +1,13 @@
 import { Component, ElementRef, HostListener, Inject, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { first } from 'rxjs/operators';
 import { validId, validTileId } from 'src/fn/helpers';
-import { Character, Party, Tile } from '../calculator/calculator.types';
+import { Character, dialogWidth, Party, Tile, Weapon } from '../calculator/calculator.types';
 import { CharacterService } from '../character-service/character-service.service';
 import { LocalStorageService } from '../local-storage-service/local-storage-service.service';
 import { transparentElementIconMap } from '../tile/tile.component';
+import { WeaponSelectDialogComponent } from '../weapon-select-dialog/weapon-select-dialog.component';
 
 export interface HeroSelectDialogData {
   party: Party;
@@ -42,7 +44,8 @@ export class HeroSelectDialogComponent implements OnInit {
     public dialogRef: MatDialogRef<HeroSelectDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: HeroSelectDialogData,
     private characterService: CharacterService,
-    private localStorageService: LocalStorageService
+    private localStorageService: LocalStorageService,
+    private dialog: MatDialog
   ) {
     console.log(data);
     if (this.data.party) {
@@ -111,8 +114,21 @@ export class HeroSelectDialogComponent implements OnInit {
   }
 
   public heroSelected(character: Character): void {
-    this.handleExistingHero(character);
-    this.dialogRef.close(character);
+    if (character.weapons?.length) {
+      this.dialog.open(WeaponSelectDialogComponent, {
+        //width: dialogWidth,
+        data: {
+          weapons: character.weapons
+        }
+      }).afterClosed().pipe(first()).subscribe((weapon: Weapon) => {
+        const characterWithWeapon = this.characterService.getCharacterWithWeapon(character.id, weapon.id);
+        this.handleExistingHero(characterWithWeapon);
+        this.dialogRef.close(characterWithWeapon);
+      })
+    } else {
+      this.handleExistingHero(character);
+      this.dialogRef.close(character);
+    }
   }
 
   public toggleRares() {
