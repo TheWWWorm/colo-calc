@@ -25,6 +25,7 @@ import deWeapons from './translations/weapons_de.json';
 import deLabels from './translations/de.json';
 
 import ptbrChars from './translations/characters_pt-br.json';
+import ptbrWeapons from './translations/weapons_pt-br.json';
 import ptbrLabels from './translations/pt-br.json';
 
 import eslaChars from './translations/characters_es-la.json';
@@ -149,7 +150,7 @@ export const mappedLangData = {
   [Language.ptbr]:  {
     labels: ptbrLabels,
     characters: applyCharacterLang(ptbrChars),
-    weapons: applyWeaponLang({})
+    weapons: applyWeaponLang(ptbrWeapons)
   },
   [Language.esla]:  {
     labels: eslaLabels,

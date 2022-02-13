@@ -22,6 +22,10 @@
   height: 22px;
 }
 
+.img-wrap {
+  position: relative;
+}
+
 // Char Portrait
 .char-img {
   width: 100px;
@@ -29,6 +33,30 @@
   display:block;
   margin:auto;
 }
+
+// Weapon img
+.weapon-img {
+  // border-bottom: solid 3px red;
+  position: absolute;
+  height: 45px;
+  //bottom: -0px;
+  right: -3px;
+  animation: living 2s ease-out infinite normal;
+}
+
+@keyframes living {
+  0% {
+    bottom: -4px;
+  }
+
+  50% {
+    bottom: -6px;
+  }
+
+  100% {
+    bottom: -4px;
+  }
+} 
 
 // Background
 .content-overlay {

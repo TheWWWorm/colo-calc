@@ -1,6 +1,10 @@
 <div class="content-overlay">
   <div class="content">
-    <img class="char-img" [src]="artSrc" (error)="imgErrored()">
+    <div class="img-wrap">
+      <img class="char-img" [src]="artSrc" (error)="imgErrored()">
+      <img *ngIf="character?.weaponEquipped?.imgName" class="weapon-img" [src]="character?.weaponEquipped?.imgName">
+    </div>
+   
     <div>{{ summon ? (character.name + '/' + summon.name) : character.name }}</div>
     <div>{{ (summon ? ((character | aiTypePipe) + '/' + (summon | aiTypePipe)) : (character | aiTypePipe))}} </div>
     <div *ngIf="character.chainsFrom && character.chainsTo">
