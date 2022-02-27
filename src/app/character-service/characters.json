@@ -731,5 +731,14 @@
 		"chainsFrom": "Airborne",
 		"chainsTo": "Injured",
 		"element": "Dark"
+	},
+  {
+		"id": "Xelloss",
+		"aiType": "Melee",
+		"class": "Support",
+		"imgName": "Xelloss.png",
+		"chainsFrom": "All",
+		"chainsTo": "Downed",
+		"element": "Dark"
 	}
 ]
