@@ -58,6 +58,15 @@
 		"chainsTo": "Downed",
 		"element": "Dark"
 	},
+  {
+		"id": "Ara",
+		"aiType": "Ranged",
+		"class": "Support",
+		"imgName": "Ara.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Injured",
+		"element": "Water"
+	},
 	{
 		"id": "Beach Sohee",
 		"aiType": "Assassin",
@@ -152,6 +161,15 @@
 		"chainsFrom": "Downed",
 		"chainsTo": "Airborne",
 		"element": "Earth"
+	},
+  {
+		"id": "Claude",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Claude.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Airborne",
+		"element": "Dark"
 	},
 	{
 		"id": "Dolf",
@@ -431,7 +449,7 @@
 	},
 	{
 		"id": "Lucy",
-		"aiType": "Ranged",
+		"aiType": "Melee",
 		"class": "Ranged",
 		"imgName": "Lucy.png",
 		"chainsFrom": "Airborne",
@@ -603,6 +621,15 @@
 		"chainsFrom": "Injured",
 		"chainsTo": "Downed",
 		"element": "Fire"
+	},
+  {
+		"id": "Priscilla",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Priscilla.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Downed",
+		"element": "Light"
 	},
   {
 		"id": "Parvati",
