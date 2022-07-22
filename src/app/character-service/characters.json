@@ -67,6 +67,15 @@
 		"chainsTo": "Injured",
 		"element": "Water"
 	},
+  {
+		"id": "AA72",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "AA72.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Downed",
+		"element": "Water"
+	},
 	{
 		"id": "Beach Sohee",
 		"aiType": "Assassin",
@@ -661,6 +670,15 @@
 		"chainsFrom": "Injured",
 		"chainsTo": "Airborne",
 		"element": "Basic"
+	},
+  {
+		"id": "Rey",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Rey.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Downed",
+		"element": "Fire"
 	},
 	{
 		"id": "Rie",
