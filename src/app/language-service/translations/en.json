@@ -83,5 +83,6 @@
   "RangedClass": "Ranged",
   "SupportClass": "Support",
   "TankClass": "Tanker",
-  "dialogWeaponSelectTitle": "Select the weapon"
+  "dialogWeaponSelectTitle": "Select the weapon",
+  "textMode": "Text Mode"
 }

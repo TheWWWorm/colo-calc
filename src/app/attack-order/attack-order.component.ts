@@ -2,6 +2,7 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 import { Character, PartyTypes } from '../calculator/calculator.types';
 import { CharacterService } from '../character-service/character-service.service';
 import { LanguageService } from '../language-service/language-service.service';
+import { LocalStorageService } from '../local-storage-service/local-storage-service.service';
 
 export type TargetEvent = {
   attacker: Character;
@@ -34,25 +35,24 @@ export type ImgEvent = {
   styleUrls: ['./attack-order.component.scss']
 })
 export class AttackOrderComponent implements OnChanges {
-
-  @Input() textMode = true;
   @Input() events: Array<TargetEvent> = [];
 
   public textEvents: Array<string> = [];
   public imgEvents: Array<ImgEvent> = [];
   public allyImgEvents: Array<ImgEvent> = [];
   public enemyImgEvents: Array<ImgEvent> = [];
+  public textMode: boolean = this.localStorageService.get('textMode') || false;
 
   constructor(
     private languageService: LanguageService,
     private characterService: CharacterService,
+    private localStorageService: LocalStorageService,
   ) { }
   
   // @TODO: show range
   // @TODO: nicer img look
   // @TODO: show in a max size box, use fit-content to resize things and max-values to keep things sane
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('changes!');
+  ngOnChanges(): void {
     if (this.textMode) {
       this.textEvents = this.events.map((event) => this.toStringEvent(event));
     } else {
@@ -116,5 +116,10 @@ export class AttackOrderComponent implements OnChanges {
       simpleChar.img = simpleChar.fallbackImg;
     };
     return simpleChar;
+  }
+
+  public textModeChecked() {
+    this.localStorageService.set('textMode', this.textMode);
+    this.ngOnChanges();
   }
 }

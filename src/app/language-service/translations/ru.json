@@ -81,5 +81,6 @@
   "RangedClass": "Дальний бой",
   "SupportClass": "Поддержка",
   "TankClass": "Танкер",
-  "dialogWeaponSelectTitle": "Выбери оружие"
+  "dialogWeaponSelectTitle": "Выбери оружие",
+  "textMode": "Текстовой режим"
 }

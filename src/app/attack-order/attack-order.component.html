@@ -1,5 +1,6 @@
 <div>
-  <div *ngIf="textMode">
+  <span class="text-mode-toggle">{{ 'textMode' | _ }}</span><input type="checkbox" [(ngModel)]="textMode" (change)="textModeChecked()">
+  <div *ngIf="textMode" class="text-event-order-wrap">
     <h3>{{ 'orderTitle' | _ }}</h3>
     <div class="text-attack-order">
       <ol>
