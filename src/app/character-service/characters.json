@@ -58,7 +58,7 @@
 		"chainsTo": "Downed",
 		"element": "Dark"
 	},
-  {
+	{
 		"id": "Ara",
 		"aiType": "Ranged",
 		"class": "Support",
@@ -67,7 +67,7 @@
 		"chainsTo": "Injured",
 		"element": "Water"
 	},
-  {
+	{
 		"id": "AA72",
 		"aiType": "Ranged",
 		"class": "Ranged",
@@ -79,7 +79,7 @@
 	{
 		"id": "Beach Sohee",
 		"aiType": "Assassin",
-    "assassinTarget": "Ranged",
+		"assassinTarget": "Ranged",
 		"fallbackAiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Beach Sohee.png",
@@ -133,7 +133,7 @@
 		"chainsTo": "Injured",
 		"element": "Water"
 	},
-  {
+	{
 		"id": "Carol",
 		"aiType": "Melee",
 		"class": "Warrior",
@@ -142,7 +142,7 @@
 		"chainsTo": "Downed",
 		"element": "Light"
 	},
-  {
+	{
 		"id": "Clara",
 		"aiType": "Ranged",
 		"class": "Ranged",
@@ -171,11 +171,20 @@
 		"chainsTo": "Airborne",
 		"element": "Earth"
 	},
-  {
+	{
 		"id": "Claude",
 		"aiType": "Ranged",
 		"class": "Ranged",
 		"imgName": "Claude.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Airborne",
+		"element": "Dark"
+	},
+	{
+		"id": "Crosselle",
+		"aiType": "Melee",
+		"class": "Support",
+		"imgName": "Crosselle.png",
 		"chainsFrom": "Downed",
 		"chainsTo": "Airborne",
 		"element": "Dark"
@@ -284,10 +293,10 @@
 		"chainsFrom": "Downed",
 		"chainsTo": "Airborne",
 		"element": "Basic",
-    "weapons": [
-      "Atomic Destroyer",
-      "Cosmic Destroyer"
-    ]
+		"weapons": [
+			"Atomic Destroyer",
+			"Cosmic Destroyer"
+		]
 	},
 	{
 		"id": "Future Princess",
@@ -316,7 +325,7 @@
 		"chainsTo": "Airborne",
 		"element": "Water"
 	},
-  {
+	{
 		"id": "Gourry",
 		"aiType": "Melee",
 		"class": "Warrior",
@@ -382,12 +391,12 @@
 		"imgName": "kang.gif",
 		"element": "Light"
 	},
-  {
+	{
 		"id": "Kanna",
 		"aiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Kanna.png",
-    "chainsFrom": "All",
+		"chainsFrom": "All",
 		"chainsTo": "Downed",
 		"element": "Basic"
 	},
@@ -437,7 +446,7 @@
 		"chainsTo": "Downed",
 		"element": "Dark"
 	},
-  {
+	{
 		"id": "Lina",
 		"aiType": "Ranged",
 		"class": "Ranged",
@@ -483,7 +492,7 @@
 		"chainsTo": "Injured",
 		"element": "Fire"
 	},
-  {
+	{
 		"id": "Hana",
 		"aiType": "Ranged",
 		"class": "Warrior",
@@ -531,6 +540,15 @@
 		"element": "Earth"
 	},
 	{
+		"id": "Mad Panda Trio",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Mad Panda Trio.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Injured",
+		"element": "Earth"
+	},
+	{
 		"id": "Mei",
 		"aiType": "Melee",
 		"class": "Warrior",
@@ -566,6 +584,15 @@
 		"chainsFrom": "Airborne",
 		"chainsTo": "Injured",
 		"element": "Dark"
+	},
+	{
+		"id": "Miss Chrome",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Miss Chrome.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Downed",
+		"element": "Basic"
 	},
 	{
 		"id": "Orca",
@@ -631,7 +658,7 @@
 		"chainsTo": "Downed",
 		"element": "Fire"
 	},
-  {
+	{
 		"id": "Priscilla",
 		"aiType": "Ranged",
 		"class": "Ranged",
@@ -640,11 +667,11 @@
 		"chainsTo": "Downed",
 		"element": "Light"
 	},
-  {
+	{
 		"id": "Parvati",
 		"aiType": "Assassin",
-    "assassinTarget": "Support",
-    "fallbackAiType": "Melee",
+		"assassinTarget": "Support",
+		"fallbackAiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Parvati.png",
 		"chainsFrom": "Downed",
@@ -671,7 +698,7 @@
 		"chainsTo": "Airborne",
 		"element": "Basic"
 	},
-  {
+	{
 		"id": "Rey",
 		"aiType": "Melee",
 		"class": "Warrior",
@@ -693,7 +720,7 @@
 	{
 		"id": "Rue",
 		"aiType": "Assassin",
-    "assassinTarget": "Ranged",
+		"assassinTarget": "Ranged",
 		"fallbackAiType": "Melee",
 		"class": "Ranged",
 		"imgName": "Rue.png",
@@ -731,6 +758,15 @@
 		"element": "Dark"
 	},
 	{
+		"id": "Summer Loraine",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Summer Loraine.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Injured",
+		"element": "Basic"
+	},
+	{
 		"id": "Tinia",
 		"aiType": "Ranged",
 		"class": "Ranged",
@@ -758,6 +794,15 @@
 		"element": "Fire"
 	},
 	{
+		"id": "Valencia",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Valencia.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Injured",
+		"element": "Light"
+	},
+	{
 		"id": "White Beast",
 		"aiType": "Melee",
 		"class": "Warrior",
@@ -777,7 +822,7 @@
 		"chainsTo": "Injured",
 		"element": "Dark"
 	},
-  {
+	{
 		"id": "Xelloss",
 		"aiType": "Melee",
 		"class": "Support",
