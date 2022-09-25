@@ -80,5 +80,6 @@
   "RangedClass": "射手",
   "SupportClass": "輔助",
   "TankClass": "坦克",
-  "dialogWeaponSelectTitle": "請選擇武器"
+  "dialogWeaponSelectTitle": "請選擇武器",
+  "textMode": "文字模式"
 }

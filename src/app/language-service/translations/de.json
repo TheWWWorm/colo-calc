@@ -81,5 +81,6 @@
   "RangedClass": "Fernkampf",
   "SupportClass": "Support",
   "TankClass": "Tank",
-  "dialogWeaponSelectTitle": "Wähle eine Waffe aus"
+  "dialogWeaponSelectTitle": "Wähle eine Waffe aus",
+  "textMode": "Text Modus"
 }
