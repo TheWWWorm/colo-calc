@@ -182,7 +182,7 @@
 	},
 	{
 		"id": "Crosselle",
-		"aiType": "Melee",
+		"aiType": "Ranged",
 		"class": "Support",
 		"imgName": "Crosselle.png",
 		"chainsFrom": "Downed",
