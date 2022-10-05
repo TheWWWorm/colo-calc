@@ -60,7 +60,7 @@
     "imgName": "Radiant.png",
     "chainsFrom": "Injured",
     "chainsTo": "Downed",
-    "aiType": "Ranged",
+    "aiType": "Melee",
     "usedBy": "Lapice"
   },
   {
