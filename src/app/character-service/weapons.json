@@ -14,5 +14,53 @@
     "chainsTo": "Airborne",
     "aiType": "Ranged",
     "usedBy": "Future Knight"
+  },
+  {
+    "id": "Echesaks",
+    "imgName": "Echesaks.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "aiType": "Melee",
+    "usedBy": "Oghma"
+  },
+  {
+    "id": "Echesaks model R",
+    "imgName": "Echesaks model R.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Injured",
+    "aiType": "Ranged",
+    "usedBy": "Oghma"
+  },
+  {
+    "id": "Volcanic Horn",
+    "imgName": "Volcanic Horn.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "aiType": "Melee",
+    "usedBy": "Vishuvac"
+  },
+  {
+    "id": "Volcanic Core",
+    "imgName": "Volcanic Core.png",
+    "chainsFrom": "All",
+    "chainsTo": "Airborne",
+    "aiType": "Ranged",
+    "usedBy": "Vishuvac"
+  },
+  {
+    "id": "Innocent",
+    "imgName": "Innocent.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "aiType": "Melee",
+    "usedBy": "Lapice"
+  },
+  {
+    "id": "Radiant",
+    "imgName": "Radiant.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "aiType": "Ranged",
+    "usedBy": "Lapice"
   }
 ]

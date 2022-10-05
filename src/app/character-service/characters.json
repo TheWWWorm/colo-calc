@@ -425,7 +425,11 @@
 		"imgName": "Lapice.png",
 		"chainsFrom": "Downed",
 		"chainsTo": "Airborne",
-		"element": "Light"
+		"element": "Light",
+		"weapons": [
+			"Innocent",
+			"Radiant"
+		]
 	},
 	{
 		"id": "Lavi",
@@ -647,7 +651,11 @@
 		"imgName": "Oghma.png",
 		"chainsFrom": "Downed",
 		"chainsTo": "Injured",
-		"element": "Dark"
+		"element": "Dark",
+		"weapons": [
+			"Echesaks",
+			"Echesaks model R"
+		]
 	},
 	{
 		"id": "Plitvice",
@@ -791,7 +799,11 @@
 		"imgName": "Vishuvac.png",
 		"chainsFrom": "All",
 		"chainsTo": "Injured",
-		"element": "Fire"
+		"element": "Fire",
+		"weapons": [
+			"Volcanic Horn",
+			"Volcanic Core"
+		]
 	},
 	{
 		"id": "Valencia",
