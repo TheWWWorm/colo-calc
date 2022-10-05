@@ -283,7 +283,11 @@
 		"imgName": "Female Knight.png",
 		"chainsFrom": "Airborne",
 		"chainsTo": "Downed",
-		"element": "Basic"
+		"element": "Basic",
+		"weapons": [
+			"Libera",
+			"Libera Type.B"
+		]
 	},
 	{
 		"id": "Future Knight",

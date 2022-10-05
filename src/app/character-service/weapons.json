@@ -62,5 +62,21 @@
     "chainsTo": "Downed",
     "aiType": "Ranged",
     "usedBy": "Lapice"
+  },
+  {
+    "id": "Libera",
+    "imgName": "Libera.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "aiType": "Melee",
+    "usedBy": "Knight"
+  },
+  {
+    "id": "Libera Type.B",
+    "imgName": "Libera Type.B.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "aiType": "Ranged",
+    "usedBy": "Knight"
   }
 ]
