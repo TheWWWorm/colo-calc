@@ -20,7 +20,8 @@ export class CreditsDialogComponent {
     'creditsDialogDevelopThanksDescPoteto',
     'creditsDialogDevelopThanksDescHim157',
     'creditsDialogDevelopThanksDesXocatl',
-    'creditsDialogDevelopThanksDescProcyon'
+    'creditsDialogDevelopThanksDescProcyon',
+    'creditsDialogDevelopThanksDescMachina_Sacra'
   ];
   public donators: Array<string> = donators;
 

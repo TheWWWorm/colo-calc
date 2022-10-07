@@ -77,6 +77,15 @@
 		"element": "Water"
 	},
 	{
+		"id": "Andras",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Andras.png",
+		"chainsFrom": "All",
+		"chainsTo": "Downed",
+		"element": "Water"
+	},
+	{
 		"id": "Beach Sohee",
 		"aiType": "Assassin",
 		"assassinTarget": "Ranged",
@@ -777,6 +786,17 @@
 		"chainsFrom": "Downed",
 		"chainsTo": "Injured",
 		"element": "Basic"
+	},
+	{
+		"id": "Sumire",
+		"aiType": "Assassin",
+		"assassinTarget": "Ranged",
+		"fallbackAiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Sumire.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Injured",
+		"element": "Dark"
 	},
 	{
 		"id": "Tinia",
