@@ -78,7 +78,7 @@
 	},
 	{
 		"id": "Andras",
-		"aiType": "Ranged",
+		"aiType": "Melee",
 		"class": "Ranged",
 		"imgName": "Andras.png",
 		"chainsFrom": "All",
@@ -677,6 +677,15 @@
 		"imgName": "Plitvice.png",
 		"chainsFrom": "Injured",
 		"chainsTo": "Downed",
+		"element": "Fire"
+	},
+	{
+		"id": "Pymon",
+		"aiType": "Melee",
+		"class": "Tank",
+		"imgName": "Pymon.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Injured",
 		"element": "Fire"
 	},
 	{
