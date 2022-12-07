@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: node/16
+    container: node:16
     steps:
       - uses: actions/checkout@v2
       - name: creates output
