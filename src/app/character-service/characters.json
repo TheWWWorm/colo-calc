@@ -183,6 +183,15 @@
 		"element": "Earth"
 	},
 	{
+		"id": "Craig_Ascended",
+		"aiType": "Melee",
+		"class": "Tank",
+		"imgName": "Craig_Ascended.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Airborne",
+		"element": "Earth"
+	},
+	{
 		"id": "Claude",
 		"aiType": "Ranged",
 		"class": "Ranged",
@@ -225,6 +234,15 @@
 		"class": "Ranged",
 		"isRare": true,
 		"imgName": "Elvira.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Downed",
+		"element": "Fire"
+	},
+	{
+		"id": "Elvira_Ascended",
+		"aiType": "Melee",
+		"class": "Ranged",
+		"imgName": "Elvira_Ascended.png",
 		"chainsFrom": "Airborne",
 		"chainsTo": "Downed",
 		"element": "Fire"

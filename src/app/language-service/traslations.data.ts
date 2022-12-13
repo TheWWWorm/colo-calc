@@ -92,11 +92,17 @@ export type MappedLanguages = {
   }
 };
 
-function applyCharacterLang(translated: {
+export type TranslatedCharacters = {
   [key in string]: TranslatedChar
-}): Array<Character> {
+};
+
+export type TranslatedWeapons = {
+  [key in string]: TranslatedWeapon
+};
+
+function applyCharacterLang(translated: TranslatedCharacters): Array<Character> {
   return (characters as Array<RawChar>).map((char): Character => {
-    const translatedChar = translated[char.id];
+    const translatedChar = translated[char.id] || (enChars as TranslatedCharacters)[char.id];
     return {
       ...char,
       name: translatedChar?.name || char.id,
@@ -105,11 +111,9 @@ function applyCharacterLang(translated: {
   });
 }
 
-function applyWeaponLang(translated: {
-  [key in string]: TranslatedWeapon
-}): Array<Weapon> {
+function applyWeaponLang(translated: TranslatedWeapons): Array<Weapon> {
   return (weapons as Array<RawWeapon>).map((weapon): Weapon => {
-    const translatedWeapon = translated[weapon.id];
+    const translatedWeapon = translated[weapon.id]  || (enWeapons as TranslatedWeapons)[weapon.id];
     return {
       ...weapon,
       name: translatedWeapon?.name || weapon.id,
