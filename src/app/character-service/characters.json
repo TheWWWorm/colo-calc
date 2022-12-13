@@ -116,7 +116,9 @@
 	},
 	{
 		"id": "Beth",
-		"aiType": "Melee",
+		"aiType": "Assassin",
+		"assassinTarget": "Ranged",
+		"fallbackAiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Beth.png",
 		"chainsFrom": "Downed",
