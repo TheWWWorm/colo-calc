@@ -187,7 +187,6 @@ export class CalculatorComponent implements OnInit, OnDestroy {
         return;
       }
       timeout = setTimeout(() => {
-        console.log('call')
         this.matrix = [...this.matrix];
         this.calculateEvents();
         timeout = null;
@@ -298,7 +297,10 @@ export class CalculatorComponent implements OnInit, OnDestroy {
     } else if (attackerAi === AiType.Assassin) {
       potentialTargets = defenders.filter((m) => m.character.class === attacker.character.assassinTarget);
       if (potentialTargets.length > 1) {
-        potentialTargets = potentialTargets.filter((m) => !alreadyInTarget.includes(m));
+        const filtred = potentialTargets.filter((m) => !alreadyInTarget.includes(m));
+        if (filtred.length) {
+          potentialTargets = filtred;
+        }
       }
     }
     return potentialTargets;
@@ -495,7 +497,6 @@ export class CalculatorComponent implements OnInit, OnDestroy {
       this.syncMatrixToTeams();
       this.calculateEvents();
       this.syncMyTeam();
-      console.log(this[partyKey]);
     });
 
     if (partyString) {

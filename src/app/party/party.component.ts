@@ -27,7 +27,6 @@ export class PartyComponent implements OnChanges {
   }
 
   public changeHero(i: number, event: Event) {
-    console.log('change hero!')
     event.stopPropagation();
     const tile = this.party.tiles[i];
     if (validTileId(tile)) {

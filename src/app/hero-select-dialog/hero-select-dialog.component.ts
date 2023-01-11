@@ -47,7 +47,6 @@ export class HeroSelectDialogComponent implements OnInit {
     private localStorageService: LocalStorageService,
     private dialog: MatDialog
   ) {
-    console.log(data);
     if (this.data.party) {
       this.selectedChars = this.data.party.tiles.reduce((acc, tile) => {
         if (tile.character) {
@@ -104,7 +103,6 @@ export class HeroSelectDialogComponent implements OnInit {
     }
 
     const tiles = [...party.tiles];
-    console.log(party);
     if (character) {
       party.updateParty({
         ...party,

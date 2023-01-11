@@ -31,7 +31,6 @@ export class GetBgClassPipe implements PipeTransform {
       startWith(control.value),
       map((value: ClassKey) => {
         const code: ClassKey = (value as ClassKey)|| Background.Solid;
-        console.log(code, valueToClassName[code]);
         return { [valueToClassName[code]]: true };
       })
     )

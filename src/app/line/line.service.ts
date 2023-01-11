@@ -38,7 +38,6 @@ export class LineService {
     const id = `line_container_${id_from}_${id_to}${summonMode ? '_summon' : ''}`;
     const pahtSubId = `line_${id_from}_${id_to}${summonMode ? '_summon' : ''}`;
     const arrowSubId = `arrow_line_${id_from}_${id_to}${summonMode ? '_summon' : ''}`;
-    //console.log(id_from, id_to);
     this.lines.push(id);
     //SVG that will not appear until points towards the element that we want is given
     const create_svg = `<span id="${id}" style="position: absolute; pointer-events: none; top: 0; left: 0; z-index: 10"> <svg width="700" height="300" style="overflow: visible;">    <defs>    <marker id="${arrowSubId}" markerWidth="13" markerHeight="13" refx="2" refy="6" orient="auto">        <path d="M2,1 L2,10 L10,6 L2,2" style="fill:${color};" />      </marker>    </defs>    <path id="${pahtSubId}" d="" style="stroke:${color}; stroke-width: 3px; fill: none; marker-end: url(#${arrowSubId});"/>  </svg> </span>`;
@@ -61,11 +60,8 @@ export class LineService {
       x: test2_loc.x + modifier - windowLoc.x,
       y: test2_loc.y + modifier - windowLoc.y
     }
-    // console.log(test1_loc, test2_loc)
-    // console.log(from, to)
     // @TODO: better targeting for ally units
     const rangeX = Math.abs(from.x - to.x);
-    console.log(rangeX);
     if (rangeX > 300) {
       if (from.x < to.x) {
         to.x = to.x - test2_loc.width;
@@ -89,7 +85,6 @@ export class LineService {
         to.y = to.y + 10;
       }
     } else {
-      console.log('hw', test2_loc.width, test2_loc.height)
 
       const mod = 10;
 
@@ -102,7 +97,6 @@ export class LineService {
       const xDiff = Math.abs((from.x - to.x) / offsetX);
       const yDiff = Math.abs((from.y - to.y) / offsetY);
 
-      console.log('to.x', to.x, 'signX', signX, 'offsetX', offsetX, 'yDiff', yDiff);
       if (xDiff) {
         to.x = to.x + (signX * (offsetX - (yDiff * mod)));
 
