@@ -210,6 +210,15 @@
 		"element": "Dark"
 	},
 	{
+		"id": "Dai",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Dai.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Airborne",
+		"element": "Basic"
+	},
+	{
 		"id": "Dolf",
 		"aiType": "Ranged",
 		"class": "Ranged",
@@ -558,6 +567,15 @@
 		"element": "Water"
 	},
 	{
+		"id": "Maam",
+		"aiType": "Melee",
+		"class": "Support",
+		"imgName": "Maam.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Airborne",
+		"element": "Earth"
+	},
+	{
 		"id": "Marvin",
 		"aiType": "Ranged",
 		"class": "Warrior",
@@ -709,6 +727,15 @@
 		"element": "Fire"
 	},
 	{
+		"id": "Popp",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Popp.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Downed",
+		"element": "Fire"
+	},
+	{
 		"id": "Priscilla",
 		"aiType": "Ranged",
 		"class": "Ranged",
@@ -750,7 +777,7 @@
 	},
 	{
 		"id": "Rey",
-		"aiType": "Melee",
+		"aiType": "Ranged",
 		"class": "Warrior",
 		"imgName": "Rey.png",
 		"chainsFrom": "Injured",
