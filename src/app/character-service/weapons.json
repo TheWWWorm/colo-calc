@@ -44,7 +44,7 @@
     "imgName": "Volcanic Core.png",
     "chainsFrom": "All",
     "chainsTo": "Airborne",
-    "aiType": "Ranged",
+    "aiType": "Melee",
     "usedBy": "Vishuvac"
   },
   {
