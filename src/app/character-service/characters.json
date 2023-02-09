@@ -794,6 +794,15 @@
 		"chainsTo": "Downed",
 		"element": "Basic"
 	},
+  {
+		"id": "Rosetta",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Rosetta.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Airborne",
+		"element": "Earth"
+	},
 	{
 		"id": "Rue",
 		"aiType": "Assassin",
