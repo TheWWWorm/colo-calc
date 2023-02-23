@@ -313,6 +313,15 @@
 		"chainsTo": "Airborne",
 		"element": "Light"
 	},
+  {
+		"id": "Fei_Ascended",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Fei_Ascended.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Airborne",
+		"element": "Light"
+	},
 	{
 		"id": "Knight",
 		"aiType": "Melee",
@@ -421,6 +430,15 @@
 		"class": "Support",
 		"isRare": true,
 		"imgName": "Karina.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Injured",
+		"element": "Dark"
+	},
+  {
+		"id": "Karina_Ascended",
+		"aiType": "Ranged",
+		"class": "Support",
+		"imgName": "Karina_Ascended.png",
 		"chainsFrom": "Downed",
 		"chainsTo": "Injured",
 		"element": "Dark"
@@ -609,6 +627,15 @@
 		"class": "Warrior",
 		"isRare": true,
 		"imgName": "Mei.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Airborne",
+		"element": "Light"
+	},
+  {
+		"id": "Mei_Ascended",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Mei_Ascended.png",
 		"chainsFrom": "Downed",
 		"chainsTo": "Airborne",
 		"element": "Light"
@@ -896,7 +923,7 @@
 	},
 	{
 		"id": "Valencia",
-		"aiType": "Melee",
+		"aiType": "Ranged",
 		"class": "Warrior",
 		"imgName": "Valencia.png",
 		"chainsFrom": "Downed",
