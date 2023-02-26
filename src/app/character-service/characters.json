@@ -940,6 +940,15 @@
 		"chainsTo": "Airborne",
 		"element": "Water"
 	},
+  {
+		"id": "White Snow",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "White Snow.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Injured",
+		"element": "Water"
+	},
 	{
 		"id": "Yuze",
 		"aiType": "Melee",
