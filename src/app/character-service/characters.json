@@ -764,7 +764,7 @@
 	},
 	{
 		"id": "Priscilla",
-		"aiType": "Ranged",
+		"aiType": "Melee",
 		"class": "Ranged",
 		"imgName": "Priscilla.png",
 		"chainsFrom": "Injured",
