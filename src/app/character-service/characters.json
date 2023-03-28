@@ -162,6 +162,15 @@
 		"chainsTo": "Injured",
 		"element": "Fire"
 	},
+  {
+		"id": "Corps Commander",
+		"aiType": "Melee",
+		"class": "Ranged",
+		"imgName": "Corps Commander.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Airborne",
+		"element": "Dark"
+	},
 	{
 		"id": "Coco",
 		"aiType": "Ranged",
