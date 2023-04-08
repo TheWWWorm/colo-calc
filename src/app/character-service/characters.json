@@ -424,6 +424,15 @@
 		"chainsTo": "Injured",
 		"element": "Earth"
 	},
+  {
+		"id": "H.E.R.O.S KAI",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "KAI.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Injured",
+		"element": "Light"
+	},
 	{
 		"id": "Idol Captain Eva",
 		"aiType": "Melee",
