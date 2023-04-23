@@ -760,7 +760,11 @@
 		"imgName": "Plitvice.png",
 		"chainsFrom": "Injured",
 		"chainsTo": "Downed",
-		"element": "Fire"
+		"element": "Fire",
+    "weapons": [
+			"Prominence",
+			"Halo"
+		]
 	},
 	{
 		"id": "Pymon",

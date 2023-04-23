@@ -78,5 +78,21 @@
     "chainsTo": "Downed",
     "aiType": "Ranged",
     "usedBy": "Knight"
+  },
+  {
+    "id": "Prominence",
+    "imgName": "Prominence.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "aiType": "Melee",
+    "usedBy": "Plitvice"
+  },
+  {
+    "id": "Halo",
+    "imgName": "Halo.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "aiType": "Ranged",
+    "usedBy": "Plitvice"
   }
 ]
