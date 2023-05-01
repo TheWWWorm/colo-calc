@@ -857,7 +857,7 @@
 		"aiType": "Assassin",
 		"assassinTarget": "Ranged",
 		"fallbackAiType": "Melee",
-		"class": "Ranged",
+		"class": "Warrior",
 		"imgName": "Rue.png",
 		"chainsFrom": "Downed",
 		"chainsTo": "Injured",
