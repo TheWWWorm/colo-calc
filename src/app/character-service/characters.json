@@ -29,6 +29,15 @@
 		"chainsTo": "Downed",
 		"element": "Earth"
 	},
+  {
+		"id": "Ameris",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Ameris.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Downed",
+		"element": "Earth"
+	},
 	{
 		"id": "Amy",
 		"aiType": "Melee",
@@ -105,6 +114,15 @@
 		"chainsTo": "Airborne",
 		"element": "Water"
 	},
+  {
+		"id": "Beach Amy",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Beach Amy.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Airborne",
+		"element": "Fire"
+	},
 	{
 		"id": "Bari",
 		"aiType": "Ranged",
@@ -151,6 +169,15 @@
 		"imgName": "Carol.png",
 		"chainsFrom": "Injured",
 		"chainsTo": "Downed",
+		"element": "Light"
+	},
+  {
+		"id": "Chun Ryeo",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Chun Ryeo.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Airborne",
 		"element": "Light"
 	},
 	{
@@ -911,6 +938,15 @@
 		"chainsFrom": "Downed",
 		"chainsTo": "Injured",
 		"element": "Dark"
+	},
+  {
+		"id": "Sia",
+		"aiType": "Melee",
+		"class": "Support",
+		"imgName": "Sia.png",
+		"chainsFrom": "All",
+		"chainsTo": "Downed",
+		"element": "Water"
 	},
 	{
 		"id": "Tinia",
