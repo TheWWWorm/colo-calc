@@ -94,5 +94,21 @@
     "chainsTo": "Airborne",
     "aiType": "Ranged",
     "usedBy": "Plitvice"
+  },
+  {
+    "id": "Pure Mind",
+    "imgName": "Pure Mind.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Injured",
+    "aiType": "Melee",
+    "usedBy": "Lahn"
+  },
+  {
+    "id": "Elusive Reflection",
+    "imgName": "Elusive Reflection.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "aiType": "Ranged",
+    "usedBy": "Lahn"
   }
 ]

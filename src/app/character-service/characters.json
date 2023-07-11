@@ -521,7 +521,11 @@
 		"imgName": "Lahn.png",
 		"chainsFrom": "Airborne",
 		"chainsTo": "Injured",
-		"element": "Basic"
+		"element": "Basic",
+    "weapons": [
+			"Pure Mind",
+			"Elusive Reflection"
+		]
 	},
 	{
 		"id": "Lapice",
