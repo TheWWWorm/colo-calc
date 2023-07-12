@@ -945,7 +945,7 @@
 	},
   {
 		"id": "Sia",
-		"aiType": "Melee",
+		"aiType": "Ranged",
 		"class": "Support",
 		"imgName": "Sia.png",
 		"chainsFrom": "All",
