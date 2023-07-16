@@ -301,6 +301,15 @@
 		"chainsTo": "Injured",
 		"element": "Light"
 	},
+  {
+		"id": "Eunha",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Eunha.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Airborne",
+		"element": "Basic"
+	},
 	{
 		"id": "Erina",
 		"aiType": "Melee",
