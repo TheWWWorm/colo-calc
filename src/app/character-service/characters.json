@@ -105,6 +105,15 @@
 		"chainsTo": "Airborne",
 		"element": "Basic"
 	},
+  {
+    "id": "Beach Shapira",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Beach Shapira.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Light"
+},
 	{
 		"id": "Beach Yuze",
 		"aiType": "Melee",
@@ -734,6 +743,15 @@
 		"chainsTo": "Downed",
 		"element": "Basic"
 	},
+  {
+    "id": "Morrian",
+    "aiType": "Melee",
+    "class": "Tank",
+    "imgName": "Morrian.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "injudred",
+    "element": "Earth"
+  },
 	{
 		"id": "Orca",
 		"aiType": "Melee",
