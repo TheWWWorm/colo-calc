@@ -745,7 +745,7 @@
 	},
   {
     "id": "Morrian",
-    "aiType": "Melee",
+    "aiType": "Ranged",
     "class": "Tank",
     "imgName": "Morrian.png",
     "chainsFrom": "Downed",
