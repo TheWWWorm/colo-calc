@@ -29,7 +29,7 @@
 		"chainsTo": "Downed",
 		"element": "Earth"
 	},
-  {
+	{
 		"id": "Ameris",
 		"aiType": "Ranged",
 		"class": "Ranged",
@@ -105,15 +105,15 @@
 		"chainsTo": "Airborne",
 		"element": "Basic"
 	},
-  {
-    "id": "Beach Shapira",
-    "aiType": "Melee",
-    "class": "Warrior",
-    "imgName": "Beach Shapira.png",
-    "chainsFrom": "Downed",
-    "chainsTo": "Injured",
-    "element": "Light"
-},
+	{
+		"id": "Beach Shapira",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Beach Shapira.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Injured",
+		"element": "Light"
+	},
 	{
 		"id": "Beach Yuze",
 		"aiType": "Melee",
@@ -123,7 +123,7 @@
 		"chainsTo": "Airborne",
 		"element": "Water"
 	},
-  {
+	{
 		"id": "Beach Amy",
 		"aiType": "Melee",
 		"class": "Warrior",
@@ -180,7 +180,7 @@
 		"chainsTo": "Downed",
 		"element": "Light"
 	},
-  {
+	{
 		"id": "Chun Ryeo",
 		"aiType": "Ranged",
 		"class": "Ranged",
@@ -198,7 +198,7 @@
 		"chainsTo": "Injured",
 		"element": "Fire"
 	},
-  {
+	{
 		"id": "Corps Commander",
 		"aiType": "Melee",
 		"class": "Ranged",
@@ -310,7 +310,7 @@
 		"chainsTo": "Injured",
 		"element": "Light"
 	},
-  {
+	{
 		"id": "Eunha",
 		"aiType": "Ranged",
 		"class": "Ranged",
@@ -367,7 +367,7 @@
 		"chainsTo": "Airborne",
 		"element": "Light"
 	},
-  {
+	{
 		"id": "Fei_Ascended",
 		"aiType": "Melee",
 		"class": "Warrior",
@@ -469,7 +469,7 @@
 		"chainsTo": "Injured",
 		"element": "Earth"
 	},
-  {
+	{
 		"id": "H.E.R.O.S KAI",
 		"aiType": "Melee",
 		"class": "Warrior",
@@ -497,7 +497,7 @@
 		"chainsTo": "Injured",
 		"element": "Dark"
 	},
-  {
+	{
 		"id": "Karina_Ascended",
 		"aiType": "Ranged",
 		"class": "Support",
@@ -540,7 +540,7 @@
 		"chainsFrom": "Airborne",
 		"chainsTo": "Injured",
 		"element": "Basic",
-    "weapons": [
+		"weapons": [
 			"Pure Mind",
 			"Elusive Reflection"
 		]
@@ -698,7 +698,7 @@
 		"chainsTo": "Airborne",
 		"element": "Light"
 	},
-  {
+	{
 		"id": "Mei_Ascended",
 		"aiType": "Melee",
 		"class": "Warrior",
@@ -743,15 +743,15 @@
 		"chainsTo": "Downed",
 		"element": "Basic"
 	},
-  {
-    "id": "Morrian",
-    "aiType": "Ranged",
-    "class": "Tank",
-    "imgName": "Morrian.png",
-    "chainsFrom": "Downed",
-    "chainsTo": "injudred",
-    "element": "Earth"
-  },
+	{
+		"id": "Morrian",
+		"aiType": "Melee",
+		"class": "Tank",
+		"imgName": "Morrian.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "injudred",
+		"element": "Earth"
+	},
 	{
 		"id": "Orca",
 		"aiType": "Melee",
@@ -819,7 +819,7 @@
 		"chainsFrom": "Injured",
 		"chainsTo": "Downed",
 		"element": "Fire",
-    "weapons": [
+		"weapons": [
 			"Prominence",
 			"Halo"
 		]
@@ -901,7 +901,7 @@
 		"chainsTo": "Downed",
 		"element": "Basic"
 	},
-  {
+	{
 		"id": "Rosetta",
 		"aiType": "Ranged",
 		"class": "Ranged",
@@ -970,7 +970,7 @@
 		"chainsTo": "Injured",
 		"element": "Dark"
 	},
-  {
+	{
 		"id": "Sia",
 		"aiType": "Ranged",
 		"class": "Support",
@@ -1020,6 +1020,15 @@
 		"element": "Light"
 	},
 	{
+		"id": "Vinette",
+		"aiType": "Ranged",
+		"class": "Support",
+		"imgName": "Vinette.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Downed",
+		"element": "Dark"
+	},
+	{
 		"id": "White Beast",
 		"aiType": "Melee",
 		"class": "Warrior",
@@ -1029,7 +1038,7 @@
 		"chainsTo": "Airborne",
 		"element": "Water"
 	},
-  {
+	{
 		"id": "White Snow",
 		"aiType": "Melee",
 		"class": "Warrior",
