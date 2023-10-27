@@ -919,7 +919,11 @@
 		"imgName": "Rue.png",
 		"chainsFrom": "Downed",
 		"chainsTo": "Injured",
-		"element": "Earth"
+		"element": "Earth",
+		"weapons": [
+			"Terminator",
+			"Nightmare"
+		]
 	},
 	{
 		"id": "Sohee",
@@ -999,7 +1003,9 @@
 	},
 	{
 		"id": "Vishuvac",
-		"aiType": "Melee",
+		"aiType": "Assassin",
+		"assassinTarget": "Ranged",
+		"fallbackAiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Vishuvac.png",
 		"chainsFrom": "All",

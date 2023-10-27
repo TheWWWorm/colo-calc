@@ -110,5 +110,21 @@
     "chainsTo": "Downed",
     "aiType": "Ranged",
     "usedBy": "Lahn"
+  },
+  {
+    "id": "Terminator",
+    "imgName": "Terminator.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "aiType": "Ranged",
+    "usedBy": "Rue"
+  },
+  {
+    "id": "Nightmare",
+    "imgName": "Nightmare.png",
+    "chainsFrom": "All",
+    "chainsTo": "Downed",
+    "aiType": "Melee",
+    "usedBy": "Rue"
   }
 ]

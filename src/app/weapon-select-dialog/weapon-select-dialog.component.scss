@@ -142,8 +142,9 @@ span {
 .char-img {
   width: 175px;
   height: 175px;
-  display:block;
-  margin:auto;
+  display: block;
+  margin: auto;
+  object-fit: contain;
 }
 
 .weapon-element {
