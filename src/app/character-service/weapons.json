@@ -34,8 +34,8 @@
   {
     "id": "Volcanic Horn",
     "imgName": "Volcanic Horn.png",
-    "chainsFrom": "Downed",
-    "chainsTo": "Airborne",
+    "chainsFrom": "All",
+    "chainsTo": "Injured",
     "aiType": "Melee",
     "usedBy": "Vishuvac"
   },

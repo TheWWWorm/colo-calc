@@ -749,7 +749,7 @@
 		"class": "Tank",
 		"imgName": "Morrian.png",
 		"chainsFrom": "Downed",
-		"chainsTo": "injudred",
+		"chainsTo": "Injured",
 		"element": "Earth"
 	},
 	{

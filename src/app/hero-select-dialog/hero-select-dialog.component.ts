@@ -145,8 +145,9 @@ export class HeroSelectDialogComponent implements OnInit {
   // Allow filtering by hero types
   // Also show more hero info on hover!
   public updateFilters() {
-    const value: string = this.filterField.value;
+    let value: string = this.filterField.value;
     if (value && value.length > 0) {
+      value = value.trim();
       this.displayCharacters = this.characterService.fullCharList.filter((ch) => {
         const query = value.toLowerCase();
         return ch.id.toLowerCase().includes(query) ||
