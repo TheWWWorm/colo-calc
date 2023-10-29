@@ -66,6 +66,8 @@ export class CharacterService {
     return {
       ...char,
       aiType: weapon.aiType,
+      assassinTarget: weapon.assassinTarget,
+      fallbackAiType: weapon.fallbackAiType,
       chainsFrom: weapon.chainsFrom,
       chainsTo: weapon.chainsTo,
       weaponEquipped: weapon

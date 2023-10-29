@@ -36,7 +36,9 @@
     "imgName": "Volcanic Horn.png",
     "chainsFrom": "All",
     "chainsTo": "Injured",
-    "aiType": "Melee",
+    "aiType": "Assassin",
+    "assassinTarget": "Ranged",
+		"fallbackAiType": "Melee",
     "usedBy": "Vishuvac"
   },
   {

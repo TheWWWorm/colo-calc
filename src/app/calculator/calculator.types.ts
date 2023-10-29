@@ -70,6 +70,8 @@ export interface RawWeapon {
   chainsFrom: ChainType;
   chainsTo: ChainType;
   aiType: AiType;
+  fallbackAiType?: AiType;
+  assassinTarget?: CharacterClass;
   usedBy: string;
 };
 
