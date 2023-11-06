@@ -1035,6 +1035,15 @@
 		"element": "Dark"
 	},
 	{
+		"id": "Win Ling",
+		"aiType": "Ally",
+		"class": "Warrior",
+		"imgName": "Win Ling.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Airborne",
+		"element": "Fire"
+	},
+	{
 		"id": "White Beast",
 		"aiType": "Melee",
 		"class": "Warrior",
