@@ -118,7 +118,9 @@
     "imgName": "Terminator.png",
     "chainsFrom": "Downed",
     "chainsTo": "Injured",
-    "aiType": "Ranged",
+    "aiType": "Assassin",
+		"assassinTarget": "Ranged",
+		"fallbackAiType": "Melee",
     "usedBy": "Rue"
   },
   {
