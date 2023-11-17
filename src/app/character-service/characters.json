@@ -625,7 +625,7 @@
 	},
 	{
 		"id": "Hana",
-		"aiType": "Ranged",
+		"aiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Hana.png",
 		"chainsFrom": "Injured",
