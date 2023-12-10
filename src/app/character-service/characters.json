@@ -588,7 +588,7 @@
 	},
 	{
 		"id": "Lina",
-		"aiType": "Ranged",
+		"aiType": "Melee",
 		"class": "Ranged",
 		"imgName": "Lina.png",
 		"chainsFrom": "Injured",
