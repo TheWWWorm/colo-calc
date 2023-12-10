@@ -208,6 +208,15 @@
 		"element": "Dark"
 	},
 	{
+		"id": "Ascendant Coco",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Coco_Ascended.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Airborne",
+		"element": "Water"
+	},
+	{
 		"id": "Coco",
 		"aiType": "Ranged",
 		"class": "Ranged",
@@ -715,6 +724,15 @@
 		"chainsFrom": "All",
 		"chainsTo": "Downed",
 		"element": "Fire"
+	},
+	{
+		"id": "Mike",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Mike.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Injured",
+		"element": "Basic"
 	},
 	{
 		"id": "MK.99",
