@@ -21,6 +21,15 @@
 		"element": "Fire"
 	},
 	{
+		"id": "Angie",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Angie.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Injured",
+		"element": "Water"
+	},
+	{
 		"id": "Alef",
 		"aiType": "Melee",
 		"class": "Warrior",
