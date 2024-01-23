@@ -110,7 +110,7 @@
     "imgName": "Elusive Reflection.png",
     "chainsFrom": "Airborne",
     "chainsTo": "Downed",
-    "aiType": "Ranged",
+    "aiType": "Melee",
     "usedBy": "Lahn"
   },
   {
