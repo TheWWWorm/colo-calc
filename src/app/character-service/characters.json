@@ -838,6 +838,15 @@
 			"Echesaks model R"
 		]
 	},
+  {
+      "id": "Plague Doctor",
+      "aiType": "Melee",
+      "class": "Warrior",
+      "imgName": "PlagueDoctor.png",
+      "chainsFrom": "Downed",
+      "chainsTo": "injudred",
+      "element": "Dark"
+  },
 	{
 		"id": "Plitvice",
 		"aiType": "Melee",
