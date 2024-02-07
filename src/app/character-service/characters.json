@@ -844,7 +844,7 @@
       "class": "Warrior",
       "imgName": "PlagueDoctor.png",
       "chainsFrom": "Downed",
-      "chainsTo": "injudred",
+      "chainsTo": "Injured",
       "element": "Dark"
   },
 	{
