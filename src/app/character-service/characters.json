@@ -125,7 +125,7 @@
 	},
 	{
 		"id": "Beach Yuze",
-		"aiType": "Melee",
+		"aiType": "Ranged",
 		"class": "Warrior",
 		"imgName": "Beach Yuze.png",
 		"chainsFrom": "Downed",
@@ -1100,7 +1100,7 @@
 	},
 	{
 		"id": "Yuze",
-		"aiType": "Ranged",
+		"aiType": "Melee",
 		"class": "Warrior",
 		"isRare": true,
 		"imgName": "Yuze.png",
