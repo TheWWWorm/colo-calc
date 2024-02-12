@@ -1100,7 +1100,7 @@
 	},
 	{
 		"id": "Yuze",
-		"aiType": "Melee",
+		"aiType": "Ranged",
 		"class": "Warrior",
 		"isRare": true,
 		"imgName": "Yuze.png",

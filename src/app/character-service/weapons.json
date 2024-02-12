@@ -54,7 +54,7 @@
     "imgName": "Innocent.png",
     "chainsFrom": "Downed",
     "chainsTo": "Airborne",
-    "aiType": "Melee",
+    "aiType": "Ranged",
     "usedBy": "Lapice"
   },
   {
