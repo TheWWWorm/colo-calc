@@ -1108,6 +1108,15 @@
 		"chainsTo": "Injured",
 		"element": "Dark"
 	},
+  {
+		"id": "Yuna",
+		"aiType": "Melee",
+		"class": "Support",
+		"imgName": "Yuna.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Downed",
+		"element": "Earth"
+	},
 	{
 		"id": "Xelloss",
 		"aiType": "Melee",
