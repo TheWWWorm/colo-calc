@@ -1110,7 +1110,7 @@
 	},
   {
 		"id": "Yuna",
-		"aiType": "Melee",
+		"aiType": "Ranged",
 		"class": "Support",
 		"imgName": "Yuna.png",
 		"chainsFrom": "Airborne",
