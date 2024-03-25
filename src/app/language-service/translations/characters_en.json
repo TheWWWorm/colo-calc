@@ -299,5 +299,11 @@
   },
   "Mei_Ascended": {
     "name": "Mei"
+  },
+  "Plague Doctor": {
+    "name": "Plague Doctor",
+    "alias": [
+      "pd"
+    ]
   }
 }
