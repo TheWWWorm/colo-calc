@@ -679,6 +679,15 @@
 		"element": "Earth"
 	},
 	{
+		"id": "Milim",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Milim.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Injured",
+		"element": "Dark"
+	},
+	{
 		"id": "Marvin",
 		"aiType": "Ranged",
 		"class": "Warrior",
@@ -947,6 +956,15 @@
 		"element": "Earth"
 	},
 	{
+		"id": "Rimuru",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Rimuru.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Injured",
+		"element": "Water"
+	},
+	{
 		"id": "Rue",
 		"aiType": "Assassin",
 		"assassinTarget": "Ranged",
@@ -989,6 +1007,15 @@
 		"chainsFrom": "Airborne",
 		"chainsTo": "Downed",
 		"element": "Dark"
+	},
+	{
+		"id": "Shuna",
+		"aiType": "Ranged",
+		"class": "Support",
+		"imgName": "Shuna.png",
+		"chainsFrom": "All",
+		"chainsTo": "Downed",
+		"element": "Fire"
 	},
 	{
 		"id": "Summer Loraine",
