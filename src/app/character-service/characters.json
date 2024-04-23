@@ -22,7 +22,8 @@
 	},
 	{
 		"id": "Angie",
-		"aiType": "Melee",
+		"aiType": "Assassin",
+		"assassinTarget": "Support",
 		"class": "Warrior",
 		"imgName": "Angie.png",
 		"chainsFrom": "Downed",
