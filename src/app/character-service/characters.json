@@ -348,6 +348,15 @@
 		"element": "Basic"
 	},
 	{
+		"id": "Estel",
+		"aiType": "Melee",
+		"class": "Ranged",
+		"imgName": "Estel.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Downed",
+		"element": "Water"
+	},
+	{
 		"id": "Eva",
 		"aiType": "Melee",
 		"class": "Ranged",
@@ -1055,6 +1064,15 @@
 		"chainsFrom": "Injured",
 		"chainsTo": "Airborne",
 		"element": "Earth"
+	},
+	{
+		"id": "Toga",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Toga.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Downed",
+		"element": "Fire"
 	},
 	{
 		"id": "Veronica",
