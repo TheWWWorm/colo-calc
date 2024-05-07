@@ -350,12 +350,12 @@
 	},
 	{
 		"id": "Estel",
-		"aiType": "Melee",
+		"aiType": "Ranged",
 		"class": "Ranged",
 		"imgName": "Estel.png",
 		"chainsFrom": "Injured",
 		"chainsTo": "Downed",
-		"element": "Water"
+		"element": "Earth"
 	},
 	{
 		"id": "Eva",
