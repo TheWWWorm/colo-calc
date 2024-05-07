@@ -24,6 +24,7 @@
 		"id": "Angie",
 		"aiType": "Assassin",
 		"assassinTarget": "Support",
+		"fallbackAiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Angie.png",
 		"chainsFrom": "Downed",
