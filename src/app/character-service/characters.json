@@ -350,7 +350,7 @@
 	},
 	{
 		"id": "Estel",
-		"aiType": "Ranged",
+		"aiType": "Melee",
 		"class": "Ranged",
 		"imgName": "Estel.png",
 		"chainsFrom": "Injured",
