@@ -846,6 +846,15 @@
 		"element": "Dark"
 	},
 	{
+		"id": "Odile",
+		"aiType": "Melee",
+		"class": "Tank",
+		"imgName": "Odile.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Downed",
+		"element": "Light"
+	},
+	{
 		"id": "Oghma",
 		"aiType": "Melee",
 		"class": "Tank",
