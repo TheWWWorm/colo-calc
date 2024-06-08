@@ -1136,6 +1136,15 @@
 		"element": "Dark"
 	},
   {
+		"id": "Yun",
+		"aiType": "Ranged",
+		"class": "Support",
+		"imgName": "Yun.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Injured",
+		"element": "Water"
+	},
+  {
 		"id": "Yuna",
 		"aiType": "Ranged",
 		"class": "Support",
