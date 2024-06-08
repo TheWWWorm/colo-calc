@@ -22,7 +22,9 @@
 	},
 	{
 		"id": "Angie",
-		"aiType": "Melee",
+		"aiType": "Assassin",
+		"assassinTarget": "Support",
+		"fallbackAiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Angie.png",
 		"chainsFrom": "Downed",
@@ -236,20 +238,20 @@
 		"element": "Water"
 	},
 	{
-		"id": "Craig",
+		"id": "Craig_Ascended",
 		"aiType": "Melee",
 		"class": "Tank",
-		"isRare": true,
-		"imgName": "Craig.png",
+		"imgName": "Craig_Ascended.png",
 		"chainsFrom": "Downed",
 		"chainsTo": "Airborne",
 		"element": "Earth"
 	},
 	{
-		"id": "Craig_Ascended",
+		"id": "Craig",
 		"aiType": "Melee",
 		"class": "Tank",
-		"imgName": "Craig_Ascended.png",
+		"isRare": true,
+		"imgName": "Craig.png",
 		"chainsFrom": "Downed",
 		"chainsTo": "Airborne",
 		"element": "Earth"
@@ -301,20 +303,20 @@
 		"element": "Light"
 	},
 	{
-		"id": "Elvira",
+		"id": "Elvira_Ascended",
 		"aiType": "Melee",
 		"class": "Ranged",
-		"isRare": true,
-		"imgName": "Elvira.png",
+		"imgName": "Elvira_Ascended.png",
 		"chainsFrom": "Airborne",
 		"chainsTo": "Downed",
 		"element": "Fire"
 	},
 	{
-		"id": "Elvira_Ascended",
+		"id": "Elvira",
 		"aiType": "Melee",
 		"class": "Ranged",
-		"imgName": "Elvira_Ascended.png",
+		"isRare": true,
+		"imgName": "Elvira.png",
 		"chainsFrom": "Airborne",
 		"chainsTo": "Downed",
 		"element": "Fire"
@@ -347,6 +349,15 @@
 		"element": "Basic"
 	},
 	{
+		"id": "Estel",
+		"aiType": "Melee",
+		"class": "Ranged",
+		"imgName": "Estel.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Downed",
+		"element": "Earth"
+	},
+	{
 		"id": "Eva",
 		"aiType": "Melee",
 		"class": "Ranged",
@@ -376,20 +387,20 @@
 		"element": "Water"
 	},
 	{
-		"id": "Fei",
+		"id": "Fei_Ascended",
 		"aiType": "Melee",
 		"class": "Warrior",
-		"isRare": true,
-		"imgName": "Fei.png",
+		"imgName": "Fei_Ascended.png",
 		"chainsFrom": "Downed",
 		"chainsTo": "Airborne",
 		"element": "Light"
 	},
 	{
-		"id": "Fei_Ascended",
+		"id": "Fei",
 		"aiType": "Melee",
 		"class": "Warrior",
-		"imgName": "Fei_Ascended.png",
+		"isRare": true,
+		"imgName": "Fei.png",
 		"chainsFrom": "Downed",
 		"chainsTo": "Airborne",
 		"element": "Light"
@@ -506,21 +517,21 @@
 		"element": "Basic"
 	},
 	{
+		"id": "Karina_Ascended",
+		"aiType": "Ranged",
+		"class": "Support",
+		"imgName": "Karina_Ascended.png",
+		"chainsFrom": "All",
+		"chainsTo": "Injured",
+		"element": "Dark"
+	},
+	{
 		"id": "Karina",
 		"aiType": "Ranged",
 		"class": "Support",
 		"isRare": true,
 		"imgName": "Karina.png",
 		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Dark"
-	},
-	{
-		"id": "Karina_Ascended",
-		"aiType": "Ranged",
-		"class": "Support",
-		"imgName": "Karina_Ascended.png",
-		"chainsFrom": "All",
 		"chainsTo": "Injured",
 		"element": "Dark"
 	},
@@ -716,20 +727,20 @@
 		"element": "Earth"
 	},
 	{
-		"id": "Mei",
+		"id": "Mei_Ascended",
 		"aiType": "Melee",
 		"class": "Warrior",
-		"isRare": true,
-		"imgName": "Mei.png",
+		"imgName": "Mei_Ascended.png",
 		"chainsFrom": "Downed",
 		"chainsTo": "Airborne",
 		"element": "Light"
 	},
 	{
-		"id": "Mei_Ascended",
+		"id": "Mei",
 		"aiType": "Melee",
 		"class": "Warrior",
-		"imgName": "Mei_Ascended.png",
+		"isRare": true,
+		"imgName": "Mei.png",
 		"chainsFrom": "Downed",
 		"chainsTo": "Airborne",
 		"element": "Light"
@@ -835,6 +846,15 @@
 		"element": "Dark"
 	},
 	{
+		"id": "Odile",
+		"aiType": "Melee",
+		"class": "Tank",
+		"imgName": "Odile.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Downed",
+		"element": "Light"
+	},
+	{
 		"id": "Oghma",
 		"aiType": "Melee",
 		"class": "Tank",
@@ -847,15 +867,15 @@
 			"Echesaks model R"
 		]
 	},
-  {
-      "id": "Plague Doctor",
-      "aiType": "Melee",
-      "class": "Warrior",
-      "imgName": "PlagueDoctor.png",
-      "chainsFrom": "Downed",
-      "chainsTo": "Injured",
-      "element": "Dark"
-  },
+	{
+		"id": "Plague Doctor",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "PlagueDoctor.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Injured",
+		"element": "Dark"
+	},
 	{
 		"id": "Plitvice",
 		"aiType": "Melee",
@@ -1056,6 +1076,15 @@
 		"element": "Earth"
 	},
 	{
+		"id": "Toga",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Toga.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Downed",
+		"element": "Fire"
+	},
+	{
 		"id": "Veronica",
 		"aiType": "Melee",
 		"class": "Support",
@@ -1145,6 +1174,15 @@
 		"element": "Water"
 	},
   {
+		"id": "Yun",
+		"aiType": "Ranged",
+		"class": "Support",
+		"imgName": "Yun.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Injured",
+		"element": "Water"
+	},
+	{
 		"id": "Yuna",
 		"aiType": "Ranged",
 		"class": "Support",
