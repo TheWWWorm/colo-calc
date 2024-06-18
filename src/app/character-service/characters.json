@@ -166,7 +166,7 @@
 	{
 		"id": "Bianca",
 		"aiType": "Ranged",
-		"class": "Ranged",
+		"class": "Warrior",
 		"imgName": "Bianca.png",
 		"chainsFrom": "Airborne",
 		"chainsTo": "Downed",
