@@ -280,7 +280,7 @@
 		"class": "Warrior",
 		"imgName": "Dai.png",
 		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
+		"chainsTo": "Injured",
 		"element": "Basic"
 	},
 	{
