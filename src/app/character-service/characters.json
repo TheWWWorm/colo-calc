@@ -428,8 +428,28 @@
 			"Libera Type.B"
 		]
 	},
+  	{
+		"id": "Female Knight_Ascended",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"isRare": true,
+		"imgName": "Female Knight_Ascent.png.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Downed",
+		"element": "Basic"
+	},
+  {
+		"id": "Male Knight_Ascended",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"isRare": true,
+		"imgName": "Male Knight_Ascent.png.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Downed",
+		"element": "Basic"
+	},
 	{
-		"id": "Future Knight",
+		"id": "Female Knight",
 		"aiType": "Ranged",
 		"class": "Warrior",
 		"imgName": "Future Knight.png",
