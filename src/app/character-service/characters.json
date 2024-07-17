@@ -166,7 +166,7 @@
 	{
 		"id": "Bianca",
 		"aiType": "Ranged",
-		"class": "Warrior",
+		"class": "Ranged",
 		"imgName": "Bianca.png",
 		"chainsFrom": "Airborne",
 		"chainsTo": "Downed",
@@ -208,6 +208,15 @@
 		"chainsFrom": "Airborne",
 		"chainsTo": "Injured",
 		"element": "Fire"
+	},
+  	{
+		"id": "Cornet",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Cornet.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Downed",
+		"element": "Light"
 	},
 	{
 		"id": "Corps Commander",
@@ -605,6 +614,15 @@
 		"chainsFrom": "Injured",
 		"chainsTo": "Downed",
 		"element": "Dark"
+	},
+  	{
+		"id": "Lena",
+		"aiType": "Melee",
+		"class": "Ranged",
+		"imgName": "Lena.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Airborne",
+		"element": "Light"
 	},
 	{
 		"id": "Lina",
