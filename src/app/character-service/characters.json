@@ -166,7 +166,7 @@
 	{
 		"id": "Bianca",
 		"aiType": "Ranged",
-		"class": "Warrior",
+		"class": "Ranged",
 		"imgName": "Bianca.png",
 		"chainsFrom": "Airborne",
 		"chainsTo": "Downed",
@@ -208,6 +208,15 @@
 		"chainsFrom": "Airborne",
 		"chainsTo": "Injured",
 		"element": "Fire"
+	},
+  	{
+		"id": "Cornet",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Cornet.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Downed",
+		"element": "Light"
 	},
 	{
 		"id": "Corps Commander",
@@ -419,8 +428,36 @@
 			"Libera Type.B"
 		]
 	},
+  	{
+		"id": "Female Knight_Ascended",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"isRare": true,
+		"imgName": "Female Knight_Ascent.png.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Downed",
+		"element": "Basic",
+		"weapons": [
+			"Libera",
+			"Libera Type.B"
+		]
+	},
+  {
+		"id": "Male Knight_Ascended",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"isRare": true,
+		"imgName": "Male Knight_Ascent.png.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Downed",
+		"element": "Basic",
+		"weapons": [
+			"Libera",
+			"Libera Type.B"
+		]
+	},
 	{
-		"id": "Future Knight",
+		"id": "Female Knight",
 		"aiType": "Ranged",
 		"class": "Warrior",
 		"imgName": "Future Knight.png",
@@ -605,6 +642,15 @@
 		"chainsFrom": "Injured",
 		"chainsTo": "Downed",
 		"element": "Dark"
+	},
+  	{
+		"id": "Lena",
+		"aiType": "Melee",
+		"class": "Ranged",
+		"imgName": "Lena.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Airborne",
+		"element": "Light"
 	},
 	{
 		"id": "Lina",

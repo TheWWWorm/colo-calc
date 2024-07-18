@@ -300,6 +300,12 @@
   "Mei_Ascended": {
     "name": "Mei"
   },
+    "Male Knight_Ascended": {
+    "name": "Knight"
+  },
+    "Female Knight_Ascended": {
+    "name": "Knight"
+  },
   "Plague Doctor": {
     "name": "Plague Doctor",
     "alias": [
