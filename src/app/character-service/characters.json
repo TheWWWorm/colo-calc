@@ -458,7 +458,6 @@
 		"id": "Female Knight",
 		"aiType": "Ranged",
 		"class": "Warrior",
-		"isRare": true,
 		"imgName": "Future Knight.png",
 		"chainsFrom": "Downed",
 		"chainsTo": "Airborne",
