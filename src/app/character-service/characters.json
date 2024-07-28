@@ -284,6 +284,15 @@
 		"element": "Dark"
 	},
 	{
+		"id": "Dabin",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Dabin.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Airborne",
+		"element": "Earth"
+	},
+	{
 		"id": "Dai",
 		"aiType": "Melee",
 		"class": "Warrior",
