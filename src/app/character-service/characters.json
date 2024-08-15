@@ -1120,6 +1120,17 @@
 		"element": "Water"
 	},
 	{
+		"id": "Saya",
+		"aiType": "Assassin",
+		"assassinTarget": "Warrior",
+		"fallbackAiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Saya.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Downed",
+		"element": "Fire"
+	},
+	{
 		"id": "Tinia",
 		"aiType": "Ranged",
 		"class": "Ranged",
