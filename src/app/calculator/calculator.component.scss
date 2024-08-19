@@ -305,6 +305,55 @@ a {
   width: 20px;
 }
 
+.team-btn-container {
+  position: relative;
+  .save-btn {
+    cursor: pointer;
+    top: 10px;
+    left: 5px;
+    position: absolute;
+    font-size: 22px;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  
+  .load-btn {
+    cursor: pointer;
+    top: 10px;
+    left: 35px;
+    position: absolute;
+    font-size: 22px;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.team-btn-container-evil {
+  position: relative;
+  .save-btn {
+    cursor: pointer;
+    bottom: 10px;
+    right: 5px;
+    position: absolute;
+    font-size: 22px;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  
+  .load-btn {
+    cursor: pointer;
+    bottom: 10px;
+    right: 35px;
+    position: absolute;
+    font-size: 22px;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
 
 /* ----------------------------------------*/
 /* ---------->>> Background <<<-----------*/

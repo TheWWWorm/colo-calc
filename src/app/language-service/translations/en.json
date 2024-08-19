@@ -85,5 +85,11 @@
   "SupportClass": "Support",
   "TankClass": "Tanker",
   "dialogWeaponSelectTitle": "Select the weapon",
-  "textMode": "Text Mode"
+  "textMode": "Text Mode",
+  "loadTeam": "Load Team",
+  "teamSelectDialogInfo": "Select a Team",
+  "deleteTeam": "Delete the team",
+  "selectAsGood": "Select as your team",
+  "selectAsEvil": "Select as enemy team",
+  "noTeamsToDisplay": "No teams to display! Please save a team first!"
 }

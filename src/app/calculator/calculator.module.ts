@@ -13,6 +13,7 @@ import { ShareDialogModule } from '../share-dialog/share-dialog.module';
 import { HelpDialogModule } from '../help-dialog/help-dialog.module';
 import { AttackOrderModule } from '../attack-order/attack-order.module';
 import { CreditsDialogModule } from '../credits-dialog/credits-dialog.module';
+import { TeamSelectDialogModule } from '../team-select-dialog/team-select-dialog.module';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { CreditsDialogModule } from '../credits-dialog/credits-dialog.module';
     FormsModule,
     HeroSelectDialogModule,
     ShareDialogModule,
+    TeamSelectDialogModule,
     HelpDialogModule,
     CreditsDialogModule,
     PartyModule,

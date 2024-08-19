@@ -47,7 +47,15 @@
       <!-- Body/Fieled -->
       <div class="field">
         <app-field [doClears]="true" [matrix]="matrix | subMatrix : 'good'"></app-field>
+        <span class="team-btn-container">
+          <mat-icon class="save-btn" (click)="teamSelectService.addTeam(goodParty, false)">save</mat-icon>
+          <mat-icon class="load-btn" (click)="loadTeam(false)">file_upload</mat-icon>
+        </span>
         <img [src]="separatorImgSrc">
+        <span class="team-btn-container-evil">
+          <mat-icon class="save-btn" (click)="teamSelectService.addTeam(evilParty, true)">save</mat-icon>
+          <mat-icon class="load-btn" (click)="loadTeam(true)">file_upload</mat-icon>
+        </span>
         <app-field [matrix]="matrix | subMatrix : 'bad'"></app-field>
       </div>
       <!-- Body/Party Setting -->

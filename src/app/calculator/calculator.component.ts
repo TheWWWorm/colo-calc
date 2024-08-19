@@ -13,6 +13,10 @@ import { languageList } from '../language-service/traslations.data';
 import { LocalStorageService } from '../local-storage-service/local-storage-service.service';
 import { ShareDialogComponent } from '../share-dialog/share-dialog.component';
 import { Party, Tile, LINE_LENGTH, LINE_HEIGHT, Coordinates, TileDistance, TargetColour, AiType, CharacterClass, Character, dialogWidth, PartyTypes } from './calculator.types';
+import { TeamSelectService } from '../team-select-dialog/team-select.service';
+import { TeamSelectDialogComponent, TeamSelectDialogResult } from '../team-select-dialog/team-select-dialog.component';
+import { generateMatrix, syncMatrixToTeams, syncParty } from './calculator.helpers';
+import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-calculator',
@@ -42,6 +46,8 @@ export class CalculatorComponent implements OnInit, OnDestroy {
   public evilParty: Party;
   
   public events: Array<TargetEvent> = [];
+
+  public matrix: Array<Tile>;
 
   private interval: any;
 
@@ -95,42 +101,18 @@ export class CalculatorComponent implements OnInit, OnDestroy {
     this.openHeroSelectDialog(party, tile.positionInParty, tile);
   }
 
-  public generateMatrix = (): Array<Tile> => {
-    return Array.from(new Array(LINE_LENGTH * LINE_HEIGHT), (_, i): Tile => {
-      const posInLine = CalculatorComponent.returnPositionInLine(i);
-      const baseTile: Tile = {
-        value: '',
-        onClick: this.onTileClick,
-        onChangeCharacter: this.onChangeCharacter,
-        id: i
-      }
-      if (posInLine < 5) {
-        return baseTile;
-      } else if (posInLine > 4 && posInLine < 11) {
-        return {
-          ...baseTile,
-          disabled: true,
-          value: 'x'
-        };
-      }
-      return baseTile;
-    });
-  }
-
-  public matrix: Array<Tile>;
-
   constructor(
     private dialog: MatDialog,
     private languageService: LanguageService,
     private localStorageService: LocalStorageService,
     private characterService: CharacterService,
+    public teamSelectService: TeamSelectService,
     private route: ActivatedRoute,
     private changeDetectorRef: ChangeDetectorRef,
   ) { }
 
   ngOnInit() {
     console.log('init')
-    this.matrix = this.generateMatrix();
 
     let goodPartyString: string = this.localStorageService.getUnparsed(this.myTeamKey);;
     let evilPartyString: string;
@@ -153,6 +135,15 @@ export class CalculatorComponent implements OnInit, OnDestroy {
       }
     });
 
+    this.initDisplay(goodPartyString, evilPartyString);
+    this.initSubs();
+  }
+
+  public initDisplay(goodPartyString: string, evilPartyString: string) {
+    this.matrix = generateMatrix({
+      onTileClick: this.onTileClick,
+      onChangeCharacter: this.onChangeCharacter,
+    });
     this.resetParty(
       PartyTypes.good,
       'goodParty',
@@ -161,8 +152,9 @@ export class CalculatorComponent implements OnInit, OnDestroy {
     this.resetParty(PartyTypes.evil, 'evilParty', evilPartyString);
     this.matrix = [...this.matrix];
     this.calculateEvents();
+  }
 
-
+  public initSubs() {
     this.langControl.valueChanges.subscribe((value) => {
       this.languageService.changeLang(value);
       this.goodParty = this.updatePartyCharNames(this.goodParty);
@@ -472,12 +464,7 @@ export class CalculatorComponent implements OnInit, OnDestroy {
   }
 
   public partyToShare(party: Party): string {
-    const reduced = party.tiles.reduce((acc, e) => {
-      const id = e?.id !== undefined && e?.id !== null ? e?.id : null;
-      const characterId = e.character?.id || null;
-      acc.push([id, characterId, e.character?.weaponEquipped?.id]);
-      return acc;
-    }, []);
+    const reduced = this.teamSelectService.teamToArr(party);
     return JSON.stringify(reduced);
   }
 
@@ -494,7 +481,7 @@ export class CalculatorComponent implements OnInit, OnDestroy {
         ...party,
         tiles: [...party.tiles],
       };
-      this.syncMatrixToTeams();
+      this.matrix = syncMatrixToTeams(this.matrix, [this.goodParty, this.evilParty]);
       this.calculateEvents();
       this.syncMyTeam();
     });
@@ -578,26 +565,42 @@ export class CalculatorComponent implements OnInit, OnDestroy {
     }
   }
 
-  public syncParty(party: Party, matrix: Array<Tile>) {
-    party.tiles.forEach((tile) => {
-      if (validTileId(tile)) {
-        matrix[tile.id] = tile;
-      }
-    });
+  public loadTeam(isEvil: boolean) {
+    this.openTeamSelectDialog(isEvil);
   }
 
-  public syncMatrixToTeams() {
-    const matrix = this.matrix.map((tile) => {
-      return {
-        ...tile,
-        character: null,
-        positionInParty: null,
-        targets: null,
-        summonTargets: null,
+  public openTeamSelectDialog(isEvil: boolean)  {
+    this.dialog.open(TeamSelectDialogComponent, {
+      width: '750px',
+      data: {
+        isEvil
       }
-    });
-    this.syncParty(this.goodParty, matrix);
-    this.syncParty(this.evilParty, matrix);
-    this.matrix = matrix;
+    }).afterClosed().pipe(first()).subscribe((result: TeamSelectDialogResult) => {
+      if (!result) {
+        return;
+      }
+  
+      let goodPartyString = this.partyToShare(this.goodParty);
+      let evilPartyString = this.partyToShare(this.evilParty);
+      if (isEvil) {
+        evilPartyString = JSON.stringify(result.teamData.team);
+      } else {
+        goodPartyString = JSON.stringify(result.teamData.team);
+      }
+
+      this.goodParty = null;
+      this.evilParty = null;
+      this.matrix = [];
+      
+      // this.matrix = [...this.matrix];
+      // this.calculateEvents();
+      this.changeDetectorRef.detectChanges();
+      this.changeDetectorRef.markForCheck();
+
+      this.initDisplay(goodPartyString, evilPartyString);
+
+      this.changeDetectorRef.detectChanges();
+      this.changeDetectorRef.markForCheck();
+    })
   }
 }

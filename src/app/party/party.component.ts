@@ -22,8 +22,8 @@ export class PartyComponent implements OnChanges {
   ) { }
 
   public ngOnChanges(changes: SimpleChanges): void {
-    this.heroList = this.party.tiles.map((tile) => tile.character);
-    this.tileList = this.party.tiles;
+    this.heroList = this.party?.tiles.map((tile) => tile.character);
+    this.tileList = this.party?.tiles;
   }
 
   public changeHero(i: number, event: Event) {

@@ -1,0 +1,18 @@
+<div>
+  <h3 class="info">{{ 'teamSelectDialogInfo' | _ }}</h3>
+  <div class="field-wrapper">
+    <div *ngFor="let item of displayData" class="element">
+      <app-field
+        [doClears]="true"
+        [matrix]="item.matrix | subMatrix : data.isEvil ? 'bad' : 'good' "
+      ></app-field>
+      <mat-icon class="delete-btn" (click)="deleteTeam(item)">delete</mat-icon>
+      <!-- <a (click)="deleteTeam(item)">{{ 'deleteTeam' | _ }}</a> -->
+      <a *ngIf="!data.isEvil" (click)="loadTeam(item)">{{ 'selectAsGood' | _ }}</a>
+      <a *ngIf="data.isEvil" (click)="loadTeam(item)">{{ 'selectAsEvil' | _ }}</a>
+    </div>
+  </div>
+  <div *ngIf="displayData.length === 0">
+    <h2 class="info">{{ 'noTeamsToDisplay' | _ }}</h2>
+  </div>
+</div>

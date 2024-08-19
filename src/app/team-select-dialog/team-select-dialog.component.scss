@@ -1,0 +1,61 @@
+
+/* ------------------------------------------*/
+/* ---------->>> Share Layout <<<-----------*/
+/* ----------------------------------------*/
+
+// "Copy this link" text
+.info {
+  text-align: center;
+}
+
+// Url Box Size
+.full-width {
+  width: 100%;
+}
+
+// Background
+::ng-deep .mat-dialog-container {
+  display: block;
+  padding: 24px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: auto;
+  width: 100%;
+  height: unset;
+  min-height: inherit;
+  max-height: inherit;
+  border: 2px solid #5a451e;
+  box-shadow: 0px 0px 0px 5px #171211;
+  background: #171211;
+  color: #fff;
+}
+
+.field-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  .element {
+    position: relative;
+    > * {
+      display: inline-block;
+      padding: 10px;
+    }
+  
+    a {
+      color: white;
+      cursor: pointer;
+      text-decoration: underline;
+      display: block;
+    }
+  
+    .delete-btn {
+      cursor: pointer;
+      bottom: -1px;
+      right: 2px;
+      position: absolute;
+      font-size: 22px;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
