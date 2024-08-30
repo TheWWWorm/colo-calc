@@ -150,7 +150,11 @@
 		"imgName": "Bari.png",
 		"chainsFrom": "Injured",
 		"chainsTo": "Downed",
-		"element": "Earth"
+		"element": "Earth",
+		"weapons": [
+			"Mayreel",
+			"Pino"
+		]
 	},
 	{
 		"id": "Beth",

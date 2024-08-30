@@ -130,5 +130,21 @@
     "chainsTo": "Downed",
     "aiType": "Melee",
     "usedBy": "Rue"
+  },
+  {
+    "id": "Mayreel",
+    "imgName": "Mayreel.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "aiType": "Ranged",
+    "usedBy": "Bari"
+  },
+  {
+    "id": "Pino",
+    "imgName": "Pino.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "aiType": "Melee",
+    "usedBy": "Bari"
   }
 ]
