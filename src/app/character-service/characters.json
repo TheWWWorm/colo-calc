@@ -41,6 +41,15 @@
 		"element": "Earth"
 	},
 	{
+		"id": "Anna",
+		"aiType": "Melee",
+		"class": "Ranged",
+		"imgName": "Anna.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Downed",
+		"element": "Basic"
+	},
+	{
 		"id": "Ameris",
 		"aiType": "Ranged",
 		"class": "Ranged",
