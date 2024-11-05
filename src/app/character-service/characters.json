@@ -1023,6 +1023,15 @@
 		"element": "Fire"
 	},
 	{
+		"id": "Ruri",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Ruri.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Airborne",
+		"element": "Light"
+	},
+	{
 		"id": "Rie",
 		"aiType": "Melee",
 		"class": "Ranged",
