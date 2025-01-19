@@ -507,6 +507,24 @@
 		"chainsTo": "Downed",
 		"element": "Light"
 	},
+  {
+		"id": "Fern",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Fern.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Downed",
+		"element": "Basic"
+	},
+  {
+		"id": "Frieren",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Frieren.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Airborne",
+		"element": "Light"
+	},
 	{
 		"id": "Gabriel",
 		"aiType": "Ranged",
@@ -1170,12 +1188,30 @@
 		"chainsTo": "Downed",
 		"element": "Fire"
 	},
+  {
+		"id": "Stark",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Stark.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Airborne",
+		"element": "Fire"
+	},
 	{
 		"id": "Tinia",
 		"aiType": "Ranged",
 		"class": "Ranged",
 		"imgName": "Tinia.png",
 		"chainsFrom": "Injured",
+		"chainsTo": "Airborne",
+		"element": "Earth"
+	},
+  {
+		"id": "Tasha",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Tasha.png",
+		"chainsFrom": "Downed",
 		"chainsTo": "Airborne",
 		"element": "Earth"
 	},
