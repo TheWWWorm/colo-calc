@@ -518,7 +518,7 @@
 	},
   {
 		"id": "Frieren",
-		"aiType": "Ranged",
+		"aiType": "Melee",
 		"class": "Ranged",
 		"imgName": "Frieren.png",
 		"chainsFrom": "Downed",
@@ -1037,6 +1037,15 @@
 		"imgName": "Rachel.png",
 		"chainsFrom": "Injured",
 		"chainsTo": "Downed",
+		"element": "Water"
+	},
+  {
+		"id": "Beach Racer Rachel",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Beach Racer Rachel.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Injured",
 		"element": "Water"
 	},
 	{
