@@ -240,6 +240,15 @@
 		"chainsTo": "Airborne",
 		"element": "Dark"
 	},
+  {
+		"id": "Chocolate Collector Ameris",
+		"aiType": "Ally",
+		"class": "Support",
+		"imgName": "Chocolate Collector Ameris.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Injured",
+		"element": "Basic"
+	},
 	{
 		"id": "Ascendant Coco",
 		"aiType": "Ranged",
@@ -956,6 +965,15 @@
 		"chainsTo": "Downed",
 		"element": "Light"
 	},
+  {
+		"id": "Nifty",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Nifty.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Downed",
+		"element": "Dark"
+	},
 	{
 		"id": "Oghma",
 		"aiType": "Melee",
@@ -1196,6 +1214,15 @@
 		"chainsFrom": "Airborne",
 		"chainsTo": "Downed",
 		"element": "Fire"
+	},
+  {
+		"id": "Sweet Troublemaker Girgas",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Sweet Troublemaker Girgas.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Downed",
+		"element": "Basic"
 	},
   {
 		"id": "Stark",
