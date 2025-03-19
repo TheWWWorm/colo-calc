@@ -128,7 +128,7 @@
     "imgName": "Nightmare.png",
     "chainsFrom": "All",
     "chainsTo": "Downed",
-    "aiType": "Melee",
+    "aiType": "Ranged",
     "usedBy": "Rue"
   },
   {
