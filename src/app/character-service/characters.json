@@ -306,6 +306,15 @@
 		"element": "Dark"
 	},
 	{
+		"id": "Callie",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Callie.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Downed",
+		"element": "Dark"
+	},
+	{
 		"id": "Dabin",
 		"aiType": "Ranged",
 		"class": "Ranged",
