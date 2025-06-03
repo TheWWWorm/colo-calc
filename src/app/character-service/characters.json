@@ -333,6 +333,15 @@
 		"element": "Basic"
 	},
 	{
+		"id": "Daisy",
+		"aiType": "Melee",
+		"class": "Tank",
+		"imgName": "Daisy.png",
+		"chainsFrom": "Airborne",
+		"chainsTo": "Downed",
+		"element": "Water"
+	},
+	{
 		"id": "Dolf",
 		"aiType": "Ranged",
 		"class": "Ranged",
@@ -443,6 +452,24 @@
 		"isSummon": true,
 		"imgName": "Jack Frost.png",
 		"element": "Water"
+	},
+	{
+		"id": "J",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "J.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Injured",
+		"element": "Water"
+	},
+	{
+		"id": "Erina",
+		"aiType": "Melee",
+		"class": "Tank",
+		"imgName": "Erina.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Injured",
+		"element": "Basic"
 	},
 	{
 		"id": "Fei_Ascended",
