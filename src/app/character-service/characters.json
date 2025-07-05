@@ -152,6 +152,16 @@
 		"chainsTo": "Airborne",
 		"element": "Fire"
 	},
+  {
+		"id": "Beach Rie",
+		"aiType": "Assassin",
+    "assassinTarget": "Ranged",
+		"class": "Warrior",
+		"imgName": "Beach Rie.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Injured",
+		"element": "Basic"
+	},
 	{
 		"id": "Bari",
 		"aiType": "Ranged",
@@ -1137,6 +1147,15 @@
 			"Nightmare"
 		]
 	},
+  {
+		"id": "Randi",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Randi.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Airborne",
+		"element": "Fire"
+	},
 	{
 		"id": "Sohee",
 		"aiType": "Ranged",
@@ -1366,5 +1385,14 @@
 		"chainsFrom": "All",
 		"chainsTo": "Downed",
 		"element": "Dark"
+	},
+  {
+		"id": "Xiaoman",
+		"aiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Xiaoman.png",
+		"chainsFrom": "Downed",
+		"chainsTo": "Injured",
+		"element": "Earth"
 	}
 ]
