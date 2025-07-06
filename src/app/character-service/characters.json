@@ -473,15 +473,6 @@
 		"element": "Water"
 	},
 	{
-		"id": "Erina",
-		"aiType": "Melee",
-		"class": "Tank",
-		"imgName": "Erina.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Basic"
-	},
-	{
 		"id": "Fei_Ascended",
 		"aiType": "Melee",
 		"class": "Warrior",
