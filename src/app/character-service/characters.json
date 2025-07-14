@@ -156,6 +156,7 @@
 		"id": "Beach Rie",
 		"aiType": "Assassin",
     "assassinTarget": "Ranged",
+    "fallbackAiType": "Melee",
 		"class": "Warrior",
 		"imgName": "Beach Rie.png",
 		"chainsFrom": "Downed",
