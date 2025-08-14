@@ -316,6 +316,15 @@
 		"chainsTo": "Airborne",
 		"element": "Dark"
 	},
+  {
+		"id": "Chriselle",
+		"aiType": "Ranged",
+		"class": "Ranged",
+		"imgName": "Chriselle.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Airborne",
+		"element": "Earth"
+	},
 	{
 		"id": "Callie",
 		"aiType": "Melee",
