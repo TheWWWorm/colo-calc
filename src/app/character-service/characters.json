@@ -515,7 +515,7 @@
 			"Libera Type.B"
 		]
 	},
-  	{
+  {
 		"id": "Female Knight_Ascended",
 		"aiType": "Melee",
 		"class": "Warrior",
@@ -655,6 +655,17 @@
 		"chainsFrom": "All",
 		"chainsTo": "Downed",
 		"element": "Basic"
+	},
+  {
+		"id": "Kahlor",
+		"aiType": "Assassin",
+    "assassinTarget": "Support",
+    "fallbackAiType": "Melee",
+		"class": "Warrior",
+		"imgName": "Kahlor.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Downed",
+		"element": "Fire"
 	},
 	{
 		"id": "Karina_Ascended",
@@ -1425,7 +1436,7 @@
 	},
   {
 		"id": "Xiaoman",
-		"aiType": "Melee",
+		"aiType": "Ranged",
 		"class": "Warrior",
 		"imgName": "Xiaoman.png",
 		"chainsFrom": "Downed",
