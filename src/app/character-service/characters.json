@@ -1,1446 +1,1455 @@
 [
-	{
-		"id": "Aisha",
-		"aiType": "Ally",
-		"fallbackAiType": "Melee",
-		"class": "Support",
-		"isRare": true,
-		"imgName": "Aisha.png",
-		"chainsFrom": "All",
-		"chainsTo": "Downed",
-		"element": "Light"
-	},
-	{
-		"id": "Akayuki",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"isRare": true,
-		"imgName": "Akayuki.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Fire"
-	},
-	{
-		"id": "Angie",
-		"aiType": "Assassin",
-		"assassinTarget": "Support",
-		"fallbackAiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Angie.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Water"
-	},
-	{
-		"id": "Alef",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Alef.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Earth"
-	},
-	{
-		"id": "Anna",
-		"aiType": "Melee",
-		"class": "Ranged",
-		"imgName": "Anna.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Basic"
-	},
-	{
-		"id": "Ameris",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Ameris.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Earth"
-	},
-	{
-		"id": "Amy",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"isRare": true,
-		"imgName": "Amy.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Basic"
-	},
-	{
-		"id": "Aoba",
-		"aiType": "Ranged",
-		"class": "Support",
-		"isRare": true,
-		"imgName": "Aoba.png",
-		"chainsFrom": "All",
-		"chainsTo": "Downed",
-		"element": "Earth"
-	},
-	{
-		"id": "Arabelle",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Arabelle.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Dark"
-	},
-	{
-		"id": "Ara",
-		"aiType": "Ranged",
-		"class": "Support",
-		"imgName": "Ara.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Water"
-	},
-	{
-		"id": "AA72",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "AA72.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Water"
-	},
-	{
-		"id": "Andras",
-		"aiType": "Melee",
-		"class": "Ranged",
-		"imgName": "Andras.png",
-		"chainsFrom": "All",
-		"chainsTo": "Downed",
-		"element": "Water"
-	},
-	{
-		"id": "Beach Sohee",
-		"aiType": "Assassin",
-		"assassinTarget": "Ranged",
-		"fallbackAiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Beach Sohee.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Airborne",
-		"element": "Basic"
-	},
-	{
-		"id": "Beach Shapira",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Beach Shapira.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Light"
-	},
-	{
-		"id": "Beach Yuze",
-		"aiType": "Ranged",
-		"class": "Warrior",
-		"imgName": "Beach Yuze.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Water"
-	},
-	{
-		"id": "Beach Amy",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Beach Amy.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Airborne",
-		"element": "Fire"
-	},
   {
-		"id": "Beach Rie",
-		"aiType": "Assassin",
-    "assassinTarget": "Ranged",
+    "id": "Aisha",
+    "aiType": "Ally",
     "fallbackAiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Beach Rie.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Basic"
-	},
-	{
-		"id": "Bari",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Bari.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Earth",
-		"weapons": [
-			"Mayreel",
-			"Pino"
-		]
-	},
-	{
-		"id": "Beth",
-		"aiType": "Assassin",
-		"assassinTarget": "Ranged",
-		"fallbackAiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Beth.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Dark"
-	},
-	{
-		"id": "Bianca",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Bianca.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Water"
-	},
-	{
-		"id": "Catherine",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"isRare": true,
-		"imgName": "Catherine.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Injured",
-		"element": "Water"
-	},
-	{
-		"id": "Carol",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Carol.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Light"
-	},
-	{
-		"id": "Chun Ryeo",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Chun Ryeo.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Light"
-	},
-	{
-		"id": "Clara",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Clara.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Injured",
-		"element": "Fire"
-	},
-  	{
-		"id": "Cornet",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Cornet.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Light"
-	},
-	{
-		"id": "Corps Commander",
-		"aiType": "Melee",
-		"class": "Ranged",
-		"imgName": "Corps Commander.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Airborne",
-		"element": "Dark"
-	},
+    "class": "Support",
+    "isRare": true,
+    "imgName": "Aisha.png",
+    "chainsFrom": "All",
+    "chainsTo": "Downed",
+    "element": "Light"
+  },
   {
-		"id": "Chocolate Collector Ameris",
-		"aiType": "Ally",
-		"class": "Support",
-		"imgName": "Chocolate Collector Ameris.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Basic"
-	},
-	{
-		"id": "Ascendant Coco",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Coco_Ascended.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Airborne",
-		"element": "Water"
-	},
-	{
-		"id": "Coco",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"isRare": true,
-		"imgName": "Coco.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Airborne",
-		"element": "Water"
-	},
-	{
-		"id": "Craig_Ascended",
-		"aiType": "Melee",
-		"class": "Tank",
-		"imgName": "Craig_Ascended.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Earth"
-	},
-	{
-		"id": "Craig",
-		"aiType": "Melee",
-		"class": "Tank",
-		"isRare": true,
-		"imgName": "Craig.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Earth"
-	},
-	{
-		"id": "Claude",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Claude.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Dark"
-	},
-	{
-		"id": "Crosselle",
-		"aiType": "Ranged",
-		"class": "Support",
-		"imgName": "Crosselle.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Dark"
-	},
+    "id": "Akayuki",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "isRare": true,
+    "imgName": "Akayuki.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Fire"
+  },
   {
-		"id": "Chriselle",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Chriselle.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Airborne",
-		"element": "Earth"
-	},
-	{
-		"id": "Callie",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Callie.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Dark"
-	},
-	{
-		"id": "Dabin",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Dabin.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Earth"
-	},
-	{
-		"id": "Dai",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Dai.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Basic"
-	},
-	{
-		"id": "Daisy",
-		"aiType": "Melee",
-		"class": "Tank",
-		"imgName": "Daisy.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Water"
-	},
-	{
-		"id": "Dolf",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"isRare": true,
-		"imgName": "Dolf.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Fire"
-	},
-  {
-		"id": "Dohwa",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Dohwa.png",
-		"chainsFrom": "All",
-		"chainsTo": "Downed",
-		"element": "Basic"
-	},
-	{
-		"id": "Eleanor",
-		"aiType": "Ranged",
-		"class": "Support",
-		"imgName": "Eleanor.png",
-		"chainsFrom": "All",
-		"chainsTo": "Downed",
-		"element": "Light"
-	},
-	{
-		"id": "Elvira_Ascended",
-		"aiType": "Melee",
-		"class": "Ranged",
-		"imgName": "Elvira_Ascended.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Fire"
-	},
-	{
-		"id": "Elvira",
-		"aiType": "Melee",
-		"class": "Ranged",
-		"isRare": true,
-		"imgName": "Elvira.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Fire"
-	},
-	{
-		"id": "Eugene",
-		"aiType": "Ranged",
-		"class": "Warrior",
-		"imgName": "Eugene.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Injured",
-		"element": "Light"
-	},
-	{
-		"id": "Eunha",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Eunha.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Basic"
-	},
-	{
-		"id": "Erina",
-		"aiType": "Melee",
-		"class": "Tank",
-		"imgName": "Erina.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Basic"
-	},
-	{
-		"id": "Estel",
-		"aiType": "Melee",
-		"class": "Ranged",
-		"imgName": "Estel.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Earth"
-	},
-	{
-		"id": "Eva",
-		"aiType": "Melee",
-		"class": "Ranged",
-		"isRare": true,
-		"imgName": "Eva.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Light"
-	},
-	{
-		"id": "Favi",
-		"aiType": "Melee",
-		"class": "Support",
-		"isRare": true,
-		"imgName": "Favi.png",
-		"chainsFrom": "All",
-		"chainsTo": "Injured",
-		"element": "Water",
-		"summonId": "Jack Frost"
-	},
-	{
-		"id": "Jack Frost",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"isSummon": true,
-		"imgName": "Jack Frost.png",
-		"element": "Water"
-	},
-	{
-		"id": "J",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "J.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Water"
-	},
-	{
-		"id": "Fei_Ascended",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Fei_Ascended.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Light"
-	},
-	{
-		"id": "Fei",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"isRare": true,
-		"imgName": "Fei.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Light"
-	},
-	{
-		"id": "Knight",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"isRare": true,
-		"imgName": "Female Knight.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Basic",
-		"weapons": [
-			"Libera",
-			"Libera Type.B"
-		]
-	},
-  {
-		"id": "Female Knight_Ascended",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Female Knight_Ascent.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Basic",
-		"weapons": [
-			"Libera",
-			"Libera Type.B"
-		]
-	},
-  {
-		"id": "Male Knight_Ascended",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Male Knight_Ascent.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Basic",
-		"weapons": [
-			"Libera",
-			"Libera Type.B"
-		]
-	},
-	{
-		"id": "Future Knight",
-		"aiType": "Ranged",
-		"class": "Warrior",
-		"imgName": "Future Knight.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Basic",
-		"weapons": [
-			"Atomic Destroyer",
-			"Cosmic Destroyer"
-		]
-	},
-	{
-		"id": "Future Princess",
-		"aiType": "Melee",
-		"class": "Tank",
-		"imgName": "Future Princess.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Light"
-	},
-  {
-		"id": "Fern",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Fern.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Basic"
-	},
-  {
-		"id": "Frieren",
-		"aiType": "Melee",
-		"class": "Ranged",
-		"imgName": "Frieren.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Light"
-	},
-	{
-		"id": "Gabriel",
-		"aiType": "Ranged",
-		"class": "Support",
-		"imgName": "Gabriel.png",
-		"chainsFrom": "All",
-		"chainsTo": "Injured",
-		"element": "Light"
-	},
-	{
-		"id": "Garam",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Garam.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Water"
-	},
-	{
-		"id": "Gourry",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Gourry.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Light"
-	},
-	{
-		"id": "Girgas",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"isRare": true,
-		"imgName": "Girgas.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Airborne",
-		"element": "Fire"
-	},
-	{
-		"id": "Gremory",
-		"aiType": "Melee",
-		"class": "Ranged",
-		"isRare": true,
-		"imgName": "Gremory.png",
-		"chainsFrom": "All",
-		"chainsTo": "Airborne",
-		"element": "Dark"
-	},
-	{
-		"id": "Hekate",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"isRare": true,
-		"imgName": "Hekate.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Earth"
-	},
-	{
-		"id": "H.E.R.O.S KAI",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "KAI.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Light"
-	},
-	{
-		"id": "Idol Captain Eva",
-		"aiType": "Melee",
-		"class": "Support",
-		"imgName": "Idol Captain Eva.png",
-		"chainsFrom": "All",
-		"chainsTo": "Downed",
-		"element": "Basic"
-	},
-  {
-		"id": "Kahlor",
-		"aiType": "Assassin",
+    "id": "Angie",
+    "aiType": "Assassin",
     "assassinTarget": "Support",
     "fallbackAiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Kahlor.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Fire"
-	},
-	{
-		"id": "Karina_Ascended",
-		"aiType": "Ranged",
-		"class": "Support",
-		"imgName": "Karina_Ascended.png",
-		"chainsFrom": "All",
-		"chainsTo": "Injured",
-		"element": "Dark"
-	},
-	{
-		"id": "Karina",
-		"aiType": "Ranged",
-		"class": "Support",
-		"isRare": true,
-		"imgName": "Karina.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Dark"
-	},
-	{
-		"id": "Kang",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"isSecret": true,
-		"imgName": "kang.gif",
-		"element": "Light"
-	},
-	{
-		"id": "Kanna",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Kanna.png",
-		"chainsFrom": "All",
-		"chainsTo": "Downed",
-		"element": "Basic"
-	},
-	{
-		"id": "Kamael",
-		"aiType": "Ranged",
-		"class": "Support",
-		"imgName": "Kamael.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Injured",
-		"element": "Earth"
-	},
-	{
-		"id": "Lahn",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Lahn.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Injured",
-		"element": "Basic",
-		"weapons": [
-			"Pure Mind",
-			"Elusive Reflection"
-		]
-	},
-	{
-		"id": "Lapice",
-		"aiType": "Ranged",
-		"class": "Warrior",
-		"imgName": "Lapice.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Light",
-		"weapons": [
-			"Innocent",
-			"Radiant"
-		]
-	},
-	{
-		"id": "Lavi",
-		"aiType": "Melee",
-		"class": "Tank",
-		"isRare": true,
-		"imgName": "Lavi.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Fire"
-	},
-	{
-		"id": "Lilith",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Lilith.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Dark"
-	},
-  	{
-		"id": "Lena",
-		"aiType": "Melee",
-		"class": "Ranged",
-		"imgName": "Lena.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Light"
-	},
-	{
-		"id": "Lina",
-		"aiType": "Melee",
-		"class": "Ranged",
-		"imgName": "Lina.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Airborne",
-		"element": "Fire"
-	},
-	{
-		"id": "Loraine",
-		"aiType": "Melee",
-		"class": "Support",
-		"isRare": true,
-		"imgName": "Loraine.png",
-		"chainsFrom": "All",
-		"chainsTo": "Injured",
-		"element": "Basic"
-	},
-	{
-		"id": "Lucy",
-		"aiType": "Melee",
-		"class": "Ranged",
-		"imgName": "Lucy.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Fire"
-	},
-	{
-		"id": "Lupina",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Lupina.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Airborne",
-		"element": "Dark"
-	},
-	{
-		"id": "Lynn",
-		"aiType": "Ranged",
-		"class": "Warrior",
-		"imgName": "Lynn.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Fire"
-	},
-	{
-		"id": "Hana",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Hana.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Water"
-	},
-	{
-		"id": "Marianne",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"isRare": true,
-		"imgName": "Marianne.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Earth"
-	},
-	{
-		"id": "Marina",
-		"aiType": "Melee",
-		"class": "Tank",
-		"imgName": "Marina.png",
-		"chainsFrom": "All",
-		"chainsTo": "Injured",
-		"element": "Water"
-	},
-	{
-		"id": "Maam",
-		"aiType": "Melee",
-		"class": "Support",
-		"imgName": "Maam.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Airborne",
-		"element": "Earth"
-	},
-	{
-		"id": "Milim",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Milim.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Dark"
-	},
-	{
-		"id": "Marvin",
-		"aiType": "Ranged",
-		"class": "Warrior",
-		"isRare": true,
-		"imgName": "Marvin.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Earth"
-	},
-	{
-		"id": "Mayreel",
-		"aiType": "Melee",
-		"class": "Support",
-		"imgName": "Mayreel.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Earth"
-	},
-	{
-		"id": "Mad Panda Trio",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Mad Panda Trio.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Earth"
-	},
-	{
-		"id": "Mei_Ascended",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Mei_Ascended.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Light"
-	},
-	{
-		"id": "Mei",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"isRare": true,
-		"imgName": "Mei.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Light"
-	},
-	{
-		"id": "Miya",
-		"aiType": "Melee",
-		"class": "Support",
-		"imgName": "Miya.png",
-		"chainsFrom": "All",
-		"chainsTo": "Downed",
-		"element": "Fire"
-	},
-	{
-		"id": "Mike",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Mike.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Basic"
-	},
-	{
-		"id": "MK.99",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Mk.99.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Light"
-	},
-	{
-		"id": "MK.2",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "MK.2.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Injured",
-		"element": "Dark"
-	},
-	{
-		"id": "Miss Chrome",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Miss Chrome.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Basic"
-	},
-	{
-		"id": "Morrian",
-		"aiType": "Melee",
-		"class": "Tank",
-		"imgName": "Morrian.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Earth"
-	},
-	{
-		"id": "Orca",
-		"aiType": "Melee",
-		"class": "Ranged",
-		"imgName": "Orca.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Water"
-	},
-	{
-		"id": "Nari",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Nari.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Basic"
-	},
+    "class": "Warrior",
+    "imgName": "Angie.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Water"
+  },
   {
-		"id": "Natsume",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Natsume.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Water"
-	},
-	{
-		"id": "Neva",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"isRare": true,
-		"imgName": "Neva.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Light"
-	},
-	{
-		"id": "Noxia",
-		"aiType": "Ranged",
-		"class": "Support",
-		"imgName": "Noxia.png",
-		"chainsFrom": "All",
-		"chainsTo": "Airborne",
-		"element": "Dark",
-		"summonId": "Dark Spirit"
-	},
-	{
-		"id": "Dark Spirit",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"isSummon": true,
-		"imgName": "Noxia Summon.png",
-		"element": "Dark"
-	},
-	{
-		"id": "Odile",
-		"aiType": "Melee",
-		"class": "Tank",
-		"imgName": "Odile.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Light"
-	},
+    "id": "Alef",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Alef.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Earth"
+  },
   {
-		"id": "Nifty",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Nifty.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Dark"
-	},
-	{
-		"id": "Oghma",
-		"aiType": "Melee",
-		"class": "Tank",
-		"imgName": "Oghma.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Dark",
-		"weapons": [
-			"Echesaks",
-			"Echesaks model R"
-		]
-	},
-	{
-		"id": "Plague Doctor",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "PlagueDoctor.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Dark"
-	},
-	{
-		"id": "Plitvice",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Plitvice.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Fire",
-		"weapons": [
-			"Prominence",
-			"Halo"
-		]
-	},
-	{
-		"id": "Pymon",
-		"aiType": "Melee",
-		"class": "Tank",
-		"imgName": "Pymon.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Fire"
-	},
-	{
-		"id": "Popp",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Popp.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Fire"
-	},
-	{
-		"id": "Priscilla",
-		"aiType": "Melee",
-		"class": "Ranged",
-		"imgName": "Priscilla.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Light"
-	},
-	{
-		"id": "Parvati",
-		"aiType": "Assassin",
-		"assassinTarget": "Support",
-		"fallbackAiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Parvati.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Earth"
-	},
-	{
-		"id": "Rachel",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"isRare": true,
-		"imgName": "Rachel.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Water"
-	},
+    "id": "Anna",
+    "aiType": "Melee",
+    "class": "Ranged",
+    "imgName": "Anna.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Basic"
+  },
   {
-		"id": "Beach Racer Rachel",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Beach Racer Rachel.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Injured",
-		"element": "Water"
-	},
-	{
-		"id": "Ranpang",
-		"aiType": "Melee",
-		"class": "Tank",
-		"isRare": true,
-		"imgName": "Ranpang.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Airborne",
-		"element": "Basic"
-	},
-	{
-		"id": "Rey",
-		"aiType": "Ranged",
-		"class": "Warrior",
-		"imgName": "Rey.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Fire"
-	},
-	{
-		"id": "Ruri",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Ruri.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Airborne",
-		"element": "Light"
-	},
-	{
-		"id": "Rie",
-		"aiType": "Melee",
-		"class": "Ranged",
-		"isRare": true,
-		"imgName": "Rie.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Basic"
-	},
-	{
-		"id": "Rosetta",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Rosetta.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Airborne",
-		"element": "Earth"
-	},
-	{
-		"id": "Rimuru",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Rimuru.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Injured",
-		"element": "Water"
-	},
-	{
-		"id": "Rue",
-		"aiType": "Assassin",
-		"assassinTarget": "Ranged",
-		"fallbackAiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Rue.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Earth",
-		"weapons": [
-			"Terminator",
-			"Nightmare"
-		]
-	},
+    "id": "Ameris",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Ameris.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Earth"
+  },
   {
-		"id": "Randi",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Randi.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Fire"
-	},
-	{
-		"id": "Sohee",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"isRare": true,
-		"imgName": "Sohee.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Light"
-	},
-	{
-		"id": "Scintilla",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Scintilla.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Fire"
-	},
-	{
-		"id": "Shapira",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"isRare": true,
-		"imgName": "Shapira.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Dark"
-	},
-	{
-		"id": "Shuna",
-		"aiType": "Ranged",
-		"class": "Support",
-		"imgName": "Shuna.png",
-		"chainsFrom": "All",
-		"chainsTo": "Downed",
-		"element": "Fire"
-	},
-	{
-		"id": "Summer Loraine",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Summer Loraine.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Basic"
-	},
-	{
-		"id": "Sumire",
-		"aiType": "Assassin",
-		"assassinTarget": "Ranged",
-		"fallbackAiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Sumire.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Dark"
-	},
-	{
-		"id": "Sia",
-		"aiType": "Ranged",
-		"class": "Support",
-		"imgName": "Sia.png",
-		"chainsFrom": "All",
-		"chainsTo": "Downed",
-		"element": "Water"
-	},
-	{
-		"id": "Saya",
-		"aiType": "Assassin",
-		"assassinTarget": "Warrior",
-		"fallbackAiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Saya.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Fire"
-	},
+    "id": "Amy",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "isRare": true,
+    "imgName": "Amy.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Basic"
+  },
   {
-		"id": "Sweet Troublemaker Girgas",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Sweet Troublemaker Girgas.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Downed",
-		"element": "Basic"
-	},
+    "id": "Aoba",
+    "aiType": "Ranged",
+    "class": "Support",
+    "isRare": true,
+    "imgName": "Aoba.png",
+    "chainsFrom": "All",
+    "chainsTo": "Downed",
+    "element": "Earth"
+  },
   {
-		"id": "Stark",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Stark.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Airborne",
-		"element": "Fire"
-	},
-	{
-		"id": "Tinia",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Tinia.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Airborne",
-		"element": "Earth"
-	},
+    "id": "Arabelle",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Arabelle.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Dark"
+  },
   {
-		"id": "Tasha",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Tasha.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Earth"
-	},
-	{
-		"id": "Toga",
-		"aiType": "Ranged",
-		"class": "Ranged",
-		"imgName": "Toga.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Fire"
-	},
-	{
-		"id": "Veronica",
-		"aiType": "Melee",
-		"class": "Support",
-		"imgName": "Veronica.png",
-		"chainsFrom": "All",
-		"chainsTo": "Downed",
-		"element": "Water"
-	},
-	{
-		"id": "Vishuvac",
-		"aiType": "Assassin",
-		"assassinTarget": "Ranged",
-		"fallbackAiType": "Melee",
-		"class": "Warrior",
-		"imgName": "Vishuvac.png",
-		"chainsFrom": "All",
-		"chainsTo": "Injured",
-		"element": "Fire",
-		"weapons": [
-			"Volcanic Horn",
-			"Volcanic Core"
-		]
-	},
-	{
-		"id": "Valencia",
-		"aiType": "Ranged",
-		"class": "Warrior",
-		"imgName": "Valencia.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Light"
-	},
-	{
-		"id": "Vinette",
-		"aiType": "Ranged",
-		"class": "Support",
-		"imgName": "Vinette.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Dark"
-	},
-	{
-		"id": "Win Ling",
-		"aiType": "Ally",
-		"class": "Warrior",
-		"imgName": "Win Ling.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Airborne",
-		"element": "Fire"
-	},
-	{
-		"id": "White Beast",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"isRare": true,
-		"imgName": "White Beast.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Airborne",
-		"element": "Water"
-	},
-	{
-		"id": "White Snow",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"imgName": "White Snow.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Injured",
-		"element": "Water"
-	},
-	{
-		"id": "Yuze",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"isRare": true,
-		"imgName": "Yuze.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Injured",
-		"element": "Dark"
-	},
+    "id": "Ara",
+    "aiType": "Ranged",
+    "class": "Support",
+    "imgName": "Ara.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Water"
+  },
   {
-		"id": "Yun",
-		"aiType": "Ranged",
-		"class": "Support",
-		"imgName": "Yun.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Injured",
-		"element": "Water"
-	},
-	{
-		"id": "Yuna",
-		"aiType": "Ranged",
-		"class": "Support",
-		"imgName": "Yuna.png",
-		"chainsFrom": "Airborne",
-		"chainsTo": "Downed",
-		"element": "Earth"
-	},
-	{
-		"id": "Xelloss",
-		"aiType": "Melee",
-		"class": "Support",
-		"imgName": "Xelloss.png",
-		"chainsFrom": "All",
-		"chainsTo": "Downed",
-		"element": "Dark"
-	},
+    "id": "AA72",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "AA72.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Water"
+  },
   {
-		"id": "Xiaoman",
-		"aiType": "Ranged",
-		"class": "Warrior",
-		"imgName": "Xiaoman.png",
-		"chainsFrom": "Downed",
-		"chainsTo": "Injured",
-		"element": "Earth"
-	}
+    "id": "Andras",
+    "aiType": "Melee",
+    "class": "Ranged",
+    "imgName": "Andras.png",
+    "chainsFrom": "All",
+    "chainsTo": "Downed",
+    "element": "Water"
+  },
+  {
+    "id": "Beach Sohee",
+    "aiType": "Assassin",
+    "assassinTarget": "Ranged",
+    "fallbackAiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Beach Sohee.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Airborne",
+    "element": "Basic"
+  },
+  {
+    "id": "Beach Shapira",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Beach Shapira.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Light"
+  },
+  {
+    "id": "Beach Yuze",
+    "aiType": "Ranged",
+    "class": "Warrior",
+    "imgName": "Beach Yuze.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Water"
+  },
+  {
+    "id": "Beach Amy",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Beach Amy.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Airborne",
+    "element": "Fire"
+  },
+  {
+    "id": "Beach Rie",
+    "aiType": "Assassin",
+    "assassinTarget": "Ranged",
+    "fallbackAiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Beach Rie.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Basic"
+  },
+  {
+    "id": "Bari",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Bari.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Earth",
+    "weapons": [
+      "Mayreel",
+      "Pino"
+    ]
+  },
+  {
+    "id": "Beth",
+    "aiType": "Assassin",
+    "assassinTarget": "Ranged",
+    "fallbackAiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Beth.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Dark"
+  },
+  {
+    "id": "Bianca",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Bianca.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Water"
+  },
+  {
+    "id": "Catherine",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "isRare": true,
+    "imgName": "Catherine.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Injured",
+    "element": "Water"
+  },
+  {
+    "id": "Carol",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Carol.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Light"
+  },
+  {
+    "id": "Chun Ryeo",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Chun Ryeo.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Light"
+  },
+  {
+    "id": "Clara",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Clara.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Injured",
+    "element": "Fire"
+  },
+  {
+    "id": "Cornet",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Cornet.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Light"
+  },
+  {
+    "id": "Corps Commander",
+    "aiType": "Melee",
+    "class": "Ranged",
+    "imgName": "Corps Commander.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Airborne",
+    "element": "Dark"
+  },
+  {
+    "id": "Chocolate Collector Ameris",
+    "aiType": "Ally",
+    "class": "Support",
+    "imgName": "Chocolate Collector Ameris.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Basic"
+  },
+  {
+    "id": "Ascendant Coco",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Coco_Ascended.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Airborne",
+    "element": "Water"
+  },
+  {
+    "id": "Coco",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "isRare": true,
+    "imgName": "Coco.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Airborne",
+    "element": "Water"
+  },
+  {
+    "id": "Craig_Ascended",
+    "aiType": "Melee",
+    "class": "Tank",
+    "imgName": "Craig_Ascended.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Earth"
+  },
+  {
+    "id": "Craig",
+    "aiType": "Melee",
+    "class": "Tank",
+    "isRare": true,
+    "imgName": "Craig.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Earth"
+  },
+  {
+    "id": "Claude",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Claude.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Dark"
+  },
+  {
+    "id": "Crosselle",
+    "aiType": "Ranged",
+    "class": "Support",
+    "imgName": "Crosselle.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Dark"
+  },
+  {
+    "id": "Chriselle",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Chriselle.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Airborne",
+    "element": "Earth"
+  },
+  {
+    "id": "Callie",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Callie.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Dark"
+  },
+  {
+    "id": "Dabin",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Dabin.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Earth"
+  },
+  {
+    "id": "Dai",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Dai.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Basic"
+  },
+  {
+    "id": "Daisy",
+    "aiType": "Melee",
+    "class": "Tank",
+    "imgName": "Daisy.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Water"
+  },
+  {
+    "id": "Dolf",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "isRare": true,
+    "imgName": "Dolf.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Fire"
+  },
+  {
+    "id": "Dohwa",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Dohwa.png",
+    "chainsFrom": "All",
+    "chainsTo": "Downed",
+    "element": "Basic"
+  },
+  {
+    "id": "Eleanor",
+    "aiType": "Ranged",
+    "class": "Support",
+    "imgName": "Eleanor.png",
+    "chainsFrom": "All",
+    "chainsTo": "Downed",
+    "element": "Light"
+  },
+  {
+    "id": "Elvira_Ascended",
+    "aiType": "Melee",
+    "class": "Ranged",
+    "imgName": "Elvira_Ascended.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Fire"
+  },
+  {
+    "id": "Elvira",
+    "aiType": "Melee",
+    "class": "Ranged",
+    "isRare": true,
+    "imgName": "Elvira.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Fire"
+  },
+  {
+    "id": "Eugene",
+    "aiType": "Ranged",
+    "class": "Warrior",
+    "imgName": "Eugene.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Injured",
+    "element": "Light"
+  },
+  {
+    "id": "Eunha",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Eunha.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Basic"
+  },
+  {
+    "id": "Erina",
+    "aiType": "Melee",
+    "class": "Tank",
+    "imgName": "Erina.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Basic"
+  },
+  {
+    "id": "Estel",
+    "aiType": "Melee",
+    "class": "Ranged",
+    "imgName": "Estel.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Earth"
+  },
+  {
+    "id": "Eva",
+    "aiType": "Melee",
+    "class": "Ranged",
+    "isRare": true,
+    "imgName": "Eva.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Light"
+  },
+  {
+    "id": "Favi",
+    "aiType": "Melee",
+    "class": "Support",
+    "isRare": true,
+    "imgName": "Favi.png",
+    "chainsFrom": "All",
+    "chainsTo": "Injured",
+    "element": "Water",
+    "summonId": "Jack Frost"
+  },
+  {
+    "id": "Jack Frost",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "isSummon": true,
+    "imgName": "Jack Frost.png",
+    "element": "Water"
+  },
+  {
+    "id": "J",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "J.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Water"
+  },
+  {
+    "id": "Fei_Ascended",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Fei_Ascended.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Light"
+  },
+  {
+    "id": "Fei",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "isRare": true,
+    "imgName": "Fei.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Light"
+  },
+  {
+    "id": "Knight",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "isRare": true,
+    "imgName": "Female Knight.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Basic",
+    "weapons": [
+      "Libera",
+      "Libera Type.B"
+    ]
+  },
+  {
+    "id": "Female Knight_Ascended",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Female Knight_Ascent.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Basic",
+    "weapons": [
+      "Libera",
+      "Libera Type.B"
+    ]
+  },
+  {
+    "id": "Male Knight_Ascended",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Male Knight_Ascent.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Basic",
+    "weapons": [
+      "Libera",
+      "Libera Type.B"
+    ]
+  },
+  {
+    "id": "Future Knight",
+    "aiType": "Ranged",
+    "class": "Warrior",
+    "imgName": "Future Knight.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Basic",
+    "weapons": [
+      "Atomic Destroyer",
+      "Cosmic Destroyer"
+    ]
+  },
+  {
+    "id": "Future Princess",
+    "aiType": "Melee",
+    "class": "Tank",
+    "imgName": "Future Princess.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Light"
+  },
+  {
+    "id": "Fern",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Fern.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Basic"
+  },
+  {
+    "id": "Frieren",
+    "aiType": "Melee",
+    "class": "Ranged",
+    "imgName": "Frieren.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Light"
+  },
+  {
+    "id": "Gabriel",
+    "aiType": "Ranged",
+    "class": "Support",
+    "imgName": "Gabriel.png",
+    "chainsFrom": "All",
+    "chainsTo": "Injured",
+    "element": "Light"
+  },
+  {
+    "id": "Garam",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Garam.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Water"
+  },
+  {
+    "id": "Gourry",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Gourry.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Light"
+  },
+  {
+    "id": "Girgas",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "isRare": true,
+    "imgName": "Girgas.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Airborne",
+    "element": "Fire"
+  },
+  {
+    "id": "Gremory",
+    "aiType": "Melee",
+    "class": "Ranged",
+    "isRare": true,
+    "imgName": "Gremory.png",
+    "chainsFrom": "All",
+    "chainsTo": "Airborne",
+    "element": "Dark"
+  },
+  {
+    "id": "Hekate",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "isRare": true,
+    "imgName": "Hekate.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Earth"
+  },
+  {
+    "id": "H.E.R.O.S KAI",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "KAI.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Light"
+  },
+  {
+    "id": "Idol Captain Eva",
+    "aiType": "Melee",
+    "class": "Support",
+    "imgName": "Idol Captain Eva.png",
+    "chainsFrom": "All",
+    "chainsTo": "Downed",
+    "element": "Basic"
+  },
+  {
+    "id": "Illuni",
+    "aiType": "Melee",
+    "class": "Ranged",
+    "imgName": "Illuni.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Airborne",
+    "element": "Light"
+  },
+  {
+    "id": "Kahlor",
+    "aiType": "Assassin",
+    "assassinTarget": "Support",
+    "fallbackAiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Kahlor.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Fire"
+  },
+  {
+    "id": "Karina_Ascended",
+    "aiType": "Ranged",
+    "class": "Support",
+    "imgName": "Karina_Ascended.png",
+    "chainsFrom": "All",
+    "chainsTo": "Injured",
+    "element": "Dark"
+  },
+  {
+    "id": "Karina",
+    "aiType": "Ranged",
+    "class": "Support",
+    "isRare": true,
+    "imgName": "Karina.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Dark"
+  },
+  {
+    "id": "Kang",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "isSecret": true,
+    "imgName": "kang.gif",
+    "element": "Light"
+  },
+  {
+    "id": "Kanna",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Kanna.png",
+    "chainsFrom": "All",
+    "chainsTo": "Downed",
+    "element": "Basic"
+  },
+  {
+    "id": "Kamael",
+    "aiType": "Ranged",
+    "class": "Support",
+    "imgName": "Kamael.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Injured",
+    "element": "Earth"
+  },
+  {
+    "id": "Lahn",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Lahn.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Injured",
+    "element": "Basic",
+    "weapons": [
+      "Pure Mind",
+      "Elusive Reflection"
+    ]
+  },
+  {
+    "id": "Lapice",
+    "aiType": "Ranged",
+    "class": "Warrior",
+    "imgName": "Lapice.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Light",
+    "weapons": [
+      "Innocent",
+      "Radiant"
+    ]
+  },
+  {
+    "id": "Lavi",
+    "aiType": "Melee",
+    "class": "Tank",
+    "isRare": true,
+    "imgName": "Lavi.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Fire"
+  },
+  {
+    "id": "Lilith",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Lilith.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Dark"
+  },
+  {
+    "id": "Lena",
+    "aiType": "Melee",
+    "class": "Ranged",
+    "imgName": "Lena.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Light"
+  },
+  {
+    "id": "Lina",
+    "aiType": "Melee",
+    "class": "Ranged",
+    "imgName": "Lina.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Airborne",
+    "element": "Fire"
+  },
+  {
+    "id": "Loraine",
+    "aiType": "Melee",
+    "class": "Support",
+    "isRare": true,
+    "imgName": "Loraine.png",
+    "chainsFrom": "All",
+    "chainsTo": "Injured",
+    "element": "Basic"
+  },
+  {
+    "id": "Lucy",
+    "aiType": "Melee",
+    "class": "Ranged",
+    "imgName": "Lucy.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Fire"
+  },
+  {
+    "id": "Lupina",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Lupina.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Airborne",
+    "element": "Dark"
+  },
+  {
+    "id": "Lynn",
+    "aiType": "Ranged",
+    "class": "Warrior",
+    "imgName": "Lynn.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Fire"
+  },
+  {
+    "id": "Hana",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Hana.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Water"
+  },
+  {
+    "id": "Marianne",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "isRare": true,
+    "imgName": "Marianne.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Earth"
+  },
+  {
+    "id": "Marina",
+    "aiType": "Melee",
+    "class": "Tank",
+    "imgName": "Marina.png",
+    "chainsFrom": "All",
+    "chainsTo": "Injured",
+    "element": "Water"
+  },
+  {
+    "id": "Maam",
+    "aiType": "Melee",
+    "class": "Support",
+    "imgName": "Maam.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Airborne",
+    "element": "Earth"
+  },
+  {
+    "id": "Milim",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Milim.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Dark"
+  },
+  {
+    "id": "Marvin",
+    "aiType": "Ranged",
+    "class": "Warrior",
+    "isRare": true,
+    "imgName": "Marvin.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Earth"
+  },
+  {
+    "id": "Mayreel",
+    "aiType": "Melee",
+    "class": "Support",
+    "imgName": "Mayreel.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Earth"
+  },
+  {
+    "id": "Mad Panda Trio",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Mad Panda Trio.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Earth"
+  },
+  {
+    "id": "Mei_Ascended",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Mei_Ascended.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Light"
+  },
+  {
+    "id": "Mei",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "isRare": true,
+    "imgName": "Mei.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Light"
+  },
+  {
+    "id": "Miya",
+    "aiType": "Melee",
+    "class": "Support",
+    "imgName": "Miya.png",
+    "chainsFrom": "All",
+    "chainsTo": "Downed",
+    "element": "Fire"
+  },
+  {
+    "id": "Mike",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Mike.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Basic"
+  },
+  {
+    "id": "MK.99",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Mk.99.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Light"
+  },
+  {
+    "id": "MK.2",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "MK.2.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Injured",
+    "element": "Dark"
+  },
+  {
+    "id": "Miss Chrome",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Miss Chrome.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Basic"
+  },
+  {
+    "id": "Morrian",
+    "aiType": "Melee",
+    "class": "Tank",
+    "imgName": "Morrian.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Earth"
+  },
+  {
+    "id": "Orca",
+    "aiType": "Melee",
+    "class": "Ranged",
+    "imgName": "Orca.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Water"
+  },
+  {
+    "id": "Nari",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Nari.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Basic"
+  },
+  {
+    "id": "Natsume",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Natsume.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Water"
+  },
+  {
+    "id": "Neva",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "isRare": true,
+    "imgName": "Neva.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Light"
+  },
+  {
+    "id": "Noxia",
+    "aiType": "Ranged",
+    "class": "Support",
+    "imgName": "Noxia.png",
+    "chainsFrom": "All",
+    "chainsTo": "Airborne",
+    "element": "Dark",
+    "summonId": "Dark Spirit"
+  },
+  {
+    "id": "Dark Spirit",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "isSummon": true,
+    "imgName": "Noxia Summon.png",
+    "element": "Dark"
+  },
+  {
+    "id": "Odile",
+    "aiType": "Melee",
+    "class": "Tank",
+    "imgName": "Odile.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Light"
+  },
+  {
+    "id": "Nifty",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Nifty.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Dark"
+  },
+  {
+    "id": "Oghma",
+    "aiType": "Melee",
+    "class": "Tank",
+    "imgName": "Oghma.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Dark",
+    "weapons": [
+      "Echesaks",
+      "Echesaks model R"
+    ]
+  },
+  {
+    "id": "Plague Doctor",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "PlagueDoctor.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Dark"
+  },
+  {
+    "id": "Plitvice",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Plitvice.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Fire",
+    "weapons": [
+      "Prominence",
+      "Halo"
+    ]
+  },
+  {
+    "id": "Pymon",
+    "aiType": "Melee",
+    "class": "Tank",
+    "imgName": "Pymon.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Fire"
+  },
+  {
+    "id": "Popp",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Popp.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Fire"
+  },
+  {
+    "id": "Priscilla",
+    "aiType": "Melee",
+    "class": "Ranged",
+    "imgName": "Priscilla.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Light"
+  },
+  {
+    "id": "Parvati",
+    "aiType": "Assassin",
+    "assassinTarget": "Support",
+    "fallbackAiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Parvati.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Earth"
+  },
+  {
+    "id": "Rachel",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "isRare": true,
+    "imgName": "Rachel.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Water"
+  },
+  {
+    "id": "Beach Racer Rachel",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Beach Racer Rachel.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Injured",
+    "element": "Water"
+  },
+  {
+    "id": "Ranpang",
+    "aiType": "Melee",
+    "class": "Tank",
+    "isRare": true,
+    "imgName": "Ranpang.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Airborne",
+    "element": "Basic"
+  },
+  {
+    "id": "Rey",
+    "aiType": "Ranged",
+    "class": "Warrior",
+    "imgName": "Rey.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Fire"
+  },
+  {
+    "id": "Ruri",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Ruri.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Airborne",
+    "element": "Light"
+  },
+  {
+    "id": "Rie",
+    "aiType": "Melee",
+    "class": "Ranged",
+    "isRare": true,
+    "imgName": "Rie.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Basic"
+  },
+  {
+    "id": "Rosetta",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Rosetta.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Airborne",
+    "element": "Earth"
+  },
+  {
+    "id": "Rimuru",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Rimuru.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Injured",
+    "element": "Water"
+  },
+  {
+    "id": "Rue",
+    "aiType": "Assassin",
+    "assassinTarget": "Ranged",
+    "fallbackAiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Rue.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Earth",
+    "weapons": [
+      "Terminator",
+      "Nightmare"
+    ]
+  },
+  {
+    "id": "Randi",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Randi.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Fire"
+  },
+  {
+    "id": "Sohee",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "isRare": true,
+    "imgName": "Sohee.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Light"
+  },
+  {
+    "id": "Scintilla",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Scintilla.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Fire"
+  },
+  {
+    "id": "Shapira",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "isRare": true,
+    "imgName": "Shapira.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Dark"
+  },
+  {
+    "id": "Shuna",
+    "aiType": "Ranged",
+    "class": "Support",
+    "imgName": "Shuna.png",
+    "chainsFrom": "All",
+    "chainsTo": "Downed",
+    "element": "Fire"
+  },
+  {
+    "id": "Summer Loraine",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Summer Loraine.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Basic"
+  },
+  {
+    "id": "Sumire",
+    "aiType": "Assassin",
+    "assassinTarget": "Ranged",
+    "fallbackAiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Sumire.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Dark"
+  },
+  {
+    "id": "Sia",
+    "aiType": "Ranged",
+    "class": "Support",
+    "imgName": "Sia.png",
+    "chainsFrom": "All",
+    "chainsTo": "Downed",
+    "element": "Water"
+  },
+  {
+    "id": "Saya",
+    "aiType": "Assassin",
+    "assassinTarget": "Warrior",
+    "fallbackAiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Saya.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Fire"
+  },
+  {
+    "id": "Sweet Troublemaker Girgas",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Sweet Troublemaker Girgas.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Basic"
+  },
+  {
+    "id": "Stark",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Stark.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Airborne",
+    "element": "Fire"
+  },
+  {
+    "id": "Tinia",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Tinia.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Airborne",
+    "element": "Earth"
+  },
+  {
+    "id": "Tasha",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Tasha.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Earth"
+  },
+  {
+    "id": "Toga",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Toga.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Fire"
+  },
+  {
+    "id": "Veronica",
+    "aiType": "Melee",
+    "class": "Support",
+    "imgName": "Veronica.png",
+    "chainsFrom": "All",
+    "chainsTo": "Downed",
+    "element": "Water"
+  },
+  {
+    "id": "Vishuvac",
+    "aiType": "Assassin",
+    "assassinTarget": "Ranged",
+    "fallbackAiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Vishuvac.png",
+    "chainsFrom": "All",
+    "chainsTo": "Injured",
+    "element": "Fire",
+    "weapons": [
+      "Volcanic Horn",
+      "Volcanic Core"
+    ]
+  },
+  {
+    "id": "Valencia",
+    "aiType": "Ranged",
+    "class": "Warrior",
+    "imgName": "Valencia.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Light"
+  },
+  {
+    "id": "Vinette",
+    "aiType": "Ranged",
+    "class": "Support",
+    "imgName": "Vinette.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Dark"
+  },
+  {
+    "id": "Win Ling",
+    "aiType": "Ally",
+    "class": "Warrior",
+    "imgName": "Win Ling.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Fire"
+  },
+  {
+    "id": "White Beast",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "isRare": true,
+    "imgName": "White Beast.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Airborne",
+    "element": "Water"
+  },
+  {
+    "id": "White Snow",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "White Snow.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Injured",
+    "element": "Water"
+  },
+  {
+    "id": "Yuze",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "isRare": true,
+    "imgName": "Yuze.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Injured",
+    "element": "Dark"
+  },
+  {
+    "id": "Yun",
+    "aiType": "Ranged",
+    "class": "Support",
+    "imgName": "Yun.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Injured",
+    "element": "Water"
+  },
+  {
+    "id": "Yuna",
+    "aiType": "Ranged",
+    "class": "Support",
+    "imgName": "Yuna.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Earth"
+  },
+  {
+    "id": "Xelloss",
+    "aiType": "Melee",
+    "class": "Support",
+    "imgName": "Xelloss.png",
+    "chainsFrom": "All",
+    "chainsTo": "Downed",
+    "element": "Dark"
+  },
+  {
+    "id": "Xiaoman",
+    "aiType": "Ranged",
+    "class": "Warrior",
+    "imgName": "Xiaoman.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Earth"
+  }
 ]
