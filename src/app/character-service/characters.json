@@ -1370,6 +1370,15 @@
 		"element": "Dark"
 	},
 	{
+		"id": "Wakamo",
+		"aiType": "Melee",
+		"class": "Support",
+		"imgName": "Wakamo.png",
+		"chainsFrom": "Injured",
+		"chainsTo": "Airborne",
+		"element": "Water"
+	},
+  {
 		"id": "Win Ling",
 		"aiType": "Ally",
 		"class": "Warrior",
