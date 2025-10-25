@@ -1313,7 +1313,7 @@
   },
   {
     "id": "Randi",
-    "aiType": "Ranged",
+    "aiType": "Melee",
     "class": "Ranged",
     "imgName": "Randi.png",
     "chainsFrom": "Downed",
