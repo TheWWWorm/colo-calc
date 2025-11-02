@@ -736,6 +736,15 @@
     "element": "Dark"
   },
   {
+    "id": "Haruka",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Haruka.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Light"
+  },
+  {
     "id": "Hekate",
     "aiType": "Ranged",
     "class": "Ranged",
