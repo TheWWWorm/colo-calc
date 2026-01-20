@@ -649,6 +649,15 @@
     ]
   },
   {
+    "id": "Mikke",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Mikke.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Basic"
+  },
+  {
     "id": "Future Knight",
     "aiType": "Ranged",
     "class": "Warrior",
@@ -731,6 +740,15 @@
     "class": "Ranged",
     "isRare": true,
     "imgName": "Gremory.png",
+    "chainsFrom": "All",
+    "chainsTo": "Airborne",
+    "element": "Dark"
+  },
+  {
+    "id": "Gremory_Ascended",
+    "aiType": "Melee",
+    "class": "Ranged",
+    "imgName": "Gremory_Ascended.png",
     "chainsFrom": "All",
     "chainsTo": "Airborne",
     "element": "Dark"
@@ -1120,6 +1138,15 @@
     "chainsFrom": "Downed",
     "chainsTo": "Injured",
     "element": "Light"
+  },
+  {
+    "id": "Noel",
+    "aiType": "Ranged",
+    "class": "Support",
+    "imgName": "Noel.png",
+    "chainsFrom": "All",
+    "chainsTo": "Downed",
+    "element": "Earth"
   },
   {
     "id": "Noxia",
