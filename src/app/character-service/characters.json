@@ -41,6 +41,15 @@
     "element": "Earth"
   },
   {
+    "id": "Alicia",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Alicia.png",
+    "chainsFrom": "Injured",
+    "chainsTo": "Downed",
+    "element": "Basic"
+  },
+  {
     "id": "Anna",
     "aiType": "Melee",
     "class": "Ranged",
@@ -623,6 +632,15 @@
     ]
   },
   {
+    "id": "Klen",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Klen.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Dark"
+  },
+  {
     "id": "Female Knight_Ascended",
     "aiType": "Melee",
     "class": "Warrior",
@@ -1119,6 +1137,15 @@
     "chainsFrom": "Downed",
     "chainsTo": "Airborne",
     "element": "Basic"
+  },
+  {
+    "id": "Nelluru",
+    "aiType": "Melee",
+    "class": "Tank",
+    "imgName": "Nelluru.png",
+    "chainsFrom": "All",
+    "chainsTo": "Downed",
+    "element": "Fire"
   },
   {
     "id": "Natsume",
