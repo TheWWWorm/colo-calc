@@ -1422,6 +1422,15 @@
     "element": "Fire"
   },
   {
+    "id": "Seira",
+    "aiType": "Ranged",
+    "class": "Support",
+    "imgName": "Seira.png",
+    "chainsFrom": "All",
+    "chainsTo": "Injured",
+    "element": "Earth"
+  },
+  {
     "id": "Summer Loraine",
     "aiType": "Ranged",
     "class": "Ranged",
