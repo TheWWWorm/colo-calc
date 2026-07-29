@@ -910,6 +910,15 @@
     "element": "Fire"
   },
   {
+    "id": "Lacryma",
+    "aiType": "Melee",
+    "class": "Ranged",
+    "imgName": "Lacryma.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Light"
+  },
+  {
     "id": "Lilith",
     "aiType": "Melee",
     "class": "Warrior",
