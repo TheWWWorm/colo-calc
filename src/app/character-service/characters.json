@@ -41,6 +41,15 @@
     "element": "Earth"
   },
   {
+    "id": "Astoria",
+    "aiType": "Ranged",
+    "class": "Ranged",
+    "imgName": "Astoria.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Airborne",
+    "element": "Basic"
+  },
+  {
     "id": "Alicia",
     "aiType": "Melee",
     "class": "Warrior",
@@ -173,16 +182,6 @@
 		"chainsFrom": "Downed",
 		"chainsTo": "Airborne",
 		"element": "Fire"
-	},
-	{
-		"id": "White Beast",
-		"aiType": "Melee",
-		"class": "Warrior",
-		"isRare": true,
-		"imgName": "White Beast.png",
-		"chainsFrom": "Injured",
-		"chainsTo": "Airborne",
-		"element": "Water"
 	},
 	{
 		"id": "White Snow",
@@ -741,6 +740,15 @@
     "chainsFrom": "Downed",
     "chainsTo": "Airborne",
     "element": "Light"
+  },
+  {
+    "id": "Geumrin",
+    "aiType": "Melee",
+    "class": "Warrior",
+    "imgName": "Geumrin.png",
+    "chainsFrom": "Airborne",
+    "chainsTo": "Downed",
+    "element": "Water"
   },
   {
     "id": "Girgas",
@@ -1532,6 +1540,15 @@
     "chainsFrom": "All",
     "chainsTo": "Downed",
     "element": "Water"
+  },
+  {
+    "id": "V",
+    "aiType": "Ranged",
+    "class": "Warrior",
+    "imgName": "V.png",
+    "chainsFrom": "Downed",
+    "chainsTo": "Injured",
+    "element": "Dark"
   },
   {
     "id": "Vishuvac",
