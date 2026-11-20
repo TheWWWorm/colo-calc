@@ -41,6 +41,15 @@
     "element": "Earth"
   },
   {
+    "id": "Amelia",
+    "aiType": "Ranged",
+    "class": "Support",
+    "imgName": "Amelia.png",
+    "chainsFrom": "All",
+    "chainsTo": "Downed",
+    "element": "Earth"
+  },
+  {
     "id": "Astoria",
     "aiType": "Ranged",
     "class": "Ranged",
